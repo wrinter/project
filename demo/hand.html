@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>复习测试demo</title>
+		<style>
+			ul li{
+				list-style: none;
+			}
+			div{
+				width: 200px;
+				min-height: 40px;
+				background: #49b9df;
+			}
+			ul{
+				display: none;
+			}
+			.listName{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="demo">
+			<div>
+				<span class="listName" id="listName">复习测试1</span>
+				<ul class="ul">
+					<li>基础知识</li>
+					<li>学习试卷</li>
+					<li>试题学习</li>
+				</ul>
+			</div>
+			<div>
+				<span class="listName">复习测试2</span>
+				<ul class="ul">
+					<li>基础知识</li>
+					<li>学习试卷</li>
+					<li>试题学习</li>
+				</ul>
+			</div>
+			<div>
+				<span class="listName">复习测试3</span>
+				<ul class="ul">
+					<li>基础知识</li>
+					<li>学习试卷</li>
+					<li>试题学习</li>
+				</ul>
+			</div>
+			<div>
+				<span class="listName">复习测试4</span>
+				<ul class="ul">
+					<li>基础知识</li>
+					<li>学习试卷</li>
+					<li>试题学习</li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.0.js"></script>
+		<script>
+			$(".listName").click(function(){
+				$(this).next("ul").show()
+				$(this).parent("div").siblings("div").find(".ul").hide();
+			})
+//			$(".listName").click(function(){
+//				if(!$(this).hasClass("add")){
+//					$(this).addClass("add").next("ul").show();
+//					$(this).parent("div").siblings("div").find(".ul").hide();
+//					if($(this).parent("div").siblings("div").find(".listName").hasClass("add")){
+//						$(this).parent("div").siblings("div").find(".listName").removeClass("add");
+//					}
+//				}else{
+//					$(this).removeClass("add").next("ul").hide();
+//				}
+//			})
+		</script>
+	</body>
+</html>

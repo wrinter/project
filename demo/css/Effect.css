@@ -1,0 +1,105 @@
+/*2d transfrom rotate*/
+.f{
+	width: 150px;
+	height: 60px;
+	border:1px solid #ccc;
+	background: yellow;
+	font-size: 14px;
+	margin-top: 50px;
+	transform:rotate(130deg);
+	-ms-transform:rotate(130deg); /* IE 9 */
+	-moz-transform:rotate(130deg); /* Firefox */
+	-webkit-transform:rotate(130deg); /* Safari and Chrome */
+	-o-transform:rotate(130deg); /* Opera */
+}
+.h:hover{
+	width: 300px;
+}
+/*2d transfrom translate*/
+.h{
+	width: 150px;
+	height: 60px;
+	border:1px solid #ccc;
+	background: #49b9df;
+	font-size: 14px;
+	margin-top: 50px;
+	/*3d过度的属性*/
+	transition: width 2s;
+}
+.hh{
+	width: 150px;
+	height: 60px;
+	border:1px solid #ccc;
+	background: #49b9df;
+	font-size: 14px;
+	transform: translate(100px,100px);
+	-ms-transform:translate(100px,100px); /* IE 9 */
+	-moz-transform:translate(100px,100px); /* Firefox */
+	-webkit-transform:translate(100px,100px); /* Safari and Chrome */
+	-o-transform:translate(100px,100px); /* Opera */
+}
+/*2d transfrom scale*/
+.r{
+	width: 150px;
+	height: 60px;
+	border:1px solid #ccc;
+	background: #65b113;
+	font-size: 14px;
+	margin-top: 150px;
+	margin-left: 50px;
+}
+.r:hover{
+	width: 150px;
+	height: 60px;
+	border:1px solid #ccc;
+	background: #65b113;
+	font-size: 14px;
+	margin-top: 150px;
+	margin-left: 50px;
+	transform: scale(1.25,1.25);
+	-ms-transform:scale(1.25,1.25); /* IE 9 */
+	-moz-transform:scale(1.25,1.25); /* Firefox */
+	-webkit-transform:scale(1.25,1.25); /* Safari and Chrome */
+	-o-transform:scale(1.25,1.25); /* Opera */
+}
+/*2d transfrom skew*/
+.k{
+	width: 150px;
+	height: 60px;
+	border:1px solid #ccc;
+	background: #65b113;
+	font-size: 14px;
+	margin-top: 150px;
+	margin-left: 50px;
+	transform: skew(30deg,20deg);
+	-ms-transform: skew(30deg,20deg);	/* IE 9 */
+	-webkit-transform: skew(30deg,20deg);	/* Safari and Chrome */
+	-o-transform: skew(30deg,20deg);	/* Opera */
+	-moz-transform: skew(30deg,20deg);
+}
+/*2d transfrom rotate origin 设定旋转的位置*/
+.o{
+	width: 300px;
+	height: 300px;
+	border: 1px solid #ccc;
+	margin-top: 50px;
+	position: relative;
+}
+.oo{
+	position: absolute;
+	width: 150px;
+	height: 60px;
+	border:1px solid #ccc;
+	background: #65b113;
+	font-size: 14px;
+	transform: rotate(30deg);
+	transform-origin:10% 80%;
+	-ms-transform: rotate(30deg); 		/* IE 9 */
+	-ms-transform-origin:10% 80%; 		/* IE 9 */
+	-webkit-transform: rotate(30deg);	/* Safari 和 Chrome */
+	-webkit-transform-origin:10% 80%;	/* Safari 和 Chrome */
+	-moz-transform: rotate(30deg);		/* Firefox */
+	-moz-transform-origin:10% 80%;		/* Firefox */
+	-o-transform: rotate(30deg);		/* Opera */
+	-o-transform-origin:10% 80%;		/* Opera */
+}

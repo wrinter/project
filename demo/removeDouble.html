@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>去重</title>
+	</head>
+	<body>
+		<script src="js/jquery-2.1.0.js"></script>
+		<script>
+		//数字去重
+//			var a = [1,2,3,4,4,56,6,6,7,43,43,3];
+//			var b = [];
+//			for(var i = 0;i<a.length;i++){
+//				if(b[b.length-1]!= a[i]){
+//					b.push(a[i]);
+//				}
+//			}
+//			document.write(b);
+		//其他去重
+			var a = ["re","re","ss","dd","dd"];
+			b = [];
+			c = {};
+			for(var i = 0 ; i<a.length;i++){
+				if(a[i] in c){
+					
+				}else{
+					b.push(a[i]);
+					c[a[i]] = true;
+				}
+			}
+			document.write(b);
+		</script>
+	</body>
+</html>
