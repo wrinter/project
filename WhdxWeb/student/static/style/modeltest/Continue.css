@@ -1,0 +1,383 @@
+html,body{
+    margin:0;
+    padding: 0;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.model_paper{
+    width: 100%;
+    height:100%;
+    overflow-x:hidden;
+    overflow-y: auto;
+    background: #f6f6f6;
+}
+.Com_Crumbs{
+    margin-bottom: 40px!important;
+}
+@media screen and (max-width: 1366px){
+    .model_papers{
+        width:900px;
+        min-height:550px;
+        background: #fff;
+        margin:0 auto;
+        border-radius: 15px;
+        padding-bottom: 25px;
+    }
+    .model_socre{
+        position: absolute;
+        top:20px;
+        right:240px;
+    }
+}
+@media screen and (min-width: 1366px){
+    .model_papers{
+        width:1000px;
+        min-height:550px;
+        background: #fff;
+        margin:0 auto;
+        border-radius: 15px;
+        padding-bottom: 25px;
+    }
+    .model_socre{
+        position: absolute;
+        top:20px;
+        right:280px;
+    }
+}
+@media screen and (min-width: 1600px){
+    .model_papers{
+        width:1200px;
+        min-height:550px;
+        background: #fff;
+        margin:0 auto;
+        border-radius: 15px;
+        padding-bottom: 25px;
+    }
+    .model_socre{
+        position: absolute;
+        top:20px;
+        right:280px;
+    }
+}
+/*公共样式*/
+.model_reflash{
+    font-size: 24px!important;
+}
+.model_time{
+    font-size: 32px!important;
+    color: #49b9df;
+    margin-right: 10px!important;
+}
+.model_logo{
+    width:100%;
+    height:60px;
+    box-sizing: border-box;
+    font-size: 24px!important;
+    color: #333;
+    position: relative;
+    background: rgba(0, 0, 0, 0) url("../../../static/image/chinese/bg.png") 0 0 repeat;
+    border-bottom: 1px solid #ccc;
+    line-height: 60px!important;
+    overflow: hidden;
+}
+.model_logoimg{
+    display: inline-block;
+    /*width:44px;*/
+    /*height:44px;*/
+    margin-left: 35px;
+    float: left;
+}
+.model_logoname{
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+/*试卷区域*/
+.model_papercon{
+    width:100%;
+    min-height:300px;
+}
+.model_paper_title{
+    width:100%;
+    height:110px;
+    /*background: #ccc;*/
+    text-align: center;
+    position: relative;
+}
+/*试卷题目*/
+.model_paper_titlecl{
+    display: inline-block;
+    margin-top: 30px!important;
+    color: #333;
+    font-size: 24px!important;
+}
+/*考试时间总分*/
+.model_socore{
+    font-size: 18px!important;
+    margin-top: 25px!important;
+}
+.model_testscore{
+    margin-left: 75px!important;
+}
+/*遮罩层*/
+.shark,.sharks,.correct_shark,.correct_sharks{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+.sendpaper{
+    position: relative;
+    width:690px;
+    height:350px;
+    background: url("../../image/modetest/sendpaper.png") no-repeat;
+    top:50%;
+    left:50%;
+    margin-left: -345px;
+    margin-top: -175px;
+}
+.model_paper_delete_correr,.model_paper_delete,.model_correct_delete,.model_correct_del{
+    display: inline-block;
+    width:35px;
+    height:35px;
+    position: absolute;
+    top:0;
+    right:40px;
+    cursor: pointer;
+}
+.model_paper_success_correr,.model_paper_success,.model_correct_success,.model_correct_suc{
+    display: inline-block;
+    width:192px;
+    height:45px;
+    position: absolute;
+    bottom:12px;
+    right:135px;
+    cursor: pointer;
+}
+.model_paper_false_correr,.model_paper_false,.model_correct_false,.model_correct_fal{
+    display: inline-block;
+    width:192px;
+    height:45px;
+    position: absolute;
+    bottom:12px;
+    left:140px;
+    cursor: pointer;
+}
+/*离开*/
+.send_paper{
+    position: relative;
+    width:690px;
+    height:350px;
+    background: url("../../image/modetest/send_paper.png") no-repeat;
+    top:50%;
+    left:50%;
+    margin-left: -345px;
+    margin-top: -175px;
+    /*display: none;*/
+}
+/*批改*/
+.sendcorrect{
+    position: relative;
+    width:690px;
+    height:350px;
+    background: url("../../image/modetest/correct_goon.png") no-repeat;
+    top:50%;
+    left:50%;
+    margin-left: -345px;
+    margin-top: -175px;
+    /*display: none;*/
+}
+.send_correct{
+    position: relative;
+    width:690px;
+    height:350px;
+    background: url("../../image/modetest/correct.png") no-repeat;
+    top:50%;
+    left:50%;
+    margin-left: -345px;
+    margin-top: -175px;
+    /*display: none;*/
+}
+/*提交*/
+.model_paperleave{
+    width:320px;
+    height:55px;
+    background: #49b9df;
+    color: #fff;
+    font-size: 18px!important;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+/*试卷存放处*/
+.model_paper_test_con{
+    width:96%;
+    margin: 45px auto;
+}
+.model_correct{
+    display: none;
+}
+.s_input{
+    display: block;
+    border:1px solid #ccc;
+    width: 96%;
+    min-height: 200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    outline: none;
+    text-indent: 10px;
+    margin-top: 32px!important;
+    margin-bottom: 32px!important;
+    font-size: 20px!important;
+    color: #666;
+}
+.s_xpoption {
+    margin-top: 20px;
+    padding: 0 10px 10px;
+}
+/*批改试题*/
+.s_xpquestionType{
+    position: relative;
+}
+.correct{
+    width:300px;
+    height:75px;
+    border:1px solid #ddd;
+    border-radius: 10px;
+    line-height: 75px;
+    text-align: center;
+    position: absolute;
+    right:0;
+    top:25px;
+    background: #fff;
+}
+/*改变分数*/
+.s_score{
+    width:230px;
+    height:60px;
+    box-sizing: border-box;
+    /*border:1px solid #ccc;*/
+    border-radius: 10px;
+    position: absolute;
+    right:0;
+    top:125px;
+    visibility: hidden;
+    /*visibility: visible;*/
+}
+.s_clickscorereduce,.s_clickstorgenum,.s_clickscoreplus{
+    display: block;
+    float: left;
+    width:50px;
+    height:100%;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 60px;
+    background: #fff;
+}
+.s_clickscorereduce,.s_clickscoreplus{
+    cursor: pointer;
+}
+.s_clickmust{
+    display: inline-block;
+    width:60px;
+    height:100%;
+    text-align: center;
+    line-height: 60px;
+    background: #65b113;
+    color: #fff;
+    /*border-radius: 10px;*/
+    cursor: pointer;
+    font-size: 18px!important;
+}
+.s_corimg{
+    display: inline-block;
+    margin-top: 15px;
+    cursor:pointer;
+}
+/*.add{*/
+/*background: #ccc;*/
+/*color:#fff;*/
+/*}*/
+/*分数*/
+
+.wr_imge{
+    position: absolute;
+    right:350px;
+    top:30px;
+}
+.wr{
+    display: none;
+}
+p{
+    margin-top: 5px;
+}
+.s_xpoption {border: 1px solid white;font-size: 14px;color: #333;line-height: 30px;cursor: pointer;}
+.p1{font-size: 16px!important;line-height: 30px!important;color: #333;}
+.s_xpoption img{max-width: 100%;}
+.s_xptopic{
+    margin-top: 25px!important;
+}
+.answer {
+    color: #fff;
+}
+/*返回顶层*/
+.back_top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+/*空白页*/
+.nothing{
+    width:100%;
+    height:550px;
+    background: #fff;
+    border-radius: 10px;
+    margin:0 auto;
+    margin-top: 40px!important;
+    position: relative;
+    display: none;
+}
+.kolano{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -175px;
+    margin-top: -200px;
+}
+.optionchoose:hover{
+    color: #0fa7db;
+}
+.model_paperleave:hover{
+    background: #0fa7db;
+}
+/*字体*/
+.s_xpquestionType ,.s_xpquestionType p,.s_xpquestionType span{
+    font-family: "Times New Roman", "宋体";
+}
+.optionchoose  ,.optionchoose  p,.optionchoose  span{
+    font-family: "Times New Roman", "宋体";
+}
+.s_xpslove  p,.s_xpslove span ,.s_xpslove{
+    font-family: "Times New Roman", "楷体";
+}
+/*字体样式调整*/
+label{
+    position: absolute;
+    left:0;
+}
+.s_xpquestionType p:nth-of-type(1){
+    display: inline;
+}
+.contentlabel,.optionchoose,.s_xpslove{
+    margin-left: 25px;
+}
+.tipic{
+    margin-left: 13px;
+}

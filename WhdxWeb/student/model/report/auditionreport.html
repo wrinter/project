@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试报告</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/iconfont.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../static/style/report/auditionreport.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/style/report/testreport.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/style/report/reportCommon.css" />
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a href="../../../student/model/report/reportlist.html">看报告</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="fl "></span>
+    </div>
+</div>
+<!--内容区-->
+<div class="Com_Main">
+    <div class="r_main">
+        <div class="r_title">
+            <span class="r_tName"></span>
+            <span class="r_tScore"></span>
+            <span class="r_tTime"></span>
+        </div>
+        <div class="r_analyze">
+            <span>数据分析</span>
+            <div class="r_classtarget">班级目标</div>
+        </div>
+        <div class="r_analyzeData clearfix">
+            <div class="r_personal clearfix">
+                <div class="r_pcircle">
+                    <div class="pie_left"><div class="left"></div></div>
+                    <div class="pie_right"><div class="right"></div></div>
+                    <div class="r_mask">
+                        <span class="r_score"></span><span class="r_fen">分</span>
+                        <span class="r_fullscore"></span>
+                    </div>
+                </div>
+                <div class="r_cue">老师批改后数据会发生变化</div>
+                <div class='clearfix r_pInfo'>
+                    <div class="r_subjectInfo r_ob">
+                        <span>客观题正确数</span>
+                        <span id="r_obNum"></span>
+                    </div>
+                    <div class="r_subjectInfo r_sub">
+                        <span>主观题正确数</span>
+                        <span id="r_subNum"></span>
+                    </div>
+                    <div class="r_subjectInfo">
+                        <span>用时</span>
+                        <span id="r_hour"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="r_danalyze">测试详情</div>
+        <div class="r_detail"></div>
+    </div>
+    <!--班級目標-->
+    <div class="shark">
+        <div class="classTarget">
+            <i class="iconfont classDelete" >&#xe69a;</i>
+            <div class="classTitle">班级目标</div>
+            <!--頭像-->
+            <div class="classHead">
+                <dl class="class_me">
+                    <dt class="class_meHead">
+                        <img class="nodo" src="../../static/image/report/nodo.png" />
+                        <img class="nocorrect"  src="../../static/image/report/nocorrect.png"/>
+                        <img class="blance"  src="../../static/image/report/blance.png"/>
+                        <img class="win"  src="../../static/image/report/win.png"/>
+                    </dt>
+                    <dd class="class_meName">我</dd>
+                </dl>
+                <span class="PK"></span>
+                <dl class="class_u">
+                    <dt class="class_uHead">
+                        <img class="nodo" src="../../static/image/report/nodo.png" />
+                        <img class="nocorrect"  src="../../static/image/report/nocorrect.png"/>
+                        <img class="blance"  src="../../static/image/report/blance.png"/>
+                        <img class="win"  src="../../static/image/report/win.png"/>
+                    </dt>
+                    <dd class="class_uName">你</dd>
+                </dl>
+            </div>
+            <!--正确率-->
+            <div class="classRight">
+                <span class="classPrecentMe">--</span>
+                <span class="classWord">正确率</span>
+                <span class="classPrecentU">--</span>
+            </div>
+            <!--用時-->
+            <div class="classTime">
+                <span class="classTimetMe">--</span>
+                <span class="className">用时</span>
+                <span class="classTimeU">--</span>
+            </div>
+        </div>
+    </div>
+    <div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+</div>
+<!--音頻-->
+<div class="lession" id="lession">
+    <audio preload="auto" id="audio" src="../../static/plugin/song/bed.mp3" controls>很抱歉，您的浏览器版本太低不支持该音频，请升级浏览器:(</audio>
+</div>
+</body>
+<script src="../../static/javascript/Newaudio/English_Audioplayer.js"></script>
+<link rel="stylesheet" href="../../static/javascript/Newaudio/newaudio.css">
+<script src="../../static/javascript/report/auditionreport.js"></script>
+<script src="../../static/javascript/report/reportCommon.js"></script>
+
+</html>

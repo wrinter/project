@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>备课中心</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/prepare1.2/Eng.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/plugin/swiper/swiper.min.js"></script>
+    <script src="../../static/javascript/prepare1.2/ComPlayer.js"></script>
+    <link rel="stylesheet" href="../../static/plugin/swiper/swiper.min.css">
+    <style>
+    </style>
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div id="Header"></div>
+        <!--面包屑导航-->
+        <div class="c_Crumbs">
+            <div class="c_Crumbs_in">
+                <!--面包屑导航图标-->
+                <i class="spriteImg c_mico fl mt15"></i>
+                <!--面包屑导航-->
+                <ul class="c_Crum fl" id="c_Crum">
+                    <!--有链接-->
+                    <li><a href="../../model/index/indexX.html" class="fl fc65">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li>音频</li>
+                </ul>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="p_Main" >
+            <div class="p_Header">
+                <!--章节知识点-->
+                <div class="c_Kownledge" id="c_Kownledge"></div>
+                <!--栏目-->
+                <div class="c_Category" id="c_Category"></div>
+            </div>
+            <div id="Content">
+                <!--单词-->
+                <div class="WordMain dino" id="WordMain">
+                    <div class="WordBox" id="WordBox"></div>
+                    <div id="MediaPlayer" class="MediaPlayer">
+                        <audio src="../../static/plugin/song/slice.mp3" id="MediaAudio"></audio>
+                        <div class="MediaModel" id="MediaModel">
+                            <p class="MediaModelBox"><span id="MediaName" data-model="one" class="MediaName">单读模式</span><img src="../../static/image/prepare1.2/mico1.png" alt="" id="MediaMico"></p>
+                            <div class="MediaOption" id="MediaOption">
+                                <p class="MediaOptionBox" id="Model0"><img src="../../static/image/prepare1.2/ms1.png" alt="" id="Modelico0"><span>单读模式</span></p>
+                                <p class="MediaOptionBox MediaBob0" id="Model1"><img src="../../static/image/prepare1.2/ms0.png" alt="" id="Modelico1"><span>连读模式</span></p>
+                                <img src="../../static/image/prepare1.2/dico.png" alt="" class="MediaDownImg">
+                            </div>
+                        </div>
+                        <div class="MediaPlayBox">
+                            <img src="../../static/image/prepare1.2/btn0n.png" title="上一个" alt="" class="MediaBtn0" id="MediaBtn0">
+                            <img src="../../static/image/prepare1.2/new_play0.png" alt="" class="MediaPlayBtn" id="MediaPlayBtn">
+                            <img src="../../static/image/prepare1.2/btn1.png" title="下一个"  alt="" class="MediaBtn1" id="MediaBtn1">
+                        </div>
+                    </div>
+                </div>
+                <!--听力&&课文-->
+                <div class="WordMain" id="NotWord">
+                    <!--听力-->
+                    <div id="ListenMain" class="dino">
+                        <!--<div class="NoListen">-->
+                            <!--<img src="../../static/image/kola/no.png" class="NoDataImg" alt="">-->
+                        <!--</div>-->
+                    </div>
+                    <!--课文-->
+                    <div id="BookMain" class="dino">
+                        <!--<div class="NoListen">-->
+                        <!--<img src="../../static/image/kola/no.png" class="NoDataImg" alt="">-->
+                        <!--</div>-->
+                        <div class="BookMain" id="BookBox">
+                            <div class="BookContent" id="BookContent">
+
+                            </div>
+                        </div>
+                    </div>
+                    <audio preload="auto" class="dino" id="ComPlayerAudio" src="../../static/plugin/song/slice.mp3" controls>很抱歉，您的浏览器版本太低不支持该音频，请升级浏览器:(</audio>
+                </div>
+            </div>
+            <div class="NoData dino" id="NoData"><img src="../../static/image/kola/no.png" class="NoDataImg" alt=""></div>
+        </div>
+    </div>
+</article>
+<script src="../../static/javascript/prepare1.2/Eng.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>作业报告</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/workpaper/workpaper.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+</head>
+<body>
+<article >
+    <div class="minw ffyh ">
+        <div id="Header"></div>
+        <!--面包屑导航-->
+        <div class="c_Crumbs">
+            <div class="c_Crumbs_in">
+                <!--面包屑导航图标-->
+                <i class="spriteImg c_mico fl mt15"></i>
+                <!--面包屑导航-->
+                <ul class="c_Crum fl" id="c_Crum">
+                    <!--有链接-->
+                    <li><a href="../../model/index/indexX.html" class="fl fc65">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+
+                    <li><a href="workpaper_index.html?pno=1" class="fl fc65">作业报告</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li>查看</li>
+                </ul>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="c_Main">
+            <div class="w_Main">
+                <h1 class="w_OtherTitle" id="w_OtherTitle"></h1>
+                <h1 class="w_OtherDataTitle" id="w_OtherDataTitle">w_OtherDataTitle</h1>
+                <a href="" class="w_PrintBtn dino" id="w_PrintBtn0" target="_blank">打印</a>
+                <div class=" "  id="DownloadBtn">
+                    <!--下载 <div id="PostBox" ></div>-->
+                </div>
+                <ul class="w_OtherTab">
+                   <li class="w_Tabbg0">学生详情</li>
+                   <li class="w_Tabbg1">题目详情</li>
+                   <li class="w_Tabbg1">综合分析</li>
+                </ul>
+                <!--学生详情-->
+                <div class="w_TabMain ">
+                    <div class="w_TabMainBox">
+                        <ul class="w_OtherListTitle">
+                            <li>姓名</li>
+                            <li>错题比例（错题个数/总个数）</li>
+                            <li>用时（分钟）</li>
+                            <li>作业详情</li>
+                        </ul>
+                        <!--学生详情列表-->
+                        <ul class="w_OtherStudent" id="w_OtherStudent">Loading...</ul>
+                    </div>
+                </div>
+                <!--题目详情-->
+                <div class="w_TabMain dino">
+                    <div class="w_TabMainBox">
+                        <ul class="w_HomeWorkTitle">
+                            <li>题号 <img src="../../static/image/workpaper/w_sort.png" alt="" class="cup" id="Num_Sort"></li>
+                            <li>错误率 <img src="../../static/image/workpaper/w_sort.png" alt="" class="cup" id="Error_Rate"></li>
+                            <li>操作</li>
+                        </ul>
+                        <ul class="w_HomeWorkTop" id="w_HomeWorkRate">Loading...</ul>
+                    </div>
+                    <div class="w_TabMainBox p40">
+                        <ul class="w_Subject" id="Subject">Loading...</ul>
+                    </div>
+                </div>
+                <!--综合分析-->
+                <div class="w_TabMain dino">
+                    <!--数据图-->
+                    <ul class="w_Meta" id="w_Meta"></ul>
+                    <ul class="w_MetaX">
+                        <li>
+                            <p>0%</p>
+                            <p class="fs12">正确率</p>
+                        </li>
+                        <li>25%</li>
+                        <li>50%</li>
+                        <li>75%</li>
+                        <li>100%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <i class="spriteImg backtopico backtop"></i>
+</article>
+<script src="../../static/javascript/workpaper/OtherReport.js"></script>
+</body>
+</html>

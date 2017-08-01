@@ -1,0 +1,778 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+.m_mian{
+    width: 100%;
+    height:100%;
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+/*媒体查询*/
+@media screen and (max-width: 1366px){
+    .m_lottery{
+        width:960px;
+        min-height: 400px;
+        margin:0 auto;
+    }
+    /*显示区域*/
+    .m_priseshow{
+        width:960px;
+        height: 300px;
+        margin:0 auto;
+        margin-top: 40px!important;
+    }
+    /*中奖规则*/
+    .m_priserule{
+        width: 440px;
+        height: 240px;
+        background: #fdf7dd;
+        border-radius: 10px;
+        margin-left: 30px;
+        float: left;
+        overflow: hidden;
+    }
+    .m_prulecon{
+        display: block;
+        width: 100%;
+        min-height: 100px;
+        margin-top: 66px!important;
+    }
+    /*转盘*/
+    /*抽奖转盘*/
+    .m_back{
+        width:814px;
+        height:616px;
+        background: url("../../image/me/m_prisebackground.png") no-repeat;
+        background-size: 814px 616px!important;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 125px!important;
+    }
+    .m_backlist{
+        display: block;
+        min-width:742px;
+        min-height: 522px;
+        margin: 0 auto;
+        position: absolute;
+        top: 33px;
+        left:40px;
+    }
+    .m_blist{
+        display: block;
+        width:243px;
+        height:180px;
+        border-radius: 10px;
+        background: #fff4be;
+        float: left;
+    }
+    .m_listnum1{
+        display: block;
+        width:243px;
+        height:180px;
+        border-radius: 10px;
+        background: #fff4be;
+        float: left;
+        margin-right: 5px!important;
+    }
+    .m_listnum2{
+        margin-top: 5px!important;
+    }
+    .m_listnum5{
+        background: rgba(0,0,0,0);
+    }
+    /*第一个list*/
+    .m_listnum1word{
+        display: block;
+        margin-top: 20px!important;
+        margin-left: 20px!important;
+        color: #343233;
+    }
+    .m_listcmeon{
+        margin-top: 14px!important;
+        margin-left: 65px!important;
+    }
+
+    /*商城*/
+    .m_listgift{
+        display: block;
+        margin-top: 55px!important;
+        margin-left: 30px!important;
+        color: #cc7849;
+        float: left;
+    }
+    .m_listgiftt{
+        float: left;
+        margin-top: 30px!important;
+        margin-left: 25px!important;
+    }
+    /*经验*/
+    .m_listwork{
+        display: block;
+        margin-top: 20px!important;
+        margin-left: 35px!important;
+        color: #cc7849;
+    }
+    .m_listworkt{
+        margin-top: 10px!important;
+        margin-left: 60px!important;
+    }
+    /*课件*/
+    .m_listppt{
+        display: block;
+        margin-top: 30px!important;
+        margin-left: 46px!important;
+        color: #cc7849;
+    }
+    .m_listpptt{
+        margin-top: 20px!important;
+        margin-left: 25px!important;
+    }
+    /*神秘大奖*/
+    .m_listsicrt{
+        display: block;
+        margin-top: 30px!important;
+        margin-left: 80px!important;
+        color: #cc7849;
+    }
+    .m_listsicrtt{
+        margin-top: 20px!important;
+        margin-left: 115px!important;
+    }
+    /*教材解读图书一套*/
+    .m_listbook{
+        display: block;
+        margin-top: 30px!important;
+        margin-left: 60px!important;
+        color: #cc7849;
+    }
+    .m_listbookt{
+        margin-top: 20px!important;
+        margin-left: 100px!important;
+    }
+    /*金币*/
+    .m_listmoney{
+        display: block;
+        float: left;
+        margin-top: 110px!important;
+        margin-left: 20px!important;
+        color: #cc7849;
+    }
+    .m_listmoneyt{
+        float: left;
+        margin-top: 80px!important;
+        margin-left: 5px!important;
+    }
+    /*经验5*/
+    .m_listjob{
+        display: block;
+        float: left;
+        margin-top: 30px!important;
+        margin-left: 60px!important;
+        color: #cc7849;
+    }
+    .m_listjobt{
+        float: left;
+        margin-top: 60px!important;
+        margin-left: 17px!important;
+    }
+    /*旋转*/
+    .m_listnum5{
+        position: relative;
+    }
+    .m_rotexuan{
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin-top: -153px;
+        margin-left: -174px;
+        z-index: 0;
+        display: block;
+        width: 360px;
+        height: 337.5px;
+        background: url("../../image/me/m_roateshow_03.png") no-repeat;
+        background-size: 90%;
+        text-align: center;
+        color: #fff;
+        line-height: 375px;
+        font-size: 60px!important;
+    }
+    .m_rote2{
+        position: absolute;
+        display: block;
+        left: 100px;
+        top:90px;
+    }
+    .m_rote1{
+        position: absolute;
+        top: -62px;
+        left: -51px;
+        z-index: 0;
+        display: block;
+        width: 320px;
+        height: 300px;
+        display: none;
+    }
+    /*弹出框*/
+    .m_diogle{
+        display: block;
+        width: 552px;
+        height:280px;
+        position: absolute;
+        left:50%!important;
+        top:50%!important;
+        margin-left: -276px;
+        margin-top: -140px;
+        z-index: 101;
+        position: relative;
+    }
+    .m_pwint{
+        display: block;
+        width: 90%;
+        height:90%;
+    }
+    /*遮罩层文字高度*/
+    .m_geim{
+        display: block;
+        width: 200px;
+        line-height: 26px;
+        position: absolute;
+        top:95px;
+        right:95px;
+    }
+    /*删除遮罩层*/
+    .m_pdele{
+        display: block;
+        width:35px;
+        height: 25px;
+        /*background: #fff;*/
+        position: absolute;
+        top:0;
+        right:80px;
+    }
+}
+@media screen and (min-width: 1366px){
+    .m_lottery{
+        width:1080px;
+        min-height: 540px;
+        margin:0 auto;
+    }
+    /*显示区域*/
+    .m_priseshow{
+        width:1080px;
+        height: 300px;
+        margin:0 auto;
+        margin-top: 40px!important;
+    }
+    /*中奖规则*/
+    .m_priserule{
+        width: 495px;
+        height: 240px;
+        background: #fdf7dd;
+        border-radius: 10px;
+        margin-left: 108px;
+        float: left;
+        overflow: hidden;
+    }
+    .m_prulecon{
+        display: block;
+        width: 100%;
+        min-height: 100px;
+        margin-top: 66px!important;
+    }
+    /*抽奖转盘*/
+    .m_back{
+        width:905px;
+        height:685px;
+        background: url("../../image/me/m_prisebackground.png") no-repeat;
+        background-size: 905px 685px!important;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 125px!important;
+    }
+    .m_backlist{
+        display: block;
+        width:825px;
+        min-height: 580px;
+        margin: 0 auto;
+        position: absolute;
+        top: 40px;
+        left:40px;
+    }
+    .m_blist{
+        display: block;
+        width:270px;
+        height:200px;
+        border-radius: 10px;
+        background: #fff4be;
+        float: left;
+    }
+    .m_listnum1{
+        display: block;
+        width:270px;
+        height:200px;
+        border-radius: 10px;
+        background: #fff4be;
+        float: left;
+        margin-right: 5px!important;
+    }
+    .m_listnum2{
+        margin-top: 5px!important;
+    }
+    .m_listnum5{
+        background: rgba(0,0,0,0);
+    }
+    /*第一个list*/
+    .m_listnum1word{
+        display: block;
+        margin-top: 20px!important;
+        margin-left: 20px!important;
+        color: #343233;
+    }
+    .m_listcmeon{
+        margin-top: 30px!important;
+        margin-left: 65px!important;
+    }
+
+    /*商城*/
+    .m_listgift{
+        display: block;
+        margin-top: 55px!important;
+        margin-left: 30px!important;
+        color: #cc7849;
+        float: left;
+    }
+    .m_listgiftt{
+        float: left;
+        margin-top: 30px!important;
+        margin-left: 25px!important;
+    }
+    /*经验*/
+    .m_listwork{
+        display: block;
+        margin-top: 20px!important;
+        margin-left: 35px!important;
+        color: #cc7849;
+    }
+    .m_listworkt{
+        margin-top: 10px!important;
+        margin-left: 60px!important;
+    }
+    /*课件*/
+    .m_listppt{
+        display: block;
+        margin-top: 30px!important;
+        margin-left: 60px!important;
+        color: #cc7849;
+    }
+    .m_listpptt{
+        margin-top: 20px!important;
+        margin-left: 60px!important;
+    }
+    /*神秘大奖*/
+    .m_listsicrt{
+        display: block;
+        margin-top: 30px!important;
+        margin-left: 60px!important;
+        color: #cc7849;
+    }
+    .m_listsicrtt{
+        margin-top: 20px!important;
+        margin-left: 115px!important;
+    }
+    /*教材解读图书一套*/
+    .m_listbook{
+        display: block;
+        margin-top: 30px!important;
+        margin-left: 60px!important;
+        color: #cc7849;
+    }
+    .m_listbookt{
+        margin-top: 20px!important;
+        margin-left: 100px!important;
+    }
+    /*金币*/
+    .m_listmoney{
+        display: block;
+        float: left;
+        margin-top: 110px!important;
+        margin-left: 20px!important;
+        color: #cc7849;
+    }
+    .m_listmoneyt{
+        float: left;
+        margin-top: 80px!important;
+        margin-left: 5px!important;
+    }
+    /*经验5*/
+    .m_listjob{
+        display: block;
+        float: left;
+        margin-top: 30px!important;
+        margin-left: 30px!important;
+        color: #cc7849;
+    }
+    .m_listjobt{
+        float: left;
+        margin-top: 70px!important;
+        margin-left: 50px!important;
+    }
+    /*旋转*/
+    .m_listnum5{
+        position: relative;
+    }
+    .m_rotexuan{
+        position: absolute;
+        top: -82px;
+        left: -76px;
+        z-index: 0;
+        display: block;
+        width: 400px;
+        height: 375px;
+        background: url("../../image/me/m_roateshow_03.png") no-repeat;
+        text-align: center;
+        color: #fff;
+        line-height: 375px;
+        font-size: 60px!important;
+    }
+    .m_rote2{
+        position: absolute;
+        left: 140px;
+        top:120px;
+    }
+    .m_rote1{
+        position: absolute;
+        top: -90px;
+        left: -90px;
+        z-index: 0;
+        display: block;
+        width: 400px;
+        height: 375px;
+        display: none;
+    }
+    /*弹出框*/
+    .m_diogle{
+        display: block;
+        width: 690px;
+        height:350px;
+        position: absolute;
+        left:50%!important;
+        top:50%!important;
+        margin-left: -345px;
+        margin-top: -175px;
+        z-index: 101;
+        position: relative;
+    }
+    .m_geim{
+        display: block;
+        width: 200px;
+        line-height: 26px;
+        position: absolute;
+        top:145px;
+        right:95px;
+    }
+    /*删除遮罩层*/
+    .m_pdele{
+        display: block;
+        width:35px;
+        height: 25px;
+        /*background: #fff;*/
+        position: absolute;
+        top:0;
+        right:40px;
+    }
+}
+@media screen and (min-width: 1600px){
+    .m_lottery{
+        width:1200px;
+        min-height: 500px;
+        margin:0 auto;
+    }
+    /*显示区域*/
+    .m_priseshow{
+        width:1200px;
+        height: 300px;
+        margin:0 auto;
+        margin-top: 40px!important;
+    }
+    /*中奖规则*/
+    .m_priserule{
+        width: 550px;
+        height: 240px;
+        background: #fdf7dd;
+        border-radius: 10px;
+        margin-left: 120px;
+        float: left;
+        overflow: hidden;
+    }
+    .m_prulecon{
+        display: block;
+        width: 550px;
+        min-height: 100px;
+        margin-top: 66px!important;
+    }
+    /*抽奖转盘*/
+    .m_back{
+        width:905px;
+        height:685px;
+        background: url("../../image/me/m_prisebackground.png") no-repeat;
+        background-size: 905px 685px!important;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 125px!important;
+    }
+    .m_backlist{
+        display: block;
+        width:825px;
+        min-height: 580px;
+        margin: 0 auto;
+        position: absolute;
+        top: 40px;
+        left:40px;
+    }
+    .m_blist{
+        display: block;
+        width:270px;
+        height:200px;
+        border-radius: 10px;
+        background: #fff4be;
+        float: left;
+    }
+    .m_listnum1{
+        display: block;
+        width:270px;
+        height:200px;
+        border-radius: 10px;
+        background: #fff4be;
+        float: left;
+        margin-right: 5px!important;
+    }
+    .m_listnum2{
+        margin-top: 5px!important;
+    }
+    .m_listnum5{
+        background: rgba(0,0,0,0);
+    }
+    /*第一个list*/
+    .m_listnum1word{
+        display: block;
+        margin-top: 20px!important;
+        margin-left: 20px!important;
+        color: #343233;
+    }
+    .m_listcmeon{
+        margin-top: 30px!important;
+        margin-left: 65px!important;
+    }
+
+    /*商城*/
+    .m_listgift{
+        display: block;
+        margin-top: 55px!important;
+        margin-left: 30px!important;
+        color: #cc7849;
+        float: left;
+    }
+    .m_listgiftt{
+        float: left;
+        margin-top: 30px!important;
+        margin-left: 25px!important;
+    }
+    /*经验*/
+    .m_listwork{
+        display: block;
+        margin-top: 20px!important;
+        margin-left: 35px!important;
+        color: #cc7849;
+    }
+    .m_listworkt{
+        margin-top: 10px!important;
+        margin-left: 60px!important;
+    }
+    /*课件*/
+    .m_listppt{
+        display: block;
+        margin-top: 30px!important;
+        margin-left: 60px!important;
+        color: #cc7849;
+    }
+    .m_listpptt{
+        margin-top: 20px!important;
+        margin-left: 60px!important;
+    }
+    /*神秘大奖*/
+    .m_listsicrt{
+        display: block;
+        margin-top: 30px!important;
+        margin-left: 60px!important;
+        color: #cc7849;
+    }
+    .m_listsicrtt{
+        margin-top: 20px!important;
+        margin-left: 115px!important;
+    }
+    /*教材解读图书一套*/
+    .m_listbook{
+        display: block;
+        margin-top: 30px!important;
+        margin-left: 60px!important;
+        color: #cc7849;
+    }
+    .m_listbookt{
+        margin-top: 20px!important;
+        margin-left: 100px!important;
+    }
+    /*金币*/
+    .m_listmoney{
+        display: block;
+        float: left;
+        margin-top: 110px!important;
+        margin-left: 20px!important;
+        color: #cc7849;
+    }
+    .m_listmoneyt{
+        float: left;
+        margin-top: 80px!important;
+        margin-left: 5px!important;
+    }
+    /*经验5*/
+    .m_listjob{
+        display: block;
+        float: left;
+        margin-top: 30px!important;
+        margin-left: 30px!important;
+        color: #cc7849;
+    }
+    .m_listjobt{
+        float: left;
+        margin-top: 70px!important;
+        margin-left: 50px!important;
+    }
+    /*旋转*/
+    .m_listnum5{
+        position: relative;
+    }
+    .m_rotexuan{
+        position: absolute;
+        top: -82px;
+        left: -76px;
+        z-index: 0;
+        display: block;
+        width: 400px;
+        height: 375px;
+        background: url("../../image/me/m_roateshow_03.png") no-repeat;
+        text-align: center;
+        color: #fff;
+        line-height: 375px;
+        font-size: 60px!important;
+    }
+    .m_rote2{
+        position: absolute;
+        left: 140px;
+        top:120px;
+    }
+    .m_rote1{
+        position: absolute;
+        top: -90px;
+        left: -90px;
+        z-index: 0;
+        display: block;
+        width: 400px;
+        height: 375px;
+        display: none;
+    }
+    /*弹出框*/
+    .m_diogle{
+        display: block;
+        width: 690px;
+        height:350px;
+        position: absolute;
+        left:50%!important;
+        top:50%!important;
+        margin-left: -345px;
+        margin-top: -175px;
+        z-index: 101;
+        position: relative;
+    }
+
+    .m_geim{
+        display: block;
+        width: 200px;
+        line-height: 26px;
+        position: absolute;
+        top:145px;
+        right:95px;
+    }
+    /*删除遮罩层*/
+    .m_pdele{
+        display: block;
+        width:35px;
+        height: 25px;
+        /*background: #fff;*/
+        position: absolute;
+        top:0;
+        right:40px;
+    }
+}
+
+
+
+/*中奖字体*/
+.m_pshoword,.m_pruleword{
+    line-height: 46px;
+    color: #fff;
+    margin-left: 10px!important;
+}
+.m_prule{
+    line-height: 30px;
+    text-indent: 55px;
+    color: #807f7a;
+}
+/*中奖状态*/
+.m_priseshowcl{
+    width: 390px;
+    height: 240px;
+    background: #fdf7dd;
+    border-radius: 10px;
+    float: left;
+    margin-left: 70px!important;
+    overflow: hidden;
+}
+.m_showarea{
+    display: block;
+    width:390px;
+    height:180px;
+    overflow: hidden;
+}
+.m_pstats{
+    line-height: 36px;
+    color: #ca0d0d;
+}
+.m_stastname{
+    margin-left: 55px!important;
+}
+.m_winp{
+    margin-left: 70px!important;
+}
+/*遮罩层*/
+.m_pshark{
+    display: block;
+    position:fixed ;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+
+.m_congraltionw{
+    display: block;
+    width: 200px;
+    line-height: 26px;
+    position: absolute;
+    top:175px;
+    right:95px;
+}
+
+/*旋转*/

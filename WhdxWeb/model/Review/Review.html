@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <title>Title</title>
+    <style>
+        body{
+            right:-1130px;
+        }
+        /*空白照片*/
+        .review_img{
+            display: block;
+            margin:200px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="r"><img class='review_img' src='../../static/image/Review/review.png' /></div>
+<a class="a" href=""></a>
+</body>
+<script>
+  var r = document.getElementsByClassName("r")[0];
+  var a = document.getElementsByTagName("a")[0];
+  Review ();
+  function Review () {
+      var parmas = {};
+      parmas.resourseId = window.parent.pptid
+      console.log(parmas.resourseId)
+      $.ajax({
+          type : 'post',
+          url : '/web/common/office/onlineViewRes',
+          data : parmas,
+          dataType : 'json',
+          success : function(data){
+              console.log(data)
+              if(data.retCode == "0000"){
+                  var officeWebId = data.retData.officeWebId;
+                  var url = data.retData.url;
+                  $("a").attr("href","http://ow365.cn/?i="+officeWebId+"&furl="+url+"");
+                  a = "http://ow365.cn/?i="+officeWebId+"&furl="+url+""
+                  console.log(a)
+                  click(a)
+              }
+          },
+          error : function(e){
+              console.log(e)
+          }
+      })
+  }
+    function click(a){
+        window.location.href = a
+        $(".r").click();
+    }
+
+</script>
+</html>

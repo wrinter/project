@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>消息</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/message/message.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/javascript/message/kkpager.js"></script>
+    <link rel="stylesheet" href="../../static/style/message/kkpager_orange.css">
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div id="Header"></div>
+        <!--面包屑导航-->
+        <div class="c_Crumbs">
+            <div class="c_Crumbs_in">
+                <!--面包屑导航图标-->
+                <i class="spriteImg c_mico fl mt15"></i>
+                <!--面包屑导航-->
+                <ul class="c_Crum fl" id="c_Crum">
+                    <li><a href="../../model/index/indexX.html" class="fl fc65">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li>消息</li>
+                </ul>
+            </div>
+        </div>
+        <div class="m_Content">
+            <div class="m_BtnBox">
+                <p class="m_MsgBtn m_Btnbg1" id="m_Btnbg1">系统消息</p>
+                <p class="m_MsgBtn m_Btnbg0" id="m_Btnbg2">申请列表</p>
+            </div>
+            <!--系统列表-->
+            <ul class="m_MsgList " id="SystemList"></ul>
+            <!--申请列表-->
+            <ul class="m_MsgList dino" id="EntryLIst"></ul>
+        </div>
+    </div>
+    <!--分页-->
+    <div class="Paging">
+        <div id="kkpager">Loading...</div>
+    </div>
+    <i class="spriteImg backtopico backtop"></i>
+</article>
+<script src="../../static/javascript/message/message.js"></script>
+</body>
+</html>

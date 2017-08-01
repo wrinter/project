@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>个人资料</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/me/me.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/plugin/md5/md5.js"></script>
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div id="Header"></div>
+        <!--面包屑导航-->
+        <div class="c_Crumbs">
+            <div class="c_Crumbs_in">
+                <!--面包屑导航图标-->
+                <i class="spriteImg c_mico fl mt15"></i>
+                <!--面包屑导航-->
+                <ul class="c_Crum fl" id="c_Crum">
+                    <li><a href="../../model/index/indexX.html" class="fl ">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li><a href="me_index.html" class="fl ">个人中心</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li class="fc65">个人资料</li>
+                </ul>
+            </div>
+        </div>
+        <!--认证内容区-->
+        <div class="c_Main">
+            <!--基本资料-->
+            <div class="m_Edit">
+                <div class="m_IsEdit" id="Base"></div>
+                <!--头部-->
+                <h2 class="m_MyGifttit "><span class="fl fs24 fc33">基本资料</span>
+                    <p class="m_Editit" id="m_Editit">
+                        <i class="spriteImg  p_editico1 fl m2010"></i>
+                        <span class="fs18">编辑</span>
+                    </p>
+                </h2>
+                <!--个人资料呈现-->
+                <ul class="m_About " id="InfoShow">
+                    <li class="w100">
+                        <span class="fc66">姓名：</span>
+                        <!--姓名-->
+                        <span class="fc33" id="m_userName0"></span>
+                    </li>
+                    <li class="w100">
+                        <span class="fc66">学校：</span>
+                        <!--省份-->
+                        <span class="fc33" id="m_provice0"></span>
+                        <!--城市-->
+                        <span class="fc33" id="m_city0"></span>
+                        <!--区县-->
+                        <span class="fc33" id="m_aera0"></span>
+                        <!--学校-->
+                        <span class="fc33" id="m_school0"></span>
+                    </li>
+                    <li class="w100">
+                        <span class="fc66">学科：</span>
+                        <span class="fc33" id="m_subject0"></span>
+                    </li>
+                    <li class="w100">
+                        <span class="fc66">教材：</span>
+                        <!--教材名称-->
+                        <span class="fc33" id="m_material0"></span>
+                    </li>
+                </ul>
+                <!--编辑学校-->
+                <div class="m_About dino" id="InfoEdit">
+                    <!--姓名-->
+                    <div class="m_AboutEdit">
+                        <span class="m_AboutSide ">姓名：</span>
+                        <input type="text" class="m_UserName" id="m_UserName" value="" maxlength="10">
+                        <span class="fl fs14 ml20 fcCA dino" id="NameError">姓名不能为空</span>
+                    </div>
+                    <!--编辑资料-->
+                    <div  class="m_AboutEdit h220">
+                        <span class="m_AboutSide">学校：</span>
+                        <!--省-->
+                        <div class="m_AreaSelect">
+                            <p class="fl fs14 lh40" id="c_ProvinceCon">选择省</p>
+                            <i class="spriteImg i_downico fr c_areaimg"></i>
+                            <!--省份-->
+                            <ul class="c_ProvinceList arealist w545" id="c_ProvinceList"></ul>
+                        </div>
+                        <!--市-->
+                        <div class="m_AreaSelect">
+                            <p class="fl fs14 lh40" id="c_CityCon">选择市</p>
+                            <i class="spriteImg i_downico fr c_areaimg"></i>
+                            <!--城市-->
+                            <ul class="c_ProvinceList arealist w280" id="c_CityList">
+                                <li>请先选择省</li>
+                            </ul>
+                        </div>
+                        <!--区/县-->
+                        <div class="m_AreaSelect" id="CountyCon">
+                            <p class="fl fs14 lh40" id="c_CountyCon">选择区/县</p>
+                            <i class="spriteImg i_downico fr c_areaimg"></i>
+                            <!--县区-->
+                            <ul class="c_ProvinceList arealist w280" id="c_CountyList">
+                                <li>请先选择城市</li>
+                            </ul>
+                        </div>
+                        <!--学校-->
+                        <div class="m_AreaSelect c_SchoolSelect" id="c_SchoolSelect">
+                            <p class="fs14 lh40 fl" id="c_SchoolCon">选择学校</p>
+                            <ul class="c_SchoolList arealist" id="c_SchoolList">
+                                <li>请先选择地区</li>
+                            </ul>
+                        </div><span class="fl fs14 ml20 fcCA dino" id="SchoolError">学校不能为空</span><br>
+                        <!--学科不可修改-->
+                        <div class="w100 fl  ">
+                            <span class="m_AboutSide">学科：</span>
+                            <span class="fc33" id="m_Sub"></span>
+                        </div>
+                        <!--编辑教材-->
+                        <span class="m_AboutSide">教材：</span>
+                        <!--学科-->
+                        <div class="m_AreaSelect w195">
+                            <p class="fl fs14 lh40" id="m_Material">subjectName</p>
+                            <i class="spriteImg i_downico fr c_areaimg"></i>
+                            <!--教材-->
+                            <ul class="c_ProvinceList arealist w195" id="m_MaterialList"></ul>
+                        </div>
+                    </div>
+                    <!--是否确定-->
+                    <input type="button" class="m_EditBtn ml355 bac65" value="确定" id="EditEnsure">
+                    <input type="button" class="m_EditBtn ml30 bac99" value="取消" id="CanCelBtn">
+                </div>
+                <!--清浮动-->
+                <div style="clear: both"></div>
+            </div>
+            <!--账号安全-->
+            <div class="m_Edit">
+                <div class="m_IsEdit" id="Security"></div>
+                <!--头部-->
+                <h2 class="m_MyGifttit fs24 fc33">账号安全</h2>
+                <ul class="m_Account " id="Account">
+                    <li>
+                        <p class="spriteImg m_passico m_Acimg">
+                            <i class="spriteImg c_optico1 m_AcDoneImg"></i>
+                        </p>
+                        <p class="mt20 fs18 fc33 tal">登录密码</p>
+                        <p class=" fs18 fc33 tal mt10">****** <span class="fc58 cup" id="ChangePass">修改</span></p>
+                    </li>
+                    <li>
+                        <p class="spriteImg m_phoneico m_Acimg">
+                            <i class="spriteImg c_optico1 m_AcDoneImg"></i>
+                        </p>
+                        <p class="mt20 fs18 fc33 tal">登录手机号</p>
+                        <p class=" fs18 fc33 tal mt10"><span class="m_Telnum0"></span>****<span class="m_Telnum1"></span> <span class="fc58 cup" id="ChangeMobile">修改</span></p>
+                    </li>
+                    <li>
+                        <p class="spriteImg m_emailico m_Acimg">
+                            <i class="spriteImg c_optico1 dino m_AcDoneImg top1 m_EmailDoneico"></i>
+                        </p>
+                        <p class="mt20 fs18 fc33 tal">安全邮箱</p>
+                        <p class=" fs18 fc33 tal mt10 IsHasEmail"></p>
+                    </li>
+                </ul>
+                <!--修改手机-->
+                <div class="m_Account dino" id="SaveMobile">
+                    <div class="m_AccLeft">
+                        <p class="spriteImg m_phoneico m_Acimg">
+                            <i class="spriteImg c_optico1 m_AcDoneImg"></i>
+                        </p>
+                        <p class="mt20 fs18 fc33 tal">登录手机号</p>
+                        <p class=" fs18 fc33 tal mt10"><span class="m_Telnum0"></span>****<span class="m_Telnum1"></span></p>
+                    </div>
+                    <div class="m_AccRight">
+                        <!--登录密码-->
+                        <p class="fl w100"><span class="m_ChangeTxt">登录密码：</span><input type="password" class="w415 m_ChangeIn" id="m_UserPass0"  maxlength="16"></p>
+                        <!--密码错误-->
+                        <span class="m_Error" id="m_PassError0"></span>
+                        <!--新手机号-->
+                        <p class="fl w100"><span class="m_ChangeTxt">新手机号：</span><input type="text" class="w415 m_ChangeIn" id="m_PhoneIn0"  maxlength="11"></p>
+                        <!--手机号错误-->
+                        <span class="m_Error" id="m_PhoneError0"></span>
+                        <!--图形验证码-->
+                        <div class="fl w100">
+                            <span class="m_ChangeTxt">图形验证码：</span>
+                            <input type="text" class="w170 m_ChangeIn" id="m_CapInput"  maxlength="4">
+                            <img src="" alt="" class="m_CapImg" id="m_CapImg0">
+                            <p class="fs14 lh45 fl">看不清，<span class="i_CapChange fs14 lh45 fc58 cup" id="m_CapChange0">换一个？</span></p>
+                        </div>
+                        <!--图形验证码错误-->
+                        <span class="m_Error" id="m_CapError0"></span>
+                        <!--短信验证码-->
+                        <p class="fl w100"><span class="m_ChangeTxt">短信验证码：</span>
+                            <input type="text" class="w265 m_ChangeIn" id="r_MsgIn"  maxlength="6">
+                            <input type="button" class="r_MsgInBtn " id="r_MsgInBtn0" value="获取验证码">
+                            <span class=" r_MsgInBtn bac99 fs14 dino"  id="r_SendTelDis1"><span id="f_SendSec1">60</span>s之后重新发送</span>
+                        </p>
+                        <!--短信验证码错误-->
+                        <span class="m_Error" id="m_SmsError0"></span>
+                        <p class="fl w100 mt20">
+                            <input type="button" value="确定" class="m_EditBtn ml110 bac65" id="m_EnsureBtn">
+                            <input type="button" value="取消" class="m_EditBtn ml20 bac99" id="m_CancelBtn">
+                        </p>
+                    </div>
+                </div>
+                <!--修改密码-->
+                <div class="m_Account dino" id="SavePass">
+                    <div class="m_AccLeft">
+                        <p class="spriteImg m_passico m_Acimg">
+                            <i class="spriteImg c_optico1 m_AcDoneImg"></i>
+                        </p>
+                        <p class="mt20 fs18 fc33 tal">登录密码</p>
+                        <p class=" fs18 fc33 tal mt10">******</p>
+                    </div>
+                    <div class="m_AccRight">
+                        <!--登录密码-->
+                        <p class="fl w100"><span class="m_ChangeTxt">旧密码：</span><input type="password" class="w415 m_ChangeIn" id="m_OldPass0" maxlength="16"></p>
+                        <!--密码错误-->
+                        <span class="m_Error" id="m_PassError1"></span>
+                        <!--登录密码-->
+                        <p class="fl w100"><span class="m_ChangeTxt">新密码：</span><input type="password" class="w415 m_ChangeIn" id="m_NewPass0"  maxlength="16"></p>
+                        <!--密码错误-->
+                        <span class="m_Error" id="m_PassError2"></span>
+                        <!--登录密码-->
+                        <p class="fl w100"><span class="m_ChangeTxt">确认新密码：</span><input type="password" class="w415 m_ChangeIn" id="m_NewPass1"  maxlength="16"></p>
+                        <!--密码错误-->
+                        <span class="m_Error" id="m_PassError3"></span>
+                        <!--确定按钮-->
+                        <p class="fl w100 mt20">
+                            <input type="button" value="确定" class="m_EditBtn ml130 bac65" id="m_PassEnsureBtn">
+                            <input type="button" value="取消" class="m_EditBtn ml20 bac99" id="m_PassCancelBtn">
+                        </p>
+                    </div>
+                </div>
+                <!--绑定邮箱-->
+                <div class="m_Account dino" id="SaveNoEmail">
+                    <div class="m_AccLeft">
+                        <p class="spriteImg m_emailico m_Acimg">
+                            <i class="spriteImg c_optico1 dino m_AcDoneImg top1 m_EmailDoneico"></i>
+                        </p>
+                        <p class="mt30 fs18 fc33 tal">安全邮箱</p>
+                        <p class=" fs18 fc66 tal mt10 ">未绑定</p>
+                    </div>
+                    <div class="m_AccRight">
+                        <!--需要绑定的邮箱-->
+                        <p class="fl w100"><span class="m_ChangeTxt">邮箱地址：</span><input type="text" class="w415 m_ChangeIn" id="m_NewEmail0"  maxlength="30"></p>
+                        <!--邮箱错误-->
+                        <span class="m_Error" id="m_NewEmailError0"></span>
+                        <!--图形验证码-->
+                        <div class="fl w100">
+                            <span class="m_ChangeTxt">图形验证码：</span>
+                            <input type="text" class="w170 m_ChangeIn" id="m_CapInputE"  maxlength="4">
+                            <img src="" alt="" class="m_CapImg" id="m_CapImgE0">
+                            <p class="fs14 lh45 fl">看不清，<span class="i_CapChange fs14 lh45 fc58 cup" id="m_CapChangeE0">换一个？</span></p>
+                        </div>
+                        <!--图形验证码错误-->
+                        <span class="m_Error" id="m_CapErrorE0"></span>
+                        <!--邮箱验证码-->
+                        <p class="fl w100"><span class="m_ChangeTxt">邮箱验证码：</span>
+                            <input type="text" class="w265 m_ChangeIn" id="r_MsgEIn"  maxlength="6">
+                            <input type="button" class="r_MsgInBtn " id="r_MsgInBtnE0" value="获取验证码">
+                            <span class=" r_MsgInBtn bac99 fs14 dino"  id="r_SendTelDisE1"><span id="f_SendSecE1">60</span>s之后重新发送</span>
+                        </p>
+                        <!--邮箱验证码错误-->
+                        <span class="m_Error" id="m_SmsErrorE0"></span>
+                        <!--确定按钮-->
+                        <p class="fl w100 mt20">
+                            <input type="button" value="确定" class="m_EditBtn ml130 bac65" id="m_EmailEnsureBtn0">
+                            <input type="button" value="取消" class="m_EditBtn ml20 bac99" id="m_EmailCancelBtn0">
+                        </p>
+                    </div>
+                </div>
+                <!--修改邮箱-->
+                <div class="m_Account dino" id="SaveOldEmail">
+                    <div class="m_AccLeft">
+                        <p class="spriteImg m_emailico m_Acimg">
+                            <i class="spriteImg c_optico1 dino m_AcDoneImg top1 m_EmailDoneico"></i>
+                        </p>
+                        <p class="mt30 fs18 fc33 tal">安全邮箱</p>
+                        <p class=" fs18 fc33 tal mt10">
+                            <span class="f_emailnum0">xx</span>****@<span class="f_emailnum1">xxx</span>.com
+                        </p>
+                    </div>
+                    <div class="m_AccRight">
+                        <!--登录密码-->
+                        <p class="fl w100"><span class="m_ChangeTxt">登录密码：</span>
+                            <input type="password" class="w415 m_ChangeIn" id="m_UserPass1"  maxlength="16"></p>
+                        <!--密码错误-->
+                        <span class="m_Error" id="m_EmailError0"></span>
+                        <!--新的邮箱地址-->
+                        <p class="fl w100"><span class="m_ChangeTxt">新邮箱地址：</span>
+                            <input type="text" class="w415 m_ChangeIn" id="m_NewEmail1"  maxlength="30"></p>
+                        <!--邮箱错误-->
+                        <span class="m_Error" id="m_NewEmailError1"></span>
+                        <!--图形验证码-->
+                        <div class="fl w100">
+                            <span class="m_ChangeTxt">图形验证码：</span>
+                            <input type="text" class="w170 m_ChangeIn" id="m_EmailCapInput"  maxlength="4">
+                            <img src="" alt="" class="m_CapImg" id="m_EmailCapImg0">
+                            <p class="fs14 lh45 fl">看不清，<span class="i_CapChange fs14 lh45 fc58 cup" id="m_EmailCapChange0">换一个？</span></p>
+                        </div>
+                        <!--图形验证码错误-->
+                        <span class="m_Error" id="m_EmailCapError0"></span>
+                        <!--邮箱验证码-->
+                        <p class="fl w100"><span class="m_ChangeTxt">邮箱验证码：</span>
+                            <input type="text" class="w265 m_ChangeIn" id="r_EmailIn"  maxlength="6">
+                            <input type="button" class="r_MsgInBtn " id="r_EmailInBtn0" value="获取验证码">
+                            <span class=" r_MsgInBtn bac99 fs14 dino"  id="r_SendEmailDis1"><span id="f_EmailSendSec1">60</span>s之后重新发送</span>
+                        </p>
+                        <!--短信验证码错误-->
+                        <span class="m_Error" id="m_EmailError1"></span>
+                        <!--确定按钮-->
+                        <p class="fl w100 mt20">
+                            <input type="button" value="确定" class="m_EditBtn ml130 bac65" id="m_EmailEnsureBtn1">
+                            <input type="button" value="取消" class="m_EditBtn ml20 bac99" id="m_EmailCancelBtn1">
+                        </p>
+                    </div>
+                </div>
+                <!--清浮动-->
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <!--提示框-->
+        <div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+    </div>
+</article>
+<script src="../../static/javascript/me/me.js"></script>
+
+</body>
+</html>

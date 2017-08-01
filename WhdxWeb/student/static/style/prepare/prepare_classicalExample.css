@@ -1,0 +1,749 @@
+html,body{
+    margin:0;
+    padding: 0;
+    background: #ccc;
+    width:100%;
+    height:100%;
+}
+
+/*引入雪碧图*/
+.p_exampleimg{background:url("../../image/sprite/spriteImg.png") 0 0  no-repeat;}
+.p_pre_03{height:21px;width:18px;background-position:0 0;}
+.p_exselete{height:24px;width:24px;background-position:-20px 0;}
+.p_Mainlc{
+    width:100%;
+    height:100%;
+    overflow-y: auto;
+    background: #ecedf0;
+}
+/*媒体查询*/
+@media screen and (max-width: 1366px) {
+    .background{
+        width:90%;
+        height: 85%;
+        border-radius: 10px;
+        overflow: hidden;
+        /*display: none;*/
+        background: url("../../image/kola/no.jpg") no-repeat;
+        background-size: 100% 100%;
+        margin:0 auto;
+        margin-top: 40px!important;
+    }
+    .p_loadtext{
+        width:960px;
+        min-height: 500px;
+        margin:0 auto;
+        background: #fff;
+        border-radius: 10px;
+        margin-top: 40px!important;
+        padding-bottom: 40px!important;
+    }
+    /*下载失败的图*/
+    .p_reloadfalse{
+        width:690px;
+        height:350px;
+        background: url("../../image/prepare/p_rolad_03.png") no-repeat;
+        background-size: 90%;
+        display: block;
+        position: absolute;
+        left:50%!important;
+        top:50%!important;
+        margin-left: -345px;
+        margin-top: -175px;
+        position: relative;
+        display: none;
+    }
+    /*充值按钮*/
+    .p_name{
+        display: block;
+        width:165px;
+        height: 40px;
+        position: absolute;
+        bottom: 45px;
+        right: 300px;
+        z-index: 100;
+    }
+    /*去认证背景图*/
+    .p_check{
+        width:690px;
+        height:350px;
+        background: url("../../image/sprite/Identity.png") no-repeat;
+        background-size: 100%;
+        display: block;
+        position: absolute;
+        left:50%!important;
+        top:50%!important;
+        margin-left: -345px;
+        margin-top: -175px;
+        position: relative;
+        border-radius: 10px;
+        /*display: none;*/
+    }
+    /*去认证*/
+    .p_checkname{
+        display: block;
+        width:192px;
+        height: 40px;
+        position: absolute;
+        bottom: 18px;
+        right: 246px;
+        z-index: 100;
+        background: #8ed6ee;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        cursor: pointer;
+    }
+    /*删除按钮*/
+    .p_success_dele{
+        position: absolute;
+        display: block;
+        width:30px;
+        height:30px;
+        right: 110px;
+        top:0px;
+        cursor: pointer;
+    }
+    .p_success_remove{
+        position: absolute;
+        display: block;
+        width:30px;
+        height:30px;
+        right: 42px;
+        top:0px;
+        cursor: pointer;
+    }
+    .p_loadtexttitle li div {
+        width: 86%;
+    }
+    .noImg {
+        margin: 45px 35%;
+    }
+}
+@media screen and (min-width: 1366px) {
+    .background{
+        width:90%;
+        height: 85%;
+        border-radius: 10px;
+        overflow: hidden;
+        /*display: none;*/
+        background: url("../../image/kola/no.jpg") no-repeat;
+        background-size: 100% 100%;
+        margin:0 auto;
+        margin-top: 40px!important;
+    }
+    .p_loadtext{
+        width:1080px;
+        min-height: 500px;
+        margin:0 auto;
+        background: #fff;
+        border-radius: 10px;
+        margin-top: 40px!important;
+        padding-bottom: 40px!important;
+    }
+
+    /*下载失败的图*/
+    .p_reloadfalse{
+        width:690px;
+        height:350px;
+        background: url("../../image/prepare/p_rolad_03.png") no-repeat;
+        background-size: 90%;
+        display: block;
+        position: absolute;
+        left:50%!important;
+        top:50%!important;
+        margin-left: -345px;
+        margin-top: -175px;
+        position: relative;
+        display: none;
+    }
+    /*去认证背景图*/
+    .p_check{
+        width:690px;
+        height:350px;
+        background: url("../../image/sprite/Identity.png") no-repeat;
+        background-size: 100%;
+        display: block;
+        position: absolute;
+        left:50%!important;
+        top:50%!important;
+        margin-left: -345px;
+        margin-top: -175px;
+        position: relative;
+        border-radius: 10px;
+        /*display: none;*/
+    }
+    /*去认证*/
+    .p_checkname{
+        display: block;
+        width:192px;
+        height: 40px;
+        position: absolute;
+        bottom: 18px;
+        right: 246px;
+        z-index: 100;
+        background: #8ed6ee;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        cursor: pointer;
+    }
+    /*充值按钮*/
+    .p_name{
+        display: block;
+        width:165px;
+        height: 40px;
+        position: absolute;
+        bottom: 45px;
+        right: 300px;
+        z-index: 100;
+        cursor: pointer;
+    }
+    /*删除按钮*/
+    .p_success_dele{
+        position: absolute;
+        display: block;
+        width:30px;
+        height:30px;
+        right: 110px;
+        top:0px;
+        cursor: pointer;
+    }
+    .p_success_remove{
+        position: absolute;
+        display: block;
+        width:30px;
+        height:30px;
+        right: 42px;
+        top:0px;
+        cursor: pointer;
+    }
+    .p_loadtexttitle li div {
+        width: 86%;
+    }
+    .noImg {
+        margin: 45px 33%;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .background{
+        width:90%;
+        height: 85%;
+        border-radius: 10px;
+        overflow: hidden;
+        /*display: none;*/
+        background: url("../../image/kola/no.jpg") no-repeat;
+        background-size: 100% 100%;
+        margin:0 auto;
+        margin-top: 40px!important;
+    }
+    .p_loadtext{
+        width:1200px;
+        min-height: 500px;
+        margin:0 auto;
+        background: #fff;
+        border-radius: 10px;
+        margin-top: 40px!important;
+        padding-bottom: 40px!important;
+    }
+    /*下载失败的图*/
+    .p_reloadfalse{
+        width:690px;
+        height:350px;
+        background: url("../../image/prepare/p_rolad_03.png") no-repeat;
+        display: block;
+        position: absolute;
+        left:50%!important;
+        top:50%!important;
+        margin-left: -345px;
+        margin-top: -175px;
+        position: relative;
+        display: none;
+    }
+    /*去认证背景图*/
+    .p_check{
+        width:690px;
+        height:350px;
+        background: url("../../image/sprite/Identity.png") no-repeat;
+        background-size: 100%;
+        display: block;
+        position: absolute;
+        left:50%!important;
+        top:50%!important;
+        margin-left: -345px;
+        margin-top: -175px;
+        position: relative;
+        border-radius: 10px;
+        /*display: none;*/
+    }
+    /*去认证*/
+    .p_checkname{
+        display: block;
+        width:192px;
+        height: 40px;
+        position: absolute;
+        bottom: 18px;
+        right: 246px;
+        z-index: 100;
+        background: #8ed6ee;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        cursor: pointer;
+    }
+    /*充值按钮*/
+    .p_name{
+        display: block;
+        width:195px;
+        height: 40px;
+        position: absolute;
+        bottom: 10px;
+        right: 250px;
+        z-index: 100;
+    }
+    /*删除按钮*/
+    .p_success_dele{
+        position: absolute;
+        display: block;
+        width:30px;
+        height:30px;
+        right: 45px;
+        top:0px;
+        cursor: pointer;
+    }
+    .p_success_remove{
+        position: absolute;
+        display: block;
+        width:30px;
+        height:30px;
+        right: 42px;
+        top:0px;
+        cursor: pointer;
+    }
+    .p_loadtexttitle li div {
+        width: 89%;
+    }
+    .noImg {
+        margin: 45px 35%;
+    }
+}
+.p_loadcon li{
+    display: block;
+    width:90%;
+    min-height: 100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
+}
+/*目录*/
+.p_DirectoryWrap{
+    display: none;
+}
+/*目录名字*/
+.p_catalogword{
+    width:100%;
+    height: 50px;
+}
+.p_catawordname{
+    display: block;
+    line-height: 50px;
+    float: left;
+    margin-left: 20px;
+    font-size: 24px!important;
+    color: #65b113;
+}
+.p_catalog_dele{
+    display: block;
+    width:20px;
+    height:20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+.p_unitcl{
+    width:265px;
+    min-height:36px;
+    margin:0 auto;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+}
+.p_unit_o{
+    font-size: 18px!important;
+    color: #333;
+}
+/*ul*/
+.p_unit_chapter{
+    margin-left: 20px!important;
+}
+/*li*/
+.p_chaptercl{
+    width:90%;
+    min-height: 18px;
+    font-size: 14px!important;
+    line-height: 18px;
+}
+/*目录*/
+.p_chapter_catalog{
+    width:90%;
+    min-height:18px;
+    line-height: 18px;
+    font-size: 14px!important;
+    margin-left: 20px!important;
+    /*display: none;*/
+}
+/*遮罩层*/
+/*下载失败*/
+.p_shark{
+    display: block;
+    position:fixed ;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 100;
+}
+.p_sharks{
+    display: block;
+    position:fixed ;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 100;
+}
+/*下载按钮*/
+.p_reloadcon{
+    min-height: 35px;
+    position: absolute;
+    top:40px;
+    right:0px;
+    cursor: pointer;
+    background: #fff;
+}
+.p_useup{
+    color: #333;
+    text-align: center;
+}
+.p_reload{
+    width:120px;
+    height:35px;
+    border-radius: 10px;
+    background: #58c1e4;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    /*position: absolute;*/
+    /*top:10px;*/
+    /*right:10px;*/
+    /*cursor: pointer;*/
+}
+.p_pre_03{
+    display: block;
+    float: left;
+    margin-left: 35px!important;
+    margin-top: 8px;
+    background: url("../../image/prepare/p_exampleimg.png") 0 0 no-repeat;
+}
+.p_exselete{
+    display: block;
+    float: left;
+    margin-left: 32px!important;
+    margin-top: 8px;
+    background: url("../../image/prepare/p_exampleimg.png") -20px 0 no-repeat;
+}
+.p_reloadword,.p_errorsword{
+    display: block;
+    float: left;
+    margin-left: 4px!important;
+    font-size: 14px!important;
+}
+/*报错按钮*/
+.p_errors{
+    width:120px;
+    height:35px;
+    border-radius: 10px;
+    background: #f9a24a;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top:97px;
+    right:0px;
+    cursor: pointer;
+}
+/*报错*/
+.p_wrong{
+    width:690px;
+    height: 470px;
+    background: #fff;
+    position: fixed;
+    left:50%;
+    top:50%;
+    margin-left: -345px;
+    margin-top: -235px;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+.p_wrongtitle{
+    display: block;
+    width:100%;
+    height: 64px;
+    text-align: center;
+    line-height: 64px;
+    font-size: 24px!important;
+    color: #65b113;
+}
+.p_wrongselect{
+    width:555px;
+    min-height:130px;
+    margin-left: 40px!important;
+}
+.p_wrongselect li{
+    float: left;
+    width:150px;
+    height:45px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 30px!important;
+    margin-top: 10px!important;
+    line-height:45px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.p_ceselect{
+    background: #f39c12;
+    color: #fff;
+}
+.p_wrongresaon{
+    display: block;
+    width:555px;
+    height:135px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: none;
+    text-indent: 10px;
+    outline: none;
+    font-size: 18px!important;
+    line-height: 36px;
+    color: #333;
+    margin-left: 40px!important;
+}
+/*取消*/
+.p_sendcl{
+    width:100%;
+    height:45px;
+    margin-top: 30px!important;
+}
+.p_cesend{
+    display: block;
+    width:240px;
+    height:45px;
+    background: #65b113;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px!important;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 65px!important;
+    float: left;
+    cursor: pointer;
+}
+.p_cecancel{
+    display: block;
+    width:240px;
+    height:45px;
+    background: #999999;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px!important;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 30px!important;
+    float: left;
+    cursor: pointer;
+}
+.p_cedelte{
+    position: absolute;
+    top:20px;
+    right:20px;
+    cursor: pointer;
+}
+/*科目，章，节*/
+.p_loadtexttitle{
+    display: block;
+    width:100%;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    color: #666;
+}
+.p_loadtexttitle label {
+    float: left;
+    text-align: left;
+    width: 70px;
+}
+.p_loadtexttitle li {
+    line-height: 31px;
+    float: left;
+    width: 100%;
+    padding-bottom: 7px;
+}
+.p_loadtexttitle li:last-child{padding-bottom: 0;}
+.p_loadtexttitle li div {
+    height: auto;
+    float: left;
+}
+.p_loadtexttitle li div span,.p_loadtexttitle label  {
+    float: left;
+    cursor: pointer;
+    text-align: left;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.change {
+    color: #58c1e4;
+}
+.fn_par:hover{
+    color: #58c1e4;
+}
+    /*选中*/
+.xuanzhong{
+    color: #f69f59;
+}
+/*试题样式微调*/
+.p_mei .p_con{
+    /*display: block;*/
+    margin-top: 10px!important;
+}
+/*视频图片*/
+.p_analysisvodeo{
+    display: none;
+}
+.p_analysisvodeoword{
+    display: inline-block;
+    float: left;
+    margin-top: 6px;
+}
+.p_analysisvo{
+    display: inline-block;
+    float: left;
+    width:160px;
+    height:120px;
+    /*background: #ddd;*/
+    margin-left: 20px!important;
+    margin-bottom: 20px!important;
+    margin-top: 10px!important;
+    cursor: pointer;
+}
+.p_exampleradio{
+    display: inline-block;
+    float: left;
+    min-width:160px;
+    min-height:120px;
+    /*background: #ddd;*/
+    margin-left: 20px!important;
+    margin-bottom: 20px!important;
+    margin-top: 10px!important;
+    cursor: pointer;
+}
+
+/*下载*/
+.p_moneycl{
+    position: absolute;
+    display: block;
+    top: 0px;
+    right: 0px;
+}
+/*样式二次解析*/
+.s_xpoption {border: 1px solid white;font-size: 14px;color: #333;line-height: 30px;cursor: pointer;}
+.p1{font-size: 16px!important;line-height: 30px!important;color: #333;}
+.s_xpoption img{max-width: 100%;}
+/*图片*/
+article{
+    width:100%;
+    height:100%;
+}
+.analysis_button{
+    width: 60px;
+    height: 30px;
+    background: #ffffff;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.analysis_close_button{
+    color: #fff;
+    border: 0px;
+    background-color: #49b9df;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.analysis_div {
+    padding: 0 20px;
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    margin: 10px;
+    display: none;
+
+}
+.template {
+    display: none;
+}
+
+.p_loadtexttitle li div span,.p_loadtexttitle label  {
+    float: left;
+    cursor: pointer;
+    text-align: left;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.p_loadtexttitle{width: 100%; padding:30px;min-height: 100px;float: left;box-sizing: border-box; overflow: hidden;text-align: center;background: white; }
+.Video_Main{margin:  40px auto 0 auto;border-radius:10px ;overflow: hidden;background: white;}
+.Com_Main{padding: 0;}
+.videoBox{float: left;width: 100%;box-sizing: border-box;padding: 0;}
+.VideoListMain{float: left;width: 100%;box-sizing: border-box;padding: 0 30px;}
+@media screen and (max-width:1366px){
+    .FirstName,.p_loadtexttitle li div span,.p_loadtexttitle label {font-size: 14px;}
+    .p_loadtexttitle li div span{width: 100px;}
+    .Video_Main{width: 900px;}
+}
+@media screen and (min-width:1366px){
+    .FirstName, .p_loadtexttitle li div span,.p_loadtexttitle label {font-size: 16px;}
+    .p_loadtexttitle li div span {width: 110px;}
+    .Video_Main{width: 1000px;}
+}
+@media screen and (min-width:1600px){
+    .FirstName,.p_loadtexttitle li div span,.p_loadtexttitle label {font-size: 18px;}
+    .p_loadtexttitle li div span{width: 120px;}
+    .Video_Main{width: 1200px;}
+}
+.p_loadtext{overflow: hidden;}
+.analysis_div p span,.analysis_div p,.analysis_div span{
+    font-family: "楷体" !important;
+    font-size: 17px !important;
+    color: #666 !important;
+}
+.p_optionA,.p_optionB,.p_optionC,.p_optionD {
+    margin-left: 9px;
+    color: #666 !important;
+    font-family: "宋体";
+    font-size: 17px;
+}

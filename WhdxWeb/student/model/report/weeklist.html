@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全部作业周报</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../static/style/report/weeklist.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/style/report/reportCommon.css" />
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a  href="../../../student/model/report/reportlist.html">看报告</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="fl">全部作业周报</span>
+    </div>
+</div>
+<!--内容区-->
+<div class="Com_Main">
+    <div class="r_main">
+        <div class="r_report">
+            <ul class="r_head">
+                <li class="r_assign">时间</li>
+                <li class="r_workName">名称</li>
+                <li class="r_operation">操作</li>
+            </ul>
+            <div class="r_content">
+                <ul class="r_body">
+                    <li class="r_assign">时间</li>
+                    <li class="r_workName">名称</li>
+                    <li class="r_operation"><span class="r_check">查看</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--页码存放处-->
+    <div class="Paging">
+        <div id="kkpager"></div>
+    </div>
+    <!--&lt;!&ndash;空白页&ndash;&gt;-->
+    <!--<div class="noData dino">-->
+        <!--做完作业才会有报告哦!-->
+    <!--</div>-->
+</div>
+</body>
+<link rel="stylesheet" href="../../static/plugin/paction/kkpager_orange.css" />
+<script src="../../static/plugin/paction/kkpager.js"></script>
+<script src="../../static/javascript/report/weeklist.js"></script>
+</html>

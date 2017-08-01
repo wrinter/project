@@ -1,0 +1,55 @@
+/*登录*/
+/*雪碧图*/
+.loimg{background:url('../../../static/image/login1.3/loimg.png')0 0   no-repeat;}
+.reico1{height:14px;width:14px;background-position:0 0;float: left;margin: 9px 8px 0 0 ;cursor: pointer;}
+.reico0{height:14px;width:14px;background-position:-18px 0;float: left;margin: 9px 8px 0 0 ;cursor: pointer}
+.wroico{height:15px;width:15px;background-position:-37px 0;float: left;margin: 13px 0 0 3px;display: none;}
+.riico{height:15px;width:15px;background-position:-56px 0;float: left;margin: 13px 0 0 3px;display: none;}
+.w_LogInMain{margin: auto;height: 100px;position: absolute;z-index: 9;right: 0;left: 0;top: 92px;}
+.w_LogInBox{width: 340px;min-height: 388px; box-sizing: border-box;padding:26px 0 35px 40px;background: white;border-radius: 10px;float: right;margin-top: 106px;}
+.w_Title{float: left;width: 100%;height: 30px;line-height: 30px;}
+.w_Tixt{float: left;font-size: 24px;color: #323232;}
+.w_RetBtn{float: right;color: #02b1cb;font-size: 20px;margin-right: 40px;}
+
+.w_PhoneBox{float: left;overflow: hidden;margin-top: 30px;}
+.w_OtherBox,.w_RemBox{float: left;overflow: hidden;margin-top: 10px;width: 100%;}
+.w_RemBox{height: 30px;line-height: 30px;}
+.w_ModelTxt{color: #636363;font-size: 16px;line-height: 25px;width: 100%;float: left;text-align: left;}
+.w_ModelInput{float: left;width: 260px;color: #323232; height: 40px;box-sizing: border-box;border: 1px solid #ccc;outline: none;padding-left: 10px;}
+.w_ModelCode{float: left;width: 137px;color: #323232; height: 40px;box-sizing: border-box;border: 1px solid #ccc;outline: none;padding-left: 10px;}
+.w_ModelError{float: left;width: 100%;text-align: left;color: #f6111a;font-size: 12px;height: 15px;line-height: 15px;}
+.w_ModelImg{float: left;height: 40px;width: 30px;}
+.w_FogetPass{float: right;font-size: 14px;color: #02b1cb;margin-right: 40px;}
+.w_CodeBox{float: left;margin-left: 7px;width: 85px;height: 40px;box-sizing: border-box;border: 1px solid #04030f;}
+.w_CodeBox img{float: left;width: 100%;margin-top: 4px;}
+.w_OtherCode{float: left;text-align: left;margin-left: 7px;color: #959595; width: 45px;height: 40px;font-size: 12px;text-decoration: underline;cursor: pointer;box-sizing: border-box;padding-top: 3px;}
+.w_LogBtn{float: left;width: 260px; margin-top: 15px; height: 40px;border-radius: 10px;text-align: center;line-height: 40px;background: #08e8ae;font-size: 18px;color: white;cursor: pointer;}
+.w_RemTxt{font-size: 14px;color: #959595;}
+@media screen and (max-width:1366px){
+    .w_LogInMain{width: 900px;}
+}
+@media screen and (min-width:1366px){
+    .w_LogInMain{width: 1000px;}
+}
+@media screen and (min-width:1600px){
+    .w_LogInMain{width: 1200px;}
+}
+/*底部*/
+.Com_Footer{float: left;width: 100%;height: 120px;background: #1c1c1c;font-family: 'microsoft yahei';}
+.FooterCon:before,.FooterCon:after{clear: both;}
+.FooterCon{width: 1000px;height: 120px;margin: auto;text-align: center;}
+.FooterLeft{float: left;width: 600px;height: 120px;box-sizing: border-box; }
+.FooterNav{float: left;width: 100%;margin-left: -20px;margin-top: 38px;}
+.FooterNav>li{float: left;border-right:1px solid #404040;text-align: center; width: 95px;box-sizing: border-box; height: 15px;line-height: 15px;font-size: 14px;color: #959595;}
+.FooterNav>li:last-child{border-right: 0;}
+.FooterNav>li a{width: 95px;box-sizing: border-box; height: 15px;line-height: 15px;font-size: 14px;color: #959595;cursor: pointer}
+.FooterNav>li a:hover{color:#00ce9e; }
+.Copyright{float: left;margin-top: 5px; text-align: left;width: 100%;font-size: 14px;color: #636363;line-height: 22px;font-family: 'microsoft yahei';}
+.FooterRight{float: right;height: 120px;width: 330px;box-sizing: border-box; }
+.FooterIcoBox{float: left;width: 170px;box-sizing: border-box; height: 32px;margin-top: 44px;}
+.FooterIcoBox>li{float: left;margin-right: 10px;text-align: left;line-height: 32px;position: relative;}
+.FooterInfo{float: right;width: 160px;font-size: 14px;margin-top: 38px;}
+.FooterInfo>li{float: left;width: 100%;font-size: 14px;color: white;font-family: 'microsoft yahei';line-height: 22px;text-align: left;}
+.Footer_Weicode{position: absolute;width: 114px;max-width: none;top: -124px;left: -42px;display: none;}
+.Weibofocus{opacity: 0;filter: alpha(opacity=0); width: 32px!important;height: 32px!important;position: absolute;}
+.Weibofocus>iframe{width: 32px!important;}

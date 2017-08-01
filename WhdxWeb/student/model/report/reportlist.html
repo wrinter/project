@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>看报告——列表</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../static/style/report/reportlist.css" />
+</head>
+<body>
+    <div class="Com_Header" id="Com_Head"></div>
+    <!--面包屑-->
+    <div class="Com_Crumbs">
+        <div class="Com_Crumbs_in">
+            <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+            <a href="../../../student/model/index/index.html">首页</a>
+            <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+            <span class="fl ">看报告</span>
+        </div>
+    </div>
+    <!--内容区-->
+    <div class="Com_Main">
+        <div class="r_Main">
+            <div class="r_week">
+                <span class="r_work">作业周报</span>
+                <p class="r_more dino">
+                    <span>更多</span>
+                    <i class="spriteImg r_moreImg">&nbsp;&nbsp;</i>
+                </p>
+                <span class="r_name"></span>
+            </div>
+            <div class="r_report">
+                <span class="r_homework">作业报告</span>
+                <ul class="r_head dino">
+                    <li class="r_assign">布置时间</li>
+                    <li class="r_typeName">学科</li>
+                    <li class="r_workType">作业类型</li>
+                    <li class="r_workName">作业名称</li>
+                    <li class="r_flag"></li>
+                    <li class="r_operation">操作</li>
+                </ul>
+                <div class="r_content dino">
+                    <ul class="r_body">
+                        <li class="r_assign">布置时间</li>
+                        <li class="r_typeName">学科</li>
+                        <li class="r_workType">作业类型</li>
+                        <li class="r_workName">作业名称</li>
+                        <li class="r_flag"><span class="r_wait">等待批改</span></li>
+                        <li class="r_operation"><span class="r_check">查看</span></li>
+                    </ul>
+                </div>
+                <!--空白页-->
+                <div class="r_noData dino">
+                    做完作业才会有报告哦！
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页码存放处-->
+    <div class="Paging">
+        <div id="kkpager"></div>
+    </div>
+</body>
+<link rel="stylesheet" href="../../static/plugin/paction/kkpager_orange.css" />
+<script src="../../static/plugin/paction/kkpager.js"></script>
+<script src="../../static/javascript/report/reportlist.js"></script>
+<script src="../../static/javascript/report/reportCommon.js"></script>
+</html>

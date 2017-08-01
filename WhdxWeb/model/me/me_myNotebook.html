@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>错题本</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/me/me.css">
+    <link rel="stylesheet" href="../../static/style/me/me_myNotebook.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/plugin/drags/drags.js"></script>
+    <script src="../../static/plugin/paper/kkpager.js"></script>
+    <link rel="stylesheet" href="../../static/plugin/paper/kkpager_orange.css">
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div id="Header"></div>
+        <!--首页内容区-->
+        <div class="mask"></div>
+        <div class="c_Main ">
+           <!--面包屑导航-->
+           <div class="c_Crumbs">
+               <div class="c_Crumbs_in">
+                   <!--面包屑导航图标-->
+                   <i class="spriteImg c_mico fl mt15"></i>
+                   <!--面包屑导航-->
+                   <ul class="c_Crum fl" id="c_Crum">
+                       <li><a href="../../model/index/indexX.html" class="fl fc65">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                       <!--<li><a href="../../model/me/me_index.html" class="fl fc65">个人中心</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>-->
+                       <li>错题本</li>
+                   </ul>
+               </div>
+           </div>
+           <div class="container">
+               <div class="error_level" id="m_cell"></div>
+               <div class="error_level" id="m_chapter"></div>
+               <div class="error_source_txt slot" id="dragslot"></div>
+           </div>
+            <div class="Paging">
+                <div id="kkpager"></div>
+            </div>
+          <!-- 导出错题章节    遮罩层-->
+           <div class="exportError">
+           </div>
+           <!--设置错误率为多少时  收录-->
+          <div class="errorPer">
+              <i class="spriteImg c_closeico fr c_closeimg0" id="c_closeG1"></i>
+              <div class="errorPerCon">
+                  <span>当学生错误率达到</span>
+                  <div class="m_select">
+                      <span class="m_selectSpan">30%</span>
+                      <i class="fr spriteImg s_selico mt10"></i>
+                  <ul class="wrong_span">
+                      <li>20%</li>
+                      <li>30%</li>
+                      <li>40%</li>
+                      <li>50%</li>
+                      <li>60%</li>
+                  </ul>
+                  </div>
+                  <span>时收录</span>
+              </div>
+              <input type="button" class="m_btnPer" value="确&nbsp;定">
+          </div>
+           <div class="m_submitErrors">
+               <i class="spriteImg c_closeico fr c_closeimg0" id="c_closeG2"></i>
+               <p>报错</p>
+               <ul class="m_errorPointsBox">
+               </ul>
+               <textarea name="" id="errorReason"  placeholder="请输入错误原因"></textarea>
+               <input type="button" class="m_submitErrorsSure" value="确&nbsp;定">
+               <input type="button" class="m_submitErrorsCancel" value="取&nbsp;消">
+           </div>
+        </div>
+        <!--提示框-->
+        <div class="c_ErrorMsg"></div>
+    </div>
+</article>
+<script src="../../static/javascript/me/me_myNotebook.js"></script>
+<!-- ↓latex公式解析↓ -->
+<script>
+    intMathJax();
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/*国学*/
+.c_Content{width: 1200px;margin: 0 auto;overflow: hidden;box-sizing: border-box;padding: 0 5px 10px 5px;}
+.c_PartTit0{font-size: 30px;width: 40px;margin-right: 15px;text-align: center;}
+.c_Catalogue{width: 100%;min-height: 100px; float: left;box-sizing: border-box;margin-bottom: 40px;}
+.c_Content>li:first-child{margin-top: 40px;}
+.c_CataListL{width: 63%; min-height: 60px;float: left;box-sizing: border-box;padding-bottom: 20px; border-radius: 10px;margin-left: 3px; border-right: 1px solid #ccc;background: white;;position: relative;}
+.c_CataListR{width: 35%; min-height: 60px;float: left;border-radius: 10px;box-sizing: border-box;padding-bottom: 20px; background: white;;position: relative;}
+.c_CataTitle{width: 100%;float: left;height: 115px;line-height: 115px;font-size: 24px;text-align: center;color: #333;}
+.c_CataImg{width:365px;height: 208px;border-radius: 10px; line-height: 208px;position: relative;cursor: pointer; margin: 0 auto;clear: both;text-align: center;overflow: hidden; }
+.c_CataImg img,.c_CataImg1 img{vertical-align: inherit;}
+.c_Movtit{position: absolute;left: 0;bottom:0; height: 35px;width: 100%;float: left;line-height: 35px;background: black;background: rgba(0,0,0,0.7);color: white;font-size: 14px;}
+.c_PlayImg{position: absolute;width: 55px;height: 55px; display: none; left: 0;right: 0;top: 0;bottom: 0;margin: auto;cursor: pointer;}
+.c_CataTeList,.c_CataList{width: 100%;float: left;}
+.c_CataTeList{margin-top: 30px;position: relative; z-index: 2;}
+.c_CataTeList li,.c_CataList li{width: 100%;float: left;text-align: center; font-size: 18px;box-sizing: border-box;}
+.c_CataList li:nth-child(2n){height: 40px;line-height: 40px;background: #F6F6F6;}
+.c_CataList li:nth-child(2n+1){height: 55px;line-height: 55px;background: white;}
+.c_CataTeList li{height: 35px;line-height: 35px;}
+.c_CataList a, .c_CataTeList li a{margin: 0 10px;}
+.c_FicList li span{width: 90px;float: left;overflow: hidden;white-space:nowrap;text-overflow:ellipsis; }
+.c_FicList a:hover,.c_CataList a:hover, .c_CataTeList li a:hover{color: #65b113!important;}
+.c_TextName{float: left;cursor: pointer;margin: 0 10px; max-width:200px;overflow: hidden;white-space:nowrap;text-overflow:ellipsis; }
+.c_ArLogo{float: left;width: 100%;height: 60px;border-bottom: 1px solid #ccc;background: url("../../../static/image/chinese/bg.png")0 0 repeat;}
+.c_ArLogoapp{float: left;width: 100%;text-align: center; height:1.4rem;border-bottom: 1px solid #ccc;background: url("../../../static/image/chinese/bg.png")0 0 repeat;}
+.c_logoar{height:60px;float: left;}
+.c_logoarapp{height: 1.4rem;float: left;}
+@media screen and (max-width:1365px){
+    .c_Content{width: 900px;margin: 0 auto;overflow: hidden;box-sizing: border-box;}
+    .c_PartTit0{font-size: 30px;width: 40px;margin-right: 15px;text-align: center;}
+    .c_Catalogue{width: 100%;min-height: 410px; float: left;box-sizing: border-box;}
+    .c_CataListL{min-height: 400px;float: left;box-sizing: border-box;padding-bottom: 40px; border-radius: 10px;margin-left: 3px; border-right: 1px solid #ccc;background: white;;position: relative;}
+    .c_CataListR{min-height: 350px;float: left;border-radius: 10px;box-sizing: border-box;padding-bottom: 40px; background: white;position: relative;}
+    .c_CataTitle{width: 100%;float: left;height: 115px;line-height: 115px;font-size: 24px;text-align: center;color: #333;}
+    .c_CataImg{width:250px;height: 155px;line-height: 180px;position: relative;cursor: pointer; margin: 0 auto;clear: both;text-align: center;overflow: hidden; }
+    .c_Movtit{position: absolute;left: 0;bottom:0; height: 35px;width: 100%;float: left;line-height: 35px;background: black;background: rgba(0,0,0,0.7);color: white;font-size: 14px;}
+    .c_CataImg1{width: 80%;height: 155px;}
+}
+
+@media screen and (min-width:1366px){
+    .c_CataImg1{width: 80%;height: 172px;}
+}
+@media screen and (min-width:1600px){
+    .c_CataImg1{width: 80%;height: 200px;}
+}
+.c_CataMask{position: absolute;display: none; width: 100%;height: 100%;background: black;background:rgba(0,0,0,0.2);left:0;top:0;}
+.c_CataMask a{float: left;width: 100%;height: 100%;position: relative;}
+/*美文*/
+.p50{padding:80px 0 0 50px!important;}
+.c_FicBox{float: left;line-height: 35px;width: 100%;}
+.c_FicListMain{position: relative;z-index: 1;padding: 80px 0 0 50px;width: 100%;box-sizing: border-box;}
+.c_PartTit{font-size: 30px;width: 7%; float: left;margin-right: 2%;text-align: center;}
+.c_FicList{float: left;line-height: 35px;min-height: 35px; width: 90%;box-sizing: border-box; border-bottom: 1px dashed #ccc;}
+.c_FicList li{float: left;cursor: pointer;width:110px;margin-right:10px;box-sizing: border-box;}
+.c_FicName{float: left;font-size: 18px;color: #333;max-width:95px;box-sizing: border-box; overflow: hidden;white-space:nowrap;text-overflow:ellipsis;}
+@media screen and (max-width:1365px){
+    .c_FicBox{margin-bottom: 20px;}
+}
+@media screen and (min-width:1366px){
+    .c_FicBox{margin-bottom: 30px;}
+}
+@media screen and (min-width:1600px){
+    .c_FicBox{margin-bottom: 40px;}
+}
+
+
+
+/*期刊*/
+.c_MagMian{width: 1200px;margin: 40px auto;padding: 38px 13px 40px 27px; overflow: hidden;background: white;min-height: 300px;border-radius: 10px; box-sizing: border-box;}
+.c_MagLeft{cursor: pointer; width: 550px;float: left;height: 765px;border: 1px solid #ccc;box-sizing: border-box;overflow: hidden;position: relative;}
+.c_MenuShow{width: 335px; height: 765px;box-sizing: border-box;padding: 50px 0 0 17px; position: absolute;left: -350px;top: 0;background: white;background: rgba(255,255,255,0.9);}
+.c_MenuTopInfo{width: 150px;height: 153px;float: left; box-sizing: border-box;padding-left: 32px;background: url("../../../static/image/chinese/c_m0.jpg")0 bottom repeat-x; }
+.c_MenuList{width: 95%;margin-left: 13px;border-left: 1px solid #ccc;float: left;}
+.c_MenuList li{width: 100%;float: left; font-size: 21px;color: #333; position: relative;height: 50px;line-height: 50px; }
+.c_MenuList li a:hover{color: #65b113!important; }
+.c_MenuList li a{width: 250px;cursor: pointer; margin-left: 20px; float: left;overflow: hidden;white-space:nowrap;text-overflow:ellipsis;}
+.c_MagRight{width: 570px;height: 720px;float: right;position: relative;overflow: hidden; box-sizing: border-box;border-bottom: 1px solid #65b113;padding: 0 15px;}
+.c_SmallMag{float: left;width: 110%;padding-top: 10px; height: 680px;overflow-y:scroll; }
+.c_SmallMag li{cursor: pointer; width: 240px;float: left;overflow: hidden; height: 330px;box-sizing: border-box;border: 1px  solid #ccc;margin: 0 15px 15px 15px;}
+.c_SmallMag .c_Shadow{box-shadow: 0 0 20px #58c1e4;}
+.c_SmallMag li:hover{box-shadow: 0 0 20px #58c1e4;}
+.c_IsUpDown{width: 570px;position: relative;height: 30px;float: right;}
+.bottom40{bottom: 40px!important;;}
+.bottom010{bottom: -10px!important;}
+@media screen and (max-width:1365px){
+    .c_MagMian{width: 900px;margin: 40px auto;padding: 38px 13px 40px 27px; overflow: hidden;background: white;min-height: 300px;border-radius: 10px; box-sizing: border-box;}
+    .c_MagLeft{width: 400px;float: left;height: 550px;border: 1px solid #ccc;box-sizing: border-box;overflow: hidden;position: relative;}
+    .c_MenuShow{width: 235px; height: 550px;box-sizing: border-box;padding: 50px 0 0 17px; position: absolute;left: -350px;top: 0;background: white;background: rgba(255,255,255,0.9);}
+    .c_MagRight{width: 450px;height: 720px;}
+    .c_SmallMag li{width: 180px;float: left;overflow: hidden; height: 215px;box-sizing: border-box;border: 1px  solid #ccc;margin: 0 15px 15px 15px;}
+    .c_IsUpDown{width: 450px;position: relative;height: 30px;float: right;}
+}
+/*************************************文章详情**************************************************/
+.c_ArticleMain{ height:100%;margin: auto; z-index: -1;background: #ECEDF0;box-sizing: border-box;}
+@media screen and (max-width:1366px){
+    .c_Content,.c_ArticleMenu,.c_ArticleMain{width: 900px;}
+}
+@media screen and (min-width:1366px){
+    .c_Content,.c_ArticleMenu,.c_ArticleMain{width: 1000px;}
+
+}
+@media screen and (min-width:1600px){
+    .c_Content,.c_ArticleMenu,.c_ArticleMain{width: 1200px;}
+}
+.c_ArticleBox{min-height: 1000px; width: 100%;height:100%;min-width: 300px;background: white; overflow:auto;border-radius: 10px;margin: 0 auto; box-sizing: border-box;}
+.c_ArticleMenu{height: 58px;border-left: 1px solid #ccc;border-right: 1px solid #ccc; background: white; position: fixed;bottom: 0;right: 0;left: 0 ;margin: auto;box-sizing: border-box;border-top: 1px solid #ccc;}
+.c_Share{width: 80px;height: 30px;float: left;border-right: 1px solid #ccc;box-sizing: border-box;margin: 15px 25px 0 0 ;cursor: pointer;padding: 3px 25px;}
+.c_Recommend{cursor: pointer;margin-top: 6px; width: 150px;height: 45px;font-size:18px;text-align: center;line-height: 45px;color: white;background: #F9A24A;border-radius: 10px;outline: none;border: 0; }
+.c_Select{min-width: 500px;height: 100%; float: right;padding-right: 60px;color: #666;line-height: 58px;}
+.m030{margin: 0 30px;}
+.c_Article{ width: 100%;float: left;box-sizing: border-box;padding: 0 50px 60px 50px;}
+.c_Article p,.c_Article span{font-size: 16px!important;line-height: 30px!important;color: #666!important;font-family:  "Microsoft YaHei";}
+
+.c_ArtTitle{width: 100%;float: left; font-size: 24px;text-align: center;margin-bottom: 16px;margin-top: 40px;}
+.auther{
+    width:1100px;
+    text-align: center;
+    margin: 0 auto;
+    color: #666;
+    text-align: center;
+    padding: 0 50px;
+}
+/*手机*/
+.c_ArticleMain1,.c_ArticleBox1,.c_ArtTitle1,.c_Article1{width: 100%;float: left;font-family:  "Microsoft YaHei"!important}
+.c_ArticleMain1{overflow: hidden;}
+.c_ArticleBox1{box-sizing: border-box;padding: 0.35rem;}
+.c_ArtTitle1{text-align: center;line-height: 1.0612rem;font-size: 0.41667rem;}
+.c_Article1{text-align: left;line-height:0.71615rem;font-size: 0.3776rem; }
+/*视频播放*/
+.c_VideoBox{background: black; width: 100%;height: 660px;float: left;text-align: center;line-height: 660px; }
+.c_VideoName{width: 100%;text-align: left;float: left;line-height: 80px;font-size: 18px;color: #333;}
+.c_VideoMenu{width: 100%;height: 60px;float: left;box-sizing: border-box;padding: 12px 10px 12px 0; border-radius:0 0 10px 10px; background: white;border-top: 1px solid #ccc;}
+.c_Views{float: left;box-sizing: border-box;padding:0 10px;border-right: 1px solid #ccc;height: 100%;line-height: 35px;color: #666;  }
+.c_LikeImg{float: left;margin: 5px 5px 0 10px;cursor: pointer;}
+.bor0{border-right: 0!important;}
+.c_VideoShare{float: left;box-sizing: border-box;padding:6px 20px;cursor: pointer; height: 100%;line-height: 35px;color: #666;}
+#isdown:hover,#isup:hover{color: #65b113!important;}
+/***无数据***/
+.noData{
+    text-align:center;
+    height:300px;
+    background:#fff;
+    margin: auto;
+    margin-top: 40px;
+}
+@media screen and (max-width:1366px){
+    .noData{width: 900px;}
+    .auther{width:800px;}
+}
+@media screen and (min-width:1366px) and (max-width:1599px){
+    .noData{width: 1000px;}
+    .auther{width:900px;}
+}
+@media screen and (min-width:1600px){
+    .noData{width: 1200px;}
+
+}
+.isTitle{float: left; width: 130px;overflow: hidden;white-space:nowrap;text-overflow:ellipsis;}

@@ -1,0 +1,253 @@
+html, body{background:#fff;}
+.LoginMain{position: relative;box-sizing: border-box;width: 100%;min-width: 900px;}
+.LoginTop{width: 100%;
+    overflow: hidden;
+    float: left;
+    min-width: 1000px;
+    background: white;
+    box-sizing: border-box;
+    height: 92px;
+    border-bottom: 2px solid #00ce9f;}
+.LoginHead{margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    background: white;}
+.LoginCenter{float: left;width: 100%;height: 710px;background:#f5f5f5;position: relative;}
+.LoginFooter{float: left;width: 100%;height: 24%;text-align: center;}
+.i_GoReg{float: right;
+    color: #00ce9f;
+    cursor: pointer;
+    width: 102px;
+    height: 31px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin: 30px 12px 30px  auto;
+    border: 1px solid #00ce9f;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;}
+.GoTo{float: left;width: 100%;text-align: center;margin: 92px 0 20px 0;}
+.GoTo a{color: #333;font-size: 16px;margin: 0 5px;}
+.GoTo a:hover{color:#F9A24A }
+.Company{float: left;width: 100%;text-align: center;color: #999;font-size:12px;}
+/*注册*/
+.RegisterMian{float: left;height: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;z-index: 1;}
+.TeacherReg{float: left;position: absolute;cursor: pointer; top: 0;left: 215px; bottom: 0;margin: auto;z-index: 2;background: url("../../../static/image/sprite/teacher.png")0 0; background-size: 100%;}
+.StudentReg{float: left;position: absolute;cursor: pointer; top: 0;right: 215px; bottom: 0;margin: auto;z-index: 2;background: url("../../../static/image/sprite/student.png")0 0; background-size: 100%;}
+.TeacherStep1,.TeacherStep2{ float:left; height: 410px;position: relative;cursor: pointer;  text-align: center;background: white; box-sizing: border-box;  padding: 0 55px 40px 55px; z-index:3;}
+.Title{width: 100%;float: left;text-align: center;color: #333333;}
+.i_InfoIn{width: 100%;float: left;box-sizing: border-box;border: 1px solid #ccc;}
+.i_Itext{outline: none;height: 100%; float: left;width: 93%;line-height:28px;color: #333;border: 0;  text-align: left;box-sizing: border-box;}
+.i_Error{box-sizing: border-box; line-height: 12px;height: 12px;text-align: left; width: 100%;float: left;color:  #f6111a;font-size: 12px;}
+.i_Captcha{float: left;width: 100%;position: relative;}
+.i_Captcha p{line-height:16px;font-size:12px;}
+.i_Captcha>p:first-child{color:#666;}
+.CaptchaIn{ width: 160px;float: left;box-sizing: border-box;border: 1px solid #ccc;outline: none;color: #333;}
+.CapImg{float: left;margin: 10px 5px 0 5px;}
+.NextBtn{width: 100%;box-sizing: border-box; float: left;text-align: center;color: white; background: -webkit-linear-gradient(#03d89b,#00b961); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#03d89b,#00b961); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#03d89b,#00b961); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#03d89b,#00b961); /* 标准的语法 */
+    border-radius: 10px;outline: none;cursor: pointer;border: 0;margin-top: 20px;}
+.MsgInBtn{width: 126px; text-align: center;cursor: pointer; border: 0;outline: none;float: right;color: #636363;font-size: 12px;background: #dedede;height:40px;}
+.MsgCapin{ width: 160px;box-sizing: border-box; text-align: left;border: 1px solid #ccc;outline: none;float: left;color: #333;}
+.StepTwo{position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;border: 1px solid #65B113;background: white;border-radius: 10px; ;  box-sizing: border-box;  z-index: 5; }
+.StepTwoTitle{width:100%;float: left; text-align: center;color: #65B113;border-bottom: 1px solid #65B113;}
+.DoneBox,.StudentBox{float: left;width: 100%;box-sizing: border-box;}
+.UserName{width: 100%; border: 1px solid #ccc;float: left;outline: none;text-align: left;box-sizing: border-box;padding-left: 10px;color: #333;}
+.UserSelect{width: 100%;cursor: pointer; padding-right: 10px;position: relative; border: 1px solid #ccc;float: left;outline: none;text-align: left;box-sizing: border-box;padding-left: 15px;color: #333;}
+.Box{float: left;width: 290px;box-sizing: border-box;margin-top:10px;}
+.SelectOut{float: left;width: 90%;overflow: hidden;white-space:nowrap;text-overflow:ellipsis; }
+.LoadTit{float: left;color: #666;}
+.UserOption{display: none; width: 100%;background: white;box-sizing: border-box; z-index: 6; border-radius: 5px;border: 1px solid #ccc; position: absolute;left: 0;}
+.UserOption li{float: left;width: 100%;box-sizing: border-box;padding-left: 15px;color: #333;}
+.DoneRegBtn0{width: 100%; box-sizing: border-box;display: block;margin: 0 auto; text-align: center;color: white;background: -webkit-linear-gradient(#03d89b,#00b961); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#03d89b,#00b961); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#03d89b,#00b961); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#03d89b,#00b961); /* 标准的语法 */
+    border-radius: 10px;border-radius: 10px;outline: none;cursor: pointer;border: 0;margin-top:30px}
+.IsCode{float: left;margin-top: 8%}
+.Choico{float: left;cursor: pointer;}
+.IsCodeSelect{float: left;color: #666;}
+.StudentBox{float: left;width: 100%;margin: 10px 0 10px 0;}
+.DoneBox{padding: 0 55px;position: absolute;left: 0;bottom: 10%;}
+.wc29{width: 29%;}
+.unline{
+    text-decoration: underline;
+}
+.r_Agreement{
+    float: left;
+    margin-top: 10px;
+}
+.r_DownBox {
+    float: right;
+    width: 38px;
+    height: 38px;
+    background: #dedede;
+    text-align: center;
+    position:relative;
+    top: -38px;
+    left: 10px;
+}
+.loimg {
+    background: url('../../../static/image/register1.3/loimg.png')0 0 no-repeat;
+}
+.dico0 {
+    height: 6px;
+    width: 11px;
+    background-position: -105px 0;
+    float: left;
+    margin: 17px 0 0 14px;
+}
+.UserOption{
+    display: none;
+    z-index: 2;
+    position: absolute;
+    top: 39px;
+    left: -1px;
+    width: 290px;
+    min-height: 40px;
+    box-sizing: border-box;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background: #f5f5f5;
+}
+.UserOption li{
+    float: left;
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    color: #323232;
+    font-size: 14px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    background: #f5f5f5;
+}
+.IsCodeSelect{
+    font-size: 18px;
+    color: #323232;
+    float: left;
+    width: 100%;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom:10px;
+}
+.reico0 {
+    height: 14px;
+    width: 14px;
+    background-position: -18px 0;
+    float: left;
+    margin: 5px 8px 0 0;
+    cursor: pointer;
+}
+.reico1 {
+    height: 14px;
+    width: 14px;
+    background-position: 0 0;
+    float: left;
+    margin: 5px 8px 0 0;
+    cursor: pointer;
+}
+.TeacherStep1>div{
+    height:40px;
+    line-height:40px;
+    position:relative;
+    float:left;
+    margin-top:10px
+}
+.IsCode>p{
+    font-size: 16px;
+}
+.r_Agreement a{
+    font-size:14px;
+    color:#959595;
+}
+.DoneRegBtn0,.LoadTit,.SelectOut{height:38px;font-size: 14px;line-height: 38px;}
+.i_Itext{line-height: 24px;font-size: 14px;color: #333;}
+@media screen and (max-width:1366px){
+    .LoginHead{width: 900px;}
+    .LoginMain{height: 740px;}
+    .RegisterMian{width: 900px;}
+    .StudentReg,.TeacherReg{width: 250px;height: 250px; }
+    .TeacherStep1,.TeacherStep2{width: 390px;left: -16%;}
+    .Title{line-height:40px;font-size: 20px; }
+    .CapImg{margin-top: 5px;margin-left: 0;margin-right: 0;}
+    .UserSelect,.UserName,.MsgCapin,.MsgInBtn{height: 40px;font-size: 12px;}
+    .MsgCapin{  padding: 2px 0 2px 10px; margin-right: 5px;}
+    .CaptchaIn,.i_InfoIn{line-height: 35px;padding: 2px 0 2px 10px;height: 35px;}
+    .NextBtn {height: 35px;line-height: 35px;text-align: center;font-size: 14px;}
+    .lh450{line-height: 35px!important;}
+    .StepTwo{width:400px;height:350px;}
+    .StepTwoTitle{height:35px;font-size: 16px;line-height: 35px;}
+    /*.UserOption{top: 36px;}*/
+    .Choico{margin: 5px;}
+    .padeL{padding-left: 63px;}
+    .padeL1{padding-left: 81px;}
+    .CaptchaIn { width: 145px;margin-right: 5px;}
+    .MsgCapin {width: 145px;}
+    .TeacherReg {left: 125px;}
+    .StudentReg {right: 125px;}
+    }
+
+@media screen and (min-width:1366px) and (max-width:1599px){
+    .LoginHead{width: 1000px;}
+    .LoginMain{height: 740px;}
+    .RegisterMian{width: 1000px;}
+    .TeacherStep1,.TeacherStep2{width: 410px;left: -13%;}
+    .StudentReg,.TeacherReg{width: 280px;height: 280px; }
+    .Title{line-height:50px;font-size: 22px;}
+    .MsgCapin{  padding: 4px 0 4px 10px;margin-right: 5px;}
+    .StepTwo{ width:480px;height:400px; }
+    .CaptchaIn,.i_InfoIn{line-height: 40px;padding: 4px 0 4px 10px;height:40px;}
+    .NextBtn {height: 40px;line-height: 40px;text-align: center;font-size: 16px;}
+    .UserSelect,.UserName,.MsgCapin,.MsgInBtn{height: 40px;font-size: 12px;}
+    .lh450{line-height: 40px!important;}
+    .StepTwoTitle{height:40px;font-size: 18px;line-height: 40px;}
+    .Choico{margin: 7px;}
+    .CaptchaIn { width: 155px;}
+    .MsgCapin {width: 155px;}
+    .TeacherReg {left: 145px;}
+    .StudentReg {right: 145px;}
+}
+@media screen and (min-width:1600px){
+    .LoginHead{width: 1200px;}
+    .LoginMain{height: 920px;}
+    .RegisterMian{width: 1200px;}
+    .TeacherStep1,.TeacherStep2{width: 404px;left: -16%;height:411px;}
+    .StudentReg,.TeacherReg{width: 310px;height: 310px; }
+    .Title{line-height:65px;font-size: 24px;}
+    .MsgCapin{  padding: 6px 0 6px 5px;margin-right: 5px;}
+    .CaptchaIn,.i_InfoIn{line-height: 40px;padding: 6px 0 6px 10px;height: 40px;}
+    .NextBtn {height: 38px;line-height: 38px;text-align: center;font-size: 16px;}
+    .UserSelect,.UserName,.MsgCapin{height: 40px;font-size: 14px;}
+    .lh450{line-height: 45px!important;}
+    .StepTwo{ width:555px;height:420px;}
+    .StepTwoTitle{height:45px;font-size: 20px;line-height: 45px;}
+    .Choico{margin: 9px;}
+    .TeacherReg {left: 215px;}
+    .StudentReg {right: 215px;}
+}
+/*.ShowMain1,.ShowMain2{*/
+    /*display:block;*/
+/*}*/
+/*底部*/
+.Com_Footer{float: left;width: 100%;height: 120px;font-family: 'microsoft yahei';}
+.FooterCon:before,.FooterCon:after{clear: both;}
+.FooterCon{width: 1000px;height: 120px;margin: auto;text-align: center;}
+.FooterLeft{float: left;width: 600px;height: 120px;box-sizing: border-box; }
+.FooterNav{float: left;width: 100%;margin-left: -20px;margin-top: 38px;}
+.FooterNav>li{float: left;border-right:1px solid #404040;text-align: center; width: 95px;box-sizing: border-box; height: 15px;line-height: 15px;font-size: 14px;color: #959595;}
+.FooterNav>li:last-child{border-right: 0;}
+.FooterNav>li a{width: 95px;box-sizing: border-box; height: 15px;line-height: 15px;font-size: 14px;color: #959595;cursor: pointer}
+.FooterNav>li a:hover{color:#00ce9e; }
+.Copyright{float: left;margin-top: 5px; text-align: left;width: 100%;font-size: 14px;color: #636363;line-height: 22px;font-family: 'microsoft yahei';}
+.FooterRight{float: right;height: 120px;width: 330px;box-sizing: border-box; }
+.FooterIcoBox{float: left;width: 170px;box-sizing: border-box; height: 32px;margin-top: 44px;}
+.FooterIcoBox>li{float: left;margin-right: 10px;text-align: left;line-height: 32px;position: relative;}
+.FooterInfo{float: right;width: 160px;font-size: 14px;margin-top: 38px;}
+.FooterInfo>li{float: left;width: 100%;font-size: 14px;color: #333;font-family: 'microsoft yahei';line-height: 22px;text-align: left;}
+.Footer_Weicode{position: absolute;width: 114px;max-width: none;top: -124px;left: -42px;display: none;}
+.Weibofocus{opacity: 0;filter: alpha(opacity=0); width: 32px!important;height: 32px!important;position: absolute;}
+.Weibofocus>iframe{width: 32px!important;}

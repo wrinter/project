@@ -1,0 +1,1038 @@
+@media screen and (max-width:1366px){
+
+    .containter{
+        width:1000px;
+        height:auto;
+        margin: 0 auto;
+    }
+    .main{
+        width:1000px;
+        height:48px;
+        margin:0 auto;
+        position: relative;
+        margin-top:20px;
+        margin-bottom: 40px;
+    }
+    .stu{
+        width: 900px;
+        height: 65px;
+        margin:0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .stu ul{
+        width:auto;
+        height: 65px;
+        position: absolute;
+        top:0;
+        z-index: 1;
+        margin-top: 8px;
+    }
+    .stuSpan{
+        float: left;
+        border: 1px solid #CCCCCC;
+        background-color: #ffffff;
+        width: 117px;
+        height: 43px;
+        line-height: 43px;
+        text-align: center;
+        margin: 0 14px;
+        margin-bottom: 20px;
+        position: relative;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #858585;
+    }
+    .triple{
+        position: absolute;
+        left:56px;
+        top:44px;
+    }
+    ._left{
+        position: absolute;
+        left:0;
+        top:7px;
+        z-index: 0;
+        cursor: pointer;
+    }
+    ._right{
+        position: absolute;
+        right:0;
+        top:7px;
+        z-index: 0;
+        cursor: pointer;
+    }
+    .rightContent{
+        width:280px;
+        height:669px;
+        float:right;
+        border-radius: 4px;
+    }
+    .paperList{
+        width: 258px;
+        height: 260px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 15px 10px;
+        overflow-y :auto;
+    }
+    .paperList li{
+        height:30px;
+        color:#333;
+        margin-bottom: 15px;
+    }
+    .nextOne{
+        width:280px;
+        height:230px;
+        background: #fff;
+        border-radius: 10px;
+        margin-top:20px;
+    }
+    .fl_img {
+        width: 700px;
+    }
+
+    .fl_img .canvas_div {
+        width: 700px;
+        height: 478px;
+        position: relative;
+    }
+    .Canvas {
+        width: 700px;
+        height: 478px;
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+    }
+    .Canvaswh {
+        width: 700px;
+        height: 474px;
+        display: none;
+    }
+    .fl_img textarea {
+        width: 685px;
+        height: 64px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        resize: none;
+    }
+    .img_ul li img {
+        width: 110px !important;
+        height: 82px !important;
+        float: left;
+        margin:0 2px 0 0;
+        cursor: pointer;
+    }
+    .img_ul li .change {
+        width: 130px !important;
+        height: 97px !important;
+        top: -15px;
+        position: relative;
+    }
+    .img_ul {
+        position: absolute;
+        top: 396px;
+        display: -webkit-box;
+    }
+    .analytical_div {
+        width: 400px;
+        height: 302px;
+        right: 0;
+        bottom: -62px;
+        background-color: #ffffff;
+        border: 1px solid #A9A9A9;
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-y: auto;
+        overflow-x: auto;
+        display: none;
+        position: absolute;
+        padding: 0 15px;
+    }
+    .close_span {
+        right: 0;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        cursor: pointer;
+        font-size: 25px;
+        margin-top: 4px;
+        float: right;
+    }
+    .paperList li .que_num {
+        display: block;
+        float: left;
+        width: 48px;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .paperList li .judge {
+        display: block;
+        float: left;
+        width: 30px;
+        text-align: center;
+        height: 24px;
+        margin-right: 11px;
+        cursor: pointer;
+        padding:2px 10px;
+        border:1px solid #ccc;
+        background-color: #ffffff;
+    }
+    .Red{
+        background: #f00 !important;
+        color: #ffffff !important;
+    }
+    .green {
+        background: #65B113 !important;
+        color: #ffffff !important;
+    }
+    .yellow {
+        background: #FAA24A !important;
+        color: #ffffff !important;
+    }
+    .half {
+        letter-spacing: -7px;
+        text-indent : -7px;
+    }
+    .up_li {
+        height: 80px;
+    }
+    .up_li div {
+        background-image: url(../../image/sprite/correct_sprite.png);
+        background-repeat: no-repeat;
+        margin: 0 46px;
+        cursor: pointer;
+    }
+    .up_li hr {
+        float: left;
+        height: 50px;
+        margin-top: 19px;
+    }
+    .down_li {
+        height: 95px;
+        padding: 7px 0px;
+    }
+    .down_li span {
+        display: block;
+        width: 150px;
+        height: 45px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 4px;
+        margin: 10px 70px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size:18px;
+    }
+    .down_li .analytical_span {
+        background-color: #65a113;
+    }
+    .down_li .next_span {
+        background-color: #FAA249;
+    }
+    .questionln_li {
+        height: auto !important;
+    }
+    .half_li {
+        margin-left: 27px;
+        display: none;
+    }
+    .score_span {
+        float: left;
+        height: 28px;
+        border: 1px solid #c1c1c1;
+        display: block;
+        border-radius: 4px;
+        padding-top: 3px;
+    }
+    .score_input {
+        width: 50px;
+        border: none;
+        background-color: #65b113;
+        height: 33px;
+        border-radius: 4px;
+        margin-left: 15px;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .score_val {
+        width: 60px;
+        height: 25px;
+        border: 1px solid #c1c1c1;
+        display: block;
+        float: left;
+        border-bottom: none;
+        border-top: none;
+        line-height: 25px;
+        text-align: center;
+    }
+    .scorebut {
+        width: 20px;
+        display: block;
+        float: left;
+        text-align: center;
+        line-height: 25px;
+        height: 25px;
+        cursor: pointer;
+        margin: 0 3.5px;
+    }
+}
+@media screen and (min-width: 1366px){
+
+    .containter{
+        width:1080px;
+        height:auto;
+        margin: 0 auto;
+    }
+    .main{
+        width:1080px;
+        height:48px;
+        margin:0 auto;
+        position: relative;
+        margin-top:20px;
+        margin-bottom: 40px;
+    }
+    .stu{
+        width: 882px;
+        height: 65px;
+        margin:0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .stu ul{
+        width:auto;
+        height:65px;
+        position: absolute;
+        top:0;
+        z-index: 1;
+        margin-top: 8px;
+    }
+    .stuSpan{
+        float: left;
+        border: 1px solid #CCCCCC;
+        background-color: #ffffff;
+        width: 117px;
+        height: 43px;
+        line-height: 43px;
+        text-align: center;
+        margin: 0 14px;
+        margin-bottom: 20px;
+        position: relative;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #858585;
+    }
+    .triple{
+        position: absolute;
+        left:56px;
+        top:44px;
+    }
+    ._left{
+        position: absolute;
+        left:0;
+        top:7px;
+        z-index: 0;
+        cursor: pointer;
+    }
+    ._right{
+        position: absolute;
+        right:0;
+        top:7px;
+        z-index: 0;
+        cursor: pointer;
+    }
+    .rightContent{
+        width:280px;
+        height:608px;
+        float:right;
+        border-radius: 4px;
+    }
+    .paperList{
+        width: 258px;
+        height: 321px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 15px 10px;
+        overflow-y: auto;
+    }
+    .paperList li{
+        height:30px;
+        color:#333;
+        margin-bottom: 15px;
+    }
+    .nextOne{
+        width:280px;
+        height:237px;
+        background: #fff;
+        border-radius: 10px;
+        margin-top:20px;
+    }
+    .fl_img {
+        width: 780px;
+    }
+
+    .fl_img .canvas_div {
+        width: 780px;
+        height: 546px;
+        position: relative;
+    }
+    .Canvas {
+        width: 780px;
+        height: 546px;
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+    }
+    .Canvaswh {
+        width: 780px;
+        height: 542px;
+        display: none;
+    }
+    .fl_img textarea {
+        width: 773px;
+        height: 64px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        resize: none;
+    }
+    .img_ul li img {
+        width: 110px !important;
+        height: 82px !important;
+        float: left;
+        margin:0 2px 0 0;
+        cursor: pointer;
+    }
+    .img_ul li .change {
+        width: 130px !important;
+        height: 97px !important;
+        top: -15px;
+        position: relative;
+    }
+    .img_ul {
+        position: absolute;
+        top: 464px;
+        display: -webkit-box;
+    }
+    .analytical_div {
+        width: 360px;
+        height: 270px;
+        right: 0;
+        bottom: -54px;
+        background-color: #ffffff;
+        border: 1px solid #A9A9A9;
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-y: auto;
+        overflow-x: auto;
+        display: none;
+        position: absolute;
+        padding: 0 15px;
+    }
+    .close_span {
+        right: 0;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        cursor: pointer;
+        font-size: 25px;
+        margin-top: 4px;
+        float: right;
+    }
+    .paperList li .que_num {
+        display: block;
+        float: left;
+        width: 48px;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .paperList li .judge {
+        display: block;
+        float: left;
+        width: 30px;
+        text-align: center;
+        height: 24px;
+        margin-right: 11px;
+        cursor: pointer;
+        padding:2px 10px;
+        border:1px solid #ccc;
+        background-color: #ffffff;
+    }
+    .Red{
+        background: #f00 !important;
+        color: #ffffff !important;
+    }
+    .green {
+        background: #65B113 !important;
+        color: #ffffff !important;
+    }
+    .yellow {
+        background: #FAA24A !important;
+        color: #ffffff !important;
+    }
+    .half {
+        letter-spacing: -7px;
+        text-indent : -7px;
+    }
+    .up_li {
+        height: 80px;
+    }
+    .up_li div {
+        background-image: url(../../image/sprite/correct_sprite.png);
+        background-repeat: no-repeat;
+        margin: 0 46px;
+        cursor: pointer;
+    }
+    .up_li hr {
+        float: left;
+        height: 50px;
+        margin-top: 19px;
+    }
+    .down_li {
+        height: 95px;
+        padding: 7px 0px;
+    }
+    .down_li span {
+        display: block;
+        width: 150px;
+        height: 45px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 4px;
+        margin: 10px 70px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size:18px;
+    }
+    .down_li .analytical_span {
+        background-color: #65a113;
+    }
+    .down_li .next_span {
+        background-color: #FAA249;
+    }
+    .questionln_li {
+        height: auto !important;
+    }
+    .half_li {
+        margin-left: 27px;
+        display: none;
+    }
+    .score_span {
+        float: left;
+        height: 28px;
+        border: 1px solid #c1c1c1;
+        display: block;
+        border-radius: 4px;
+        padding-top: 3px;
+    }
+    .score_input {
+        width: 50px;
+        border: none;
+        background-color: #65b113;
+        height: 33px;
+        border-radius: 4px;
+        margin-left: 15px;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .score_val {
+        width: 60px;
+        height: 25px;
+        border: 1px solid #c1c1c1;
+        display: block;
+        float: left;
+        border-bottom: none;
+        border-top: none;
+        line-height: 25px;
+        text-align: center;
+    }
+    .scorebut {
+        width: 20px;
+        display: block;
+        float: left;
+        text-align: center;
+        line-height: 25px;
+        height: 25px;
+        cursor: pointer;
+        margin: 0 3.5px;
+    }
+}
+@media screen and (min-width: 1600px){
+
+    .containter{
+        width:1200px;
+        height:auto;
+        margin: 0 auto;
+    }
+    .main{
+        width:1200px;
+        height:48px;
+        margin:0 auto;
+        position: relative;
+        margin-top:20px;
+        margin-bottom: 40px;
+    }
+    .stu{
+        width: 1045px;
+        height: 65px;
+        margin:0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .stu ul{
+        width:auto;
+        height:65px;
+        position: absolute;
+        top:0;
+        z-index: 1;
+        margin-top: 8px;
+    }
+    .stuSpan{
+        float: left;
+        border: 1px solid #CCCCCC;
+        background-color: #ffffff;
+        width: 117px;
+        height: 43px;
+        line-height: 43px;
+        text-align: center;
+        margin: 0 14px;
+        margin-bottom: 20px;
+        position: relative;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #858585;
+    }
+    .triple{
+        position: absolute;
+        left:56px;
+        top:44px;
+    }
+    ._left{
+        position: absolute;
+        left:0;
+        top:7px;
+        z-index: 0;
+        cursor: pointer;
+    }
+    ._right{
+        position: absolute;
+        right:0;
+        top:7px;
+        z-index: 0;
+        cursor: pointer;
+    }
+    .rightContent{
+        width:280px;
+        height:669px;
+        float:right;
+        border-radius: 4px;
+    }
+    .paperList{
+        width: 258px;
+        height: 390px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 15px 10px;
+        overflow-y: auto;
+    }
+    .paperList li{
+        height:30px;
+        color:#333;
+        margin-bottom: 15px;
+    }
+    .nextOne{
+        width:280px;
+        height:230px;
+        background: #fff;
+        border-radius: 10px;
+        margin-top:20px;
+    }
+    .fl_img {
+        width: 900px;
+    }
+
+    .fl_img .canvas_div {
+        width: 900px;
+        height: 607px;
+        position: relative;
+    }
+    .Canvas {
+        width: 900px;
+        height: 607px;
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+    }
+    .Canvaswh {
+        width: 900px;
+        height: 607px;
+        display: none;
+    }
+    .fl_img textarea {
+        width: 875px;
+        height: 64px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        resize: none;
+    }
+    .img_ul li img {
+        width: 110px !important;
+        height: 82px !important;
+        float: left;
+        margin:0 2px 0 0;
+        cursor: pointer;
+    }
+    .img_ul li .change {
+        width: 130px !important;
+        height: 97px !important;
+        top: -15px;
+        position: relative;
+    }
+    .img_ul {
+        position: absolute;
+        top: 525px;
+        display: -webkit-box;
+    }
+    .analytical_div {
+        width: 400px;
+        height: 302px;
+        right: 0;
+        bottom: -62px;
+        background-color: #ffffff;
+        border: 1px solid #A9A9A9;
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-y: auto;
+        overflow-x: auto;
+        display: none;
+        position: absolute;
+        padding: 0 15px;
+    }
+    .close_span {
+        right: 0;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        cursor: pointer;
+        font-size: 25px;
+        margin-top: 4px;
+        float: right;
+    }
+    .paperList li .que_num {
+        display: block;
+        float: left;
+        width: 48px;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .paperList li .judge {
+        display: block;
+        float: left;
+        width: 30px;
+        text-align: center;
+        height: 24px;
+        margin-right: 11px;
+        cursor: pointer;
+        padding:2px 10px;
+        border:1px solid #ccc;
+        background-color: #ffffff;
+    }
+    .Red{
+        background: #f00 !important;
+        color: #ffffff !important;
+    }
+    .green {
+        background: #65B113 !important;
+        color: #ffffff !important;
+    }
+    .yellow {
+        background: #FAA24A !important;
+        color: #ffffff !important;
+    }
+    .half {
+        letter-spacing: -7px;
+        text-indent : -7px;
+    }
+    .up_li {
+        height: 80px;
+    }
+    .up_li div {
+        background-image: url(../../image/sprite/correct_sprite.png);
+        background-repeat: no-repeat;
+        margin: 0 46px;
+        cursor: pointer;
+    }
+    .up_li hr {
+        float: left;
+        height: 50px;
+        margin-top: 19px;
+    }
+    .down_li {
+        height: 95px;
+        padding: 7px 0px;
+    }
+    .down_li span {
+        display: block;
+        width: 150px;
+        height: 45px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 4px;
+        margin: 10px 70px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size:18px;
+    }
+    .down_li .analytical_span {
+        background-color: #65a113;
+    }
+    .down_li .next_span {
+        background-color: #FAA249;
+    }
+    .questionln_li {
+        height: auto !important;
+    }
+    .half_li {
+        margin-left: 27px;
+        display: none;
+    }
+    .score_span {
+        float: left;
+        height: 28px;
+        border: 1px solid #c1c1c1;
+        display: block;
+        border-radius: 4px;
+        padding-top: 3px;
+    }
+    .score_input {
+        width: 50px;
+        border: none;
+        background-color: #65b113;
+        height: 33px;
+        border-radius: 4px;
+        margin-left: 15px;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .score_val {
+        width: 60px;
+        height: 25px;
+        border: 1px solid #c1c1c1;
+        display: block;
+        float: left;
+        border-bottom: none;
+        border-top: none;
+        line-height: 25px;
+        text-align: center;
+    }
+    .scorebut {
+        width: 20px;
+        display: block;
+        float: left;
+        text-align: center;
+        line-height: 25px;
+        height: 25px;
+        cursor: pointer;
+        margin: 0 3.5px;
+    }
+}
+.font_green {
+    color: #67b21a;
+}
+.eraser {
+    background-position: 0px -350px;
+    width: 48px;
+    height: 34px;
+    margin-top: 28px !important;
+}
+.disaeraser {
+    background-position: 0px -316px;
+    width: 48px;
+    height: 34px;
+    margin-top: 28px !important;
+}
+.pencil {
+    background-position: 0px -91px;
+    width: 41px;
+    height: 41px;
+    margin-top: 24px !important;
+}
+.disapencil {
+    background-position: 0px -51px;
+    width: 41px;
+    height: 41px;
+    margin-top: 24px !important;
+}
+.p_LessMoney{display: none; z-index: 99999; position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: black;background: rgba(0,0,0,0.5);}
+.p_LessMoneyBg{width: 670px;height: 352px;position: absolute;bottom: 0;top: 0;left: 0;right: 0;margin: auto;background: url("../../../static/image/sprite/bg.png") 0 0 no-repeat;border-radius: 10px;overflow: hidden;}
+.p_NoIdentifyBg{width: 670px;height: 352px;position: absolute;bottom: 0;top: 0;left: 0;right: 0;margin: auto;background: url("../../../static/image/homework/exit.png") 0 0 no-repeat;border-radius: 10px;overflow: hidden;}
+.confirm{position: absolute;bottom: 15px;right: 230px;left: 0;margin: auto; width: 190px;height: 45px;text-align: center;line-height: 45px;font-size: 18px;float: left; color: white;background: #8ed6ee;border-radius: 10px;}
+.cancel{position: absolute;bottom: 15px;right: 0;left: 230px;margin: auto; width: 190px;height: 45px;text-align: center;line-height: 45px;font-size: 18px;float: left; color: white;background: #CCCCCC;border-radius: 10px;}
+.GoPayClose{opacity: 0;filter: alpha(opacity=0);  width: 35px;height: 40px;position: absolute;top: 0;right: 21px;cursor: pointer;}
+.triangle {
+    display: block;
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    margin-top: 3px;
+    border-right: 10px solid #ecedf0;
+    border-bottom: 10px solid #67b21a;
+    border-left: 10px solid #ecedf0;
+}
+.font_gray {
+    border: 1px solid #67b21a;
+    color: #67b21a;
+}
+.openPic_span {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-image: url(../../../static/image/homework/open.png);
+    background-size: 100% 100%;
+    cursor: pointer;
+    float: left;
+    left: 0px;
+    bottom: 20px;
+    display: none;
+}
+.closePic_span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-image: url(../../../static/image/homework/close.png);
+    background-size: 100% 100%;
+    cursor: pointer;
+    top: 16px;
+    margin: 0;
+    float: left;
+}
+.late_i {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    background-color: #ca0d0d;
+    top: -9px;
+    right: -14px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+.correct_i{
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    background-color: #65a113;
+    top: -9px;
+    left: -12px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+}
+.nobackcolor {
+    background-color: #ccc !important;
+    color: #fff !important;
+}
+.change_que_num {
+    color: #65B113;
+}
+.noImg {
+    color: red;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 155px;
+    width: 100%;
+    float: left;
+}
+.noimgDiv {
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+}
+.nextOne .heng {
+    margin: 0;
+}
+.pencil_div,.eraser_div {
+    width: 139px;
+    height: 88px;
+}
+.pencil_div {
+    border-top-left-radius: 10px;
+}
+.eraser_div {
+    border-top-right-radius: 10px;
+}
+.change_pencel {
+    background-image: url("../../image/sprite/eareser3.png") !important;
+    background-repeat: inherit !important;
+    background-position: 0px -80px !important;
+    height: 40px !important;
+}
+.change_eareser {
+    background-image: url("../../image/sprite/pensor3.png") !important;
+    background-repeat: inherit !important;
+    background-position: 0 0 !important;
+}
+
+.change_li {
+    height: 35px !important;
+    padding-top: 5px;
+    background: rgba(243, 161, 78, 0.65);
+}
+
+.s_active {
+    border: 1px solid #67b21a;
+    color: #67b21a;
+}
+.Canvas {
+
+    border-color: #ccc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.fl_img textarea {
+    text-indent: 20px;
+    line-height: 21px;
+    font-size: 16px;
+    color: #999;
+    background: #fff;
+    border: 1px solid #ccc;
+
+}
+.paperList {
+
+}
+.nextOne {
+
+}
+.addBorder {
+    border:1px solid #ffffff;
+}
+.title_div {
+    float: right;
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid #DDDDDD;
+}
+.num_span {
+    float: left;
+    margin-top: 6px;
+    margin-left: 9px;
+    font-size: 18px;
+}

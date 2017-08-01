@@ -1,0 +1,128 @@
+
+.NoData{border-radius:0 0 10px 10px; margin: auto; height: 600px;overflow: hidden;background: white;box-sizing: border-box;; text-align: center;line-height: 600px;position: relative;}
+.NoDataImg{width: 195px;margin-top: 40px; }
+body{overflow-y: scroll;}
+/*备课中心目录索引*/
+.c_Crumbs{ position: relative;}
+.p_DirectoryName{ color: #F9A24A;}
+.p_Directory_ico{ width:38px; height: 29px; background: url("../../../static/image/prepare/img_p_directory_ico.png") no-repeat; margin:15px 20px 0 15px; cursor: pointer;}
+.p_DirectoryWrap{ width:305px; height: 465px; border: 1px solid #ccc; border-radius: 10px; box-sizing: border-box; position: absolute; right: 0;top: 60px; z-index: 10; background: #fff;  }
+/*音频内容区*/
+.p_AudioMain{width: 1200px;min-height: 260px;overflow: hidden;margin:0 auto;background: white;border-radius:0 0 10px 10px;  ;box-sizing: border-box;}
+.p_AudioListMain{width: 100%;height:220px;position: relative;  box-sizing: border-box;border-bottom: 1px solid #ccc;}
+.p_AudioList_Out{width: 1085px;height: 220px; overflow: hidden;margin: 0 auto;position: relative;}
+.p_AudioList{float: left;position: absolute;top: 0;left: 0; width: 99999px; height: 220px;box-sizing: border-box;}
+.p_AudioList li{width: 270px;height: 220px;box-sizing: border-box;float: left;padding: 0 25px 0 10px;}
+.p_ListBox{width: 245px;cursor: pointer; height: 135px;float: left; border-radius: 10px;background: white;padding: 25px 0 0 0; box-sizing:border-box;margin: 43px 0 0 0; ;  border: 1px solid #ccc;}
+/*单词*/
+.p_Word{width: 132px;text-align: center;line-height: 55px; font-size: 18px;color: #999;margin-top: 10px;float: left;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.p_Origin{width: 100%;height: 35px;text-align: center;position: absolute;bottom: 0;left: 0;}
+.p_Origin span{width: 10px;height: 10px;box-sizing: border-box;border-radius: 120%;display: inline-block;border: 1px solid #ccc;;cursor: pointer;margin: 10px;}
+.p_OriginSelect{background:#65b113;border: 0!important; }
+.WrapperBox{width: 100%;height: 405px;margin: 15px 0;position: relative;overflow: hidden;}
+.WordOutBox{width:1200px;margin:0 auto;position: relative; height: 100%;overflow: hidden;}
+.WordBox{float: left;height: 100%;width:999999px; position: absolute;top: 0;left: 0;}
+.WordBox>li{float: left;width: 1200px;height: 100%;}
+.Word_ImgBox{width: 40%;height: 100%;float: left;margin-right:4%; }
+.Word_MainBox{width: 100%;height: 100%;float: left;box-sizing: border-box;padding: 80px 0 0 170px;overflow-y: auto;overflow-x: hidden;}
+.Word_Img{width: 100%;height: 64%;margin-top:18%;  float: left;border-radius: 10px;box-sizing: border-box;overflow: hidden;}
+.w160{width: 160px!important;}
+.Word_Top{float: left;width: 100%;margin-bottom: 25px;}
+.Word{font-size: 30px;color: #333;width: 25%;float: left;height: 100%;line-height: 30px;text-align: left;}
+.Word_Phonogram{width: 70%;line-height: 30px;float: left;font-size: 30px;}
+.Word_MeaningList{float: left;width: 70%;margin-top: 15px;}
+.Word_MeaningList li{float: left;width:100%;line-height: 30px;}
+.Word_MainBox span{float: left;}
+.Word_Example{width: 100%;float: left;}
+.Word_Attr{width: 100%;float: left;line-height: 30px;}
+.Word_AttrName{float: left;text-align: left;color: #999;width: 25%;}
+.Sentences_List{float: left;text-align: left;color: #333;width: 75%;overflow-y: auto;}
+.Sentences_List li{float: left;width: 100%;margin-bottom: 20px;}
+.title{  font-size: 24px;  color:#65b113;  margin-left:18px;  }
+._unit{  margin-left:18px;  font-size:18px;  color:#333;  border-bottom: 1px solid #ccc;  cursor: pointer;  }
+._section{  margin-left:40px;  font-size:14px;  color:#5a5a5a;  min-height:26px;  line-height: 26px;  height:auto;  }
+._sectionNext{  margin-left:22px;  font-size:14px;  color:#5a5a5a;  min-height:26px;  line-height: 26px;  height:auto;  }
+.m_del {  cursor: pointer;  margin-right: 20px;  margin-top:20px; }
+/*切换按钮*/
+.a_TabBtn{overflow: hidden;top: 0;left: 20px; width: 170px;height: 35px;border: 1px solid #ccc;cursor: pointer;box-sizing: border-box;float: left;background: white;padding: 0 10px; border-radius: 12px;position: relative;}
+.a_Tab0,.a_Tab1{width: 50%; float: left;height: 33px; line-height: 33px;text-align: center;color: #666;position: absolute;top: 0;z-index: 1;}
+.a_Tab0{left:0;}
+.a_Tab1{right:0;}
+.a_TabBtnImg{position: absolute; left:0;top: 0;height: 100%;z-index: 2;}
+.a_TabCon{position: absolute;top: 0;left: -84px;width: 150%;height: 33px;box-sizing: border-box;padding: 0 10px;}
+.TabT{float:left;width: 33.3%;height: 33px;color: #666;line-height: 33px;text-align: center;}
+.p_ListenBox{width: 1000px;height:385px;overflow-y: auto; box-sizing: border-box;padding: 0 20px; margin: 0 auto;overflow-y: auto;text-align: left;position: relative;}
+.p_NoTapeScript{position: absolute;top: 0;left: 0;bottom: 0;right: 0;margin: auto;}
+.p_TabWoring{position: relative;top: 5px;left: 40px; font-size: 18px;color: #333;}
+.matop30{margin-top: 30px!important;}
+@media screen and (max-width:1366px){
+    .Word_MainBox{ padding: 80px 0 0 160px;}
+    .p_DirectoryWrap{ width:305px; height: 465px; border: 1px solid #ccc; border-radius: 10px; box-sizing: border-box; position: absolute; right: 0;top: 60px; z-index: 10; background: #fff; ;}
+    .p_AudioMain{width: 1000px;min-height: 260px;overflow: hidden;margin: 0 auto;background: white;border-radius:0 0 10px 10px;  box-sizing: border-box;}
+    .p_AudioList_Out{width: 805px;height: 220px; overflow: hidden;margin: 0 auto;}
+    .p_AudioList li{width: 270px;height: 220px;box-sizing: border-box;float: left;padding: 0 25px 0 10px;}
+    .p_ListBox{width: 245px;cursor: pointer; height: 135px;float: left; border-radius: 10px;background: white;padding: 25px 0 0 0; box-sizing:border-box;margin: 43px 0 0 0; }
+    .p_Word{width: 125px;text-align: center; font-size: 18px;color: #999;margin-top: 10px;float: left;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+    .p_Tabimg0{position: absolute;top:99px;left: 10px;cursor: pointer; }
+    .p_Tabimg1{position: absolute;top:99px;right: 10px;cursor: pointer; }
+    .p_Origin{width: 100%;height: 35px;text-align: center;position: absolute;bottom: 0;left: 0;}
+    .p_Origin span{width: 10px;height: 10px;box-sizing: border-box;border-radius: 120%;display: inline-block;border: 1px solid #ccc;;cursor: pointer;margin: 10px;}
+    .p_OriginSelect{background:#65b113;border: 0; }
+    .WordOutBox{width:900px;}
+    .WordBox>li{width: 900px;}
+    .Word_Img{height: 58%;margin-top: 21%;}
+}
+.NoDataImg{width: 200px;}
+.p_ListenBox {box-sizing: border-box;padding-left: 35px;}
+.lyricContainer p,.lyricContainer span,.p_ListenBox p,.p_ListenBox span{ font-size: 14px;line-height: 45px;font-family: Microsoft YaHei,sans-serif,Arial!important;color: #666;}
+.lyricContainer{position: absolute;}
+
+.c_Kownledge{width: 1200px;padding:30px;border-radius: 10px;min-height: 200px; margin: 20px auto;overflow: hidden;text-align: center;box-sizing: border-box;background: white; ; }
+.Kolaimg{width: 200px;}
+.c_Directory{float: left;width: 100%;text-align: left;font-size: 16px;}
+.FirstName,.c_DirectoryList li{float: left;line-height: 31px;height: 31px;color: #333; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.c_DirectoryList li{width: 100px;margin-right: 10px; }
+.FirstName{width: 70px;}
+.c_DirectoryList{float: left;width: 1000px;}
+@media screen and (max-width:1366px){
+    .c_Kownledge{width: 1000px;}
+    .c_DirectoryList{width: 800px;}
+}
+.c_Kownledge{width: 1200px;padding:30px;border-radius: 10px 10px 0 0;min-height: 100px; margin:  40px auto 0 auto;overflow: hidden;text-align: center;box-sizing: border-box;background: white; ; }
+.Kolaimg{width: 200px;}
+.c_Directory{float: left;width: 100%;padding-bottom: 7px;text-align: left;font-size: 16px;}
+.c_Directory:last-child{padding-bottom: 0;}
+.FirstName,.c_DirectoryList li{float: left;line-height: 31px;height: 31px;color: #333; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.c_DirectoryList li{cursor: pointer;padding:0 10px;width: 100px;}
+.FirstName{width: 70px;}
+.c_DirectoryList{float: left;}
+@media screen and (max-width:1366px){
+    .FirstName, .c_DirectoryList li{font-size: 14px;}
+    .c_Kownledge,.p_AudioMain,.NoData{width: 900px;}
+    .c_DirectoryList{width: 770px;}
+    .Sentences_List{width: 68%;}
+    .p_AudioList_Out{width: 805px;}
+    .WordOutBox{width:900px;}
+    .WordBox>li{width: 900px;}
+}
+@media screen and (min-width:1366px){
+    .FirstName, .c_DirectoryList li{font-size: 16px;}
+    .c_Kownledge,.p_AudioMain,.NoData{width: 1000px;}
+    .c_DirectoryList{width: 865px;}
+    .Sentences_List{width: 68%;}
+    .p_AudioList_Out{width: 805px;}
+    .WordOutBox{width:1000px;}
+    .WordBox>li{width: 1000px;}
+}
+@media screen and (min-width:1600px){
+    .FirstName, .c_DirectoryList li{font-size: 18px;}
+    .c_Kownledge,.p_AudioMain,.NoData{width: 1200px;}
+    .c_DirectoryList{width: 1060px;}
+    .Sentences_List{width: 75%;}
+    .p_AudioList_Out{width: 1085px;}
+    .WordOutBox{width:1200px;}
+    .WordBox>li{width: 1200px;}
+}
+.c_Kownledge{border-bottom: 1px solid #ccc;}
+.audioplayer{position: static;}
+.lyricWrapper{overflow: hidden;  height: 100%; padding-left: 40px;}

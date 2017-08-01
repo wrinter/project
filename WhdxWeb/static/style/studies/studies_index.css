@@ -1,0 +1,360 @@
+html,body{
+    margin:0;
+    padding:0;
+    background: #ecedf0;
+}
+/*引入雪碧图*/
+/*.s_delete{height:18px;width:15px;background-position:-52px 0;}*/
+/*.s_radio{height:32px;width:50px;background-position:0 0;}*/
+/*.s_inxback_03{height:46px;width:8px;background-position:0 -35px;}*/
+/*媒体查询*/
+@media screen and (max-width: 1366px){
+    /*内容区*/
+    .s_inxcon{
+        width:960px;
+        min-height:432px;
+        background: #fff;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top:45px!important;
+    }
+    /*小喇叭图片*/
+    .s_radioimg{
+        display: block;
+        float: left;
+        width:50px;
+        height:36px;
+        background: url("../../image/studies/studiesimg.png") 0 0 no-repeat;
+        margin-top: 15px!important;
+        margin-left: 20px!important;
+    }
+    /*地区*/
+    .s_inxareaeord{
+        width:520px;
+        height:50px;
+        margin-left: 260px!important;
+        margin-top: 64px!important;
+    }
+    /*第二个选择*/
+    .s_inxareaselect{
+        display: block;
+        width:325px;
+        height:46px;
+        border:1px solid #ccc;
+        border-radius: 10px;
+        text-indent: 10px;
+        float: left;
+        cursor: pointer;
+        position: relative;
+        margin-left: 321px !important;
+    }
+    /*筛选已做的题*/
+    .s_inxseled{
+        display: block;
+        float: left;
+        width:26px;
+        height:26px;
+        margin-left: 405px!important;
+        margin-top: 5px!important;
+        cursor: pointer;
+        background: url("../../image/studies/studiesimg.png") -99px -1px no-repeat;
+    }
+    .s_inxseleimg{
+        display: block;
+        float: left;
+        width:26px;
+        height:26px;
+        margin-left: 405px!important;
+        margin-top: 5px!important;
+        cursor: pointer;
+        background: url("../../image/studies/studiesimg.png") -70px -1px no-repeat;
+    }
+    .s_inxdid{
+        width:100%;
+        height: 36px;
+        margin-top: 48px!important;
+    }
+}
+@media screen and (min-width: 1366px){
+    /*内容区*/
+    .s_inxcon{
+        width:1080px;
+        min-height:486px;
+        background: #fff;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 45px!important;
+    }
+    /*小喇叭图片*/
+    .s_radioimg{
+        display: block;
+        float: left;
+        width:50px;
+        height:36px;
+        background: url("../../image/studies/studiesimg.png") 0 0 no-repeat;
+        margin-top: 15px!important;
+        margin-left: 20px!important;
+    }
+    /*地区*/
+    .s_inxareaeord{
+        width:520px;
+        height:50px;
+        margin-left: 320px!important;
+        margin-top: 72px!important;
+    }
+    /*第二个选择*/
+    .s_inxareaselect{
+        display: block;
+        width:325px;
+        height:46px;
+        border:1px solid #ccc;
+        border-radius: 10px;
+        text-indent: 10px;
+        float: left;
+        cursor: pointer;
+        position: relative;
+        margin-left: 380px !important;
+    }
+    /*筛选已做的题*/
+    .s_inxseled{
+        display: block;
+        float: left;
+        width:26px;
+        height:26px;
+        margin-left: 465px!important;
+        margin-top: 5px!important;
+        cursor: pointer;
+        background: url("../../image/studies/studiesimg.png") -99px -1px no-repeat;
+    }
+    .s_inxseleimg{
+        display: block;
+        float: left;
+        width:26px;
+        height:26px;
+        margin-left: 465px!important;
+        margin-top: 5px!important;
+        cursor: pointer;
+        background: url("../../image/studies/studiesimg.png") -70px -1px no-repeat;
+    }
+    .s_inxdid{
+        width:100%;
+        height: 36px;
+        margin-top: 54px!important;
+    }
+}
+@media screen and (min-width: 1600px){
+    /*内容区*/
+    .s_inxcon{
+        width:1200px;
+        height:540px;
+        background: #fff;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 45px!important;
+    }
+    /*小喇叭图片*/
+    .s_radioimg{
+        display: block;
+        float: left;
+        width:50px;
+        height:36px;
+        background: url("../../image/studies/studiesimg.png") 0 0 no-repeat;
+        margin-top: 15px!important;
+        margin-left: 20px!important;
+    }
+    /*地区*/
+    .s_inxareaeord{
+        width:520px;
+        height:50px;
+        margin-left: 365px!important;
+        margin-top: 80px!important;
+    }
+    /*第二个选择*/
+    .s_inxareaselect{
+        display: block;
+        width:325px;
+        height:46px;
+        border:1px solid #ccc;
+        border-radius: 10px;
+        text-indent: 10px;
+        float: left;
+        cursor: pointer;
+        position: relative;
+        margin-left: 438px !important;
+    }
+    /*筛选已做的题*/
+    .s_inxseled{
+        display: block;
+        float: left;
+        width:26px;
+        height:26px;
+        margin-left: 520px!important;
+        margin-top: 5px!important;
+        cursor: pointer;
+        background: url("../../image/studies/studiesimg.png") -99px -1px no-repeat;
+    }
+    .s_inxseleimg{
+        display: block;
+        float: left;
+        width:26px;
+        height:26px;
+        margin-left: 520px!important;
+        margin-top: 5px!important;
+        cursor: pointer;
+        background: url("../../image/studies/studiesimg.png") -70px -1px no-repeat;
+    }
+    .s_inxdid{
+        width:100%;
+        height: 36px;
+        margin-top: 60px!important;
+    }
+}
+/*公共样式区域*/
+/*继续做题*/
+.s_inxcon_last{
+    width:100%;
+    height:60px;
+    border-bottom:1px solid #ccc;
+    box-sizing: border-box;
+}
+.s_lasttext{
+    display: block;
+    float: left;
+    line-height: 60px;
+    color: #666666;
+}
+.s_inxgo{
+    margin-left: 10px!important;
+    color: #58c1e4;
+    text-decoration:underline;
+    cursor: pointer;
+}
+.s_delete{
+    display: block;
+    float: left;
+    width:15px;
+    height:18px;
+    background: url("../../image/studies/studiesimg.png") -52px 0 no-repeat;
+    cursor: pointer;
+    margin-left: 10px!important;
+    margin-top: 20px!important;
+    display: none;
+}
+.s_inxback{
+    display: block;
+    float: right;
+    width:150px;
+    height:45px;
+    border-radius: 10px;
+    box-sizing: border-box;
+   /*background: #e5e4e5;*/
+    background: url("../../image/studies/s_inxback_03.png");
+    border: 1px solid #ccc;
+    border-top:0;
+    line-height: 45px;
+    text-align: center;
+    margin-top: 7.5px!important;
+    margin-right: 25px!important;
+    cursor: pointer;
+}
+/*地区*/
+
+.s_inxname{
+    display: block;
+    float: left;
+    color: #666666;
+    line-height: 50px;
+}
+.s_inxselect{
+    display: block;
+    width:325px;
+    height:46px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    text-indent: 10px;
+    float: left;
+    cursor: pointer;
+    position: relative;
+}
+/*选择下拉框*/
+.s_inxul,.s_inxulcl{
+    width:325px;
+    height: 320px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    position: absolute;
+    top:50px;
+    left: 0;
+    z-index: 2;
+    background: #fff;
+    display: none;
+    overflow: auto;
+}
+.s_inxli,.s_inxlist{
+    width:300px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px!important;
+    color: #333;
+}
+/*地区里面的名字*/
+.s_inxareaname,.s_inxareanamecl{
+    display: block;
+    float: left;
+    width:270px;
+    height:40px;
+    margin-top: 3px!important;
+    text-align: center;
+    line-height: 40px;
+}
+.s_inxccc{
+    display: block;
+    width:2px;
+    height:30px;
+    background: #cfcfcf;
+    float: left;
+    margin-top: 9px;
+}
+.s_inxpull{
+    margin-top: 20px!important;
+    margin-right: 15px!important;
+}
+/*第二个选择*/
+.s_area_select{
+    width:100%;
+    height:46px;
+    margin-top: 30px!important;
+}
+
+/*过滤已做的题*/
+
+.s_inxselword{
+    display:block ;
+    float: left;
+    line-height: 36px!important;
+    margin-left: 10px!important;
+}
+/*提交*/
+.s_inxbtn{
+    width:100%;
+    height:50px;
+    margin-top: 20px!important;
+}
+.s_inxbttn{
+    width:320px;
+    height:50px;
+    background: #65b113;
+    color: #fff;
+    border-radius: 10px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.s_inxbttn:hover{
+    background: #5da313;
+}
+.s_inxcon_last:hover .s_delete{
+    display: block;
+}

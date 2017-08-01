@@ -1,0 +1,594 @@
+html,body{
+    /*overflow: hidden;*/
+}
+.task_paper{
+    width:100%;
+    min-height: 100px!important;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 30px!important;
+}
+/*头部*/
+.task_title{
+    width:100%;
+    height:180px;
+
+    box-sizing: border-box;
+}
+.task_name{
+    width:100%;
+    text-align: center;
+    margin-top: 40px!important;
+}
+.task_tiltename{
+    display: inline-block;
+    min-width:100px;
+    height: 40px;
+    /*background: #ccc;*/
+    font-size: 18px!important;
+    color: #333;
+}
+.task_time{
+    margin-left: 20px!important;
+    font-size: 14px!important;
+    color: #666;
+}
+/*学情分析*/
+.task_click{
+    width:100%;
+    height:50px;
+    text-align: center;
+    margin-top: 40px!important;
+}
+.task_details{
+    display: inline-block;
+    width:250px;
+    height:50px;
+    background: #59c1e4;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px!important;
+    cursor: pointer;
+}
+.task_studiesdetails{
+    display: inline-block;
+    width:250px;
+    height:50px;
+    background: #e7e7e7;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 40px!important;
+    font-size: 18px!important;
+    cursor: pointer;
+}
+/*报告区域*/
+.task_storage{
+    width:98%;
+    min-height: 100px;
+    padding: 0 2%;
+}
+.task_strogepaper{
+    width:76%;
+    min-height: 200px;
+    float: left;
+    margin-top: 2px!important;
+    /*display: none;*/
+}
+.task_studiesclassfiy{
+     width:76%;
+     min-height: 200px;
+     float: left;
+     margin-top: 2px!important;
+     display: none;
+ }
+.task_bc{
+    width:4%;
+    min-height: 200px;
+    float: left;
+    background: url("../../image/test/see_report.png") 0 0 repeat-y;
+    background-size: 100%;
+    margin-top: 2px!important;
+}
+.task_strogetitle{
+    width:20%;
+    min-height: 200px;
+    float: left;
+    margin-top: 2px!important;
+}
+@media screen and (max-width: 1366px) {
+    /*题目区域*/
+    .task_classtarget{
+        width:90%;
+        height:45px;
+        background: #faa249;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 18px!important;
+        margin:0 auto;
+        margin-top: 40px!important;
+    }
+    /*用时*/
+    .task_usetime{
+        font-size: 18px!important;
+        margin-top: 45px!important;
+        color: #333;
+        margin:0 auto;
+    }
+    .task_ti:nth-last-child(odd){
+        margin-left: 35px;
+    }
+    .wclassfiy{
+        width:100%;
+        min-height: 10px !important;
+        overflow: hidden;
+    }
+    /*补偿练习模块*/
+    .wtraining{
+        width:90%;
+        height: 190px;
+        border:1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin-left: 5% !important;
+        margin-top: 30px!important;
+        overflow: hidden;
+    }
+    .wtrainingword{
+        width:48%;
+        height:70%;
+        float: left;
+        margin-top: 6%;
+        margin-left: 80px!important;
+        font-size: 16px!important;
+        color: #333;
+        line-height: 30px;
+    }
+    .wsubstraningclick{
+        width:35%;
+        height:70%;
+        float: left;
+        margin-top: 6%;
+        margin-left: 2% !important;
+    }
+    .wsubstraningclickword{
+        display: inline-block;
+        width:170px;
+        height:50px;
+        border:1px solid #f8a349;
+        color: #f8a349;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: 30px!important;
+        font-size: 24px;
+    }
+    .wsubstraningclickmoney{
+        margin-left: 20px!important;
+        color: #333;
+    }
+    /*百分比*/
+    .wpresent{
+        width:68%;
+        margin: 10px auto 0;
+        overflow: hidden;
+    }
+    .wpresent span{
+        display: inline-block;
+        width:40px;
+        float: left;
+        font-size: 14px;
+        word-break: keep-all;
+    }
+    .wpresent span:nth-of-type(2){
+        margin-left: 14%;
+    }
+    .wpresent span:nth-of-type(3){
+        margin-left: 14%;
+    }
+    .wpresent span:nth-of-type(4){
+        margin-left: 17%;
+    }
+    .wpresent span:nth-of-type(5){
+        margin-left: 10%;
+    }
+}
+@media screen and (min-width: 1366px) {
+    /*题目区域*/
+    .task_classtarget{
+        width:90%;
+        height:45px;
+        background: #faa249;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 18px!important;
+        margin:0 auto;
+        margin-top: 40px!important;
+    }
+    /*用时*/
+    .task_usetime{
+        font-size: 18px!important;
+        margin-top: 45px!important;
+        color: #333;
+        margin:0 auto;
+    }
+    .task_ti:nth-last-child(odd){
+        margin-left: 35px;
+    }
+    /*补偿练习模块*/
+    .wtraining{
+        width:90%;
+        height: 190px;
+        border:1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin-left: 5% !important;
+        margin-top: 30px!important;
+        overflow: hidden;
+    }
+    .wtrainingword{
+        width:48%;
+        height:70%;
+        float: left;
+        margin-top: 6%;
+        margin-left: 80px!important;
+        font-size: 16px!important;
+        color: #333;
+        line-height: 30px;
+    }
+    .wsubstraningclick{
+        width:35%;
+        height:70%;
+        float: left;
+        margin-top: 6%;
+        margin-left: 2% !important;
+    }
+    .wsubstraningclickword{
+        display: inline-block;
+        width:170px;
+        height:50px;
+        border:1px solid #f8a349;
+        color: #f8a349;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: 30px!important;
+        font-size: 24px;
+    }
+    .wsubstraningclickmoney{
+        margin-left: 20px!important;
+        color: #333;
+    }
+    /*百分比*/
+    .wpresent{
+        width:68%;
+        margin: 10px auto 0;
+        overflow: hidden;
+    }
+    .wpresent span{
+        display: inline-block;
+        width:40px;
+        float: left;
+        font-size: 14px;
+        word-break: keep-all;
+    }
+    .wpresent span:nth-of-type(2){
+        margin-left: 15%;
+    }
+    .wpresent span:nth-of-type(3){
+        margin-left: 16%;
+    }
+    .wpresent span:nth-of-type(4){
+        margin-left: 18%;
+    }
+    .wpresent span:nth-of-type(5){
+        margin-left: 11%;
+    }
+}
+@media screen and (min-width: 1600px) {
+    /*题目区域*/
+    .task_classtarget{
+        width:90%;
+        height:45px;
+        background: #faa249;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 18px!important;
+        margin:0 auto;
+        margin-top: 40px!important;
+    }
+    /*用时*/
+    .task_usetime{
+        font-size: 18px!important;
+        margin-top: 45px!important;
+        color: #333;
+        margin:0 auto;
+    }
+    .task_ti:nth-last-child(odd){
+        margin-left: 72px;
+    }
+    /*补偿练习模块*/
+    .wtraining{
+        width:90%;
+        height: 190px;
+        border:1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin-left: 5% !important;
+        margin-top: 30px!important;
+        overflow: hidden;
+    }
+    .wtrainingword{
+        width:48%;
+        height:70%;
+        float: left;
+        margin-top: 6%;
+        margin-left: 80px!important;
+        font-size: 16px!important;
+        color: #333;
+        line-height: 30px;
+    }
+    .wsubstraningclick{
+        width:35%;
+        height:70%;
+        float: left;
+        margin-top: 6%;
+        margin-left: 2% !important;
+    }
+    .wsubstraningclickword{
+        display: inline-block;
+        width:170px;
+        height:50px;
+        border:1px solid #f8a349;
+        color: #f8a349;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: 30px!important;
+        font-size: 24px;
+    }
+    .wsubstraningclickmoney{
+        margin-left: 20px!important;
+        color: #333;
+    }
+    /*百分比*/
+    .wpresent{
+        width:68%;
+        margin: 10px auto 0;
+        overflow: hidden;
+    }
+    .wpresent span{
+        display: inline-block;
+        width:40px;
+        float: left;
+        font-size: 14px;
+        word-break: keep-all;
+    }
+    .wpresent span:nth-of-type(2){
+        margin-left: 17%;
+    }
+    .wpresent span:nth-of-type(3){
+        margin-left: 16%;
+    }
+    .wpresent span:nth-of-type(4){
+        margin-left: 18%;
+    }
+    .wpresent span:nth-of-type(5){
+        margin-left: 15%;
+    }
+}
+/*题目区域*/
+.task_attention{
+    width:96%;
+    margin:0 auto;
+    margin-top: 40px!important;
+    font-size: 14px!important;
+    color: #666;
+}
+.task_seetitle{
+    width:96%;
+    min-height:100px;
+    margin: 40px auto 0;
+}
+.task_tiname{
+    font-size: 18px!important;
+}
+.task_ti{
+    display: block;
+    width:60px;
+    height:60px;
+    border-radius: 30px;
+    border:1px solid #ccc;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px!important;
+    float: left;
+    margin-top: 20px!important;
+    color: #333;
+}
+
+
+/*遮罩层*/
+.task_shark{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+}
+.task_class{
+    width:620px;
+    height:465px;
+    background: #fff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -310px;
+    margin-top: -233px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.task_delete{
+    position: absolute;
+    right: 30px;
+    top:30px;
+    font-size: 24px!important;
+    cursor: pointer;
+}
+
+/*班级目标*/
+.task_target{
+    width:100%;
+    text-align: center;
+    font-size: 24px!important;
+    color: #88cde8;
+    margin-top: 30px!important;
+}
+.task_portrait{
+    width:100%;
+    height:200px;
+
+}
+.task_meimg,.task_vsimg,.task_uimg{
+    float: left;
+    text-align: center;
+    margin-right: 60px!important;
+    position: relative;
+}
+.task_me,.task_u{
+    display: block;
+    width:120px;
+    height:120px;
+    background: #ccc;
+    border-radius: 60px;
+    margin-top: 40px!important;
+
+}
+.task_mename,.task_uname{
+    margin-top: 20px!important;
+
+}
+.task_meimg{
+    margin-left: 90px!important;
+}
+.task_vsimg{
+    margin-top: 35px!important;
+    margin-right: 60px!important;
+}
+
+/*正确率*/
+.task_rate,.task_umtime{
+    width:510px;
+    height:50px;
+    border: 4px solid #88cde8;
+    border-radius: 25px;
+    margin:0 auto;
+    margin-top: 30px!important;
+}
+.task_merate,.task_merateword,.task_urate,.task_metime,.task_metimeword,.task_utime{
+    width:170px;
+    height:50px;
+    float: left;
+    color: #88cde8;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px!important;
+}
+.task_merateword,.task_metimeword{
+    background: #88cde8;
+    color: #fff;
+}
+/*头像*/
+.task_me,.task_u{
+    display: block;
+    width:120px;
+    height:120px;
+    background: url("../../image/test/head.png") no-repeat;
+    background-size: 120px;
+
+}
+/*皇冠*/
+.peom{
+    position: absolute;
+    top:15px;
+    display: none;
+}
+.task_pk{
+    position: absolute;
+    top:10px;
+    right: -75px;
+    display: none;
+}
+/*学情分析*/
+.wsubbg{
+    width:66.7%;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    margin: 130px 0  0 16.5%;
+    background: url("../../image/test/Statbg.png") 0 0 repeat-y;
+    background-size: 100%;
+    float: left;
+}
+
+/*进度条*/
+.wprogess{
+    display: inline-block;
+    width:100%;
+    height:10px;
+    float: left;
+    margin-bottom: 40px;
+    position: relative;
+}
+/*知识点*/
+.wKnowledge{
+    width: 140px;
+    position: absolute;
+    left: -150px;
+    top: -15px;
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+}
+.wtipic {
+    width: 140px;
+    position: absolute;
+    right: -150px;
+    top: -5px;
+    word-wrap: break-word;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 40px;
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+    line-height: 20px;
+}
+/*题目*/
+/*进度条数据*/
+.wprogerssname{
+    display: inline-block;
+    width:60%;
+    height:10px;
+    background: #59c1e4;
+    float: left;
+}

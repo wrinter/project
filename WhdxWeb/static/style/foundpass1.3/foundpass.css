@@ -1,0 +1,66 @@
+/*头部和底部*/
+body{background: #f5f5f5;}
+.First_Nav{width: 100%;overflow: hidden;float: left; min-width: 1000px;background: white; box-sizing:border-box;height:92px;border-bottom: 2px solid #00ce9f;}
+.First_NavBox{margin: 0 auto;height: 100%;overflow: hidden;background: white;}
+.First_Logo{float: left;}
+.First_Dowload{float: right; color: #00ce9f;cursor: pointer;width: 102px;height: 31px;border-radius: 16px; box-sizing: border-box;margin:30px auto;border: 1px solid #00ce9f;line-height: 30px;text-align: center;font-size: 16px;margin-right: 12px; }
+@media screen and (max-width:1366px){
+    .First_NavBox{width: 900px;}
+}
+@media screen and (min-width:1366px){
+    .First_NavBox{width: 1000px;}
+}
+@media screen and (min-width:1600px){
+    .First_NavBox{width: 1200px;}
+}
+.FourFooter{height: 100px;float: left; background: #00ce9f;width: 100%; box-sizing: border-box;text-align: center;line-height: 100px;color: white;font-size: 14px; }
+/*内容区*/
+.r_MainBox{float: left;width: 100%;}
+.r_FoundMain{width: 490px;height: 570px;box-shadow: 0 0 10px #ededed;  box-sizing: border-box;  padding: 25px 0 0 95px;  border-radius: 10px;  background: white;  margin: 120px auto;  box-sizing: border-box;}
+.r_Title{float: left;width: 100%;height: 30px;line-height: 30px;box-sizing: border-box;}
+.r_Tixt{float: left;font-size: 24px;color: #323232;}
+.r_LoadMain{float: left;width: 100%;height: 30px;margin-top: 40px;}
+.r_LoadTxt{float: left;width: 30px;text-align: center; height: 30px;line-height: 30px;background: #f5f5f5;color: #959595;border-radius: 100%;border: 1px solid white; font-size: 14px;font-weight: bold;}
+.r_LoadTxtNow{float: left;width: 30px;text-align: center; height: 30px;line-height: 30px;background: #555558;color: white;border-radius: 100%;border: 1px solid white; font-size: 14px;font-weight: bold;}
+.r_LoadBar{float: left; height: 3px;width: 105px;overflow: hidden; position: relative;background: #f5f5f5;margin-top: 13.5px;}
+.r_Bar{position: absolute;left: -120px;top: 0; height: 3px;width: 105px;background: #555558;}
+
+.r_LoadTxtBox {float: left;width: 100%;line-height: 25px;margin-top: 10px;box-sizing: border-box;padding-right: 90px;}
+.r_LoadTxtBox p{float: left;line-height: 25px;font-size: 12px;color: #959595;width: 33.3333333%}
+.r_LoadTxtBox p:nth-child(1){text-align: left;}
+.r_LoadTxtBox p:nth-child(2){text-align: center;}
+.r_LoadTxtBox p:nth-child(3){text-align: right;}
+.r_LoadTxtBox .LoadNow{color: #323232;font-weight: bold;}
+.r_StepBox{float: left;width: 100%;}
+.r_OneBox{float: left;overflow: hidden;margin-top: 30px;}
+.r_OtherBox{float: left;overflow: hidden;margin-top: 10px;width: 100%;}
+.r_OtherBox1{float: left;overflow: hidden;margin-top: 20px;width: 100%;}
+.r_ModelTxt{color: #636363;font-size: 16px;height: 25px; line-height: 25px;width: 100%;float: left;text-align: left;}
+.r_ModelInput{float: left;font-size: 16px; width: 300px;color: #323232; height: 40px;box-sizing: border-box;border: 1px solid #ccc;outline: none;padding-left: 10px;}
+.r_ModelError{float: left;width: 100%;text-align: left;color: #f6111a;font-size: 12px;height: 15px;line-height: 15px;}
+.r_ModelHint{float: left;width: 100%;text-align: left;color: #959595;font-size: 12px;height: 15px;line-height: 15px;}
+.r_ModelTxt0{float: right;margin-right: 95px;line-height: 30px; text-align: right;font-size: 12px;color: #959595;}
+.r_CodeInput{float: left;width: 160px;color: #323232;font-size: 16px; height: 40px;box-sizing: border-box;border: 1px solid #ccc;outline: none;padding-left: 10px;}
+.r_CodeBox{float: left;margin-left: 15px;width: 85px;height: 40px;box-sizing: border-box;border: 1px solid #04030f;}
+.r_CodeBox img{float: left;width: 100%;margin-top: 4px;}
+.r_OtherCode{float: left;text-align: left;margin-left: 7px;color: #959595; width: 45px;height: 40px;font-size: 12px;text-decoration: underline;cursor: pointer;box-sizing: border-box;padding-top: 3px;}
+.r_NextBtn{float: left;width: 300px;height: 38px;text-align: center;font-size: 16px;color: white;line-height: 38px;background:#08E8AE;border-radius: 10px;cursor: pointer;margin-top: 30px; }
+.r_UserPhoneTxt{font-size: 16px;color: #323232;text-align: left;line-height: 30px;font-weight: bold;}
+.r_UserPhoneBox{font-size: 16px;color: #323232;text-align: left;line-height: 30px;font-weight: bold;}
+.r_GetMsg,.MsgBtnTxt{float: left;margin-left: 5px; width: 105px;height: 40px;text-align: center;line-height: 40px;text-align: center;font-size: 12px;color: #636363;background: #dedede;cursor: pointer;}
+.MsgBtnTxt{margin-left: 0;}
+.r_MsgInput{float: left;width: 190px;color: #323232;font-size: 16px; height: 40px;box-sizing: border-box;border: 1px solid #ccc;outline: none;padding-left: 10px;}
+.RankBox{float: left;width: 100%;height: 15px;line-height: 15px;margin-top: 5px;}
+.RankBox p{  float: left;width: 22px;height: 15px;line-height: 15px;font-size: 12px;color: white;background: #d7d3d4;text-align: center;margin-right: 1px;}
+.RankBox .ThisRank{float: left;width: 22px;height: 15px;line-height: 15px;font-size: 12px;color: white;background: #00ce9f;text-align: center;margin-right: 1px;}
+.RankTxt{float: left;color: #959595;font-size: 12px;margin-right: 15px;}
+.r_NextBtn0{float: left;width: 300px;height: 40px;text-align: center;font-size: 18px;color: white;line-height: 40px;background:#08E8AE;border-radius: 10px;cursor: pointer;margin-top: 5px; }
+.r_ModelError0{float: left;width: 100%;text-align: left;color: #f6111a;font-size: 12px;height: 10px;line-height: 10px;}
+.mt0{margin-top: 0;}
+.r_ImgBox{float: left;text-align:center;height: 40px;width: 100%;margin-top: 75px;}
+.r_FoundMain0{padding-left: 0;height: 460px;}
+.pl95{padding-left: 95px;}
+.r_DoneTxt0{float: left;width: 100%;height: 30px;line-height: 30px;font-size: 28px;color: #323232;text-align: center;margin-top: 20px;}
+.r_DoneTxt1{float: left;width: 100%;height: 30px;line-height: 30px;font-size: 14px;color: #959595;text-align: center;margin-top: 10px;}
+.r_LoginBtn{margin: 45px 0 0 95px;}
+.mt5{margin-top: 5px;}

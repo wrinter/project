@@ -1,0 +1,471 @@
+/*****************************  作业测试  **********************************/
+html{background-color: #ecedf0;}
+h3,h4,p,div.flex{font-family: Times New Roman,\5B8B\4F53;}
+h2,h2 p{font-family: Microsoft YaHei,sans-serif,Arial;}
+table{border-collapse: separate;}
+.nodata{display: block;width: 176px;margin: 40px auto;}
+.wrong{color:red;}
+.gray{color: #999;}
+.green{color: #65b113;}
+.yellow{color: #f9a24a;}
+.hj_Chapter,.hj_Type,.hj_Mine{margin: 0 30px;padding: 20px 0;}
+.hj_Chapter{border-bottom: 1px solid #ddd;}
+.hj_Type{padding-bottom: 0;}
+.hj_Mine{padding-top: 0;}
+.hj_Box{width: 62.5%;padding: 10px 0;margin: 40px auto;border-radius: 8px;background: #fff;}
+.hj_Box dl{width: 100%;overflow: hidden;padding-bottom: 7px;}
+.hj_Box dl dt{float: left;line-height: 31px;font-weight: bold;text-align: right;white-space: nowrap;color: #333;}
+.hj_Box .hj_Chapter dl dt{font-weight: normal;}
+.hj_Box dl dd ul{width: 85%; float: right;}
+.hj_Box .hj_Chapter dl dd ul{width: 92%;}
+.hj_Box dl dd ul li{display: inline-block;vertical-align: sub;width: 100px;height: 31px;line-height: 31px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;cursor: pointer;}
+.hj_Box dl dd ul li.on,.hj_Box dl dd ul li:hover{color: #65b113;}
+.h_Type_ul{float: left;width: 100%;margin-top: 7px;}
+.h_Type_ul > div{width: 93.4%;margin: 0 auto;}
+.h_Type{position: relative;float: left;width: 20%;}
+.h_Type a{display: block;width: 100%;padding: 13px 0 16px 0;}
+.h_Type span{display: block;width: 47%;margin: 0 auto;margin-top: 10px;font-size: 14px;line-height: 30px;text-align: center;border-radius: 8px;border: 1px solid #dfdfdf;color: #333;}
+.h_Type img{display: block;width: 69%;margin: 0 auto;border: 1px solid transparent;}
+.h_Type a:hover img{border: 1px solid #fff;box-shadow: 0 3px 5px 0 rgba(0,0,0,.3);}
+.h_Minework_table{width: 100%;float: left;margin-top: 15px;border: 1px solid #dfdfdf;}
+.h_Minework_table th,.h_Minework_table td{line-height: 2;text-align: center;color: #666;border-top: 1px solid transparent;border-bottom: 1px solid transparent;}
+.h_Minework_table tr:first-child th{color: #666;}
+.h_Minework_table tr:nth-child(2n + 1){background-color: #f6f6f6;}
+.h_Minework_table tr:hover th,.h_Minework_table tr:hover td{border-top: 1px solid #65b113;border-bottom: 1px solid #65b113;}
+.h_Minework_table tr:first-child:hover th,.h_Minework_table tr:first-child:hover td{border-top: 1px solid transparent;border-bottom: 1px solid transparent;}
+.h_Minework_table tr:first-child th:nth-child(1){width: 40%;}
+.h_Minework_table tr:first-child th:nth-child(2){width: 8%;}
+.h_Minework_table tr:first-child th:nth-child(3){width: 27%;}
+.h_Minework_table tr:first-child th:nth-child(4){width: 18%;}
+.h_Minework_table tr:first-child th:nth-child(5){width: 7%;}
+.h_Minework_table td{padding: 0 5px;}
+.h_Minework_table td a{color: #666;}
+.h_Minework_table td a:hover{color: #65b113;}
+.h_Minework_table td input{visibility: hidden;padding-left: 21px;margin-right: 12px;border: none;background: transparent url("../../../static/image/homework/h_Minework_01.png") no-repeat left center;font-size: 14px;color: #999;cursor: pointer;}
+.h_Minework_table td input:hover{color: #e61818;}
+.h_Minework_table tr:hover td input{visibility: visible;}
+.h_Minework_table tr td:first-child{text-align: left;text-indent: 10px;}
+
+/*********************************  题目详情  **********************************/
+.h_p_Main{width: 100%;}
+.exercise_btn{position: fixed;top: auto;bottom: 14px;left: 0;right: 0;z-index:2;height: 0;}
+.exercise_btn_in{position: relative;padding: 10px 0;margin: 0 auto;border-top: 1px solid #ccc;background: #f6f6f6;}
+.exercise_btn input,.exercise_btn a{float: right;display: block;margin-right: 10px;border: none;color: #fff;cursor: pointer;}
+.exercise_btn a{text-align: center;}
+.exercise_btn_edit,.exercise_btn_add{background: #faa249;}
+.exercise_btn_edit:hover,.exercise_btn_add:hover{background-color: #fb9732;}
+.exercise_btn_statistics{background-color: #58c1e4;}
+.exercise_btn_statistics:hover{background-color: #0fa7db;}
+.exercise_btn_print,.exercise_btn_publish,.exercise_btn_setline,.exercise_btn_done,.exercise_btn_add_lineTypeFalse,.exercise_btn_score{background: #65b113;}
+.exercise_btn_print:hover,.exercise_btn_publish:hover,.exercise_btn_setline:hover,.exercise_btn_done:hover,.exercise_btn_add_lineTypeFalse:hover{background-color: #5da313;}
+.exercise_box{position: relative;margin: 40px auto 0 auto;padding-bottom: 60px;overflow: hidden;border-radius: 8px 8px 0 0;border: 1px solid #ccc;background-color: #fff;}
+.exercise_box > h1{padding: 20px 20px 0 20px;line-height: 1.5;text-align: center;}
+.exercise_box .timeing{padding: 5px;text-align: center;}
+/*如果没有数据*/.data_Popup{position: fixed;top: 0;left: 0;bottom: 0;z-index:10000;display: none;width: 100%;background: rgba(0,0,0,0.3);}
+.data_Popup .in{position: absolute;top: 50%;left: 50%;z-index: 1010;overflow: hidden;border-radius: 8px;background: #fff;}
+.data_Popup .in > img{width: 100%;}
+.data_Popup .in .close{position: absolute;top: 0;right: 30px;display: block;width: 34px;height: 38px;overflow: hidden;text-indent: -10em;border-radius: 0 0 17px 17px;background: #f96672 url("../../image/homework/data_Popup_btn.png") no-repeat 0 0;cursor: pointer;}
+.data_Popup .in .close:hover{background-color: #f05865;}
+.data_Popup .in .close:active{background-color: #e44855;}
+.data_Popup .in .btn{width: 100%;padding: 18px 0;}
+.data_Popup .in .btn a{float: left;display: block;width: 27%;font-size: 18px;line-height: 46px;text-align: center;border-radius: 8px;background: #8ed6ee;color: #fff;}
+.data_Popup .in .btn a{margin-left: 5%;}
+.data_Popup .in .btn a:first-child{margin-left: 20%;}
+.data_Popup .in .btn a:hover{background: #6abad4;}
+/*题目列表*/.work_box{padding: 0 24px;font-size: 14px;line-height: 1.9;color: #333;}
+.work_box h2,.work_box h3,.work_box h4{font-size: inherit;}
+/*.work_box h2 p:nth-child(2),.work_box h3 p:nth-child(2),.work_box h4 p:nth-child(2){display: inline;}*/
+.work_box > ul{padding-bottom: 100px;}
+.work_box ul li{position: relative;margin-top: 10px;font-size: 16px;text-align: justify;text-justify: inter-ideograph;border-radius: 10px;border: 1px solid transparent;background-color: #fff;}
+.work_box ul li[isshow]{border: none;}
+.work_box ul li.ui-state{min-height: 60px;border:1px solid #fcefa1;background:#f4fbed;visibility: visible;}
+.work_box ul li img{max-width: 100%;vertical-align: middle;}
+.work_box ul li .question_number{position: absolute;top: 0;left: 10px;}
+.work_box ul li > h2,.work_box ul li > h3,.work_box ul li > h4{padding-left: 10px;color: #333;}
+.work_box ul li > h3,.work_box ul li > h4,.work_box ul li > div{padding: 0 36px;}
+.work_box ul li > div.buttons{padding-right: 12px;}
+.work_box ul li > div{padding-left: 42px;}
+.work_box .buttons{height: 35px;}
+.work_box .buttons > div{display: none;float: right;margin-right: -13px;padding: 2px 0;border-radius: 0 0 10px 0;overflow: hidden;border: 1px solid #ccc;margin-bottom: -1px;background: #fff;}
+.work_box .buttons > div span{display: inline-block;padding: 0 20px;line-height: 24px;border-left: 1px solid #ccc;cursor: pointer;}
+.work_box .buttons > div span:first-child{border-left: none;}
+.work_box .buttons > div span.on{color: #999;}
+.work_box .answer,.work_box .analysis{display: none;padding-left: 27px;}
+.work_box .answer.on,.work_box .analysis.on{display: block;}
+.answer,.analysis,.answer p,.analysis p{font-family: Times New Roman, "楷体", "楷体_GB2312";}
+.line_list{padding: 3px;}/* ←为了空行可拖入试题*/
+.line > ul > li:hover,.line > ul > li.on{border-color: #ccc;}
+.line > ul > li[data-issplite = "1"]{border-color: transparent;}
+.line > ul > li:hover > div.buttons div,.line > ul > li.on > div.buttons div{display: block;}
+.line > ul > li.on > div.buttons div{border-radius: 0 0 0 0;}
+.group > ul > li:hover,.group > ul > li.on{border-color: #ccc;}
+.group[data-issplite = "0"] > ul > li{border-color: transparent;}
+.group > ul > li:hover > div.buttons div,.group > ul > li.on > div.buttons div{display: block;}
+.group > ul > li.on > div.buttons div{border-radius: 0 0 0 0;}
+/*听力题目*/.audioplayer{position: absolute;left: 0;top: 0;bottom: 0;height: auto;margin: 0;}
+.audioplayer-bar{width: 230px!important;}
+.audioEN a{display: inline-block;width: 24px;height: 24px;overflow: hidden;vertical-align: top;text-indent: -10em;background: url("../../../static/image/homework/play_circle0.gif") no-repeat 0 1px;transition: none;}
+.work_box_edit .audioEN{display: none;}
+/*****************************  打印  **********************************/
+#w_Print_Main h1{padding: 20px 20px 0 20px;font-size: 18px;line-height: 1.5;text-align: center;}
+#w_Print_Main .timeing{padding: 5px;font-size: 14px;line-height: 1.5;text-align: center;}
+#w_Print_Main .work_group{font-size: 14px;}
+#w_Print_Main .work_group h2{font-size: 18px;}
+#w_Print_Main .work_group .work_txt{margin-top: 0;padding-top: 0;line-height: 1.5;}
+#w_Print_Main .work_group .work_txt.on{border: none;box-shadow: none;}
+#w_Print_Main .work_group .work_txt .work_txt_btn{display: none;}
+.work_box.print{width:100%;padding: 0;height: auto;}
+.work_box.print ul{padding-bottom: 0;}
+.work_box.print h3,.work_box.print h4{padding-right: 0;}
+.work_box.print table{border-collapse: collapse;border: 1px solid #666;font-size: 14px;}
+.work_box.print table td{border: 1px solid #ccc;font-size: 14px;color: #333;}
+
+/*****************************  布置  **********************************/
+.publish_box_wrap{display: none;position: fixed;top: 0;left: 0;width: 100%;min-height: 100%;z-index: 10000;background: rgba(0,0,0,.3);}
+.publish_box{position: relative;margin: 0 auto;padding: 40px 0;border-radius: 10px;box-shadow: 0 2px 7px 0 rgba(0,0,0,0.5);background: #fff;}
+.publish_box > dl,.publish_box .dl{width: 60%;margin: 0 auto;font-size: 16px;line-height: 46px;}
+.publish_box > dl dt{float: left;width: 15%;}
+.publish_box > dl dd{float: left;width: 85%;}
+.publish_box > dl dd input{height: 28px;line-height: 28px;text-indent: 0.5em;border-radius: 3px;border: 1px solid #ccc; background: #fff;}
+.publish_box > dl dd input.act_time{width: 66px;margin-right: 5px;text-align: center;text-indent: 0;}
+.publish_box > dl dd input.act_stop_time{width: 156px;text-align: center;text-indent: 0;}
+.publish_box > dl dd input.act_stop_time_h,.publish_box > dl dd input.act_stop_time_m{width: 50px;margin-left: 6px;background: url("../../../static/image/homework/set_time.png") no-repeat 35px 10px;}
+.publish_box .tab{padding: 10px;border-radius: 8px;border: 1px solid #ccc;}
+.publish_box .tab dl{}
+.publish_box .tab dl dt{float: left;width: 15%;line-height: 28px;}
+.publish_box .tab dl dd{float: left;width: 85%;}
+.publish_box .tab dl dd a{float: left;display: block;width: 140px;margin-right: 10px;line-height: 28px;text-align: center;border-radius: 6px;}
+.publish_box .tab dl dd a.on{background: #65b113;color: #fff;}
+.publish_box .tab ul{width: 30%;margin: 0 auto;margin-top: 30px;}
+.publish_box .tab ul li{overflow: hidden;margin-top: 10px;line-height: 32px;text-align: center;border-radius: 8px;border: 1px solid #ccc;color: #666;cursor: pointer;}
+.publish_box .tab ul li.on{border: 1px solid #65b113;background: #65b113;color: #fff;}
+.publish_box .done{margin-top: 40px;}
+.work_done{display: block;width: 150px;line-height: 36px;margin: 0 auto;font-size: 18px;text-align: center;border-radius: 8px;background: #65b113;color: #fff;}
+.work_done:hover{background: #5da313;}
+.work_done:active{background: #5da313;}
+.ui-datepicker-next.ui-corner-all,.ui-datepicker-prev.ui-corner-all{transition: all 0s ease;}
+ul.set_time{position: absolute;z-index: 10000;width: 50px;max-height: 120px;overflow-y: auto;border: 1px solid #ccc;background: #fff;}
+ul.set_time li{text-align: center;cursor: pointer;color: #666;}
+ul.set_time li:hover{background: #eee;color: #444;}
+ul.set_time li:active{background: #aaa;}
+/*for 个人、小组*/.set_user,.set_group{overflow: hidden;}
+.publish_box .tab .set_user ul,.publish_box .tab .set_group ul{float: left;width: 20%;margin-top: 5px;}
+.obj_type_con > div{float: left;width: 77%;margin-left: 1.5%;margin-top: 15px;border: 1px solid #ccc;}
+.obj_type_con > div > ol{width: 100%;}
+.obj_type_con > div > ol li{float: left;width: 25%;line-height: 36px;}
+.obj_type_con > div > ol.gr li{width: 33%;}
+.obj_type_con > div > ol li span{display: block;width: 100%;height: 100%;overflow: hidden;text-indent:36px;white-space: nowrap;text-overflow: ellipsis;color: #666;background: url("../../../static/image/homework/homework_useres.png") no-repeat 8px 8px;cursor: pointer;}
+.obj_type_con > div > ol li span.on{background-position: 8px -23px;}
+
+/*****************************  模拟套卷  **********************************/
+.mo_container{background: #fff;border-radius: 10px;height: auto;min-height: 568px;margin: 0 auto;margin-top: 40px;}
+.mo_list{overflow-y: auto;}
+.paperTitle{height: 80px;line-height: 80px;color: #333;width: 80%;padding: 0 10%;border-bottom: 1px dashed #ccc;}
+
+/*****************************  编辑/自主主卷 **********************************/
+.work_box ul li > div.line_title{padding: 0;}
+.work_box ul li.line div > h2{color: #333;}
+.work_box .line .line_btn{display: none;}
+.line_title{border: 1px solid transparent;}
+.work_box_edit .line_title:hover{}
+.work_box_edit .line[data-questiontype="999"] .line_title,.work_box_edit .line[data-isshow="0"] .line_title{border-color: transparent;}
+.work_box_edit .line div > h2{display: inline;}
+.work_box_edit .line .line_btn{display: inline;}
+.line_title .line_btn{padding-left: 18px;margin-left: 12px;background: url("../../../static/image/homework/ico_line_addQuestion.png") no-repeat center left;color: #49b9df;cursor: pointer;}
+.work_box_edit .line_title:hover .line_btn{}
+.work_box_edit .line[data-isshow="0"] .line_title .line_btn{display: block;position: absolute;top: 0;right: 10px;z-index: 2;}
+.setLine_in{position: absolute;top: 50%;left: 50%;z-index: 1010;width: 532px;height: 500px;margin-top: -250px;margin-left: -266px;overflow: hidden;border-radius: 8px;background: #fff;}
+.setLine_lines{height: 100%;overflow-y: auto;}
+.setLine_lines ul{margin: 0 45px;padding-top: 28px;}
+.setLine_lines ul li{position: relative;padding-left: 18px;margin-top: 18px;overflow: hidden;line-height: 48px;white-space: nowrap;text-overflow: ellipsis;border-radius: 10px;border: 1px dashed #999;background-color: #fff;}
+.setLine_lines ul li.ui-state{height: 48px;background-color: #fafafa;}
+.setLine_lines ul li > span{display: block;margin-right: 50px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.setLine_lines ul li i{display:none;;position: absolute;top: 0;right: 0;margin-right: 14px;font-size: 12px;color: #999;cursor: pointer;}
+.setLine_lines ul li i:hover{color: #49b9df;}
+.setLine_lines ul li:hover i{display: inline-block;}
+.setLine_line[data-addquestion="true"]{color: #333;}
+.setLine_line[data-addquestion="false"]{color: #999;}
+.setLine_line_score{font-size: 14px;}
+.setLine_btn{overflow: hidden;}
+.setLine_btn.a{margin: 0 45px;padding-top: 24px;}
+.setLine_btn.b{margin: 0 45px;padding: 24px 0;}
+.setLine_btn span.setLine_btn_add{padding-left: 18px;font-size: 14px;background: url("../../../static/image/homework/ico_line_addQuestion.png") no-repeat center left;color: #49b9df;cursor: pointer;}
+.setLine_btn span.setLine_btn_done,.setLine_btn span.setLine_btn_cancel{width: 190px;line-height: 45px;border-radius: 10px;text-align: center;font-size: 18px;color: #fff;cursor: pointer;}
+.setLine_btn span.setLine_btn_done{float: left;margin-left: 15px;background-color: #65b113;}
+.setLine_btn span.setLine_btn_cancel{float: right;margin-right: 15px;background-color: #ccc;}
+.setLine_btn span.setLine_btn_done:hover{background-color: #5da313;}
+.setLine_btn span.setLine_btn_cancel:hover{background-color: #bbb;}
+.question_type{display: none;margin: 0 15px 0 45px;padding-top: 24px;}
+.question_type i{display: block;font-size: 14px;color: #999;}
+.question_type a{display: inline-block;overflow: hidden;white-space: nowrap;text-align: center;padding: 0 16px;margin-top: 10px;margin-right: 30px;line-height:28px;border-radius: 10px;border: 1px solid #ccc;}
+.question_type a.disabled{color: #fff;border-color: #65b113;background-color: #65a113;cursor: default;}
+.timeing{text-align: center;}
+.timeing ul{position: relative;display: inline-block;width: 66px;height: 20px;overflow: hidden;vertical-align: sub;border-bottom: 1px solid #ccc;}
+.timeing .timeing_up,.timeing .timeing_down{position: absolute;right: 2px;display: block;width: 14px;height: 6px;overflow: hidden;text-indent: -10em;background-image: url("../../image/homework/h_btn_timeing.png");cursor: pointer;}
+.timeing .timeing_up{bottom: 11px;background-position: top left;}
+.timeing .timeing_up:hover{background-position: top right;}
+.timeing .timeing_down{bottom: 3px;background-position: bottom left;}
+.timeing .timeing_down:hover{background-position: bottom right;}
+.timeing ul li{width: 50px;}
+.timeing ul li input{width: 100%;text-align: center;border: none;background-color: transparent;}
+.timeing.timeing_edit ul li input{float: none;display: inline;margin-right: 0;font-size: inherit;line-height: inherit;border-radius: 0;cursor: default;}
+.addLineQuestion_box{position: absolute;top: 162px;left: 50%;bottom: 0;border-radius: 10px 10px 0 0;background-color: #fff;}
+.addLineQuestion_box_close{z-index: 2;}
+.addLineQuestion_top{position: relative;padding:12px 30px 24px 30px;overflow: hidden;border-bottom: 1px solid #ccc;}
+.addLineQuestion_top_switch{position: absolute;bottom: 0;left: 0;width: 100%;height: 28px;background-color: #fff;}
+.addLineQuestion_top_switch i{float: right;margin-right: 100px;padding-right: 20px;background: url("../../image/homework/addLineQuestion_top_switch2.png") no-repeat center right;color: #65B113;cursor: pointer;}
+.addLineQuestion_top_switch i.on{background: url("../../image/homework/addLineQuestion_top_switch1.png") no-repeat center right;}
+.addLineQuestion_top dl{position: relative;padding-left: 80px;margin-top: 12px;line-height: 29px;}
+.addLineQuestion_top dl dt{position: absolute;top: 0;left: 0;color: #333;}
+.addLineQuestion_top dl dd{display: block;padding-right: 30px;float: left;}
+.addLineQuestion_top dl dd span{display: inline-block;margin-right: 20px;cursor: pointer;color: #666;}
+.addLineQuestion_top dl dd span.on,.addLineQuestion_top dl dd span:hover{color: #65B113;}
+.addLineQuestion_top dl dd p{display: inline-block;color: #999;}
+.addLineQuestion_middle{overflow-y: auto;}
+/*题目列表*/.addLineQuestion_middle_questions{margin: 0 30px; padding: 30px 0;font-size: 14px;line-height: 1.86;color: #666;}
+.addLineQuestion_middle_questions h3,.addLineQuestion_middle_questions h4{font-size: inherit;}
+.addLineQuestion_middle_questions ul li{position: relative;margin-top: 10px;font-size: 14px;text-align: justify;text-justify: inter-ideograph;border-bottom: 1px solid #ccc;background-color: #fff;}
+.addLineQuestion_middle_questions ul li[isshow]{border: none;}
+.addLineQuestion_middle_questions ul li.ui-state{min-height: 60px;border:1px solid #fcefa1;background:#f4fbed;visibility: visible;}
+.addLineQuestion_middle_questions ul li img{max-width: 100%;vertical-align: middle;}
+.addLineQuestion_middle_questions ul li .question_number{position: absolute;top: 0;left: 10px;}
+.addLineQuestion_middle_questions ul li > h3,.addLineQuestion_middle_questions ul li > h4{padding-left: 10px;color: #333;}
+.addLineQuestion_middle_questions ul li > h3,.addLineQuestion_middle_questions ul li > h4,.addLineQuestion_middle_questions ul li > div{padding: 0 36px;}
+.addLineQuestion_middle_questions ul li > div.buttons{padding-right: 12px;}
+.addLineQuestion_middle_questions ul li > div{padding-left: 42px;}
+.addLineQuestion_middle_questions .buttons{height: 31px;}
+.addLineQuestion_middle_questions .buttons > div{float: right;margin-right: -13px;padding: 2px 0;overflow: hidden;border: 1px solid #ccc;margin-bottom: -1px;background: #fff;}
+.addLineQuestion_middle_questions .buttons > div span{display: none;padding: 0 20px;line-height: 24px;border-left: 1px solid #ccc;cursor: pointer;}
+.addLineQuestion_middle_questions .buttons > div span.options_choice{display: inline-block;border-color: transparent;}
+.addLineQuestion_middle_questions .buttons > div span:first-child{border-left: none;}
+.addLineQuestion_middle_questions .buttons > div span.on{color: #999;}
+.addLineQuestion_middle_questions .answer,.addLineQuestion_middle_questions .analysis{display: none;padding-left: 27px;font-size: 15px;}
+.addLineQuestion_middle_questions .answer.on,.addLineQuestion_middle_questions .analysis.on{display: block;}
+.addLineQuestion_middle_questions > ul > li:hover,.addLineQuestion_middle_questions > ul > li.on{border-color: #ccc;}
+.addLineQuestion_middle_questions > ul > li[data-issplite = "1"]{border-color: transparent;}
+.addLineQuestion_middle_questions > ul > li:hover > div.buttons div span,.addLineQuestion_middle_questions > ul > li.on > div.buttons div span{display: inline-block;}
+.addLineQuestion_middle_questions > ul > li:hover > div.buttons div span.options_choice,.addLineQuestion_middle_questions > ul > li.on > div.buttons div span.options_choice{border-color: #ccc;}
+.addLineQuestion_middle_questions > ul > li.on > div.buttons div{border-radius: 0 0 0 0;}
+.addLineQuestion_middle_list{padding: 30px;}
+.addLineQuestion_middle_list #kkpager_btn_go_input{width: 48px;height: 25px;}
+.addLineQuestion_middle_list #kkpager_btn_go{width: 50px;height: 28px;line-height: 28px;margin-top: 1px;left: 67px !important;}
+.addLineQuestion_middle_list .infoTextAndGoPageBtnWrap{margin-right: 30px;}
+.addLineQuestion_bottom{position: absolute;bottom: 0;left: 0;width: 100%;overflow: hidden;padding: 10px 0;border-top: 1px solid #ccc;background-color: #f6f6f6;}
+.addLineQuestion_bottom a,.addLineQuestion_bottom span{float: right;margin-right: 10px;}
+.addLineQuestion_bottom a{text-align: center;}
+.addLineQuestion_bottom span{font-size: 14px;color: #333;}
+.addLineQuestion_bottom_done{display: block;background-color: #65B113;color: #fff;cursor: pointer;}
+.addLineQuestion_bottom_done.off{background-color: #999;}
+.addLineQuestion_bottom_num,.addLineQuestion_bottom_numlist{display: none;}
+.addLineQuestion_bottom_numlist ul li{display: inline;margin-left: 3px;font-size: 12px;color: #999;}
+.addLineQuestion_bottom_numlist ul li i{color: #65B113;}
+.addLineQuestion_bottom_total{color: #65B113;}
+.new.question,.new.group{border-color: #65B113;}
+.new.question:after,.new.group:after{content: "";position: absolute;top: 0;right: 0;display: block;width: 61px;height: 61px;border-radius: 0 9px 0 0;background: url("../../image/homework/newOptIn.png") no-repeat;}
+
+/*****************************  报错  **********************************/
+.m_submitErrors_Main{display: none;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 10010;background-color: rgba(0,0,0,0.3);}
+.m_submitErrors {position: absolute;top: 50%;left: 50%;width: 600px;height: 400px;margin-top: -200px;margin-left: -300px;border: 1px solid #ccc;border-radius: 10px;background: #fff;}
+.m_submitErrors .fr.c_closeimg0{top: 10px;right: 20px;}
+.m_submitErrors > p{width: 100%;height: 60px;line-height: 60px;color: #64b211;font-size: 24px;text-align: center;}
+.m_submitErrors .m_errorPoints{border: 1px solid #ccc;width: 140px;height: 40px;line-height: 40px;text-align: center;margin-bottom: 20px;margin-left: 30px;border-radius: 10px;color: #666;font-size: 18px;cursor: pointer;}
+.m_submitErrors .m_errorPoints:hover{border: 1px solid #f9a24a;background: #f9a24a;color: #fff;}
+#errorReason{border: none;outline: none;resize: none;border: 1px solid #ccc;width: 540px;height: auto;min-height: 120px;line-height: 32px;margin-left: 30px;border-radius: 10px;color: #999;font-size: 18px;  }
+.m_submitErrors > input{border: none;outline: none;border: 1px solid #999;background: #999;border-radius: 10px;width: 200px;height: 40px;color: #fff;margin: 20px 0 0 66px;cursor: pointer;}
+.m_submitErrors > input:hover{background: #65b113;border: 1px solid #65b113;}
+.m_errorPoints.e_active{background: #f9a24a;color: #fff;border: 1px solid #f9a24a;}
+.t_active{color: #65b113;}
+
+/*****************************  打印  **********************************/
+.print_wrap{display: none; z-index: 99999; position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: black;background: rgba(0,0,0,0.5);}
+.print_in{width: 641px;height: 315px;position: absolute;bottom: 0;top: 0;left: 0;right: 0;margin: auto;background: #fff;border-radius: 10px;overflow: hidden;}
+.print_btn{position:relative;width:218px;height:55px;top:129px;text-align: center;font-size: 18px;line-height: 55px;border-radius: 10px;cursor:pointer;float:left;background: #65b113;color: #fff;}
+.print_btn:hover{background: #5da313;}
+.normal{right:125px;}
+.withAnalyze{left:331px;}
+
+/*****************************  选项  **********************************/
+.options.one .flex{display: inline-block;width: 25%;vertical-align: top;}
+.options.two .flex{display: inline-block;width: 50%;vertical-align: top;}
+
+/*****************************  适应  **********************************/
+/*屏幕小于1366*/
+@media screen and (max-width:1365px){
+    .timing{font-size:12px;}
+    .timeing ul{height: 17px;}
+    .hj_Box,.exercise_box,.publish_box,.exercise_btn_in,.mo_container,.addLineQuestion_box{width: 900px;}
+    .hj_Box dl{font-size: 14px;}
+    .hj_Box dl dd ul li{width: 100px;}
+    .h_Type_li_normal a{left: 35%;bottom:6%;font-size: 12px;}
+    .h_Type_li_normal a span{font-size: 14px;}
+    .h_Type_li_big span a{font-size: 14px;line-height: 2;}
+    .h_Minework_table{font-size: 14px;}
+    .exercise_btn input,.exercise_btn a,.edit_btn input,.edit_btn a,.addLineQuestion_bottom_done{width: 100px;font-size: 14px;line-height:34px;border-radius: 6px;}
+    .exercise_btn_edit{text-indent: 20px;background: #faa249 url("../../image/homework/h_work_btn_01small.png") no-repeat 25px 8px;}
+    .exercise_box > h1{font-size: 20px;}
+    .work_box ul li.line div > h2{font-size: 16px;}
+    .timeing{font-size: 14px;}
+    .work_group > h2{font-size: 16px;}
+    .data_Popup .in{width: 420px;height: 260px;margin-top: -130px;margin-left: -210px;}
+    .data_Popup .in .btn a{font-size: 14px; line-height: 32px;}
+    .exercise_statistics > dl dt,.exercise_statistics > dl dd{font-size: 12px;}
+    .exercise_statistics .statistics dl dt,.exercise_statistics .statistics dl dd{font-size: 12px;}
+    .exercise_statistics{width: 240px;}
+    .exercise_statistics > dl{line-height: 32px;}
+    .exercise_statistics_close{top: -28px;width: 20px;height: 28px;background: url("../../image/homework/exercise_statistics_close_s.png");}
+    .exercise_btn .exercise_btn_in{margin-top: -41px;height: 40px;}
+    .audioplayer{width: 655px!important;}
+    .setLine_lines ul li{font-size: 16px;}
+    .addLineQuestion_box{margin-left: -450px;}
+    .addLineQuestion_bottom a,.addLineQuestion_bottom span{font-size: 14px;line-height: 34px;}
+}
+/*屏幕大于1366小于1599*/
+@media screen and (min-width:1366px) and (max-width:1599px){
+    .timing{font-size:14px;}
+    .hj_Box,.exercise_box,.publish_box,.exercise_btn_in,.mo_container,.addLineQuestion_box{width: 1000px;}
+    .hj_Box dl{font-size: 16px;}
+    .hj_Box dl dd ul li{width: 110px;}
+    .h_Type_li_normal a{left: 39%;bottom:7%;font-size: 13px;}
+    .h_Type_li_normal a span{font-size: 15px;}
+    .h_Type_li_big span a{font-size: 16px;line-height: 2.25;}
+    .h_Minework_table{font-size: 16px;}
+    .exercise_btn input,.exercise_btn a,.edit_btn input,.edit_btn a,.addLineQuestion_bottom_done{width: 126px;font-size: 16px;line-height:42px;border-radius: 8px;}
+    .exercise_btn_edit{text-indent: 25px;background: #faa249 url("../../image/homework/h_work_btn_01.png") no-repeat 32px 10px;}
+    .exercise_box > h1{font-size: 22px;}
+    .work_box ul li.line div > h2{font-size: 16px;}
+    .timeing{font-size: 16px;}
+    .work_group > h2{font-size: 18px;}
+    .data_Popup .in{width: 560px;height: 310px;margin-top: -155px;margin-left: -280px;}
+    .data_Popup .in .btn a{font-size: 16px; line-height: 40px;}
+    .exercise_statistics > dl dt,.exercise_statistics > dl dd{font-size: 14px;}
+    .exercise_statistics .statistics dl dt,.exercise_statistics .statistics dl dd{font-size: 12px;}
+    .exercise_statistics{width: 270px;}
+    .exercise_statistics > dl{line-height: 42px;}
+    .exercise_statistics_close{top: -34px;width: 24px;height: 34px;background: url("../../image/homework/exercise_statistics_close_m.png");}
+    .exercise_btn .exercise_btn_in{margin-top: -49px;height: 50px;}
+    .audioplayer{width: 715px!important;}
+    .setLine_lines ul li{font-size: 16px;}
+    .addLineQuestion_box{margin-left: -500px;}
+    .addLineQuestion_bottom a,.addLineQuestion_bottom span{font-size: 16px;line-height: 42px;}
+}
+/*屏幕大于1600*/
+@media screen and (min-width:1600px){
+    .timing{font-size:16px;}
+    .hj_Box,.exercise_box,.publish_box,.exercise_btn_in,.mo_container,.addLineQuestion_box{width: 1200px;}
+    .hj_Box dl{font-size: 18px;}
+    .hj_Box dl dd ul li{width: 120px;}
+    .h_Type_li_big span a{font-size: 18px;line-height: 2.5;}
+    .h_Minework_table{font-size: 16px;}
+    .exercise_btn input,.exercise_btn a,.edit_btn input,.edit_btn a,.addLineQuestion_bottom_done{width: 150px;font-size: 18px;line-height:50px;border-radius: 8px;}
+    .exercise_btn_edit{text-indent: 30px;background: #faa249 url("../../image/homework/h_work_btn_01.png") no-repeat 38px 13px;}
+    .exercise_box > h1{font-size: 24px;}
+    .work_box ul li.line div > h2{font-size: 18px;}
+    .timeing{font-size: 18px;}
+    .work_group > h2{font-size: 18px;}
+    .data_Popup .in{width: 680px;height: 360px;margin-top: -180px;margin-left: -340px;}
+    .exercise_statistics > dl dt,.exercise_statistics > dl dd{font-size: 16px;}
+    .exercise_statistics .statistics dl dt,.exercise_statistics .statistics dl dd{font-size: 14px;}
+    .exercise_statistics{width: 300px;}
+    .exercise_statistics > dl{line-height: 54px;}
+    .exercise_statistics_close{top: -48px;width: 34px;height: 48px;background: url("../../image/homework/exercise_statistics_close.png");}
+    .exercise_btn .exercise_btn_in{margin-top: -57px;height: 60px;}
+    .audioplayer{width: 860px!important;}
+    .audioplayer-bar{width: 300px!important;}
+    .setLine_lines ul li{font-size: 18px;}
+    .addLineQuestion_box{margin-left: -600px;}
+    .addLineQuestion_bottom a,.addLineQuestion_bottom span{font-size: 18px;line-height: 50px;}
+}
+/**********分数设置***********/
+.h_setScore{
+    width:570px;
+    min-height:570px;
+}
+.h_scorehead{
+    text-align:center;
+    margin-top:40px;
+}
+.h_closeImg{
+    position: absolute;
+    right: 30px;
+    top: 40px;
+}
+.h_text{
+    font-size:18px;
+    font-weight: bold;
+}
+.h_btns{
+    width:100%;
+    position:absolute;
+    text-align:center;
+    bottom: 25px;
+    padding: 40px 0;
+}
+.h_btns input{
+    width:190px;
+    height:50px;
+    border-radius:10px;
+    color: #fff;
+    border: none;
+}
+.h_finish{
+    background: #65b113;
+    margin-right:20px;
+}
+.h_cancel{
+    background: #cccccc;
+    margin-left:20px;
+}
+.h_scorecontent{
+    width: 450px;
+    height: 290px;
+    padding: 40px 60px 0 60px;
+    overflow: auto;
+}
+/*.h_line label{*/
+/*position:absolute;*/
+/*}*/
+/*.h_line{*/
+/*height:30px;*/
+/*}*/
+.h_line p{
+    font-size:18px;
+    display: inline;
+}
+.h_questions{
+    width:  100%;
+    margin-left: 25px;
+    overflow: hidden;
+    min-height:40px;
+}
+.h_questions li{
+    width:102px;
+    float:left;
+    font-size:14px;
+    line-height: 40px;
+    margin-right: 30px;
+}
+.h_escore{
+    width:35px;
+    height:25px;
+    font-size:16px;
+    margin: 0 0 0 5px;
+    text-align: center;
+}
+.h_questions li span{
+    position: relative;
+    left: 90px;
+    top: -40px;
+}
+.h_setbtn{
+    color: #49b9df;
+    border: 0;
+    background: #fff;
+}
+.h_groupli{
+    width:130px !important;
+}
+.h_allscore{
+    display: block;
+    color:#999;
+}
+/****************************/

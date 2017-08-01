@@ -1,0 +1,137 @@
+/***************************************************走遍英美************************************************/
+
+.a_UnitImg{width: 430px;height: 215px;float: left;;border-radius: 10px;text-align: center;overflow: hidden;}
+.a_UnitImg img{width: 100%;}
+.a_UnitArt{float: left;width: 705px;margin-top: 45px;}
+.a_UnitArt li{float: left;width: 100%;height: 40px;line-height: 40px;color: #666;font-size: 18px;}
+.a_UnitArt li:nth-child(2n){background: white;}
+.a_UnitArt li:nth-child(2n+1){background:#F6F6F6;}
+.a_UnitArt li a:hover{ color: #65b113!important;}
+#isdown:hover,#isup:hover{color: #65b113!important;}
+.auther{
+    width:100%;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+}
+/***************************************************音频菜单栏************************************************/
+.a_EngArtMenu{width: 100%;height: 55px;line-height: 55px;float: left;text-align: center;}
+.a_TabBtn{overflow: hidden;margin-top: 8px; width: 170px;height: 35px;border: 1px solid #ccc;cursor: pointer;box-sizing: border-box;float: left;background: white;padding: 0 10px; border-radius: 12px;position: relative;}
+.a_Tab0,.a_Tab1{width: 50%; float: left;height: 33px; line-height: 33px;text-align: center;color: #666;position: absolute;top: 0;z-index: 1;}
+.a_Tab0{left:0;}
+.a_Tab1{right:0;}
+.a_TabBtnImg{position: absolute; left:0;top: 0;height: 100%;z-index: 2;}
+.a_TabCon{position: absolute;top: 0;left: -84px;width: 150%;height: 33px;box-sizing: border-box;padding: 0 10px;}
+.TabT{float:left;width: 33.3%;height: 33px;color: #666;line-height: 33px;text-align: center;}
+/*分享*/
+.c_Share{width: 80px;height: 30px;float: right;box-sizing: border-box;margin: 10px 10px 0 0 ;cursor: pointer;padding: 3px 25px;}
+.c_Recommend{cursor: pointer;width: 150px;margin-top: 3px;float: right; height: 45px;font-size:18px;text-align: center;line-height: 45px;color: white;background: #F9A24A;border-radius: 10px;outline: none;border: 0; }
+.c_Select{width: 100%;height: 100%; float: right;margin-bottom: 20px; color: #666;line-height: 58px;}
+.m030{margin: 0 30px;}
+/*文章*/
+.a_IsTransEngLish,.a_IsEngLish{float: left;width: 100%;min-height: 30px;text-align: left;margin-bottom: 40px;}
+.a_IsTransEngLish p,.a_IsEngLish p{text-indent: 30px;}
+.a_IsTransEngLish p,.a_IsTransEngLish span,.a_IsEngLish p,.a_IsEngLish span{font-size: 16px!important;line-height: 35px!important;color: #666!important;font-family:  "Microsoft YaHei"!important}
+.c_Content{margin: 0 auto;overflow: hidden;border-radius: 10px;box-sizing: border-box;margin-top: 40px; }
+.a_Unit{width: 100%;float: left;min-height: 370px;box-sizing: border-box; margin-top: 40px;background: white;border-radius: 10px;}
+.a_Unit:first-child{margin-top: 0}
+.a_UnitTit{width: 100%;padding-left: 65px;font-size: 24px;color: #666; border-radius: 10px 10px 0 0;height: 61px;float: left; box-sizing: border-box;background: url("../../../static/image/me/m_Headbg.jpg")0 0 repeat;line-height: 61px;}
+.a_EngArtMain{width: 100%;min-height: 800px; float: left;background: #F9FDFE;position: relative;box-sizing: border-box;padding:45px  65px 90px 65px; }
+.c_Article{width: 100%;float: left;box-sizing: border-box;padding: 0 45px;}
+.c_ArtTitle{width: 100%;height: 105px;float: left; font-size: 24px;text-align: center;line-height: 105px;color: #333;}
+.IsEngTitle{float: left;width: 60%;height: 55px;font-size: 18px;box-sizing: border-box; text-align: center;color: #666;line-height: 55px; }
+.pl80{padding-left: 80px!important;}
+.c_Content{position: relative;}
+
+@media screen and (max-width:1366px){
+    .c_Content,.wrapper{width: 900px;}
+    .a_UnitArt{float: left;width: 445px;margin-top: 45px;}
+    .a_UnitImg{margin: 30px 0 0 25px}
+    .a_UnitArt li{padding-left: 20px;}
+
+}
+@media screen and (min-width:1366px){
+    .c_Content,.wrapper{width: 1000px;}
+    .a_UnitImg{margin: 30px 0 0 45px}
+    .a_UnitArt{float: left;width: 524px;margin-top: 45px;}
+    .a_UnitArt li{padding-left: 120px;}
+
+}
+@media screen and (min-width:1600px){
+    .c_Content,.wrapper{width: 1200px;}
+    .a_UnitImg{margin: 30px 0 0 65px}
+    .a_UnitArt{float: left;width: 703px;margin-top: 45px;}
+    .a_UnitArt li{padding-left: 150px;}
+
+}
+.c_Main{padding-bottom: 0;}
+.wrapper{position: fixed;bottom: 0; left: 0;right: 0;margin: auto;overflow: hidden;border-radius: 0 0 10px 10px;}
+.c_ArLogo{float: left;width: 100%;height: 60px;border-bottom: 1px solid #ccc;background: url("../../../static/image/chinese/bg.png")0 0 repeat;}
+.c_ArLogoapp{float: left;width: 100%;text-align: center; height:1.4rem;border-bottom: 1px solid #ccc;background: url("../../../static/image/chinese/bg.png")0 0 repeat;}
+.c_logoar{height:60px;float: left;}
+.c_logoarapp{height: 1.4rem;float: left;}
+
+.audioplayer{background: black;background: rgba(0,0,0,0.8)}
+/*播放器*/
+.ComPlayer:before{clear: both;}
+.ComPlayer{position: fixed;left: 0;right: 0;bottom: 0; height: 60px;width: 800px;margin: auto;overflow: hidden; background: black;background: rgba(0,0,0,0.8);}
+.ComPlayer-playpause{float: left;width: 30px;height: 30px;margin:15px 10px 0  40px; overflow: hidden;cursor: pointer;  }
+.ComPlayer-playpause span {color: transparent; display: block;background: url("../../../static/image/player1.3/new_play0.png");width: 30px;height: 30px;}
+.ComPlayer-playing .ComPlayer-playpause span {color: transparent; display: block;background: url("../../../static/image/player1.3/new_play1.png");width: 30px;height: 30px;}
+.ComPlayer-bar{height: 5px;width: 345px;margin: 28px 0 0 0;position: relative;left: 0; overflow: hidden;border-radius: 3px;  float:left;background-color:#F6F6F6;box-sizing: border-box; cursor: pointer;}
+.ComPlayer-bar div{ width: 0; height: 100%;position: absolute; left: 0; top: 0;}
+.ComPlayer-bar-loaded{ background-color: #F6F6F6;; z-index: 1;border-radius: 3px; }
+.ComPlayer-bar-played{ background: #65b113;; z-index: 2;border-radius: 3px;}
+.ComPlayer-time-current{float: left;color: #fff;font-size: 12px;line-height: 60px;margin-left: 20px; }
+.ComPlayer-time-cut{float: left;color: #fff;font-size: 12px;line-height: 60px;margin: 0 3px;}
+.ComPlayer-time-duration{float: left;color: #fff;font-size: 12px;line-height: 60px;}
+.ComPlayer-volume{float: right;height: 60px;margin-right: 40px;}
+.ComPlayer-volume-button{float: left;margin-right: 7px;overflow: hidden;margin-top: 22px; cursor: pointer; width: 23px;height: 22px;background: url("../../../static/image/prepare1.2/new_voice0.png") 0 0 no-repeat;}
+.ComPlayer-volume-button span{color: transparent;}
+.ComPlayer-volume-adjust{width: 145px;overflow: hidden;border-radius: 3px; float: left;height: 5px;line-height: 5px;position: relative;margin-top: 29px;}
+.ComPlayer-volume-adjust > div { width: 145px;height: 5px;overflow: hidden;border-radius: 3px;background-color:#F6F6F6;box-sizing: border-box;;cursor: pointer;position: relative; }
+.ComPlayer-volume-adjust div div{width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: #65b113;}
+
+
+
+
+
+
+
+
+/****************************************手机端适配*****************************************/
+.c_ArLogo0{float: left;width: 100%;text-align: center; height:1.4rem;border-bottom: 1px solid #ccc;}
+.c_logoar0{height: 1.4rem;float: left;}
+.a_IsTransEngLish0,.a_IsEngLish0{float: left;width: 100%;min-height: 30px;text-align: left;margin-bottom: 1.5rem;}
+.a_IsTransEngLish0 p,.a_IsTransEngLish0 span,.a_IsEngLish0 p,.a_IsEngLish0 span{font-size: 0.4rem!important;line-height: 0.8rem!important;color: #666!important;font-family:  "Microsoft YaHei"!important}
+.a_EngArtMain0{width: 100%;min-height: 100px; float: left;background: #F9FDFE;position: relative;box-sizing: border-box;padding:0.5rem; }
+.c_Content0{position: relative;width: 100%; margin: 0 auto;overflow: hidden;box-sizing: border-box;}
+.c_Mainapp{width: 100%;float: left;background: #ECEDF0;box-sizing: border-box;}
+.wrapper0{position: fixed;width: 100%;height: 1.5rem;left: 0;bottom: 0;}
+.wrapper0 .audioplayer { height: 1.5rem; color: #666; position: relative; bottom: 0;z-index: 1;background: white;width: 100%;border-top: 1px solid #ccc;}
+.wrapper0 .audioplayer > div{ position: absolute;}
+.wrapper0 .audioplayer-playpause{width: 1rem;height: 1rem;text-align: left;  text-indent: -9999px;  cursor: pointer;  z-index: 2; bottom: 0;top: 0;margin: auto 0; left: 0.5rem;  }
+.wrapper0 .audioplayer-playpause span { display: block;}
+.wrapper0 .audioplayer-stopped .audioplayer-playpause span { background: url("../../../static/image/acrossenglish/p_playico0.png")0 0 no-repeat;width: 1rem;height: 1rem;background-size: 100%;}
+.wrapper0 .audioplayer-playing .audioplayer-playpause span {background: url("../../../static/image/acrossenglish/p_palyico1.png")0 0 no-repeat;width: 1rem;height: 1rem;background-size: 100%;}
+.wrapper0 .audioplayer-bar div{ width: 0; height: 100%;position: absolute; left: 0; top: 0;}
+.wrapper0 .audioplayer-bar-loaded{ background-color: #F6F6F6;; z-index: 1;}
+.wrapper0 .audioplayer-bar-played{ background: #58C1E4;; z-index: 2;}
+.wrapper0 .audioplayer-volume{ display: none;}
+.wrapper0 .audioplayer-bar,.audioplayer-bar div,.audioplayer-volume-adjust div{ -webkit-border-radius: 12px; -moz-border-radius: 12px; border-radius: 12px;  }
+.wrapper0 .audioplayer { -webkit-border-radius: 2px; -moz-border-radius: 2px;border-radius: 2px; }
+.wrapper0 .audioplayer-volume-adjust{ -webkit-border-top-left-radius: 2px; -webkit-border-top-right-radius: 2px;  -moz-border-radius-topleft: 2px;  -moz-border-radius-topright: 2px;  border-top-left-radius: 2px;  border-top-right-radius: 2px;  }
+.wrapper0 .audioplayer-bar{height: 0.4rem;width: 5rem!important;margin: 0; float:left;background-color:#F6F6F6;box-sizing: border-box;border-top:1px solid #E4E4E4; cursor: pointer;z-index: 1;top: 0.5rem;left: 1.8rem;}
+.wrapper0 .audioplayer-time{width: 1rem;height: 100%;line-height:1.5rem;font-size: 0.4rem; text-align: center;z-index: 2;top:0;color:#666;}
+.wrapper0 .audioplayer-time-current {color: #58C1E4; left:6.4rem; }
+.wrapper0 .audioplayer-time-cut { left:7.8rem; }
+.wrapper0 .audioplayer-time-duration { right:0.5rem; }
+.wrapper0 .audioplayer-novolume .audioplayer-time-duration{  border-right: 0; right: 0;}
+.IsEngTitlt0,.IsEngTitlt{font-weight: bold;color: #666;text-align: center;width: 100%;}
+.IsEngTitlt0{font-size:0.4rem;line-height: 1rem; }
+.auther0{font-size:0.35rem;line-height: 1rem;text-align: center; }
+.IsEngTitlt{font-size:18px;line-height: 45px; }
+
+
+
+

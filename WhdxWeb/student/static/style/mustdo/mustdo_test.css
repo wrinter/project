@@ -1,0 +1,100 @@
+/***********************************************必刷题首页By徐扬**************************************************/
+.mu_Main{overflow:hidden; float: left;text-align:center;position: relative;  width: 100%;min-width: 1200px; background: url("../../../static/image/mustdo/m_bg0.jpg")0 0 repeat-y;background-size: 100%; }
+.m_PkUser{width: 650px;margin: 0 auto;overflow: hidden;height: 100%;box-sizing:border-box;}
+.m_VsIco{float: left;margin-top: 15px;}
+.UserProBox{float: left;width: 40%;height: 100%;}
+.mu_QueMain{width: 100%;float: left; margin-top: 40px;position: relative; }
+.mu_QueMain>img{float: left;width: 100%;}
+.mu_UserProgress{float: left;width: 100%;height: 140px;}
+.m_ContentMain{float: left;width: 102%;height: 100%;overflow-y: scroll;}
+.m_VsBox{float: left;width: 20%;height: 100%;text-align: center;overflow: hidden;vertical-align: middle;}
+.m_PkPhoto0,.m_PkPhoto1{float: left; width:100px;;overflow: hidden; height: 100px;box-sizing: border-box;padding:2px; background: white;border-radius: 100%;border: 1px solid #ccc;}
+.m_PkPhoto0>img,.m_PkPhoto1>img{float: left;width: 100%;border-radius: 100%;}
+.m_PkProMainBox0,.m_PkProMainBox1{float: left;height: 100%;padding-top: 60px;box-sizing: border-box;}
+.m_PkProMainBox0{margin-left: 30px;}
+.m_PkProMainBox1{margin-right: 30px;}
+.m_PkProBox,.m_PkProBox0{overflow: hidden; width: 220px; box-sizing: border-box;background: #f6f6f6; height: 10px;border: 1px solid #ccc;border-radius: 5px;margin: 0 auto;}
+.m_PkProBox0{background: #f6f6f6;}
+.m_PkPro,.m_PkPro0{width:0;height: 100%;float: left;background: url("../../../static/image/me/m_probg.jpg")0 0 repeat;border-radius: 4px;}
+
+.m_PkNum{height: 40px;overflow: hidden;text-align: center;line-height: 40px;font-size: 18px;color: white;}
+.m_PkNum span{;margin: 0 2px;}
+.m_Question{float: left;width: 100%;min-height: 100px;position: relative;box-sizing: border-box;padding: 0 60px; font-size: 18px;color: #333;text-align: left; overflow: hidden;background: url("../../../static/image/mustdo/m_testbg2.png")0 0 repeat;background-size: 100%;}
+.m_Question>div,.m_Question>p{text-align: left;line-height: 35px;font-family: "Microsoft YaHei"!important;}
+.UserAnswer{cursor: pointer;}
+.UserAnswer:hover{color: #49b9df;}
+.mu_QuNum{position: absolute;top: 0;left:25px;text-align: center; float: left;width: 40px;height: 35px;line-height: 35px;}
+.mu_QuNum0{position: absolute;top: 0;left:0;text-align: center; float: left;width: 40px;height: 30px;line-height: 30px;}
+.Close{float: left;width: 55px;right: 6px;top: 0; height: 55px;background: none; position: absolute;;color: #333;font-size: 30px;cursor: pointer;border-radius: 100%;}
+
+/*雪碧图*/
+.meimg{background:url('../../../static/image/sprite/meimg.png')0 0   no-repeat;}
+.m_pkdico0{height:22px;width:24px;background-position:-230px -144px;float: left;margin: auto; position: absolute;top: 0;bottom: 0;right: 30px;cursor: pointer;}
+.m_pkdico1{height:22px;width:24px;background-position:-230px -113px;float: left;margin: auto; position: absolute;top: 0;bottom: 0;right: 30px;cursor: pointer;}
+.m_winico0{height:28px;width:26px;background-position:-268px -109px;;float: left;margin-left: 10px;}
+.m_winico1{height:24px;width:30px;background-position:-267px -143px;;float: left;position: absolute;top: 40px;right: 90px;}
+.m_pkico0{height:83px;width:105px;background-position:-109px -104px;}
+.m_pkico1{height:83px;width:105px;background-position:0 -105px;}
+/*试题结果*/
+.mu_UserResult{width: 100%;height: 250px;float: left;margin-top: 40px;background: white;overflow: hidden;border-radius: 10px;box-sizing: border-box;}
+.m_ReCon{float: left;width: 40%;height: 100%;box-sizing: border-box;padding-top: 75px;}
+.m_VsBox0{float: left;width: 20%;height: 100%;text-align: center;overflow: hidden;box-sizing: border-box;padding-top: 48px;}
+.mu_ReMsg0,.mu_ReMsg1{float: left;width: 140px;height: 100%;}
+.mu_ReMsg0 li,.mu_ReMsg1 li{float: left;text-align: left; line-height: 35px;height: 35px;width: 100%;color: #333;font-size: 18px;}
+.m_UserImgBox0,.m_UserImgBox1{position: relative;width: 100px;height: 100%;float: left;}
+.m_UserImgBox0{padding-left: 50px;}
+.m_UserImgBox1{padding-right: 50px;margin-right: 20px;}
+.m_pkresult0{float: left;position: absolute;top: -35px;left: -25px;}
+.m_pkresult1{float: left;position: absolute;top: -35px;right: -25px;}
+.m_PkImg0,.m_PkImg1{float: left; width:100px;;overflow: hidden; height: 100px;box-sizing: border-box;padding:2px; background: white;border-radius: 100%;border: 1px solid #ccc;}
+.m_PkImg0>img,.m_PkImg1>img{float: left;width: 100%;border-radius: 100%;}
+.mu_AnswerMain{float: left;margin-top: 20px;width: 100%;padding: 25px; min-height: 300px;background: white;overflow: hidden;border-radius: 10px;box-sizing: border-box;}
+.mu_AnswerTxt{float: left;width: 100%;line-height: 30px;font-size: 18px;color: white;text-align: left;margin-bottom: 20px; }
+.mu_FrageNum{float: left;width: 100%;box-sizing: border-box;}
+.mu_FrageNum li{float: left;width: 80px;height: 80px;margin: 0 15px; position: relative;;box-sizing: border-box;}
+.mu_FrageNum li>span{float: left;border-radius: 100%;cursor: pointer;box-sizing: border-box; width: 75%;height: 75%; text-align: center;background: white;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto; }
+.mu_FrageNum li .mu_SelectRightNum{width: 100%;height: 100%;background: #90d29b;color: white;}
+.mu_FrageNum li .mu_SelectWrongNum{width: 100%;height: 100%;background: #ca0d0d;color: white;}
+.mu_FrageNum li .mu_RightNum{background: white;border: 1px solid #90d29b;color: #90d29b;}
+.mu_FrageNum li .mu_WrongNum{background: white;border: 1px solid #ca0d0d;color: #ca0d0d;}
+.m_ReQuestion{float: left;position: relative; width: 100%;margin-top: 40px; box-sizing: border-box;text-align: left; padding-left: 30px;min-height: 200px;color: #333!important;}
+.m_ReQuestion>div,.m_ReQuestion>p{text-align: left;line-height: 30px;}
+.mu_AnswerLine{float: left;width: 100%;}
+.mu_AnswerLine>p{float: right;}
+.mu_AnswerTitle{float: left;width: 80px;height: 101%;}
+.m_Mask{position: fixed;width: 100%;height: 100%;display: none; top: 0;left: 0;background: black;background: rgba(0,0,0,0.6);z-index: 99999;}
+.m_QuitMian{width: 670px;height: 355px;box-sizing: border-box;position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;background: url("../../../static/image/mustdo/mu_quite.png")0 0 no-repeat;background-size: 100%;}
+.QuitBtn0,.QuitBtn1{position: absolute;cursor: pointer; width: 190px;height: 45px;background: none;bottom: 25px;}
+.QuitBtn0{left: 130px;}
+.QuitBtn1{right: 130px;}
+.QuitBtn2{position: absolute;cursor: pointer; width: 35px;height: 40px;background: none;top: 0;right: 40px;}
+.r_OpRightColor,.r_OpRightColor p,.r_OpRightColor span{color: #59C1E4!important;}
+.r_OpNomalColor,.r_OpNomalColor p,.r_OpNomalColor span{color: #333;}
+.r_OpWrongColor,.r_OpWrongColor p,.r_OpWrongColor span{color: #CA0D0D!important;}
+@media screen and (max-width:1366px){
+    .m_PkPhoto0{margin: 15px auto 0 5px;}
+    .m_PkPhoto1{margin: 15px 5px 0  auto;}
+    .mu_ReMsg0{margin-left: 40px;}
+    .mu_FrageNum li{width: 55px;height: 55px;}
+    .mu_FrageNum .mu_SelectRightNum, .mu_FrageNum .mu_SelectWrongNum{line-height: 55px;font-size: 32px;}
+    .mu_FrageNum li>span{line-height: 40px;font-size: 16px;}
+    .mu_AnswerLine>p{width: 739px;}
+}
+@media screen and (min-width:1366px){
+    .m_PkPhoto0{margin: 15px auto 0 40px;}
+    .m_PkPhoto1{margin: 15px 40px 0 auto;}
+    .mu_ReMsg0{margin-left: 70px;}
+    .mu_FrageNum li{width: 65px;height: 65px;}
+    .mu_FrageNum li>span{line-height: 48px;font-size: 20px;}
+    .mu_FrageNum .mu_SelectRightNum, .mu_FrageNum .mu_SelectWrongNum{line-height: 65px;font-size: 40px;}
+    .mu_AnswerLine>p{width: 840px;}
+}
+@media screen and (min-width:1600px){
+    .m_PkPhoto0{margin: 15px auto 0 100px;}
+    .m_PkPhoto1{margin: 15px 100px 0 auto;}
+    .mu_ReMsg0{margin-left: 160px;}
+    .mu_FrageNum li{width: 85px;height: 85px;}
+    .mu_FrageNum li>span{line-height: 63px;font-size: 24px;}
+    .mu_FrageNum .mu_SelectRightNum, .mu_FrageNum .mu_SelectWrongNum{line-height: 85px;font-size: 48px;}
+    .mu_AnswerLine>p{width: 1039px;}
+}

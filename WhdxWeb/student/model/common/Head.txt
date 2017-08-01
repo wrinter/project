@@ -1,0 +1,27 @@
+<div class="Com_Nav_wrap">
+    <div class="Com_Nav">
+        <img src="../../static/image/common/logo.png" alt="" class="Com_Logo">
+        <!--签到-->
+        <div class="Com_SignBox" id="Com_SignBox">
+            <div class="WarnMsg0  AllMsgNum"></div>
+            <img src="../../static/image/common/i_upico0.png" alt="" class="Com_DownIco">
+            <div class="Com_UserPhoto" id="User"><img src="../../static/image/common/user.png" alt="" class="fl w100" id="UserHeadImg"></div>
+            <!-- <div class="Com_SignBtn" id="sign">签到</div> -->
+            <ul class="Com_SecNav">
+                <li>
+                    <a href="../../model/massage/message.html">消息</a>
+                    <div class="WarnMsg1  AllMsgNum"></div>
+                </li>
+                <li>
+                    <a href="../../model/me/me_index.html">个人中心</a>
+                </li>
+                <li id="Quit">退出</li>
+            </ul>
+        </div>
+        <!--导航-->
+        <ul class="Com_NavMain" id="Com_NavMain"></ul>
+        <!--提示框-->
+        <div class="c_Dissolve"  id="c_ErrorMsg"></div>
+    </div>
+</div>
+<script src="../../static/javascript/GetNav/GetNav.js"></script>

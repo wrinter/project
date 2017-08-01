@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>测试报告</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/testpaper/testpaper.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div id="Header"></div>
+        <!--面包屑导航-->
+        <div class="c_Crumbs">
+            <div class="c_Crumbs_in">
+                <!--面包屑导航图标-->
+                <i class="spriteImg c_mico fl mt15"></i>
+                <!--面包屑导航-->
+                <ul class="c_Crum fl" id="c_Crum">
+                    <!--有链接-->
+                    <li><a href="../../model/index/indexX.html" class="fl fc65">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li><a href="testpaper_index.html?pno=1" class="fl fc65">测试报告</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li>查看</li>
+                </ul>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="c_Main">
+            <div class="w_Main">
+                <div class="w_ReadMain">
+                    <div class="w_ArtName" >
+                        <span id="w_ArtName">Loading...</span>
+                        <div class="w_StudentPro" id="w_StudentPro"><p class="w_SProgress" id="w_SProgress"></p></div>
+                        <div class="w_ReportNum" id="w_ReportNum"></div>
+                        <div class="w_UnDoneMain" id="w_UnDoneMain">
+                            <img src="../../static/image/workpaper/w_Undoneimg.png" alt="" class="w_UnDoneImg">
+                            <h1 class="w_UnDoneTitle" id="w_UnDoneTitle">未完成</h1>
+                            <!--未完成名单-->
+                            <ul class="w_UnDoneList" id="w_UnDoneList"></ul>
+                        </div>
+                    </div>
+                    <ul class="w_WorkTitle">
+                        <li>日期</li>
+                        <li>姓名</li>
+                        <li>用时</li>
+                    </ul>
+                    <ul class="w_StudentReport" id="w_StudentReport"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <i class="spriteImg backtopico backtop"></i>
+</article>
+<script src="../../static/javascript/testpaper/ReadeReport.js"></script>
+</body>
+</html>

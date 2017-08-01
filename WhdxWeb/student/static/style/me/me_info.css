@@ -1,0 +1,115 @@
+/***********************************************个人中心修改资料By徐扬**************************************************/
+.m_UserInfo{float: left;width: 100%;position: relative; background: white; ;box-sizing: border-box;;border-radius: 10px;margin-top: 40px;}
+.m_UserHeader{float: left;width: 100%;height: 60px;border-radius: 10px 10px 0 0; box-sizing: border-box;border-bottom: 1px solid #ccc; padding: 0 20px;background: url("../../../static/image/me/m_HeadBg.jpg")0 0 repeat;}
+.m_UserHTxt{float: left;line-height: 60px;font-size: 24px;color: #333;}
+.m_Edit{cursor: pointer;overflow: hidden;height: 100%;}
+.m_Edit,.m_Downico,.m_Editxt{float: right;color: #90d29b;line-height: 60px;font-size: 18px;}
+.m_Edit>.m_Downico{margin-top: 2px;font-size: 26px;margin-right: 3px;}
+.m_InfoShow{float: left;width: 100%;padding: 40px 35px 0 35px;box-sizing: border-box;background: white;border-radius:0 0 10px 10px ;}
+.m_InfoLine,.m_InfoLine1{float: left;width: 100%;line-height: 40px;}
+.m_InfoInTro0{float: left;color: #666;}
+.m_InfoInTro1{float: left;color: #333;}
+.m_SubMatShow{float: left;width: 90%;}
+.m_Wrong{float: left;margin-left: 10px;font-size: 14px;color: #CA0D0D;}
+.m_SubMatShow>li{float: left;width: 160px;height: 265px;position: relative;margin-right: 50px;margin-bottom: 50px;}
+.m_ImgBox{float: left;width: 100%;height: 220px;overflow: hidden;line-height: 220px;text-align: center;font-size: 24px;}
+.m_SubMatShow>li img{float: left;width: 100%;}
+.m_Material{width: 170px;height: 38px;font-size: 16px; ;text-align: center;line-height: 38px; border-radius: 10px;color: #333;position: absolute;left: -5px;bottom: 10px;}
+.m_UserNameInput{float: left;outline: none;border-radius: 10px; border: 1px solid #ccc;width: 250px;box-sizing: border-box;padding-left: 15px;}
+.m_SelectBox,.m_GoStudy{float: left; width: 195px;cursor: pointer; padding: 0 10px;line-height: 33px;font-size: 14px;color: #333; height: 35px;border-radius: 10px;box-sizing: border-box;background: white;border: 1px solid #ccc;position: absolute; bottom: 25px;left: -18px;}
+.m_SelectOther{float: left; width: 195px;position: relative; cursor: pointer; padding: 0 10px;line-height: 33px;font-size: 14px;color: #333; height: 35px;border-radius: 10px;box-sizing: border-box;background: white;border: 1px solid #ccc;}
+.m_GoStudy{ background: url("../../../static/image/me/m_inbtnbg.jpg")0 0 repeat;text-align: center;color: #666;}
+.m_Downico{font-size: 26px;color: #999;line-height: 35px;float: right;}
+.m_SelectList{width: 195px;z-index: 5; min-height: 30px;display: none; box-sizing: border-box;padding: 0 10px;border-radius: 10px;border: 1px solid #ccc;background: white;position: absolute;top: 35px;left: 0;}
+.m_SelectList>li{float: left;overflow: hidden;white-space:nowrap;text-overflow:ellipsis; width: 100%;height: 30px;line-height: 30px;text-align: left;color: #333;}
+.m_SelectList>li:hover{color: #49b9df;}
+.m_SelectShow{width: 145px;float: left;line-height: 35px;height: 35px;overflow: hidden;white-space:nowrap;text-overflow:ellipsis;}
+.m_InfoBtn0,.m_InfoBtn1{float: left;border-radius: 10px;text-align: center;color: white;cursor: pointer;}
+.m_InfoBtn0{background: #49b9df;margin-right:30px;}
+.m_InfoBtn1{background: #999;}
+.mb50{margin-bottom: 50px!important;}
+.m_OtherInfo{float: left;width: 100%;min-height: 250px; background: white;box-sizing: border-box;border-radius: 0 0 10px 10px;padding-bottom: 30px;}
+.m_OtherInfo >li{float: left;width: 33.3%;box-sizing: border-box; border-right: 1px solid #ccc;height: 120px;}
+.m_OtherInfo >li:last-child{border-right: 0;}
+.m_AboutLeft{float: left;width: 45%;box-sizing: border-box; height: 120px;}
+.m_ChangeTxt0,.m_ChangeTxt1{ color: #333;line-height: 30px;margin-left: 15px;text-indent: 15px;}
+.m_ChangeTxt0{margin-top:30px;}
+.m_ChangeBtn{color: #58c1e4;cursor: pointer;}
+.m_ChangeMain{float: left;width: 55%;height: 100%;box-sizing: border-box;}
+.m_ChangeLine{float: left;width: 100%;color: #666;}
+.m_ChangeTxt{float: left; width: 120px; color: #666;text-align: right;}
+.m_ChangeIn1, .m_ChangeIn0,.m_ChangeIn{outline: none;border-radius: 5px;margin-left: 15px;float: left; border: 1px solid #ccc;  text-align: left;  box-sizing: border-box;  padding-left: 15px; color: #333;}
+.m_Error{margin-left: 140px; height: 20px; line-height: 20px;  float: left; font-size: 14px; color: #CA0D0D;}
+.mt30{margin-top: 30px;}
+.mt20{margin-top: 20px;}
+.m_EditBtn{float: left;outline: none;border: 0;cursor: pointer; border-radius: 10px;text-align: center;color: white;}
+.m_CapImgBox{width: 70px;float: left;height: 26px;overflow: hidden;}
+.m_CapImgBox img{width: 100%;float: left;}
+.r_MsgInBtn{float: left;outline: none;border: 0;text-align: center; border-radius: 10px;background: #f9a24a;color: white;cursor: pointer;}
+/*雪碧图*/
+.meimg{background:url('../../../static/image/sprite/meimg.png')0 0  no-repeat;}
+.m_phone0{height:98px;width:64px;background-position:0 0;float: left;margin-left: 20%;}
+.m_phone1{height:98px;width:64px;background-position:-67px 0;float: left;margin-left: 20%;}
+.m_pass1{height:89px;width:68px;background-position:-369px 0;float: left;margin-top: 3px;}
+.m_pass0{height:89px;width:68px;background-position:-295px 0;float: left;margin-top: 3px;}
+.m_email1{height:63px;width:74px;background-position:-137px 0;float: left;margin-top: 18px;margin-left: 10%;}
+.m_email0{height:63px;width:74px;background-position:-215px 0;float: left;margin-top: 18px;margin-left: 10%;}
+.m_Cover{background: none;display: none; position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 3;}
+.m_Editico{font-size: 24px;margin-top: 3px;float: right;}
+@media screen and (max-width:1366px){
+    .m_EditBtn,.m_InfoBtn0,.m_InfoBtn1,.m_UserHTxt {font-size: 20px;}
+    .r_MsgInBtn,.m_ChangeTxt,.m_ChangeIn,.m_ChangeLine,.m_ChangeTxt0,.m_ChangeTxt1,.m_GoStudy,.m_InfoLine,.m_InfoLine1{font-size: 14px;}
+    .m_InfoLine{margin-bottom: 10px;}
+    .m_InfoLine,.m_InfoLine1{line-height: 30px;}
+    .m_InfoBtn0,.m_InfoBtn1{width: 145px;height: 35px;line-height: 35px;}
+    .m_InfoBtn0{margin-left: 255px;}
+    .m_UserNameInput{height: 30px;line-height: 30px;}
+    .m_AboutLeft,.m_OtherInfo >li{margin-top: 65px;}
+    .m_pass0,.m_pass1{margin-left: 21%;}
+    .m_Wrong,.r_MsgInBtn,.m_ChangeIn1, .m_ChangeIn0,.m_EditBtn,.m_ChangeIn,.m_ChangeLine{height: 30px;line-height: 30px;}
+    .m_ChangeIn{width: 300px;}
+    .m_EditBtn{width: 145px;}
+    .mar3010{margin: 0 30px 0 100px;}
+    .m_CapImgBox{margin: 1px 10px 0 10px; }
+    .m_ChangeIn0{width: 100px;}
+    .m_ChangeIn1{width: 155px;}
+    .r_MsgInBtn{width: 125px;margin-left: 15px;}
+}
+@media screen and (min-width:1366px){
+    .m_EditBtn,.m_InfoBtn0,.m_InfoBtn1,.m_UserHTxt {font-size: 22px;}
+    .r_MsgInBtn,.m_ChangeTxt,.m_ChangeIn,.m_ChangeLine,.m_ChangeTxt0,.m_ChangeTxt1,.m_GoStudy,.m_InfoLine,.m_InfoLine1{font-size: 16px;}
+    .m_InfoLine{margin-bottom: 15px;}
+    .m_InfoLine,.m_InfoLine1{line-height: 35px;}
+    .m_InfoBtn0,.m_InfoBtn1{width: 165px;height: 40px;line-height: 40px;}
+    .m_UserNameInput{height: 35px;line-height: 35px;}
+    .m_InfoBtn0{margin-left: 275px;}
+    .m_AboutLeft,.m_OtherInfo >li{margin-top: 80px;}
+    .m_pass0,.m_pass1{margin-left: 21%;}
+    .m_Wrong,.r_MsgInBtn,.m_ChangeIn1, .m_ChangeIn0,.m_EditBtn,.m_ChangeIn,.m_ChangeLine{height: 35px;line-height: 35px;}
+    .m_ChangeIn{width: 350px;}
+    .m_EditBtn{width: 165px;}
+    .mar3010{margin: 0 30px 0 110px;}
+    .m_CapImgBox{margin: 3px 10px 0 10px; }
+    .m_ChangeIn0{width: 120px;}
+    .m_ChangeIn1{width: 190px;}
+    .r_MsgInBtn{width: 145px;margin-left: 15px;}
+}
+@media screen and (min-width:1600px){
+    .m_EditBtn,.m_InfoBtn0,.m_InfoBtn1,.m_UserHTxt {font-size: 24px;}
+    .r_MsgInBtn,.m_ChangeTxt,.m_ChangeIn,.m_ChangeLine,.m_ChangeTxt0,.m_ChangeTxt1,.m_GoStudy,.m_InfoLine,.m_InfoLine1{font-size: 18px;}
+    .m_InfoLine{margin-bottom: 15px;}
+    .m_InfoLine,.m_InfoLine1{line-height: 40px;}
+    .m_InfoBtn0,.m_InfoBtn1{width: 185px; height: 45px;line-height: 45px;}
+    .m_UserNameInput{height: 40px;line-height: 40px;}
+    .m_InfoBtn0{margin-left: 370px;}
+    .m_AboutLeft,.m_OtherInfo >li{margin-top: 90px;}
+    .m_pass0,.m_pass1{margin-left: 25%;}
+    .m_Wrong,.r_MsgInBtn,.m_ChangeIn1, .m_ChangeIn0,.m_EditBtn,.m_ChangeIn,.m_ChangeLine{height: 40px;line-height: 40px;}
+    .m_ChangeIn{width: 400px;}
+    .m_EditBtn{width: 185px;}
+    .mar3010{margin: 0 30px 0 120px;}
+    .m_CapImgBox{margin: 5px 10px 0 10px; }
+    .m_ChangeIn0{width: 150px;}
+    .m_ChangeIn1{width: 220px;}
+    .r_MsgInBtn{width: 160px;margin-left: 25px;}
+}

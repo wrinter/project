@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>写作业--作业测试</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/iconfont.css">
+    <link rel="stylesheet" href="../../static/plugin/img/css/cropper.css">
+    <link rel="stylesheet" href="../../static/plugin/img/css/main.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/plugin/img/js/cropper.js"></script>
+    <script src="../../static/plugin/img/js/Chobi.js"></script>
+    <link rel="stylesheet" href="../../static/style/doHomework/DH_homework.css">
+    <script src="../../static/plugin/Print/jquery.jqprint-0.3.js"></script>
+    <script src="../../static/plugin/Print/Migrate.js"></script>
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a href="../../../student/model/doHomework/DH_Presentation.html">写作业</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="dohomeworkname fc49">写作业</span>
+    </div>
+</div>
+<div class="Com_Main">
+    <div class="task_paper">
+        <div class="task_title">
+            <div class="task_name">
+                <span class="task_tiltename"></span>
+
+                <span class="task_print">打印</span>
+            </div>
+            <div class="task_time">
+                <span class="task_fen"></span>
+                <span class="task_usedtime"></span>
+            </div>
+        </div>
+        <!--试卷区域-->
+        <div class="task_storage">
+            <!--作业详情-->
+            <div class="task_strogepaper"></div>
+            <div class="task_bc"></div>
+            <div class="task_strogetitle">
+                <div class="task_strogetitleDeposit">
+                    <div class="task_classtarget">班级目标</div>
+                    <div class="task_attention">
+                        <p class="attention">注意事项</p>
+                    </div>
+                    <div class="task_usetime">
+                        <span class="Minus_usetime">计时：</span><span id="s_paper_hour">00</span>:<span id="s_paper_min">00</span>:<span id="s_paper_second">00</span><br>
+                    </div>
+                    <div class="task_seetitle"></div>
+                    <!--上传区域-->
+                    <div class="task_tipc">
+                        <div class="task_see">
+                            <dl class="hasdo">
+                                <dt class="hasdocolor"></dt>
+                                <dd class="hasdoname">已做</dd>
+                            </dl>
+                            <dl class="hasnodo">
+                                <dt class="hasdonocolor"></dt>
+                                <dd class="hasdononame">未做</dd>
+                            </dl>
+                        </div>
+                        <div class="task_up">
+                            <span>上传</span>
+                        </div>
+                        <div class="tisubjective"></div>
+                    </div>
+                    <div class="task_upsend">提交</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--图片处理-->
+    <div class="content_sharks">
+        <div class="container">
+            <div class="container_shark">
+                <i class="iconfont ShareClose" id="ShareClose">&#xe69a;</i>
+                <div class="img_word">图片编辑器</div>
+                <div class="img-container" >
+                    <img src="../../static/plugin/img/img/picture.png" alt="Picture" id="Main_img" >
+                    <p class="Rota" data-method="rotate" data-option="90" type="button" title="Rotate Left"><i class="iconfont Rotae">&#xe613;</i></p>
+                </div>
+                <!--<p class="Rota1" onclick="filter(5)">Brightness +5</p>-->
+                <!--<p class="Rota1" onclick="filter(6)">Brightness -5</p>-->
+                <p class="UpImg"></p>
+                <div class="Operation">
+                    <div class="addPicture">
+                        <input class=" IsUpImgBtn" id="inputImage" value="上传" name="file"  type="file" accept="image/*">
+                        <span class="addP">添加图片</span>
+                    </div>
+                    <input class="clickPreservation" type="button" data-method="getCroppedCanvas"  value="确定修改" id="GetImgUrl">
+                </div>
+            </div>
+            <div class="notice"><span>友情提示 : </span>请上传小于5M的图片!</div>
+            <div id="CanvasBox"></div>
+            <canvas  id="canvas" width="600" height="300" class="well"></canvas>
+        </div>
+    </div>
+    <!--空白页-->
+    <div class="nothing">
+        <img class="kolano" src="../../static/image/common/no.png" />
+    </div>
+</div>
+<!--音頻-->
+<div class="lession" id="lession">
+    <audio preload="auto" class="audio" id="audio" src="../../static/plugin/song/bed.mp3" controls>很抱歉，您的浏览器版本太低不支持该音频，请升级浏览器:(</audio>
+</div>
+<div class="shark">
+    <div class="sendpaper">
+        <span class="model_paper_delete_correr"></span>
+        <span class="model_paper_false_correr"></span>
+        <span class="model_paper_success_correr"></span>
+    </div>
+</div>
+<div class="sharks">
+    <div class="send_paper">
+        <span class="model_paper_delete"></span>
+        <span class="model_paper_success"></span>
+        <span class="model_paper_false"></span>
+    </div>
+</div>
+<div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+
+<script>
+    GetHtml("../../model/common/Head.txt","#Com_Head");
+</script>
+<script src="../../static/javascript/test/English_Audioplayer.js"></script>
+<script src="../../static/javascript/doHomework/DH_homework.js"></script>
+<script src="../../static/plugin/img/js/main.js"></script>
+<!-- ↓latex公式解析↓ -->
+<script src="../../static/javascript/Newaudio/English_Audioplayer.js"></script>
+<link rel="stylesheet" href="../../static/javascript/Newaudio/newaudio.css">
+<script>
+    intMathJax();
+</script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+/*********************************圆环**********************************/
+.r_pcircle {
+    width: 216px;
+    height: 216px;
+    position: absolute;
+    border-radius: 50%;
+    background: #59c1e4;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0,#069fbd), color-stop(1,#0492d3) ),-webkit-gradient( linear, left top, right top, color-stop(0,#069fbd), color-stop(1,#0492d3) );
+    margin-left: -25px;
+}
+.r_ccircle {
+    width: 216px;
+    height: 216px;
+    position: absolute;
+    border-radius: 50%;
+    background: #59c1e4;
+    margin-left: 110px;
+    margin-top: 20px;
+}
+.pie_left, .pie_right {
+    width:216px;
+    height:216px;
+    position: absolute;
+    top: 0;left: 0;
+}
+.left, .right {
+    width:216px;
+    height:216px;
+    background:#ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pie_right, .right {
+    clip:rect(0,auto,auto,108px);
+}
+.pie_left, .left {
+    clip:rect(0,108px,auto,0);
+}
+.r_mask {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    left: 20px;
+    top: 20px;
+    background: #FFF;
+    position: absolute;
+    text-align: center;
+    line-height: 165px;
+    font-size: 20px;
+}
+.r_score{
+    font-size:76px;
+    color: #333;
+    font-family: 'Arial';
+    position: relative;
+    top: -10px;
+}
+.r_fen{
+    font-size: 35px;
+    color: #333;
+    position: relative;
+    top: -10px;
+}
+.r_fullscore{
+    font-size:18px;
+    display:block;
+    color:#f9a24a;
+    position: relative;
+    top: -140px;
+}
+/*********************测试知识点分析************************/
+.r_kownledge{
+    padding-bottom: 24px;
+}
+.r_table{
+    width:100%;
+    border: 1px solid #dfdfdf;
+    font-size:16px;
+    margin: 0 30px 0 30px;
+}
+.r_train{
+    width:100%;
+    margin: 0 auto;
+    background: url("../../image/report/compensate.png")0 0 no-repeat;
+    margin: 24px 30px 0 30px;
+    padding: 30px 0 30px 0;
+    text-align: center;
+    background-size: cover;
+}
+.r_train li{
+    font-size: 16px;
+    color: white;
+    line-height: 30px;
+}
+.r_khead li{
+    float: left;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    width: 20%;
+    color: #333;
+}
+.r_kbody li{
+    float: left;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    color: #333;
+}
+.r_table ul:nth-child(odd){
+    background:#f6f6f6;
+}
+.r_table li{
+}
+.r_khead{
+    font-weight: bold;
+}
+.r_khead>:first-child{
+    border-right: 1px solid #dfdfdf;
+    width: 35%;
+    padding-left: 30px;
+}
+.r_khead>:last-child{
+    border-left: 1px solid #dfdfdf;
+    width: 35%;
+    padding-left: 30px;
+}
+.r_kbody>:first-child{
+    border-right: 1px solid #dfdfdf;
+    text-align: left;
+    width: 35%;
+    padding-left: 30px;
+}
+.r_kbody>:last-child{
+    border-left: 1px solid #dfdfdf;
+    text-align: left;
+    width: 35%;
+    padding-left: 30px;
+}
+.r_knum{
+    padding-left: 10px;
+}
+.r_wrong{
+    color:#ca0d0d;
+}
+.r_wright{
+    color:#f9a24a;
+}
+.r_compensate{
+    display: block;
+    height: 40px;
+    width: 202px;
+    background: #2eb9e8;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0 auto;
+    font-size:18px;
+    border:1px solid #fff;
+    color:white;
+    margin-bottom: 10px;
+    cursor:pointer;
+    -moz-box-shadow:0 0 7px rgba(204, 204, 204, 0.55);
+    -webkit-box-shadow:0 0 7px rgba(204, 204, 204, 0.55);
+    box-shadow:0 0 7px rgba(204, 204, 204, 0.55);
+}
+.r_need{
+    font-size: 14px;
+    color:#fff;
+}
+.r_money{
+    color:#fe8d79;
+    font-size: 14px;
+}
+.r_trainli{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.r_ttitle{
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+/****************************班级目标*************************************/
+/*班級目標*/
+.shark{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.3);
+    position:fixed;
+    top:0;
+    left:0;
+    display: none;
+    font-size:18px;
+}
+.classTarget{
+    width: 580px;
+    height: 470px;
+    background: #fff;
+    border-radius: 10px;
+    left: 35%;
+    top: 35%;
+    position: relative;
+    float: left;
+    padding: 0 0 20px 0;
+}
+/*頭部區域*/
+.classTitle{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 40px;
+    color: #333;
+}
+.classHead{
+    width:100%;
+    height: 150px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+/*默認頭像*/
+.class_me{
+    margin-left: 80px;
+}
+.PK,.class_u{
+    margin-left: 80px;
+}
+.class_me,.class_u{
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+    float: left;
+    color: #666;
+}
+.PK{
+    display: inline-block;
+    width: 58px;
+    height: 36px;
+    text-align: center;
+    float: left;
+    background: url("../../image/report/vs.png") no-repeat;
+    background-size: 100%;
+    margin-top: 40px;
+}
+.class_meHead{
+    display: inline-block;
+    width:108px;
+    height: 108px;
+    background: url("../../image/kola/user.png");
+    background-size: cover;
+    border-radius: 50%;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+}
+.class_uHead{
+    display: inline-block;
+    width:108px;
+    height: 108px;
+    background: url("../../image/kola/user.png");
+    background-size: cover;
+    border-radius: 50%;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+
+}
+.class_meName,.class_uName{
+
+}
+/*正確率*/
+.classRight{
+    width:80%;
+    height: 50px;
+    border:1px solid #65b113;
+    border-radius: 30px;
+    margin: 10px auto 20px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.classTime{
+    width:80%;
+    height: 50px;
+    border:1px solid #49b9df;
+    border-radius: 30px;
+    margin:0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.classPrecentMe,.classPrecentU{
+    display: inline-block;
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    flex-grow: 1;
+    color: #65b113;
+}
+.classTimetMe,.classTimeU{
+    display: inline-block;
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    flex-grow: 1;
+    color: #49b9df;
+}
+.classWord{
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #65b113;
+    flex-grow: 1;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.className{
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #49b9df;
+    flex-grow: 1;
+    color: #fff;
+    letter-spacing: 2px;
+}
+/*刪除*/
+.classDelete{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 24px !important;
+    cursor: pointer;
+}
+/*平局胜利等待批改未做*/
+.nodo,.nocorrect,.blance{
+    position: absolute;
+    top:0;
+    right: -50px;
+    display: none;
+}
+.win{
+    position: absolute;
+    top:-45px;
+    right: -25px;
+    display: none;
+}/******测试详情*********/
+.r_detail{
+    padding: 0 20px 74px 30px;
+}
+.nocorrect{
+    width: 85px;
+    height: 25px;
+}
+.nodo,.blance{
+    width: 65px;
+    height: 30px;
+}
+.win{
+    width: 85px;
+    height: 80px;
+}
+/*试卷样式*/
+.r_detail p{
+    max-width: 88%;
+}
+.contTitle{
+    line-height: 30px !important;
+    font-family: 'Times New Roman','SimSun' !important;
+}
+.contTitle label{
+    position: absolute;
+    left: 0;
+}
+.contTitle p{
+    margin-left: 25px;
+    font-family: 'Times New Roman','SimSun' !important;
+}
+.choose{
+    margin-left: 25px;
+}
+.task_strogepaper p,.p1,.p1 p,.groung,.task_tiname{
+    font-family: 'Times New Roman','SimSun' !important;
+    font-size: 16px!important;
+}
+.questiongrounp{
+    margin-top: 40px;
+}
+.question>:first-child{
+    margin-top: 20px;
+}
+.content,.content p{
+    font-family: 'Times New Roman','SimSun' !important;
+    line-height: 30px;
+}
+.content{
+    margin-left:-5px;
+}
+.oneline p{
+    display:inline;
+}
+/*.lineName:first-child {*/
+    /*margin-top: 20px!important;*/
+/*}*/
+.choose .optionchoose{
+    margin-right: 10px;
+    line-height: 30px;
+    /*overflow: hidden;*/
+}
+.questionTitle img{
+    max-width: 100%;
+}
+.questionTitle .wr_img{
+    display: inline-block;
+    width:25px;
+}
+.questionTitle{
+    margin-top: 10px!important;
+    position: relative;
+    border:1px solid #fff;
+}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content: " ";clear:both;height:0;}
+.clearfix{*zoom:1;}
+.r_pInfo{
+    position: relative;
+    top: 235px;
+    text-align: center;
+    padding: 40px;
+    width: 95%;
+}
+@media screen and (max-width: 1366px) {
+    .r_pInfo{
+        width: 820px;
+    }
+    .r_subjectInfo{
+        width: 300px;
+    }
+    .r_analyze,.r_kanalyze,.r_danalyze,.r_kownledge {
+        width: 840px;
+    }
+    .classTarget{
+        left:20%;
+    }
+}
+
+@media screen and (min-width:1366px) and (max-width:1599px){
+    .r_pInfo{
+        width: 920px;
+    }
+    .r_subjectInfo{
+        width: 330px;
+    }
+    .r_analyze,.r_kanalyze,.r_danalyze,.r_kownledge {
+        width: 940px;
+    }
+    .classTarget{
+        left:30%;
+    }
+}
+@media screen and (min-width: 1600px){
+    .r_pInfo{
+        width: 1120px;
+    }
+    .r_subjectInfo{
+        width: 400px;
+    }
+    .r_analyze,.r_kanalyze,.r_danalyze,.r_kownledge {
+        width: 1140px;
+    }
+    .classTarget{
+        left:35%;
+    }
+}

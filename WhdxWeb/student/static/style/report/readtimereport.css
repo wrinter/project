@@ -1,0 +1,109 @@
+.r_transform{
+    color: #49b9df;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100px;
+    height: 10px;
+    margin-top: -50px;
+    margin-right: 20px;
+    float:right;
+}
+/*.audioplayer {*/
+    /*height: 60px;*/
+    /*color: #666;*/
+    /*position: relative;*/
+    /*bottom: 0;*/
+    /*z-index: 1;*/
+    /*background: rgba(0,0,0,0.6);*/
+    /*border-top: 1px solid #ccc;*/
+    /*-webkit-border-radius: 2px;*/
+    /*-moz-border-radius: 2px;*/
+    /*border-radius: 5px;*/
+/*}*/
+/*.lession{*/
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*margin: 0 auto;*/
+    /*bottom: 0;*/
+/*}*/
+.r_chinese{
+    width: 90%;
+    display: none;
+    font-size: 16px !important;
+    color: #666;
+    margin: 20px auto;
+    line-height: 32px;
+    display:none;
+}
+.r_function{
+    padding-bottom: 20px;
+}
+/*.audioplayer > div{ position: absolute;}*/
+/*.audioplayer-playpause{width: 30px;height: 30px;text-align: left;  text-indent: -9999px;  cursor: pointer;  z-index: 2; bottom: 0;top: 0;margin: auto 0; left: 90px;  }*/
+/*.audioplayer-playpause span { display: block;}*/
+/*.audioplayer-stopped .audioplayer-playpause span { background: url("../../../static/image/prepare/p_playico0.png");width: 30px;height: 30px;}*/
+/*.audioplayer-playing .audioplayer-playpause span {background: url("../../../static/image/prepare/p_palyico1.png");width: 30px;height: 30px;}*/
+/*.audioplayer-time{width: 70px;height: 100%;line-height:60px; text-align: center;z-index: 2;top:0;color:#fff;}*/
+/*.audioplayer-time-current {color: #fff; left:62%; }*/
+/*.audioplayer-time-cut { color: #fff; left:65%; }*/
+/*.audioplayer-time-duration {left: 68%;}!*color: #ffffff;*!*/
+/*.audioplayer-novolume .audioplayer-time-duration{  border-right: 0; right: 0;}*/
+/*.audioplayer-bar{height: 10px;width: 40%;float:left;background-color:#F6F6F6;box-sizing: border-box;border-top:1px solid #E4E4E4; cursor: pointer;z-index: 1;top: 25px;left: 19%;}*/
+/*.audioplayer-bar div{ width: 0; height: 100%;position: absolute; left: 0; top: 0;}*/
+/*.audioplayer-bar-loaded{ background-color: #F6F6F6;; z-index: 1;}*/
+/*.audioplayer-bar-played{ background: #F6F6F6;; z-index: 2;}*/
+/*.audioplayer-volume{ width: 23%;height: 45px;text-align: left;float:left;text-indent: -9999px;  cursor: pointer;  z-index: 2;  top:22px;  right: 0;}*/
+/*.audioplayer-volume-button{ width: 40px;height: 30px; float: left;background: url("../../../static/image/prepare/p_voiceico0.png") 0 0 no-repeat}*/
+/*.audioplayer-volume-button a { width: 5px;height: 6px; background-color: #fff;display: block; position: relative;  z-index: 1; top: 40%; left: 35%;  }*/
+/*.audioplayer-volume-button a:before,.audioplayer-volume-button a:after { content: ''; position: absolute;}*/
+/*.audioplayer-volume-button a:before{ width: 0;  height: 0;  border: 8px solid transparent;  border-left: none;  border-right-color: #fff;  z-index: 2;  top: 50%;  right: -4px;  margin-top: -8px;  }*/
+/*.audioplayer:not(.audioplayer-muted) .audioplayer-volume-button a:after {  width: 5px;  height: 5px;  border: double #fff;  border-width: 4px 4px 0 0;  left: 9px;  top: -1px;  border-radius: 0 15px 0 0;  -webkit-transform: rotate( 45deg );  -moz-transform: rotate( 45deg );  -ms-transform: rotate( 45deg );  -o-transform: rotate( 45deg );  transform: rotate( 45deg );  }*/
+/*.audioplayer-volume-adjust{width: 69% ;float: left;height: 20px;line-height: 20px;}*/
+/*.audioplayer-volume-adjust > div { width: 100%;height: 10px;background-color:#F6F6F6;box-sizing: border-box;border-top:1px solid #E4E4E4; ;cursor: pointer;position: relative;z-index: 1;margin: 5px auto 0;  }*/
+/*.audioplayer-volume-adjust div div{width: 100%;height: 100%;position: absolute;left: 0;}*/
+/*.audioplayer-volume-adjust div div,.audioplayer-bar-played{ background: #58C1E4;}*/
+/*.audioplayer-volume-adjust div div{ background: #58C1E4; }*/
+/*.audioplayer-bar,.audioplayer-bar div,.audioplayer-volume-adjust div{ -webkit-border-radius: 12px; -moz-border-radius: 12px; border-radius: 12px;  }*/
+/*.audioplayer { -webkit-border-radius: 2px; -moz-border-radius: 2px;border-radius: 5px; }*/
+/*.audioplayer-volume-adjust{ -webkit-border-top-left-radius: 2px; -webkit-border-top-right-radius: 2px;  -moz-border-radius-topleft: 2px;  -moz-border-radius-topright: 2px;  border-top-left-radius: 2px;  border-top-right-radius: 2px;  }*/
+/*.WordMode{cursor: pointer;text-align: center;width: 40px;height: 40px;position: absolute;left: 30px;box-sizing: border-box; background: white;border-radius: 100%;border: 3px solid #58C1E4;line-height: 32px;top: 0;bottom: 0;margin: auto; font-weight: bold; color: #333;font-size: 20px;float: left; }*/
+/*.wrapper {float: left;box-sizing: border-box; width: 100%;background: #F9FDFE; margin: 0 auto;position: relative;}*/
+/*.player {position: fixed;bottom: 5px;left: 0;right: 0;z-index: 99;}*/
+/*.playlist {float: left;display: none  ;text-align: left;width: 300px;height: 500px;overflow: hidden; padding: 20px 0 20px 25px;box-sizing: border-box; z-index: 999; background:#6D6D6D;}*/
+/*.playlist a {color: white;font-size: 16px;}*/
+/*.info a {color: #bbb;text-decoration: underline;}*/
+/*.playlist ul {  height: 480px;  overflow: auto;  margin: 0;  }*/
+/*.lyricWrapper {  height: 536px; width: 100%; box-sizing: border-box;padding:0 35px; text-indent: 30px;  overflow: hidden;  position: relative; color:#666;}*/
+/*.lyricContainer {position: relative;top: 0;font-size: 18px;text-align: left;line-height: 45px; }*/
+.noVoice {
+    width: 40px;
+    height: 30px;
+    float: left;
+    background: url("../../../static/image/prepare/p_voiceico1.png") 0 0 no-repeat !important;
+}
+/*@media screen and (max-width: 1366px) {*/
+    /*.lession {*/
+        /*width: 900px;*/
+    /*}*/
+    /*.audioplayer {*/
+        /*width: 900px;*/
+    /*}*/
+/*}*/
+
+/*@media screen and (min-width:1366px) and (max-width:1599px){*/
+    /*.lession {*/
+        /*width: 1000px;*/
+    /*}*/
+    /*.audioplayer {*/
+        /*width: 1000px;*/
+    /*}*/
+/*}*/
+/*@media screen and (min-width: 1600px){*/
+    /*.lession {*/
+        /*width: 1200px;*/
+    /*}*/
+    /*.audioplayer {*/
+        /*width: 1200px;*/
+    /*}*/
+/*}*/

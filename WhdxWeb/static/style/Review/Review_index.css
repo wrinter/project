@@ -1,0 +1,295 @@
+html,body{
+    width:100%;
+    height:100%;
+    background: #ebeef0;
+}
+/*适配*/
+@media screen and (max-width: 1366px) {
+    .Com_Main{
+        width:900px;
+        margin:0 auto;
+    }
+}
+@media screen and (min-width: 1366px) {
+    .Com_Main{
+        width:1000px;
+        margin:0 auto;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .Com_Main{
+        width:1200px;
+        margin:0 auto;
+    }
+}
+html,body{
+    width:100%;
+    height:100%;
+    background: #ebeef0;
+}
+/*面包屑*/
+.c_Crumbs{
+    margin-bottom: 40px;
+}
+.Main{
+    width:100%;
+    min-height: 800px;
+}
+/*学科年级*/
+@media screen and (max-width: 1366px) {
+    .R_subject{
+        width:180px;
+        min-height: 100px;
+        float: left;
+        font-size: 14px;
+        color: #333;
+    }
+    /*百度*/
+    .R_content{
+        width:700px;
+        height: 780px;
+        background: #fff;
+        float: left;
+        margin-left: 2%;
+    }
+}
+@media screen and (min-width: 1366px) {
+    .R_subject{
+        width:200px;
+        min-height: 100px;
+        float: left;
+        font-size: 14px;
+        color: #333;
+    }
+    /*百度*/
+    .R_content{
+        width:780px;
+        height: 800px;
+        background: #fff;
+        float: left;
+        margin-left: 2%;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .R_subject{
+        width:240px;
+        min-height: 100px;
+        float: left;
+        font-size: 14px;
+        color: #333;
+    }
+    /*百度*/
+    .R_content{
+        width:936px;
+        height: 800px;
+        background: #fff;
+        float: left;
+        margin-left: 2%;
+    }
+}
+.R_grade_subjectc{
+    width:100%;
+    min-height: 100px;
+    float: left;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+}
+.R_grade_subject{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    min-height: 100px;
+    float: left;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+}
+.R_grade_subjectt{
+    width:100%;
+    min-height: 31px;
+    float: left;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    background: #fff;
+    padding: 11.5px 0;
+}
+.R_greadesub{
+    width:100%;
+    height: 31px;
+    line-height: 31px;
+    font-size: 14px;
+}
+.R_greadesub li{
+    float: left;
+    margin-left: 8%;
+}
+.R_gre:hover,.R_sub:hover{
+    color: #65b113;
+    cursor: pointer;
+}
+.R_kwon{
+    width:100%;
+    min-height: 31px;
+    overflow: hidden;
+}
+.R_Name{
+    float: left;
+    margin-left: 8%;
+    line-height: 31px;
+}
+.R_kwonsub{
+    width:61%;
+    float: left;
+    margin-left: 8%;
+}
+.R_kwonsub li{
+    float: left;
+    margin-right: 5.2%;
+    line-height: 31px;
+}
+/*知识点*/
+.R_obj{
+    width:100%;
+    min-height: 100px;
+    float: left;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #65b113;
+    color: #333;
+    margin-top: 20px;
+    position: relative;
+}
+/*遮罩层*/
+.R_shark{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    display: none;
+}
+.R_fc{
+    background: #fff;
+}
+.R_greadName{
+    width:100%;
+    height: 45px;
+    font-size: 18px;
+    text-indent: 8%;
+    line-height: 45px;
+    color: #fff;
+}
+.R_objList{
+    width:100%;
+    min-height: 40px;
+    border-top: 1px solid #dfdfdf;
+    cursor: pointer;
+}
+.R_objName{
+    display: inline-block;
+    height: 35px;
+    line-height: 40px;
+    width:70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-left: 8%;
+}
+.Dom_Down{
+    margin-top: 13px;
+    margin-right: 20px;
+    display: inline-block;
+    float: right;
+}
+.R_ul{
+    display: none;
+    line-height: 29px;
+    text-indent: 27%;
+    /*padding-bottom: 16.5px;*/
+}
+.R_listName{
+    height: 29px;
+}
+/*按键功能区*/
+@media screen and (max-width: 1366px) {
+    .R_Look,.R_Download{
+        width:100px;
+        height: 35px!important;
+        background: #65b113;
+        color: #fff;
+        float: right;
+        line-height: 35px;
+        text-align: center;
+        border-radius: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+        position: relative;
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 1366px) {
+    .R_Look,.R_Download{
+        width:120px;
+        height: 40px!important;
+        background: #65b113;
+        color: #fff;
+        float: right;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+        position: relative;
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .R_Look,.R_Download{
+        width:150px;
+        height: 45px!important;
+        background: #65b113;
+        color: #fff;
+        float: right;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+        position: relative;
+        font-size: 18px;
+    }
+}
+.add{
+    color:#65b113;
+}
+.R_Look{
+    display: none;
+}
+/*百度*/
+.wenku-toolsbar-zoom{
+    display: none;
+}
+/*总的遮罩层*/
+.R_Sharks{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+}
+/*空白照片*/
+.review_img{
+    display: block;
+    margin:200px auto;
+}

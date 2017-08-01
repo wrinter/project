@@ -1,0 +1,102 @@
+body{min-width: 1000px;overflow-x: hidden;}
+/*全局*/
+.swiper-wrapper{min-width: 1100px;position: relative;}
+.FloorMain{float: left;width: 100%;height: 895px;position: relative;}
+.OutSlide{float: left;width: 100%;}
+.OutSlide2{background: url("../../../static/image/login1.3/bg2.jpg")center center no-repeat;background-size:  cover;overflow: hidden;}
+.OutSlide3{background: url("../../../static/image/login1.3/bg3.jpg")center center no-repeat;background-size:  cover;}
+.OutSlide4{background: url("../../../static/image/login1.3/bg4.jpg")center center no-repeat;background-size:  cover;height: 1073px;}
+.Banner0{background: url("../../../static/image/login1.3/banner0.jpg")center center no-repeat;background-size: cover;}
+.Banner1{background: url("../../../static/image/login1.3/banner0.jpg")center center no-repeat;background-size: cover;}
+.Echo_Txt{position: absolute;top: 100px;left: 0;right: 0;margin: auto;}
+.fc00c{color: #00ce9f!important;}
+.Pagination{position: fixed;right: 15px;top: 0;bottom: 0;margin: auto;width: 22px;z-index: 15;}
+.Pagination li{width: 12px;height: 12px;cursor: pointer;margin: 15px 5px; border-radius: 100%;float: left;box-sizing: border-box;background: #959595; filter: alpha(opacity=0.6); opacity: .6; }
+.ThisPage{background: #00ce9f!important;}
+.LunPic{float: left;width: 100%;height: 600px;}
+/*一楼*/
+.First_Nav{width: 100%;overflow: hidden;min-width: 1000px;background: white; box-sizing:border-box;height:92px;border-bottom: 2px solid #00ce9f;}
+.First_NavBox{margin: 0 auto;height: 100%;overflow: hidden;background: white;}
+.First_Logo{float: left;}
+/*.First_App{float: right;height: 90px;width: 90px;line-height: 90px;color: #00ce9f;}*/
+.First_Dowload{float: right; color: #00ce9f;cursor: pointer;width: 102px;height: 31px;border-radius: 16px; box-sizing: border-box;margin:30px auto;border: 1px solid #00ce9f;line-height: 30px;text-align: center;font-size: 16px;margin-right: 12px; }
+/*二楼*/
+.SecMain{width: 450px;height: 540px; overflow: hidden;float: left; border-radius: 10px;border: 1px solid #f1f1f1; box-sizing: border-box;background: white;position: absolute;bottom: 120px;}
+.SecLeft{left: -500px;opacity: 0;}
+.SecRight{right: -500px;opacity: 0;transform: rotate(0deg);}
+.SecImgBox{width: 450px;height: 300px;position: relative;perspective: 800px;transform: rotate(0deg);overflow: hidden;}
+.SecImgBox>img{height: 100%;width: auto;transition: all 0.6s;}
+.SecImgBox:hover img{transform: scale(1.2);}
+.SecMask{position: absolute;background: black; background: rgba(0,0,0,0.4);color: white;font-size: 28px; text-align: center; width: 450px;height:300px;line-height: 300px;position: absolute;left: 0;top: 0;}
+.SecIntro{width: 100%;float: left;box-sizing: border-box;padding:0 25px;}
+.SecIntro li{width: 100%;float: left;box-sizing: border-box;margin-top: 15px;}
+.Sec_Line{width: 100%;line-height: 30px;font-size: 16px;text-align: left;font-weight: bold;color: #333;}
+.Sec_Con{width: 100%;line-height: 30px;font-size: 16px;text-align: left;color: #636363;}
+/*三楼*/
+.ThreeMain{width: 1000px;position: absolute;left: 0;right: 0;top: 235px;min-height: 750px; margin: auto; }
+.ThreeTab{float: left;width: 100%;height: 40px;box-sizing: border-box;margin-bottom: 70px;}
+.ThreeTab li{float: left;width: 50%;height: 40px;box-sizing: border-box;overflow: hidden;}
+.ThreeTab li p{overflow: hidden;margin: auto; width: 40%;height: 40px;cursor: pointer; text-align: center;line-height: 30px; border-bottom: 3px solid #007a69;font-size: 28px;color: #007b6a;  box-sizing: border-box;}
+.ThreeTab .ThisTab{border-bottom: 3px solid white;color: white;}
+/***************************************老师**********************************/
+.ThreeRound{width: 500px;position: absolute;top: 100px; left: 0; transform-origin:50% 50%; height: 500px; float: left;perspective: 800px;background-size: cover;}
+.ThreeRound li{width: 100px;margin: 50px; height: 100px;position: absolute;transform-origin:center center;  z-index: 2;background-size: cover;background-position: center center;background-repeat: no-repeat; }
+.ThreeRound li:nth-child(1){top: 0;left: -20px;right: 0;margin: auto;}
+.ThreeRound li:nth-child(2){top: 79px;right: -35px;}
+.ThreeRound li:nth-child(3){bottom: -17px;right: 23px;}
+.ThreeRound li:nth-child(4){bottom: -17px;left: 40px;}
+.ThreeRound li:nth-child(5){top: 95px;left: -44px;}
+/*.Circle>img{cursor: pointer;}*/
+/*老师头像*/
+.ThreeRound li:nth-child(6){width: 200px;height: 200px;z-index: 3;transform-origin:center center;  position: absolute;top: 0;right: 0;left: 0;bottom: 0;margin: auto;background: url("../../../static/image/login1.3/teacher.png");}
+/*大圆盘背景*/
+.ThreeRound li:nth-child(7){z-index: 1; width: 500px;height: 500px;transform-origin:center center; animation: BigRun 10s linear infinite;  position: absolute;top: 0;right: 0;left: 0;bottom: 0;margin: auto; background: url("../../../static/image/login1.3/round.png");}
+.RunPic{position: absolute;top: 0;left: 0;}
+.ThreeInTro{ height: 105px;display: none; position: absolute;float: left; z-index: 1; width: 700px;left: 450px; top: 160px;}
+.ToLine{margin-right: 20px;margin-top: 45px;float: left;}
+.ThreeInTroBox{  min-width:200px;float: left; height: 105px;overflow: hidden;padding-right: 35px; box-sizing: border-box;border: 1px solid #dfdfdf;border-radius: 15px;background: white; }
+.ThreeInTroNum{width: 100px;height:103px;text-align: center; font-size: 90px;font-family: 'Arial';font-weight: bold;color: #00ce9f; float: left;position: relative;background: white; }
+.Xline{position: absolute;bottom: 5px;right: 15px;z-index: 5;}
+.ThreeInTxt{ width: 295px;float: left;height: 100%;padding: 10px 0;box-sizing: border-box;}
+.ThreeInTitle{width: 100%;float: left;font-size: 28px;color: #333;line-height: 40px;}
+.ThreeSubhead{width: 100%;float: left;font-size: 16px;color: #636363;line-height: 20px;}
+.TeachInTro{width: 100px;  text-align: center;  line-height: 30px;  color: #333;  position: absolute; bottom: -30px;left: 0; }
+/***************************************学生**********************************/
+.ThreeRound1{width: 500px;position: absolute;top: 100px; right:0;: 0; transform-origin:50% 50%; height: 500px; float: left;perspective: 800px;background-size: cover;}
+.ThreeRound1 li{width: 100px;margin: 50px; height: 100px;position: absolute;transform-origin:center center;  z-index: 2;background-size: cover;background-position: center center;background-repeat: no-repeat; }
+.ThreeRound1 li:nth-child(1){top: 0;left: -20px;right: 0;margin: auto;}
+.ThreeRound1 li:nth-child(2){top: 79px;right: -35px;}
+.ThreeRound1 li:nth-child(3){bottom: -17px;right: 23px;}
+.ThreeRound1 li:nth-child(4){bottom: -17px;left: 40px;}
+.ThreeRound1 li:nth-child(5){top: 95px;left: -44px;}
+/*.Circle1>img{cursor: pointer;}*/
+/*老师头像*/
+.ThreeRound1 li:nth-child(6){width: 200px;height: 200px;z-index: 3;transform-origin:center center;  position: absolute;top: 0;right: 0;left: 0;bottom: 0;margin: auto;background: url("../../../static/image/login1.3/Stu.png");}
+/*大圆盘背景*/
+.ThreeRound1 li:nth-child(7){z-index: 1; width: 500px;height: 500px;transform-origin:center center; animation: BigRun 10s linear infinite;  position: absolute;top: 0;right: 0;left: 0;bottom: 0;margin: auto; background: url("../../../static/image/login1.3/round.png");}
+.RunPic1{position: absolute;top: 0;left: 0;}
+.ThreeInTro1{ height: 105px; position: absolute;float: left; z-index: 1; width: 700px;left: -50px; top: 172px;}
+.ToLine1{margin-left: 20px;margin-top: 45px;float: left;}
+.ThreeInTroBox1{  min-width:200px;float: left; height: 105px;overflow: hidden;padding-right: 35px; box-sizing: border-box;border: 1px solid #dfdfdf;border-radius: 15px;background: white; }
+.ThreeInTroNum1{width: 100px;height:103px;text-align: center; font-size: 90px;font-family: 'Arial';font-weight: bold;color: #00ce9f; float: left;position: relative;background: white; }
+.Xline1{position: absolute;bottom: 5px;right: 15px;z-index: 5;}
+.ThreeInTxt1{ width: 295px;float: left;height: 100%;padding: 10px 0;box-sizing: border-box;}
+.ThreeInTitle1{width: 100%;float: left;font-size: 28px;color: #333;line-height: 40px;}
+.ThreeSubhead1{width: 100%;float: left;font-size: 16px;color: #636363;line-height: 20px;}
+.TeachInTro1{width: 100px;  text-align: center;  line-height: 30px;  color: #333;  position: absolute; bottom: -30px;left: 0; }
+/***************************************四楼**********************************/
+.FourMain{margin: 0 auto;width: 1100px;height: 100%;position: relative;}
+.FourFooter{height: 100px;position: absolute;bottom: 0;left: 0;z-index: 10; background: #00ce9f;width: 100%; box-sizing: border-box;text-align: center;line-height: 100px;color: white;font-size: 14px; }
+.Phone{height: 525px;position: absolute; left: 225px; top:0;bottom: 0;margin: auto; width: 253px;background: url("../../../static/image/login1.3/phone.png") center center no-repeat;background-size: cover;}
+.PhoneBox{float: left;width: 220px;height: 393px;overflow: hidden;position: absolute;top: 56px;left:0;right: 0;margin: auto;}
+.Hander{position: absolute;bottom: 0;z-index: 5;left: 50px;}
+.DownBox{position: absolute;top: 0;bottom: 0;right: 50px;margin: auto;}
+@media screen and (max-width:1366px){
+    .First_NavBox{width: 900px;}
+}
+@media screen and (min-width:1366px){
+    .First_NavBox{width: 1000px;}
+}
+@media screen and (min-width:1600px){
+    .First_NavBox{width: 1200px;}
+}

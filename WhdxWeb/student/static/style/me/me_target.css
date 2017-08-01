@@ -1,0 +1,57 @@
+/***********************************************个人中心班级目标By徐扬**************************************************/
+.m_LineBox,.m_PkLogList,.m_PkLogHead{float: left;width: 100%;}
+.m_LogBtn{float: right;width: 185px;color: white;background: #49b9df; border-radius: 10px;cursor: pointer;margin-top: 40px; height: 45px;line-height: 45px;text-align: center;}
+.m_Notarget{width: 100%;float: left;position: relative; background: url("../../../static/image/me/m_targetbg.png") 0 0 no-repeat;background-size: 100%; margin-top: 10px;border-radius: 10px;overflow: hidden;;}
+.m_ClickHere{background: none;position: absolute;cursor: pointer;}
+.m_Mask{position: fixed;width: 100%; height: 100%;top: 0;left: 0;background: black;background: rgba(0,0,0,0.5);z-index: 99999;}
+.m_ChoiceTarget{width: 797px;height:620px;background: white;z-index: 2; box-sizing: border-box;padding-bottom: 20px ; border-radius: 10px;overflow: hidden;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin:auto; }
+.m_SeacherClose{cursor: pointer;position: absolute;top: 20px;right: 20px;}
+.m_ChoiceTarget h3{font-size: 24px;color: #49B9DF;height: 60px;float: left;width: 100%;line-height: 60px;text-align: center;}
+.m_TargetList{height: 420px;overflow-y: auto; float: left;width: 103%;box-sizing: border-box;padding-left: 5px;padding-top: 20px;}
+.m_TargetList li{float: left;position: relative;width: 130px;color: #666;cursor: pointer; border: 1px solid #ccc;border-right: 0;border-top: 0; height: 45px;text-align: center;line-height: 43px;}
+.m_TargetList li:nth-child(-n+6){border-top: 1px solid #ccc;}
+.m_TargetList li:nth-child(6n){border-right: 1px solid #ccc;}
+.m_TargetList li:last-child{border-right: 1px solid #ccc;}
+.meimg{background:url('../../../static/image/sprite/meimg.png')0 0  no-repeat;}
+.m_cico0{height:22px;width:22px; background-position:-149px -69px;float: left;position: absolute;right: -7px;top: -8px;z-index: 3;}
+.m_Surplus{float: left;width: 100%;height: 40px;line-height: 40px;color: #666;font-size: 14px;margin-left: 10px;box-sizing: border-box;}
+.m_SurplusNum{font-size: 18px;color: #CA0D0D;}
+.m_ChoiceBtn{width: 190px;height: 45px;font-size: 18px;margin: 0 auto;overflow: hidden;clear: both;cursor: pointer; line-height: 45px;text-align: center;border-radius: 10px;background: #49B9DF;color: white;}
+.m_HasTarget{width: 100%; float: left;background: white; position: relative;  margin-top: 10px;border-radius: 10px;overflow: hidden;;}
+.m_PkUserMain{width: 100%;height: 233px; background: url("../../../static/image/me/m_tgbg.jpg") 0 0 repeat;background-size: 100%;}
+.m_PkUser{width: 650px;margin: 0 auto;overflow: hidden;height: 100%;box-sizing:border-box;}
+.m_VsIco{float: left;margin-top: 15px;}
+.m_UserCon{float: left;height: 100%;width: 285px;}
+.m_PkPhotoBox{float: left;width: 100%;height: 175px;position: relative;}
+.m_PkProBox,.m_PkProBox0{overflow: hidden; width: 220px;box-sizing: border-box;background: #f6f6f6; height: 10px;border: 1px solid #ccc;border-radius: 5px;margin: 0 auto;}
+.m_PkProBox0{background: #f6f6f6;}
+.m_PkPro,.m_PkPro0{width:0;height: 100%;float: left;background: url("../../../static/image/me/m_probg.jpg")0 0 repeat;border-radius: 4px;}
+.m_PkPro0{background: url("../../../static/image/me/m_probg.jpg")0 0 repeat;}
+.m_PkPhoto{width: 100px;;overflow: hidden;margin: 50px auto 0 auto; height: 100px;box-sizing: border-box;padding:2px; background: white;border-radius: 100%;border: 1px solid #ccc;}
+.m_PkPhoto>img{float: left;width: 100%;border-radius: 100%;}
+.m_PkNum{height: 40px;overflow: hidden;text-align: center;line-height: 40px;font-size: 18px;color:#666;}
+.m_ChangePkBtn{width: 120px;height: 30px;position: absolute;left: 0;right: 0;margin: auto;bottom: 15px;cursor:pointer; text-align: center;line-height: 30px;box-sizing: border-box;color: white;font-size: 14px;background: #90d29b;border-radius: 10px;}
+.m_PkLog{float: left;width: 100%;background: white;border-top: 1px solid #ccc; box-sizing: border-box;padding-bottom: 30px;min-height: 395px;}
+.m_PkLogHead{float: left;width: 100%;}
+.m_PkLogHead li{float: left;width: 25%;background: #f6f6f6;height: 55px;line-height: 55px;text-align: center;color: #333;font-size: 16px;}
+.m_PkLogList li{float: left;width: 100%;height: 40px;}
+.m_PkLogList li:nth-child(2n+1){background: white;}
+.m_PkLogList li:nth-child(2n){background: #f6f6f6;}
+.m_PkLogList li>span{float: left;width: 25%;height: 40px;line-height: 40px;font-size: 14px;color: #666;text-align: center;}
+.m_NoBox{float: left; width: 100%;height: 290px;;position: relative;}
+.m_Nolist{position: absolute;right: 0;left: 0;top: 0;bottom: 0; margin: auto;}
+@media screen and (max-width:1366px){
+    .m_LogBtn{font-size: 20px;}
+    .m_Notarget{height: 464px;}
+    .m_ClickHere{width: 141px;height: 33px;top: 60px;left: 30px;}
+}
+@media screen and (min-width:1366px){
+    .m_LogBtn{font-size: 22px;}
+    .m_Notarget{height: 516px;}
+    .m_ClickHere{width: 156px;  height: 37px;  top: 67px;  left: 34px;}
+}
+@media screen and (min-width:1600px){
+    .m_LogBtn{font-size: 24px;}
+    .m_Notarget{height: 620px;}
+    .m_ClickHere{width: 187px; height: 45px; top: 79px; left: 41px;}
+}

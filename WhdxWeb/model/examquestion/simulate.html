@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>三年模拟</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/examquestion/simulate.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="//static.bcedocument.com/reader/v2/doc_reader_v2.js"></script>
+    <script src="../../static/javascript/message/kkpager.js"></script>
+    <link rel="stylesheet" href="../../static/style/message/kkpager_orange.css">
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div id="header"></div>
+        <!--面包屑导航-->
+        <div class="c_Crumbs">
+            <div class="c_Crumbs_in">
+                <!--面包屑导航图标-->
+                <i class="spriteImg c_mico fl mt15"></i>
+                <!--面包屑导航-->
+                <ul class="c_Crum fl" id="c_Crum">
+                    <!--有链接-->
+                    <li><a href="../../model/index/indexX.html" class="fl ">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <!--无链接-->
+                    <li class="fc65">三年模拟</li>
+                </ul>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="r_Main">
+            <div class="MainContent">
+                <div class="r_condition">
+                    <div class="condition_area fs18 fl">地区</div>
+                    <ul class="condition_ul fn_area fl">
+                        <li class="fc66 fs18 change_area">全部</li>
+                    </ul>
+                    <div class="condition_year fs18 fl">年份</div>
+                    <ul class="condition_ul fn_year fl">
+                        <li class="fc66 fs18 change_year">全部</li>
+                    </ul>
+                    <div class="condition_catlog fs18 fl">类型</div>
+                    <ul class="condition_ul fn_catlog fl">
+                        <li class="fc66 fs18 change_catlog">全部</li>
+                    </ul>
+                    <div class="condition_knowledge fs18 fl">单元</div>
+                    <ul class="condition_ul fn_knowledge fl">
+                        <li class="fc66 fs18 change_knowledge">全部</li>
+                    </ul>
+                </div>
+                <div class="r_dimension" id="r_dimension">
+                    <div class="NoData" id="NoData"></div>
+                </div>
+                <div id="s_container"></div>
+                <div class="Paging">
+                    <div id="kkpager">Loading...</div>
+                </div>
+            </div>
+            <div class="p_LessMoney" id="p_LessMoney">
+                <div class="p_LessMoneyBg">
+                    <a href="../../model/me/me_pay.html" class="GoPay">充值</a>
+                    <p class="GoPayClose"></p>
+                </div>
+            </div>
+            <div class="p_LessMoney" id="NoIdentify">
+                <div class="p_NoIdentifyBg">
+                    <a href="../../model/me/me_certification.html" class="GoPay">去认证</a>
+                    <p class="GoPayClose" id="GoIdentifyClose"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+<script src="../../static/javascript/examquestion/examquestioncommon.js"></script>
+<script src="../../static/javascript/examquestion/simulate.js"></script>
+</body>
+</html>

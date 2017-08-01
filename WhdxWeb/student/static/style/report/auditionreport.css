@@ -1,0 +1,46 @@
+.audioplayer {
+    height: 60px;
+    color: #666;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+    background:rgba(0,0,0,0.6);
+    border-top: 1px solid #ccc;
+}
+.lession {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+}
+.noVoice {
+    width: 40px;
+    height: 30px;
+    float: left;
+    background: url("../../../static/image/prepare/p_voiceico1.png") 0 0 no-repeat !important;
+}
+@media screen and (max-width: 1366px) {
+    .lession{
+        width:900px;
+    }
+    .audioplayer {
+        width: 890px;
+    }
+}
+@media screen and (min-width: 1366px) {
+    .lession{
+        width:1000px;
+    }
+    .audioplayer {
+        width: 990px;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .lession{
+        width:1200px;
+    }
+    .audioplayer {
+        width: 1190px;
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>视频播放</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <!--<link rel="stylesheet" href="../../static/style/me/me.css">-->
+    <link rel="stylesheet" href="../../static/style/prepare/prepare_video_prepareVideoPlay.css">
+
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div id="Header"></div>
+        <!--首页内容区-->
+
+        <div class="c_Main ">
+            <!--面包屑导航-->
+            <div class="c_Crumbs">
+                <div class="c_Crumbs_in">
+                    <!--面包屑导航图标-->
+                    <i class="spriteImg c_mico fl mt15"></i>
+                    <!--面包屑导航-->
+                    <ul class="c_Crum fl" id="c_Crum">
+                        <li><a href="../../model/index/indexX.html" class="fl fc65">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                        <li>视频播放</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="prepareVideoBox">
+                <div class="c_ArLogo"><img src="../../static/image/chinese/logoar.png" class="c_logoar" alt=""></div>
+               <p class="prepareVideoName"></p>
+                <div class="prepareVideo">
+                </div>
+                <div class="functions">
+                    <span class="pageViews">浏览量</span><span class="pageViewsNum">(0)</span>
+                    <span class="ClickUp agree p_spriteImg p_Praiseico"></span><span class="agreeNum">(0)</span>
+                    <span class="enjoys p_spriteImg p_shareico"></span><span class="nbsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span id="recommend" class="recommend fn_recommend">推荐</span>
+                    <span class='prepareTest'></span>
+                </div>
+                <div class="functions_share">
+                    <span class="pageViews">浏览量</span><span class="pageViewsNum">(0)</span>
+                </div>
+            </div>
+            <!--分享-->
+            <div class="Share" id="Share">
+                <i class="spriteImg c_ruleico fr cup" id="ShareClose"></i>
+                <h1 class="ShareTitle">分享给好友</h1>
+                <div class="jiathis_style_32x32">
+                    <a class="jiathis_button_cqq"></a>
+                    <a class="jiathis_button_qzone"></a>
+                    <a class="jiathis_button_tsina"></a>
+                    <a class="jiathis_button_weixin"></a>
+                </div>
+            </div>
+            <!--推荐班级-->
+            <div class="Masking dino" id="Masking">
+                <div class="c_Referrer">
+                    <h1 class="c_ReferrerTit">推荐班级 <i class="spriteImg c_ruleico fr mt20 cup" id="refclose"></i> </h1>
+                    <!--推荐的班级列表-->
+                    <ul class="c_ReferrerClass" id="c_ReferrerClass"></ul>
+                    <textarea name="" id="c_Remark" cols="30"  placeholder="备注消息：（100个字符以内）" maxlength="100" rows="10" class="c_Remark"></textarea>
+                  <!--  <p class="fl w100 fc33 fs18">注：请去作业报告中查看推荐报告</p>-->
+                    <input type="button" value="确定" class="c_RefBtn ml25" id="c_RefBtn0">
+                    <input type="button" value="取消" class="c_RefBtn ml50" id="c_RefBtn1">
+                </div>
+                <div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+            </div>
+            <!--<div class="paper">-->
+                <!--<p class="baseTitle"></p>-->
+                <!--<ul class="paperBase"></ul>-->
+            <!--</div>-->
+        </div>
+    </div>
+</article>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<script src="../../static/javascript/prepare/prepare_video_prepareVideoPlay.js"></script>
+<!-- ↓latex公式解析↓ -->
+<script>
+    intMathJax();
+</script>
+</body>
+</html>

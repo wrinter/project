@@ -1,0 +1,12 @@
+a{color:#007bc4; text-decoration:none;}
+a:hover{text-decoration:underline}
+ol,ul{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+.ui-datepicker-title {height:100%; font:14px/18px Tahoma, Helvetica, Arial, Verdana, "\5b8b\4f53", sans-serif; color:#51555C;}
+.ui-datepicker-calendar{height:100%; font:14px/18px Tahoma, Helvetica, Arial, Verdana, "\5b8b\4f53", sans-serif; color:#51555C;}
+img{border:none}
+
+.m_publishTime h4{height:32px; line-height:32px; font-size:14px}
+.m_publishTime h4 span{font-weight:500; font-size:12px}
+.m_publishTime p{line-height:28px;}
+.m_publishTime input{width:108px; height:20px; line-height:20px; padding:2px; border:1px solid #d3d3d3}

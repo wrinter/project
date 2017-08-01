@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>作业报告</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/workpaper/workpaper.css">
+</head>
+<body class="bacEC">
+<article >
+    <div class="w_Main w_BoxShadow">
+        <div class="w_SubTitle">
+            <p id="title">这里是标题</p>
+            <p>时间：<span id="time"></span></p>
+        </div>
+        <div class="w_SubMain">
+            <!--用户-->
+            <div class="w_SubList">
+                <div class="w_SubName w_botborder" id="UpBtn"><i class="w_sprite w_topico1" id="upico"></i></div>
+                <!--完成名单-->
+                <div class="w_SubNameListOut">
+                    <ul class="w_SubNameList" id="w_SubNameList">Loading...</ul>
+                </div>
+                <div class="w_SubName w_topborder" id="DownBtn"><i class="w_sprite w_boico1" id="downico"></i></div>
+            </div>
+            <!--试题-->
+            <div class="w_UserTestMain">
+                <!--题目列表-->
+                <ul class="w_UserSubject" id="Subject">Loading...</ul>
+            </div>
+        </div>
+    </div>
+</article>
+<script src="../../static/javascript/workpaper/SubjectDetailes.js"></script>
+<!-- ↓latex公式解析↓ -->
+<script>
+    intMathJax();
+</script>
+</body>
+</html>

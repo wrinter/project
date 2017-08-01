@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传列表</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/me/me_conlist.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/plugin/paper/kkpager.js"></script>
+    <link rel="stylesheet" href="../../static/plugin/paper/kkpager_orange.css">
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a href="me_index.html">个人中心</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a href="me_contribute.html">投稿</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="fl fc49">上传列表</span>
+    </div>
+</div>
+<!--内容区-->
+<div class="Com_Main">
+    <div class="m_ConListMain">
+        <ul class="m_ConListHeader">
+            <li>标题</li>
+            <li>上传时间</li>
+            <li>状态</li>
+            <li>奖励</li>
+            <li>操作</li>
+        </ul>
+        <ul class="m_ConList" id="m_ConList">
+            <li>
+                <span>初中数学第一单元测试</span>
+                <span>2016-09-10</span>
+                <span>审核中</span>
+                <span>5经验，15金币</span>
+                <span><i class="ArrowsFont m_DelIco">&#xe65f;</i></span>
+            </li>
+            <li>
+                <span>初中数学第一单元测试</span>
+                <span>2016-09-10</span>
+                <span>审核中</span>
+                <span>5经验，15金币</span>
+                <span>— —</span>
+            </li>
+        </ul>
+        <img src="../../static/image/me/none.png" class="m_Nolist dino" id="m_Nolist" alt="">
+    </div>
+</div>
+<!--分页-->
+<div class="Paging">
+    <div id="kkpager"></div>
+</div>
+<script src="../../static/javascript/me/me_conlist.js"></script>
+</body>
+</html>

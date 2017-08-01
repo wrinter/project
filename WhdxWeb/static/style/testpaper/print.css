@@ -1,0 +1,53 @@
+.w_Main{margin: 0 auto;box-sizing: border-box;overflow: hidden; padding: 10px 10px 10px 10px;font-family: "Microsoft YaHei";position: relative; }
+@media screen and (max-width:1366px){
+    .w_Main{width: 900px;}
+}
+@media screen and (min-width:1366px){
+    .w_Main{width: 1000px;}
+}
+@media screen and (min-width:1600px){
+    .w_Main{width: 1200px;}
+}
+.w_TabMainBox{width: 100%;float: left;background: white;box-sizing: border-box; margin-top: 15px; overflow: hidden;;border-radius: 10px;}
+.w_PrintContent{width: 100%;padding:20px 30px;float: left;box-sizing: border-box;}
+.w_OtherStudent>li:nth-child(2n){background: white;border: 1px solid white;}
+.w_OtherStudent>li:nth-child(2n+1){background: #F6F6F6;border: 1px solid #F6F6F6;}
+.w_HomeWorkTitle{float: left;width: 100%;box-sizing: border-box;border-bottom: 1px solid #ccc;}
+.w_HomeWorkTitle li{float: left;vertical-align: middle; width: 16.6%;line-height: 50px; color: #333;font-size: 18px; height:50px;text-align: center;}
+.w_HomeWorkTop{width: 100%;margin-bottom: 10px;float: left;}
+.w_HomeWorkTop>li{width: 33.3%;height: 40px;float: left;text-align: center;box-sizing: border-box;border-bottom:1px solid #ccc;}
+.w_HomeWorkTop>li:not(:nth-child(3n)){border-right:1px solid #ccc;}
+.w_HomeWorkTop>li p{width: 50%;float: left;text-align: center;position: relative; box-sizing: border-box;height: 40px;line-height: 40px;color: #666;}
+/*.p40{padding: 40px;}*/
+
+.w_Subject{float: left;line-height: 35px;width: 100%;}
+.w_Subject li{width: 100%;position: relative; float: left; box-sizing: border-box;background: white;margin-bottom: 40px;line-height: 35px;font-family: "宋体", "\5B8B\4F53";}
+.w_Subject li div,.w_Subject li p{font-family: "宋体", "\5B8B\4F53";}
+.w_Subject li div.w_AnalysisMain,.w_Subject li div.w_AnalysisMain p{font-family: "楷体", "楷体_GB2312";}
+.stem .p2:nth-child(1){float: left;}
+.w_Analysis0{background: #65b113;width: 75px;outline: none; border: 0; height: 35px;text-align: center;line-height: 35px;box-sizing: border-box; border-radius: 10px 10px 0 0;font-size: 14px;color: white;cursor: pointer;margin-top: 20px;}
+.w_AnalysisMain{width: 90%;min-height: 80px; ;border-radius: 0 0 10px 10px;margin-bottom: 20px;}
+.statp{position: relative;display: inline;z-index: 5;margin: 0 20px;}
+.w_statYes{position: absolute;left: -2px;top: 2px;}
+.sataOption{margin: 0 5px;}
+.w_WrongMan{overflow: hidden;}
+.w_WrongName{float: left;width: 80%;word-break: break-all;}
+.stat{overflow: hidden;}
+.gap{width: 100px;height: 30px;text-align: center;line-height: 30px;font-size: 14px;float: left;color: #333;}
+.w_PrintBtn{width: 15%;cursor: pointer; position: absolute;right: 30px;top: 5px; height: 50px;border-radius: 10px;text-align: center;line-height: 50px;background: #F9A24A;outline: none;border: 0;font-size: 18px;color: white;}
+.w_PrintTitle{position: relative; float: left;width: 100%;height: 60px;box-sizing: border-box;text-align: center;font-size: 24px;color: #333;line-height: 60px;background: url("../../../static/image/workpaper/w_printbg.jpg")0 0 repeat;border-bottom: 1px solid #ccc;}
+
+
+.w_AnalysisMain{padding: 10px;box-sizing: border-box;border: 1px solid #ccc;background: #FCFCFC;}
+.GapImg{position: absolute;left: 0;top: 0;z-index: 0;}
+.GapTxt{position: absolute;width: 100%;display: block; left: 0;top: 0;z-index: 0;}
+/*@media print {*/
+/*body {*/
+/*-webkit-print-color-adjust:exact;*/
+/*print-color-adjust: exact;*/
+/*}*/
+/*}*/
+/*.option{text-indent: 30px;}*/
+/*.analysis,.stat,.w_WrongMan{margin-left: 30px;}*/
+.MJX_Assistive_MathML{display: none!important;}
+body{background: white;}

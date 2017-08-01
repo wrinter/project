@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>找回密码</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/foundpass1.3/foundpass.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/plugin/md5/md5.js"></script>
+</head>
+<body>
+<!--导航-->
+<div class="First_Nav">
+    <div class="First_NavBox">
+        <img src="../../static/image/login1.3/logo.png" alt="" class="First_Logo">
+        <p class="First_Dowload" id="First_Dowload">APP下载</p>
+    </div>
+</div>
+<div class="r_MainBox">
+    <div class="r_FoundMain " id="Find">
+        <div class="r_Title">
+            <p class="r_Tixt">找回密码</p>
+        </div>
+        <div class="r_LoadMain">
+            <p class="r_LoadTxtNow" id="r_LoadTxt1">1</p>
+            <div class="r_LoadBar"><div class="r_Bar" id="r_Bar0"></div></div>
+            <p class="r_LoadTxt" id="r_LoadTxt2">2</p>
+            <div class="r_LoadBar"><div class="r_Bar" id="r_Bar1"></div></div>
+            <p class="r_LoadTxt" id="r_LoadTxt3">3</p>
+        </div>
+        <div class="r_LoadTxtBox">
+            <p id="r_StepTxt1" class="LoadNow">账户信息</p>
+            <p id="r_StepTxt2">安全验证</p>
+            <p id="r_StepTxt3">重新设置密码</p>
+        </div>
+        <div class="r_StepBox "  id="Find1">
+            <div class="r_OneBox">
+                <p class="r_ModelTxt">账号<span class="r_ModelTxt0">请输入手机号</span></p>
+                <input type="text" class="r_ModelInput" maxlength="11" id="Phone">
+                <p class="r_ModelHint">当前只支持手机号找回密码！</p>
+                <p class="r_ModelError" id="PhoneError"></p>
+            </div>
+            <!--图形验证码-->
+            <div class="r_OtherBox1 mt5">
+                <div class="r_ModelTxt">验证码</div>
+                <input type="text" class="r_CodeInput" maxlength="4"  id="Code">
+                <div class="r_CodeBox"><img src="../../static/image/login1.3/deful.png" alt="" id="CodeImg"></div>
+                <p class="r_OtherCode" id="ChangeCode">看不清?换一张</p>
+                <p class="r_ModelError" id="CodeError"></p>
+            </div>
+            <p class="r_NextBtn" id="Step1">下一步</p>
+        </div>
+        <div class="r_StepBox dino"  id="Find2">
+            <div class="r_OneBox">
+                <p class="r_UserPhoneTxt">手机</p>
+                <div class="r_UserPhoneBox"><span id="Phone0">133</span>****<span id="Phone1">6212</span></div>
+            </div>
+            <!--短信验证码-->
+            <div class="r_OtherBox">
+                <div class="r_ModelTxt">短信验证码</div>
+                <input type="text" class="r_MsgInput" maxlength="6"  id="MsgCode">
+                <div class="r_GetMsg">
+                    <span class="MsgBtnTxt" id="GetMsgBtn">获取短信验证码</span>
+                    <div id="DisGetMsg" class="dino"><span id="GetMsgSec">60</span>s之后重新发送</div>
+                </div>
+                <p class="r_ModelError" id="MsgError"></p>
+            </div>
+            <p class="r_NextBtn"  id="Step2">下一步</p>
+        </div>
+        <div class="r_StepBox dino"  id="Find3">
+            <!--新密码-->
+            <div class="r_OneBox">
+                <p class="r_ModelTxt">输入新密码</p>
+                <input type="password" class="r_ModelInput" maxlength="16" id="Pass0">
+                <p class="r_ModelHint">请输入6-16位密码,由数字和字母、特殊字符组成。</p>
+                <div class="RankBox">
+                    <span class="RankTxt">安全程度：</span>
+                    <p id="Rank0">弱</p>
+                    <p id="Rank1">中</p>
+                    <p id="Rank2">强</p>
+                </div>
+                <p class="r_ModelError" id="PassError0"></p>
+            </div>
+            <!--确认密码-->
+            <div class="r_OtherBox mt0">
+                <p class="r_ModelTxt">确认密码</p>
+                <input type="password" class="r_ModelInput" maxlength="16" id="Pass1">
+                <p class="r_ModelError" id="PassError1"></p>
+            </div>
+            <p class="r_NextBtn0"  id="Step3">下一步</p>
+        </div>
+    </div>
+    <div class="r_FoundMain r_FoundMain0 dino " id="Find4">
+        <div class="r_Title pl95">
+            <p class="r_Tixt">找回密码</p>
+        </div>
+        <p class="r_ImgBox"><img src="../../static/image/foundpass1.3/fd.png" alt=""></p>
+        <p class="r_DoneTxt0">密码修改成功！</p>
+        <p class="r_DoneTxt1">请使用新密码登录</p>
+        <!--<a href="../../index.html"></a>-->
+        <p class="r_NextBtn r_LoginBtn" id="GoToIndex">立即登录</p>
+    </div>
+</div>
+<!--提示框-->
+<div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+<div class="FourFooter">Copyright ©2017 山东百川图书有限公司  All Rights Reserved. 鲁ICP备16038439号-2</div>
+<script src="../../static/javascript/foundpass1.3/foundpass.js"></script>
+</body>
+</html>

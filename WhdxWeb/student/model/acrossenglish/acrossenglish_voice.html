@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title id="Title">走遍英美</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/javascript/prepare/English_Audioplayer.js"></script>
+    <script src="../../static/javascript/prepare/Phoneaudioplayer.js"></script>
+    <link rel="stylesheet" href="../../static/style/acrossenglish/acrrossenglish.css">
+</head>
+<body>
+<article >
+    <div id="Pc">
+        <div class="minw ffyh">
+            <!--内容区-->
+            <div class="Com_Main" >
+                <div class="c_Content">
+                    <div class="c_ArLogo"><img src="../../static/image/chinese/logoar.png" class="c_logoar" alt=""></div>
+                    <div class="a_EngArtMain">
+                        <div id="a_ArtTitle"></div>
+                        <!--菜单栏-->
+                        <!--<div class="a_EngArtMenu" id="a_EngArtMenu">
+                            &lt;!&ndash;切换翻译按钮&ndash;&gt;
+                            <div class="a_TabBtn">
+                                <img src="../../static/image/sprite/a_tapbtn.png" alt="" class="a_TabBtnImg" id="TabBtn">
+                                <span id="a_Tab0" class="a_Tab0"></span>
+                                <span id="a_Tab1" class="a_Tab1"></span>
+                                <p class="a_TabCon" id="a_TabCon">
+                                    <span class="TabT">关闭翻译</span>
+                                    <span class="TabT"></span>
+                                    <span class="TabT">查看翻译</span>
+                                </p>
+                            </div>
+                            &lt;!&ndash;&ndash;&gt;
+                            &lt;!&ndash;<input type="button" value="老师要求" class="c_Recommend">&ndash;&gt;
+                        </div>-->
+                        <!--文章-->
+                        <div class="IsEngTitlt" id="a_IsEngTitlt0"></div>
+                        <div class="auther"></div>
+                        <div class="a_IsEngLish" id="a_IsEngLish"></div>
+                        <!-- 翻译按钮 -->
+                        <div class="a_EngArtMenu" id="a_EngArtMenu"><span class="text_li">查看翻译</span>&nbsp;&nbsp;<i class="ArrowsFont Com_Down">&#xe600;</i></div>
+                        <!--文章翻译-->
+                        <div class="a_IsTransEngLish dino" id="a_IsTransEngLish"></div>
+                        <!--上一篇下一篇-->
+                        <div class="c_Select">
+                            <p class="c_Share" id="c_Share"><i class="p_spriteImg p_shareico fl"></i></p>
+                            <div class="fr " id="isdown">
+                                <!--下一篇-->
+                                <p id="c_NextArt" class="fr cup CanClick"></p>
+                                <span id="go">下一篇&nbsp;:&nbsp;</span>
+                            </div>
+                            <span class="fr m030" id="m030">|</span>
+                            <div class="fr " id="isup">
+                                <!--上一篇-->
+                                <p id="c_PreArt" class="fr cup CanClick"></p>
+                                <span id="up">上一篇&nbsp;:&nbsp;</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--歌词部分-->
+                    <div class="wrapper">
+                        <audio preload="auto" id="audio"  src="../../static/plugin/song/bed.mp3" controls>很抱歉，您的浏览器版本太低不支持该音频，请升级浏览器:(</audio>
+                    </div>
+                </div>
+            </div>
+            <!--分享-->
+            <div class="Share" id="Share">
+                <i class="spriteImg c_ruleico fr cup" id="ShareClose"></i>
+                <h1 class="ShareTitle">分享给好友</h1>
+                <!--<div class="jiathis_style_32x32">-->
+                    <!--<a class="jiathis_button_cqq"></a>-->
+                    <!--<a class="jiathis_button_qzone"></a>-->
+                    <!--<a class="jiathis_button_tsina"></a>-->
+                    <!--<a class="jiathis_button_weixin"></a>-->
+                <!--</div>-->
+                <div class="bdsharebuttonbox" data-tag="share_1">
+                    <a class="bds_sqq" data-cmd="sqq"></a>
+                    <a class="bds_qzone" data-cmd="qzone" ></a>
+                    <a class="bds_tsina" data-cmd="tsina"></a>
+                    <a class="bds_weixin" data-cmd="weixin"></a>
+                </div>
+            </div>
+            <!--提示框-->
+            <div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+            <i class="spriteImg backtopico backtop"></i>
+        </div>
+    </div>
+    <div id="Phone" class="dino">
+        <div class="c_Mainapp" >
+            <div class="c_Content0">
+                <div class="a_EngArtMain0">
+                    <div class="c_ArLogo0"><img src="../../static/image/chinese/logoar.png" class="c_logoar0" alt=""></div>
+                    <div class="IsEngTitlt0" id="a_IsEngTitlt"></div>
+                    <div class="a_IsEngLish0" id="a_IsEngLish0"></div>
+                    <!--文章翻译-->
+                    <div class="a_IsTransEngLish0 " id="a_IsTransEngLish0"></div>
+                </div>
+                <!--歌词部分-->
+                <div class="wrapper0">
+                    <audio preload="auto" id="audio0"  src="../../static/plugin/song/bed.mp3" controls>很抱歉，您的浏览器版本太低不支持该音频，请升级浏览器:(</audio>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!--<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>-->
+<script src="../../static/javascript/acrossenglish/acrossenglish_voice.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+        <header style="height:78px;border-bottom:2px solid #65B113;background:white;">
+                    <div class="c_Head">
+                        <img src="../../static/image/sprite/weblogo.png" alt="" class="weblogo">
+                        <i class="spriteImg c_titico fl  dino"></i>
+                        <div class="fr c_Day Thisli">
+                            <div class="WarnMsg0 dino AllMsgNum"></div>
+                            <i class="spriteImg c_navico c_Navico"></i>
+                            <!-- <span class="fr cup fs18" id="sign">签到</span> -->
+                            <div class="c_UserImg fr" id="User"><img src="../../static/image/me/user.png" alt="" class="fl w100" id="UserHeadImg"></div>
+                            <nav>
+                                <ul class="menav" id="menav">
+                                    <li class="pr">
+                                        <div class="WarnMsg1 dino AllMsgNum"></div>
+                                        <a href="../../model/message/message.html">
+                                        <!-- <i class="spriteImg p_msgico0 fl m2015"></i> -->
+                                            消息
+                                            <span class="fl"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../../model/me/me_index.html">
+                                        <!-- <i class="spriteImg p_u0 fl m1612"></i> -->
+                                        个人中心
+                                            <span class="fl"></span>
+                                        </a>
+                                    </li>
+                                    <li class='quite'>
+                                        <a href="#" >
+                                        <!-- <i class="spriteImg p_quitico0 fl m2119"></i>-->
+                                        退出
+                                            <span class="fl"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <nav><ul class="c_Nav "></ul></nav>
+                    </div>
+
+                </header>
+                 <!--提示框-->
+                <div class="c_Dissolve "  id="c_ErrorMsg"></div>
+        <script src="../../static/javascript/GetNav/GetNav.js"></script>

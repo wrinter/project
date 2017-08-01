@@ -1,0 +1,135 @@
+.LoginMain{position: relative;overflow: auto;box-sizing: border-box;min-width: 900px;}
+.LoginTop{float: left;width: 100%;height: 25%;position: relative;}
+.LoginCenter{float: left;width: 100%;height: 51%;background:#f9dfbb;position: relative;}
+.LoginFooter{float: left;width: 100%;height: 24%;text-align: center;}
+.Logo{position: absolute;bottom: 0;left: 0;right: 0;top: 0;margin: auto;}
+.GoTo{float: left;width: 100%;text-align: center;margin: 4% 0 1% 0;}
+.GoTo a{margin: 0 2%;color: #666;}
+.GoTo a:hover{color:#F9A24A }
+.Company{float: left;width: 100%;text-align: center;color: #666;}
+@media screen and (max-width:1366px){
+    .Logo{width: 380px;}
+    .LoginMain{height: 740px;}
+    .f_Step1{width:500px;height: 270px;border-radius: 10px; box-sizing: border-box;background: white; overflow: hidden;position: absolute;right: 0;left: 0;bottom: 0;top:  0;margin: auto;}
+    .f_Step2{width: 700px;height: 300px;display: none; border-radius: 10px;padding: 30px 0 0 30px;;box-sizing: border-box;background: white; overflow: hidden;position: absolute;right: 0;left: 0;bottom: 0;top:  0;margin: auto;}
+    .f_h1{width: 100%;height: 50px;border-bottom: 1px solid #65B113;text-align: center;margin-bottom: 35px;float: left; line-height: 50px;font-size: 18px;color: #65B113;}
+    .f_Tbox{width: 100%;float: left;padding:0 10px 0 30px;box-sizing: border-box;}
+    .lh45{line-height: 30px!important;}
+    .f_Tel{width: 180px;height: 30px;line-height: 30px;font-size: 14px; border: 1px solid #CCC;box-sizing: border-box;float: left;outline: none;border-radius: 2px;padding-left: 10px;}
+    .f_CapImg{width: 85px;height: 30px;float: left;padding-top:0;box-sizing: border-box; margin:0 12px;cursor: pointer;}
+    .f_StepBtn1{width: 240px;height: 30px;line-height: 30px!important; margin: 5px auto 0 125px;clear: both; border-radius: 10px;background:#65B113;color: white;text-align: center;border: 0;outline: none; }
+    .f_Progress{width: 130px;height: 30px; position: relative;float: left;margin: 0 10px;}
+    .f_Pro1{width: 130px;height: 6px;border-radius: 3px;background: #CCC;float: left;margin-top: 10px; position: relative;overflow: hidden;}
+    .f_ProIn1{width: 150px;height: 6px;border-radius: 3px;background: #65B113;position: absolute;left: -83px;top:0;z-index: 0;}
+    .f_Done{margin: -7px 6px 0 0 ;}
+    .f_arrowico1{position: absolute;left: 55px;top: 2px; z-index: 0;}
+    .f_Choice{float: left;width: 100%;}
+    .f_Phone{width: 100%;height: 85px;float:left;margin-top: 30px; box-sizing: border-box;padding-right: 60px;}
+    .f_FChot{width: 350px;float: left;margin-left: 25px;}
+    .f_GetChaBtn{width: 130px;height: 30px;margin-top: 10px;font-size: 14px; outline: none;border: 0;background: #F9A24A;text-align: center;cursor: pointer;border-radius: 5px; line-height: 30px;color: white;}
+    .f_InCapBox{width: 100%;height: 50px;margin: 60px auto 30px 40px;overflow: hidden;}
+    .f_InCapT{width: 245px;height: 30px;border: 1px solid #CCC;box-sizing: border-box;float: left;outline: none;border-radius: 2px;padding-left: 10px;margin: 0 10px;}
+    .f_InCapBtn{width: 130px;height: 30px;cursor: pointer; border: 0; box-sizing: border-box;float: left;outline: none;border-radius: 10px;text-align: center;color: white;}
+    .f_InBtnBox{width:93%;height: 50px;float: left;overflow: hidden;}
+    .f_InBtn{width: 240px;height: 30px;cursor: pointer; margin: 0 auto;display: block; border: 0; box-sizing: border-box;outline: none;border-radius: 10px;text-align: center;color: white;}
+    .f_InMBox2{height: 100px;margin: 60px auto 30px 90px;}
+    .mr5{margin-right:5px!important;}
+    .ml10{margin-left:10px!important;}
+    .p35{padding:20px 35px 0 15px!important;}
+    .p30{padding:20px 5px 0 5px!important;}
+    .w145{width: 145px!important;text-align: left;}
+    .f_Setbox{margin: 40px auto 40px 110px;width: 600px;float: left; text-align: center;overflow: hidden;clear: both;}
+    .f_SetBtn{clear: both;display: block;margin: 40px auto;}
+    .f_Doneimg{float: left;margin:  15px 0 0 80px;width:200px; }
+    .f_Hint{width: 350px;height: 100px;float: left;text-align: center;margin-top: 88px;}
+    .f_PhoError{float: left;margin-left: 10px;;font-size: 14px; height: 25px;line-height: 25px;text-align: left;color: #ca0d0d;}
+    .pl50{padding-left: 47px;}
+    .f_ProIn2{left: 0;}
+    .dino{display: none;}
+    .dinb{display: block;}
+    .m0{margin:0;}
+}
+@media screen and (min-width:1366px){
+    .Logo{width: 420px;}
+    .LoginMain{height: 740px;}
+    .f_Step1{width: 550px;height: 320px;border-radius: 10px; box-sizing: border-box;background: white; overflow: hidden;position: absolute;right: 0;left: 0;bottom: 0;top:  0;margin: auto;}
+    .f_Step2{width: 750px;height: 350px;display: none; border-radius: 10px;padding: 40px 0 0 30px; ;box-sizing: border-box;background: white; overflow: hidden;position: absolute;right: 0;left: 0;bottom: 0;top:  0;margin: auto;}
+    .f_h1{width: 100%;height: 60px;border-bottom: 1px solid #65B113;text-align: center;margin-bottom: 40px;float: left; line-height: 60px;font-size: 20px;color: #65B113;}
+    .f_Tbox{width: 100%;float: left;padding:0 10px 0 60px;box-sizing: border-box;}
+    .f_Tel{width: 200px;height: 35px;border: 1px solid #CCC;box-sizing: border-box;float: left;outline: none;border-radius: 2px;padding-left: 10px;}
+    .f_CapImg{width: 85px;height: 45px;float: left;padding-top: 3px;box-sizing: border-box; margin:0 12px;cursor: pointer;}
+    .f_StepBtn1{width: 260px;height: 40px;margin: 5px auto 0 130px;clear: both; border-radius: 10px;background:#65B113;color: white;text-align: center;border: 0;outline: none; }
+    .f_Progress{width: 140px;height: 30px; position: relative;float: left;margin: 0 10px;}
+    .f_Pro1{width: 140px;height: 6px;border-radius: 3px;background: #CCC;float: left;margin-top: 10px; position: relative;overflow: hidden;}
+    .f_ProIn1{width: 140px;height: 6px;border-radius: 3px;background: #65B113;position: absolute;left: -83px;top:0;z-index: 0;}
+    .f_Done{margin: -7px 6px 0 0 ;}
+    .f_arrowico1{position: absolute;left: 50px;top: 2px; z-index: 0;}
+    .f_Choice{float: left;width: 100%;}
+    .f_Phone{width: 100%;height: 85px;float:left;margin-top: 40px; box-sizing: border-box;padding-right: 60px;}
+    .f_FChot{width: 370px;float: left;margin-left: 25px;}
+    .f_GetChaBtn{width: 165px;height: 45px;margin-top: 10px; outline: none;border: 0;background: #F9A24A;text-align: center;cursor: pointer;border-radius: 10px; line-height: 45px;color: white;}
+    .f_InCapBox{width: 100%;height: 50px;margin: 80px auto 55px 55px;overflow: hidden;}
+    .f_InCapT{width: 245px;height: 40px;line-height: 40px; border: 1px solid #CCC;box-sizing: border-box;float: left;outline: none;border-radius: 2px;padding-left: 10px;margin: 0 10px;}
+    .f_InCapBtn{width: 150px;height: 40px;line-height: 40px; cursor: pointer; border: 0; box-sizing: border-box;float: left;outline: none;border-radius: 10px;text-align: center;color: white;}
+    .f_InBtnBox{width:93%;height: 50px;float: left;overflow: hidden;}
+    .f_InBtn{width: 240px;height: 45px;cursor: pointer; margin: 0 auto;display: block; border: 0; box-sizing: border-box;outline: none;border-radius: 10px;text-align: center;color: white;}
+    .f_InMBox2{height: 100px;margin: 60px auto 30px 90px;}
+    .mr5{margin-right:5px!important;}
+    .ml10{margin-left:10px!important;}
+    .p35{padding:40px 0 0 30px!important;}
+    .p30{padding:40px 10px 0 10px!important;}
+    .w145{width: 145px!important;text-align: left;}
+    .f_Setbox{margin: 40px auto 40px 150px;width: 700px;float: left; text-align: center;overflow: hidden;clear: both;}
+    .f_SetBtn{clear: both;display: block;margin: 40px auto;}
+    .f_Doneimg{float: left;margin:  20px 0 0 90px;width: 230px;}
+    .f_Hint{width: 350px;height: 100px;float: left;text-align: center;margin-top: 105px;}
+    .f_PhoError{float: left;margin-left: 10px;font-size: 14px;height: 30px;line-height: 30px;text-align: left;color: #ca0d0d;}
+    .pl50{padding-left: 49px;}
+    .f_ProIn2{left: 0;}
+    .dino{display: none;}
+    .dinb{display: block;}
+    .m0{margin:0;}
+    .this{line-height: 35px!important;}
+}
+@media screen and (min-width:1600px){
+    .LoginMain{height: 920px;}
+    .Logo{width: 480px;}
+    .f_Step1{width: 640px;height: 370px;border-radius: 10px;box-sizing: border-box;background: white; overflow: hidden;position: absolute;right: 0;left: 0;bottom: 0;top:  0;margin: auto;}
+    .f_Step2{width: 900px;height: 410px;display: none; border-radius: 10px;padding: 35px 0 0 60px; ;box-sizing: border-box;background: white; overflow: hidden;position: absolute;right: 0;left: 0;bottom: 0;top:  0;margin: auto;}
+    .f_h1{width: 100%;height: 80px;border-bottom: 1px solid #65B113;text-align: center;margin-bottom: 45px;float: left; line-height: 80px;font-size: 24px;color: #65B113;}
+    .f_Tbox{width: 100%;float: left;padding:0 10px 0 60px;box-sizing: border-box;}
+    .f_Tel{width: 245px;height: 45px;border: 1px solid #CCC;box-sizing: border-box;float: left;outline: none;border-radius: 2px;padding-left: 10px;}
+    .f_CapImg{width: 85px;height: 45px;float: left;padding-top: 5px;box-sizing: border-box; margin:0 12px;cursor: pointer;}
+    .f_StepBtn1{width: 240px;height: 45px;margin: 5px auto 0 200px;clear: both; border-radius: 10px;background:#65B113;color: white;text-align: center;border: 0;outline: none; }
+    .f_Progress{width: 166px;height: 30px; position: relative;float: left;margin: 0 18px;}
+    .f_Pro1{width: 166px;height: 6px;border-radius: 3px;background: #CCC;float: left;margin-top: 10px; position: relative;overflow: hidden;}
+    .f_ProIn1{width: 166px;height: 6px;border-radius: 3px;background: #65B113;position: absolute;left: -83px;top:0;z-index: 0;}
+    .f_Done{margin: -7px 6px 0 0 ;}
+    .f_arrowico1{position: absolute;left: 72px;top: 2px; z-index: 0;}
+    .f_Choice{float: left;width: 100%;}
+    .f_Phone{width: 100%;height: 85px;float:left;margin-top: 70px; box-sizing: border-box;padding-right: 60px;}
+    .f_FChot{width: 470px;float: left;margin-left: 25px;}
+    .f_GetChaBtn{width: 165px;height: 45px;margin-top: 10px; outline: none;border: 0;background: #F9A24A;text-align: center;cursor: pointer;border-radius: 10px; line-height: 45px;color: white;}
+    .f_InCapBox{width: 100%;height: 50px;margin: 105px auto 55px 90px;overflow: hidden;}
+    .f_InCapT{width: 245px;height: 45px;border: 1px solid #CCC;box-sizing: border-box;float: left;outline: none;border-radius: 2px;padding-left: 10px;margin: 0 10px;}
+    .f_InCapBtn{width: 150px;height: 45px;cursor: pointer; border: 0; box-sizing: border-box;float: left;outline: none;border-radius: 10px;text-align: center;color: white;}
+    .f_InBtnBox{width:93%;height: 50px;float: left;overflow: hidden;}
+    .f_InBtn{width: 240px;height: 45px;cursor: pointer; margin: 0 auto;display: block; border: 0; box-sizing: border-box;outline: none;border-radius: 10px;text-align: center;color: white;}
+    .f_InMBox2{height: 100px;margin: 60px auto 30px 90px;}
+    .mr5{margin-right:5px!important;}
+    .ml10{margin-left:10px!important;}
+    .p35{padding:60px 35px 0 35px!important;}
+    .p30{padding:60px 30px 0 30px!important;}
+    .w145{width: 145px!important;text-align: left;}
+    .f_Setbox{margin: 80px auto 40px 220px;width: 700px;float: left; text-align: center;overflow: hidden;clear: both;}
+    .f_SetBtn{clear: both;display: block;margin: 40px auto;}
+    .f_Doneimg{float: left;margin:  35px 0 0 110px}
+    .f_Hint{width: 350px;height: 100px;float: left;text-align: center;margin-top: 125px;}
+    .f_PhoError{float: left;margin-left: 10px;height: 30px;line-height: 30px;text-align: left;color: #ca0d0d;}
+    .pl50{padding-left: 65px;}
+    .f_ProIn2{left: 0;}
+    .dino{display: none;}
+    .dinb{display: block;}
+    .m0{margin:0;}
+}
+

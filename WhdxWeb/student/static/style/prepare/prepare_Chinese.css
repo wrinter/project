@@ -1,0 +1,294 @@
+.p_ChineseAudio{ min-height: 260px;margin: 45px auto;background: white;border-radius: 10px;  box-sizing: border-box;position: absolute;z-index: -1;}
+.p_ArtTitle{width: 100%;height: 107px;line-height: 107px;font-size: 24px; box-sizing: border-box;text-align: center; background: url('../../../static/image/prepare/p_titlebg.jpg')0 0 repeat;}
+.p_ChineseArt{width: 70%;line-height: 40px; text-align: left;box-sizing: border-box;padding: 50px 40px;float: left;}
+.p_ChineseArt p,.p_ChineseArt span{font-family: "Microsoft YaHei"!important; text-indent: 30px!important;color: #666!important;}
+.lh65{line-height: 65px;}
+@media screen and (max-width:1366px){
+    .p_ChineseArt p,.p_ChineseArt span,.trans p,.trans span{font-size: 14px!important;line-height: 35px!important;}
+    .p_ChineseAudio{width: 890px}
+    .audioplayer-playpause{left: 25px;  }
+    .audioplayer-bar{left: 75px;width: 450px}
+    .audioplayer-time-cut { left:550px; }
+    .audioplayer-time-duration { right:250px;}
+    .audioplayer-time-current {color: #58C1E4; left:520px; }
+    .p_loadtexttitle li div {
+        width: 86%;
+    }
+    .audioplayer-time-cut { left:542px; }
+    .audioplayer-time-duration { left:568px;}
+    .audioplayer-bar {width: 40%}
+    .audioplayer-time-current {color: #58C1E4; left:515px; }
+}
+@media screen and (min-width:1366px){
+    .p_ChineseArt p,.p_ChineseArt span,.trans p,.trans span{font-size: 16px!important;line-height: 40px!important;}
+    .p_ChineseAudio{width: 990px}
+    .audioplayer-playpause{left: 30px;}
+    .audioplayer-bar{width: 520px;left: 80px;}
+    .audioplayer-time-cut { left:639px; }
+    .audioplayer-time-duration { right:255px;}
+    .audioplayer-time-current {color: #58C1E4; left:605px; }
+    .p_loadtexttitle li div {
+        width: 86%;
+    }
+    .audioplayer-time-cut { left:634px; }
+    .audioplayer-time-duration { left:662px;}
+    .audioplayer-bar {width: 45%}
+    .audioplayer-time-current {color: #58C1E4; left:605px; }
+}
+@media screen and (min-width:1600px){
+    .p_ChineseArt p,.p_ChineseArt span,.trans p,.trans span{font-size: 16px!important;line-height: 30px!important;}
+    .p_ChineseAudio{width: 1190px}
+    .audioplayer-playpause{left: 90px;}
+    .audioplayer-bar{width: 620px;left: 160px;}
+    .audioplayer-time-cut { left:830px; }
+    .audioplayer-time-duration { right:265px;}
+    .audioplayer-time-current {color: #58C1E4; left:800px; }
+    .p_loadtexttitle li div {
+        width: 89%;
+    }
+    .audioplayer-time-cut { left:843px; }
+    .audioplayer-time-duration { left:870px;}
+    .audioplayer-bar {width: 53%}
+    .audioplayer-time-current {color: #58C1E4; left:814px; }
+}
+.noImg{
+    margin: 0 auto;
+    height: 250px;
+}
+.noData{
+    text-align: center;
+    margin-top: 40px;
+}
+/*科目，章，节*/
+.p_loadtexttitle {
+    width: 100%;
+    font-size: 24px!important;
+    float: left;
+
+    margin-top: 20px;
+    background-color: #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: #666;
+}
+.p_loadtexttitle label {
+    float: left;
+    text-align: left;
+    width: 70px;
+}
+.p_loadtexttitle li {
+    line-height: 31px;
+    float: left;
+    width: 100%;
+    padding-bottom: 7px;
+}
+.p_loadtexttitle li:last-child{padding-bottom: 0;}
+.p_loadtexttitle li div {
+    height: auto;
+    float: left;
+}
+
+.change {
+    color: #58c1e4;
+}
+/*歌词匹配颜色*/
+.pre-line{color: #666;}
+.current-line{color: #65B113;}
+.current-song, .current-song a {color: #A6E22D;}
+.dino{display: none;}
+.childList {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    min-height: 550px;
+    padding-bottom: 30px;
+
+}
+.child_li {
+    float: left;
+    width: 262px;
+    height: 120px;
+    margin: 20px 1.4%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+    cursor: pointer;
+    color: #999999;
+    padding-top: 20px;
+}
+.font_li {
+    margin-top: 32px;
+    display: block;
+    margin-left: 20px;
+    float: left;
+    width: 51%;
+}
+
+/*备课中心-音频雪碧图*/
+.prepare_sprite{background:url("../../image/sprite/prepare_sprite.png")0 0 no-repeat;}
+.p_voiceico1{height:22px;width:25px;background-position:-154px 0;}
+.p_voiceico0{height:22px;width:25px;background-position:-186px 0;}
+.p_palyico1{height:40px;width:40px;background-position:0 0;}
+.p_playico0{height:40px;width:40px;background-position:-47px 0;}
+.p_wordico{height:28px;width:32px;background-position:-150px -103px;float: left;margin: 0 10px;cursor: pointer;}
+.p_tabico{height:37px;width:65px;background-position:-138px -54px;}
+.p_wordico0{height:84px;width:63px;background-position:0 -52px;float: left;margin-left: 15px!important;}
+.p_wordico1{height:84px;width:63px;background-position:-67px -52px;float: left;margin-left: 15px!important;}
+.p_bookico1{height:69px;width:92px;background-position:-98px -145px;margin-top: 10px;float: left;margin-left: 15px!important;}
+.p_bookico0{height:69px;width:92px;background-position:0 -145px;margin-top: 10px;float: left;margin-left: 15px!important;}
+.p_listenico1{height:62px;width:96px;background-position:0 -221px;margin-top: 10px;float: left;margin-left: 15px!important;}
+.p_listenico0{height:62px;width:96px;background-position:-102px -221px;margin-top: 10px;float: left;margin-left: 15px!important;}
+/*备课中心-视频雪碧图*/
+.p_spriteImg{background:url(../../image/sprite/p_VideoSpriteImg.png)0 0 no-repeat;}
+.p_yetshareico{height:23px;width:23px;background-position:-32px 0;}
+.p_shareico{height:23px;width:23px;background-position:0 0;}
+.p_Praiseico{height:24px;width:24px;background-position:0 -32px;}
+.p_video2ico{height:24px;width:24px;background-position:-64px 0;}
+.p_videoico{height:24px;width:24px;background-position:-64px -32px;}
+.p_yetPraiseico{height:24px;width:24px;background-position:-32px -32px;}
+.p_rightico{height:70px;width:30px;background-position:-104px 0;}
+.p_leftico{height:70px;width:30px;background-position:-144px 0;}
+.p_hoverRightico{height:70px;width:30px;background-position:-184px 0;}
+.p_hoverLeftico{height:70px;width:30px;background-position:-224px 0;}
+.p_AnswerWrongico{height:43px;width:39px;background-position:-264px 0;}
+.p_briefico{height:36px;width:44px;background-position:-377px 0;}
+.p_AnswerRightico{height:39px;width:46px;background-position:-320px 0;}
+.p_video3ico{height:60px;width:60px;background-position:-433px 0;}
+.p_shareQQico{height:80px;width:80px;background-position:0 -97px;}
+.p_shareWeiboico{height:80px;width:80px;background-position:-96px -96px;}
+.p_shareWeixinico{height:80px;width:80px;background-position:-191px -96px;}
+.p_shareQQZoneico{height:80px;width:80px;background-position:-288px -96px;}
+.p_newico{height:84px;width:82px;background-position:-383px -96px;}
+
+.trans {
+    float: right;
+    width: 90%;
+    line-height: 20px;
+    font-size: 18px;
+    color: #666 !important;
+}
+.contentImg {
+    width: 2.9%;
+    float: left;
+    background: url("../../image/prepare/bookline.png");
+    position: absolute;
+    height: 100%;
+    right: 27%;
+    background-size: 100%;
+}
+.child_li:hover {
+
+}
+
+/**********************************音频公共样式*******************************************************/
+.audioplayer { height: 60px; color: #666; position: relative; bottom: 0;z-index: 1;background: #646566;width: 100%;border-top: 1px solid #ccc;}
+.audioplayer > div{ position: absolute;}
+.audioplayer-playpause{width: 30px;height: 30px;text-align: left;  text-indent: -9999px;  cursor: pointer;  z-index: 2; bottom: 0;top: 0;margin: auto 0; left: 90px;  }
+.audioplayer-playpause span { display: block;}
+.audioplayer-stopped .audioplayer-playpause span { background: url("../../../static/image/prepare/p_playico0.png");width: 30px;height: 30px; background-size: 100%;}
+.audioplayer-playing .audioplayer-playpause span {background: url("../../../static/image/prepare/p_palyico1.png");width: 30px;height: 30px; background-size: 100%;}
+.audioplayer-time{width: 70px;height: 100%;line-height:61px; text-align: center;z-index: 2;top:0;color:white;font-size: 12px;}
+.audioplayer-time-current {color: white; left:61%; }
+.audioplayer-time-cut { left:64%; }
+.audioplayer-time-duration { left:67%;}
+.audioplayer-novolume .audioplayer-time-duration{  border-right: 0; right: 0;}
+.audioplayer-bar{height: 5px;width: 44%;float:left;background-color:#F6F6F6;box-sizing: border-box;border-top:1px solid #E4E4E4; cursor: pointer;z-index: 1;top: 29px;left: 150px;}
+.audioplayer-bar div{ width: 0; height: 100%;position: absolute; left: 0; top: 0;}
+.audioplayer-bar-loaded{ background-color: #F6F6F6;; z-index: 1;}
+.audioplayer-bar-played{ background: #F6F6F6;; z-index: 2;}
+.audioplayer-volume{ width: 240px;height: 45px;text-align: left;float:left;text-indent: -9999px;  cursor: pointer;  z-index: 2;  top: 20px;  right: 1%;}
+.audioplayer-volume-button{ width: 45px;height: 22px; float: left;background: url("../../../static/image/prepare/p_voiceico0.png") 0 0 no-repeat}
+.audioplayer-volume-button a { width: 5px;height: 6px; background-color: #fff;display: block; position: relative;  z-index: 1; top: 40%; left: 35%;  }
+.audioplayer-volume-button a:before,.audioplayer-volume-button a:after { content: ''; position: absolute;}
+.audioplayer-volume-button a:before{ width: 0;  height: 0;  border: 8px solid transparent;  border-left: none;  border-right-color: #fff;  z-index: 2;  top: 50%;  right: -4px;  margin-top: -8px;  }
+.audioplayer:not(.audioplayer-muted) .audioplayer-volume-button a:after {  width: 5px;  height: 5px;  border: double #fff;  border-width: 4px 4px 0 0;  left: 9px;  top: -1px;  border-radius: 0 15px 0 0;  -webkit-transform: rotate( 45deg );  -moz-transform: rotate( 45deg );  -ms-transform: rotate( 45deg );  -o-transform: rotate( 45deg );  transform: rotate( 45deg );  }
+.audioplayer-volume-adjust{width: 180px ;float: left;height: 5px;line-height: 5px;}
+.audioplayer-volume-adjust > div { width: 180px;height: 5px;background-color:#F6F6F6;box-sizing: border-box;border-top:1px solid #E4E4E4; ;cursor: pointer;position: relative;z-index: 1;margin: 8px auto 0;}
+.audioplayer-volume-adjust div div{width: 100%;height: 100%;position: absolute;left: 0;}
+.audioplayer-volume-adjust div div,.audioplayer-bar-played{ background: #58C1E4;}
+.audioplayer-volume-adjust div div{ background: #58C1E4; }
+.audioplayer-bar,.audioplayer-bar div,.audioplayer-volume-adjust div{ -webkit-border-radius: 12px; -moz-border-radius: 12px; border-radius: 12px;  }
+.audioplayer { -webkit-border-radius: 2px; -moz-border-radius: 2px;border-radius: 2px; }
+.audioplayer-volume-adjust{ -webkit-border-top-left-radius: 2px; -webkit-border-top-right-radius: 2px;  -moz-border-radius-topleft: 2px;  -moz-border-radius-topright: 2px;  border-top-left-radius: 2px;  border-top-right-radius: 2px;  }
+.WordMode{cursor: pointer;text-align: center;width: 40px;height: 40px;position: absolute;left: 30px;box-sizing: border-box; background: white;border-radius: 100%;border: 3px solid #58C1E4;line-height: 32px;top: 0;bottom: 0;margin: auto; font-weight: bold; color: #333;font-size: 20px;float: left; }
+.wrapper {float: left;box-sizing: border-box; width: 100%;background: #F9FDFE; margin: 0 auto;position: relative;border: 1px solid #58C1E4;}
+.player {position: fixed;bottom: 5px;left: 0;right: 0;z-index: 99;}
+.playlist {float: left;display: none  ;text-align: left;width: 300px;height: 500px;overflow: hidden; padding: 20px 0 20px 25px;box-sizing: border-box; z-index: 999; background:#6D6D6D;}
+.playlist a {color: white;font-size: 16px;}
+.info a {color: #bbb;text-decoration: underline;}
+.playlist ul {  height: 480px;  overflow: auto;  margin: 0;  }
+.lyricWrapper {  height: 536px; width: 100%; box-sizing: border-box;padding:0 35px; text-indent: 30px;  overflow: hidden;  position: relative; color:#666;}
+.lyricContainer {position: relative;top: 0;font-size: 18px;text-align: left;line-height: 45px; }
+.noVoice {width: 45px;height: 22px; float: left;background: url("../../../static/image/prepare/p_voiceico1.png") 0 0 no-repeat !important; }
+
+
+.p_loadtexttitle{padding:30px;border-radius:10px 10px 0 0 ;min-height: 100px;margin:  0px auto 0 auto;overflow: hidden;text-align: center;box-sizing: border-box;background: white;}
+.Kolaimg{width: 200px;}
+.c_Directory{float: left;width: 100%;text-align: left;font-size: 16px;}
+.FirstName,.c_DirectoryList li{float: left;line-height: 35px;height: 35px;color: #333; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.c_DirectoryList li{cursor: pointer;}
+.p_loadtexttitle li div span,.p_loadtexttitle label  {
+    float: left;
+    cursor: pointer;
+    text-align: left;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+
+@media screen and (max-width:1366px){
+    .FirstName,.p_loadtexttitle li div span,.p_loadtexttitle label {font-size: 14px;}
+   .p_loadtexttitle li div span{width: 100px;}
+    .p_loadtexttitle{font-size: 14px;}
+    .audioplayer-time-current {left:59% !important;; }
+    .audioplayer-time-cut { left:62% !important;; }
+    .audioplayer-time-duration { left:65% !important;;}
+    .audioplayer-bar{width: 42% !important;}
+    .top_margin {margin-top: -50px;min-height: 70px;padding-bottom: 0;}
+}
+@media screen and (min-width:1366px){
+    .FirstName, .p_loadtexttitle li div span,.p_loadtexttitle label {font-size: 16px;}
+    .p_loadtexttitle li div span {width: 110px;}
+    .p_loadtexttitle{font-size: 16px;}
+    .audioplayer-time-current {left:59% !important;; }
+    .audioplayer-time-cut { left:62% !important;; }
+    .audioplayer-time-duration { left:65% !important;;}
+    .audioplayer-bar{width: 44% !important;}
+    .top_margin {margin-top: -50px;min-height: 70px;padding-bottom: 0;}
+}
+@media screen and (min-width:1600px){
+    .FirstName,.p_loadtexttitle li div span,.p_loadtexttitle label {font-size: 18px;}
+   .p_loadtexttitle li div span{width: 120px;}
+    .p_loadtexttitle{font-size: 18px;}
+    .audioplayer-time-current {left:61% !important;; }
+    .audioplayer-time-cut { left:64% !important;; }
+    .audioplayer-time-duration { left:67% !important;;}
+    .audioplayer-bar{width: 48% !important;}
+    .top_margin {margin-top: -50px;min-height: 70px;padding-bottom: 0;}
+}
+.p_loadtexttitle li div span:hover{color: #58c1e4;}
+.autor {
+    text-align: center;
+    color: #666;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.wid_class {
+    width: 23% !important;
+    margin: 40px 30px 0 30px;
+}
+#audioplayer{position: fixed;bottom: 0;right: 0;left: 0;margin: auto;;}
+.p_ChineseAudio{right: 0;left: 0;}
+@media screen and (max-width:1366px){
+    #audioplayer{width: 890px;}
+}
+@media screen and (min-width:1366px){
+    #audioplayer{width: 990px;}
+}
+@media screen and (min-width:1600px){
+    #audioplayer{width: 1190px;}
+}
+.p_ChineseArt,.p_ChineseArt p{
+    font-family:'Times new roman','宋体' !important;
+}

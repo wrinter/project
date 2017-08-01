@@ -1,0 +1,111 @@
+.LoginMain{position: relative;box-sizing: border-box;width: 100%;min-width: 900px;}
+.LoginTop{float: left;width: 100%;height: 25%;position: relative;}
+.LoginCenter{float: left;width: 100%;height: 51%;background:#f9dfbb;position: relative;}
+.LoginFooter{float: left;width: 100%;height: 24%;text-align: center;}
+.Logo{position: absolute;bottom: 0;left: 0;right: 0;top: 0;margin: auto;}
+.i_GoReg{position: absolute; text-align: center; color: white; border-radius: 0 0 10px 10px; top: 0;right: 15%;float: left;background: #65b113; background: linear-gradient(to bottom,#65B113 0%,#599E0E 100%);}
+.GoTo{float: left;width: 100%;text-align: center;margin: 4% 0 1% 0;}
+.GoTo a{margin: 0 2%;color: #666;}
+.GoTo a:hover{color:#F9A24A }
+.Company{float: left;width: 100%;text-align: center;color: #666;}
+/*注册*/
+.RegisterMian{float: left;height: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;z-index: 1;}
+.TeacherReg{float: left;position: absolute;cursor: pointer; top: 0;left: 13%; bottom: 0;margin: auto;z-index: 2;background: url("../../../static/image/sprite/sp_teacherico.png")0 0; background-size: 100%;}
+.StudentReg{float: left;position: absolute;cursor: pointer; top: 0;right: 13%; bottom: 0;margin: auto;z-index: 2;background: url("../../../static/image/sprite/sp_studentico.png")0 0; background-size: 100%;}
+.TeacherStep1{ float:left; min-height: 200px;position: relative;cursor: pointer;  text-align: center;background: white;border-radius: 10px;    box-sizing: border-box;  padding: 8px 15% 20px 15% ; z-index:3;}
+.Title{width: 100%;float: left;text-align: center;color: #65b113;}
+.i_InfoIn{width: 100%;float: left;box-sizing: border-box;border: 1px solid #ccc;border-radius: 5px;}
+.i_Itext{outline: none;height: 100%; float: left;width: 93%;line-height:28px;color: #333;border: 0;  text-align: left;box-sizing: border-box;padding-left: 10px;}
+.i_Error{box-sizing: border-box; line-height: 20px;height: 20px;text-align: left; width: 100%;float: left;color:  #CA0D0D;font-size: 14px;}
+.i_Captcha{float: left;width: 100%;position: relative;}
+.CaptchaIn{border-radius: 5px; width: 45%;float: left;box-sizing: border-box;border: 1px solid #ccc;outline: none;color: #333;}
+.CapImg{float: left;margin: 0 10px;}
+.NextBtn{width: 100%;box-sizing: border-box; float: left;text-align: center;color: white;background: #65b113;border-radius: 10px;outline: none;cursor: pointer;border: 0;}
+.MsgInBtn{width: 45%; text-align: center;cursor: pointer; border: 0;outline: none;border-radius: 5px;float: right;color: white;font-size: 14px;background: #F15067;}
+.MsgCapin{border-radius: 5px; width: 45%;box-sizing: border-box; text-align: left;border: 1px solid #ccc;outline: none;float: left;color: #333;}
+.StepTwo{position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;border: 1px solid #65B113;background: white;border-radius: 10px; ;  box-sizing: border-box;  z-index: 5; }
+.StepTwoTitle{width:100%;float: left; text-align: center;color: #65B113;border-bottom: 1px solid #65B113;}
+.DoneBox,.StudentBox,.TeacherStepTwo{float: left;width: 100%;box-sizing: border-box;padding: 30px 16%;}
+.UserName{width: 71%;border-radius: 5px; border: 1px solid #ccc;float: left;outline: none;text-align: left;box-sizing: border-box;padding-left: 15px;color: #333;}
+.UserSelect{width: 71%;cursor: pointer;border-radius: 5px; padding-right: 10px;position: relative; border: 1px solid #ccc;float: left;outline: none;text-align: left;box-sizing: border-box;padding-left: 15px;color: #333;}
+.Box{float: left;width: 100%;box-sizing: border-box;}
+.SelectOut{float: left;width: 90%;overflow: hidden;white-space:nowrap;text-overflow:ellipsis; }
+.LoadTit{float: left;color: #666;}
+.UserOption{display: none; width: 100%;background: white;box-sizing: border-box; z-index: 6; border-radius: 5px;border: 1px solid #ccc; position: absolute;left: 0;}
+.UserOption li{float: left;width: 100%;box-sizing: border-box;padding-left: 15px;color: #333;}
+.DoneRegBtn0{width: 70%; box-sizing: border-box;display: block;margin: 0 auto; text-align: center;color: white;background: #65b113;border-radius: 10px;outline: none;cursor: pointer;border: 0;}
+.IsCode{float: left;margin-top: 8%}
+.Choico{float: left;cursor: pointer;}
+.IsCodeSelect{float: left;color: #666;}
+.StudentBox{float: left;width: 100%;}
+.DoneBox{padding: 0 16%;position: absolute;left: 0;bottom: 10%;}
+.wc29{width: 29%;}
+@media screen and (max-width:1366px){
+    .LoginMain{height: 740px;}
+    .Logo{width: 380px;}
+    .RegisterMian{width: 900px;}
+    .StudentReg,.TeacherReg{width: 280px;height: 280px; }
+    .TeacherStep1{width: 390px;left: -16%;}
+    .i_GoReg{width: 108px;height: 60px;line-height: 60px;font-size: 22px;}
+    .i_Itext{line-height: 25px;font-size: 14px;}
+    .Title{line-height:40px;font-size: 20px; }
+    .CapImg{margin-top: 5px;margin-left: 0;margin-right: 0;}
+    .UserSelect,.UserName,.MsgCapin,.MsgInBtn{height: 35px;font-size: 14px;}
+    .MsgCapin{  padding: 2px 0 2px 15px;}
+    .CaptchaIn,.i_InfoIn{line-height: 35px;padding: 2px 0 2px 15px;height: 35px;}
+    .NextBtn {height: 35px;line-height: 35px;text-align: center;font-size: 14px;}
+    .lh450{line-height: 35px!important;}
+    .StepTwo{width:400px;height:350px;}
+    .StepTwoTitle{height:35px;font-size: 16px;line-height: 35px;}
+    .IsCodeSelect,.DoneRegBtn0,.UserOption li,.LoadTit,.SelectOut{height:35px;font-size: 14px;line-height: 35px;}
+    .UserOption{top: 36px;}
+    .Choico{margin: 5px;}
+    .padeL{padding-left: 63px;}
+    .padeL1{padding-left: 81px;}
+}
+@media screen and (min-width:1366px){
+    .LoginMain{height: 740px;}
+    .Logo{width: 420px;}
+    .RegisterMian{width: 1000px;}
+    .TeacherStep1{width: 410px;left: -13%;}
+    .StudentReg,.TeacherReg{width: 320px;height: 320px; }
+    .i_GoReg{ width: 144px;height: 80px;line-height: 80px;font-size: 30px;}
+    .Title{line-height:50px;font-size: 22px;}
+    .MsgCapin{  padding: 4px 0 4px 15px}
+    .StepTwo{ width:480px;height:400px; }
+    .CapImg{margin-top: 7px;margin-left: 1px;margin-right: 1px;}
+    .CaptchaIn,.i_InfoIn{line-height: 40px;padding: 4px 0 4px 15px;height:40px;}
+    .i_Itext{line-height: 24px;font-size: 16px;}
+    .NextBtn {height: 40px;line-height: 40px;text-align: center;font-size: 16px;}
+    .UserSelect,.UserName,.MsgCapin,.MsgInBtn{height: 40px;font-size: 16px;}
+    .lh450{line-height: 40px!important;}
+    .StepTwoTitle{height:40px;font-size: 18px;line-height: 40px;}
+    .IsCodeSelect,.DoneRegBtn0,.UserOption li,.LoadTit,.SelectOut{height:40px;font-size: 16px;line-height: 40px;}
+    .UserOption{top: 41px;}
+    .Choico{margin: 7px;}
+    .padeL{padding-left: 72px;}
+    .padeL1{padding-left: 97px;}
+}
+@media screen and (min-width:1600px){
+    .LoginMain{height: 920px;}
+    .Logo{width: 480px;}
+    .RegisterMian{width: 1200px;}
+    .TeacherStep1{width: 485px;left: -16%;}
+    .StudentReg,.TeacherReg{width: 360px;height: 360px; }
+    .i_GoReg{ width: 180px;height: 100px;line-height: 100px;font-size: 36px;}
+    .Title{line-height:65px;font-size: 24px;}
+    .CapImg{margin-top: 8px;margin-left: 15px;}
+    .MsgCapin{  padding: 6px 0 6px 15px;}
+    .CaptchaIn,.i_InfoIn{line-height: 45px;padding: 6px 0 6px 15px;height: 45px;}
+    .i_Itext{line-height: 24px;font-size: 18px;}
+    .NextBtn {height: 45px;line-height: 45px;text-align: center;font-size: 18px;}
+    .UserSelect,.UserName,.MsgCapin,.MsgInBtn{height: 45px;font-size: 18px;}
+    .lh450{line-height: 45px!important;}
+    .StepTwo{ width:555px;height:420px;}
+    .StepTwoTitle{height:45px;font-size: 20px;line-height: 45px;}
+    .IsCodeSelect,.DoneRegBtn0,.UserOption li,.LoadTit,.SelectOut{height:45px;font-size: 18px;line-height: 45px;}
+    .UserOption{top: 46px;}
+    .Choico{margin: 9px;}
+    .padeL{padding-left: 82px;}
+    .padeL1{padding-left: 112px;}
+}

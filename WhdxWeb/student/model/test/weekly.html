@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业和测试——周报</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/iconfont.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/test/weekly.css">
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a href="../../../student/model/test/Presentation.html">看报告</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="dohomeworkname fc49">周报</span>
+    </div>
+</div>
+<div class="Com_Main">
+    <div class="weekly">
+        <div class="weeklyname"></div>
+        <div class="wsubject">
+            <div class="weeklysubject">
+                <div class="weekly_subject">
+                    <span class="subjectname"></span>
+                    <span class="subline"></span>
+                </div>
+                <!--分析图-->
+                <div class="wclassfiy">
+                    <div class="wsubbg">
+                        <!--<span class="wprogess">-->
+                            <!--<span class="wprogerssname" title="60%" style="width: 60%;"></span>-->
+                            <!--<span class="wKnowledge">知识点1</span>-->
+                            <!--<span class="wtipic">第1、题</span>-->
+                        <!--</span>-->
+                    </div>
+                    <!--百分比-->
+                    <div class="wpresent">
+                        <span>0% 正确率</span>
+                        <span>25%</span>
+                        <span>50%</span>
+                        <span>75%</span>
+                        <span>100%</span>
+                    </div>
+                </div>
+                <div class="wtraining">
+                    <div class="wtrainingword">
+                        <!--<p class="wsubtraningname">本周语文共考察了5个知识点，其中：</p>-->
+                        <!--<p class="wsubtraningname">熟练掌握的知识点有：物理、语文语文、语文、语文</p>-->
+                        <!--<p class="wsubtraningname">急需加强的知识点有：语文、数学、语文、语文、语</p>-->
+                    </div>
+                    <div class="wsubstraningclick">
+                        <span class="wsubstraningclickword">补偿训练</span>
+                        <span class="wsubstraningclickmoney">5金币</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--空白页-->
+    <div class="nothing">
+        <img class="kolano" src="../../static/image/common/no.png" />
+    </div>
+</div>
+<div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+</body>
+<script>
+    GetHtml("../../model/common/Head.txt","#Com_Head");
+</script>
+<script src="../../static/javascript/test/weekly.js"></script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布置和打印</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/plugin/drags/drags.css">
+    <link rel="stylesheet" href="../../static/style/me/me.css">
+    <link rel="stylesheet" href="../../static/style/me/me_pubAndPrint.css">
+    <link rel="stylesheet" href="../../static/plugin/timepicker/jquery-ui.css">
+    <!--   <link rel="stylesheet" href="../../static/style/me/me_myNotebook.css">-->
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/plugin/Print/jquery.jqprint-0.3.js"></script>
+    <script src="../../static/plugin/Print/Migrate.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="m_paper"></div>
+    <div class="m_btnBox">
+        <span class="m_btn m_btnPublish">布置</span>
+        <span id="w_PrintBtn" class="m_btn m_btnLayout">打印</span>
+    </div>
+</div>
+
+<div class="m_publish">
+    <i class="spriteImg c_closeico fr c_closeimg0" id="c_closeG1"></i>
+    <p class="noAnalyze">无解析打印</p>
+    <p class="hasAnalyze">有解析打印</p>
+</div>
+<!-- 打印 -->
+<div style="display: none;">
+    <div id="w_Print">
+        <title>错题本</title>
+        <link rel="stylesheet" href="../../static/style/common.css">
+        <link rel="stylesheet" href="../../static/style/me/me_pubAndPrint.css">
+        <style>
+            .m_order{width:20px;height:5px;}
+        </style>
+        <div id="w_Print_Main"></div>
+    </div>
+</div>
+<script src="../../static/plugin/timepicker/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="../../static/plugin/timepicker/jquery.ui.datepicker-zh-CN.js"></script>
+<script src="../../static/plugin/timepicker/jquery-ui-timepicker-addon.js"></script>
+<script src="../../static/plugin/timepicker/jquery-ui-timepicker-zh-CN.js"></script>
+<script src="../../static/javascript/me/me_pubAndPrint.js"></script>
+<script src="../../static/javascript/me/h_publishwork_publish.js"></script>
+<!-- ↓latex公式解析↓ -->
+<script>
+    intMathJax();
+</script>
+</body>
+</html>

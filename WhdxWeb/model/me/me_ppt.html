@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>私人订制PPT</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/me/me.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div id="Header"></div>
+        <!--面包屑导航-->
+        <div class="c_Crumbs">
+            <div class="c_Crumbs_in">
+                <!--面包屑导航图标-->
+                <i class="spriteImg c_mico fl mt15"></i>
+                <!--面包屑导航-->
+                <ul class="c_Crum fl" id="c_Crum">
+                    <li><a href="../../model/index/indexX.html" class="fl fc65">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li><a href="me_index.html" class="fl fc65">个人中心</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li>私人订制PPT</li>
+                </ul>
+            </div>
+        </div>
+        <!--我的礼物内容区-->
+        <div class="c_Main">
+            <div class="m_PptMain">
+                <ul class="m_AdverList fl w100" id="m_AdverList">
+                    <li><img src="../../static/image/me/m_ad1ic1.png" alt="" class="w100 fl"></li>
+                    <li><img src="../../static/image/me/m_ad1ic2.png" alt="" class="w100 fl"></li>
+                    <li><img src="../../static/image/me/m_ad1ic3.png" alt="" class="w100 fl"></li>
+                    <li><img src="../../static/image/me/m_ad1ic4.png" alt="" class="w100 fl"></li>
+                    <li><img src="../../static/image/me/m_ad1ic5.png" alt="" class="w100 fl"></li>
+                </ul>
+                <div class="m_PptBox">
+                    <p class="m_ImgBox" id="m_Advert">
+                        <img src="../../static/image/me/m_ad1ic1.png" alt="" class="w100 fl " >
+                        <img src="../../static/image/me/m_ad1ic2.png" alt="" class="w100 fl dino" >
+                        <img src="../../static/image/me/m_ad1ic3.png" alt="" class="w100 fl dino" >
+                        <img src="../../static/image/me/m_ad1ic4.png" alt="" class="w100 fl dino" >
+                        <img src="../../static/image/me/m_ad1ic5.png" alt="" class="w100 fl dino" >
+                    </p>
+                    <div class="m_Order">
+                        <div class="m_OrderTop">
+                            <a href="me_paylog.html" class="fs14 fc58 fr ">购买记录</a>
+                            <p class="fs24 fc33 fl w100 tc mt35">售价：<em class="fn_ppt_price"></em>金币</p>
+                            <input type="button" value="立即订制" class="m_OrderBtn" id="m_OrderBtn" >
+                            <p class="w100 tc fl fn_rebate">
+                                <span class="fs14 fc33">您有<em class="fn_rebate_count"></em>张代金券，有效期至：<em class="fn_rebate_time"></em></span>
+                                <span class="fr fc58 fs14 cup" id="p_QuickUse">立即使用</span>
+                            </p>
+                        </div>
+                        <ul class="m_OrderLine">
+                            <li>支付成功，准备材料</li>
+                            <li><img src="../../static/image/me/goico.png" alt=""></li>
+                            <li>等待确认，发送材料</li>
+                            <li><img src="../../static/image/me/goico.png" alt=""></li>
+                            <li>制作完成，下载课件</li>
+                        </ul>
+                        <ul class="m_OrderLine0">
+                            <li><img src="../../static/image/me/p_pptico0.png" alt="">15764151078</li>
+                            <li><img src="../../static/image/me/p_ppt1.png" alt="">周一至周日 8:00—20:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--支付方式-->
+            <div class="Shade" id="m_PptPay">
+                <div class="m_PayMeth">
+                    <i class="spriteImg c_ruleico fr cup" id="m_PptPayClose"></i>
+                    <p class="m_PptCho ">
+                        <i class="spriteImg p_useico1 cup fl" id="m_UsePpt0"></i>
+                        <span>使用金币</span>
+                        <span><em class="fn_ppt_price"></em>金币</span>
+                    </p>
+                    <p class="m_PptCho mt50">
+                        <i class="spriteImg p_useico0 cup fl" id="m_UsePpt1"></i>
+                        <span>使用代金券</span>
+                        <span><em class="if_zero">1</em>张</span>
+                        <input id="fn_rebate_id" type="hidden" value="" />
+                    </p>
+                    <input type="button" class="m_PptChobtn bac65" value="确定" id="m_GO">
+                    <input type="button" class="m_PptChobtn bac99 ml30" value="取消" id="m_ChoCancel">
+                </div>
+            </div>
+            <!--余额不足-->
+            <div class="Shade"  id="m_PayMsg">
+                <div class="RechargeMsg">
+                    <i class="m_ClosPay" id="m_ClosPay"></i>
+                    <p class="m_PptMsg">
+                        <span class="fc33">金币不足,</span>
+                        <a href="me_pay.html" class="fcE6">请充值</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="m_UpBox" id="m_UpBox">
+            <div class="m_UpBoxMain fs18">
+                <i class="spriteImg c_ruleico c_rClose" id="c_rClose"></i>
+                <!--<p class="m_Uptitle"><span class="fc99">请您将制作材料发送到</span><span class="fcCA">wuhaoodaoxueyw@126.com</span></p>-->
+                <p class="m_UpIntro marg">我们怎样联系到您？</p>
+                <ul class="m_CallUser">
+                    <li>
+                        <span>手机：</span><input type="text" maxlength="11" id="m_PhoneTel"><span class="fcCA" id="m_PhoneTelError"></span>
+                    </li>
+                    <li>
+                        <span>QQ&nbsp;：</span><input id="QQ" type="text">
+                    </li>
+                    <li>
+                        <span>微信：</span><input id="weixin" type="text">
+                    </li>
+                </ul>
+                <p class="m_UpIntro">您对课件有什么明确要求？</p>
+                <div class="m_require">
+                    <textarea name="要求" class="m_TextIn" id="m_TextIn" cols="30" rows="10" maxlength="200" ></textarea>
+                    <p class="m_Font"><span id="m_Font">200</span>字</p>
+                </div>
+                <p class="m_GoOnBox ">
+                    <input type="button" class="m_GoOn" id="m_GoOn" value="确定">
+                </p>
+            </div>
+        </div>
+        <!--支付成功展示-->
+        <div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+    </div>
+
+</article>
+<script src="../../static/javascript/me/me_ppt.js"></script>
+</body>
+</html>

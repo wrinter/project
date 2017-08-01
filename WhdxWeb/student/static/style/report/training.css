@@ -1,0 +1,168 @@
+@media screen and (max-width: 1366px) {}
+@media screen and (min-width: 1366px) {}
+@media screen and (min-width: 1600px) {}
+/*公共样式*/
+.traning{
+    width:100%;
+    min-height: 750px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 40px;
+    overflow: hidden;
+    padding-bottom: 32px;
+}
+.traningpaper{
+    width:96%;
+    min-height: 200px;
+    padding: 0 2%;
+}
+.traningname{
+    width:100%;
+    text-align: center;
+    font-size: 24px!important;
+    margin-top: 50px!important;
+}
+/*遮罩层*/
+.shark,.sharks,.correct_shark,.correct_sharks{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+.sendpaper{
+    position: relative;
+    width:690px;
+    height:350px;
+    background: url("../../image/test/sendpaper.png") no-repeat;
+    top:50%;
+    left:50%;
+    margin-left: -345px;
+    margin-top: -175px;
+}
+/*批改*/
+.sendcorrect{
+    position: relative;
+    width:690px;
+    height:350px;
+    background: url("../../image/modetest/correct_goon.png") no-repeat;
+    top:50%;
+    left:50%;
+    margin-left: -345px;
+    margin-top: -175px;
+    /*display: none;*/
+}
+.model_paper_delete_correr,.model_paper_delete,.model_correct_delete,.model_correct_del{
+    display: inline-block;
+    width:35px;
+    height:35px;
+    position: absolute;
+    top:0;
+    right:40px;
+    cursor: pointer;
+}
+.model_paper_false_correr,.model_paper_false,.model_correct_false,.model_correct_fal{
+    display: inline-block;
+    width:192px;
+    height:45px;
+    position: absolute;
+    bottom:12px;
+    right:135px;
+    cursor: pointer;
+}
+
+.model_paper_success_correr,.model_paper_success,.model_correct_success,.model_correct_suc{
+    display: inline-block;
+    width:192px;
+    height:45px;
+    position: absolute;
+    bottom:12px;
+    left:140px;
+    cursor: pointer;
+}
+.trianingUp{
+    width:190px;
+    height:45px;
+    background: #49b9df;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10%!important;
+    margin-top: 20px!important;
+    cursor: pointer;
+}
+/*试卷样式*/
+.traningpaper img {
+    vertical-align: middle;
+}
+.s_input{
+    display: block;
+    width: 96%;
+    border: 1px solid #ccc;
+    outline: none;
+    height: 131px;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-indent: 5px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #666;
+    padding: 0 10px;
+}
+.questionanswer{
+    display: none;
+}
+.answer,.groundanswer,.questionanswer{
+    display: none;
+}
+.traningpaper{
+    font-size: 14px;
+    color: #333;
+}
+.traningpaper .questionTitle,.optionchoose {
+    margin-top: 5px;
+}
+.optionchoose{
+    cursor: pointer;
+}
+.questionTitle{
+    padding: 0 10px 10px;
+}
+.questionTitle:hover{
+
+    border-radius: 10px;
+}
+.contTitle,.traningpaper span ,.traningpaper p{
+    font-size: 16px!important;
+    margin-top: 5px!important;
+}
+.p1{font-size: 16px!important;line-height: 30px!important;color: #333;}
+/*空白页*/
+.nothing{
+    width:100%;
+    height:550px;
+    background: #fff;
+    border-radius: 10px;
+    margin:0 auto;
+    margin-top: 40px!important;
+    position: relative;
+    display: none;
+}
+.kolano{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -175px;
+    margin-top: -200px;
+}
+ .optionchoose:hover{
+    color: #0fa7db;
+}
+.trianingUp:hover{
+    background: #0fa7db;
+    color: #fff;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>五好导学_让学与教更简单</title>
+    <link href="static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="static/style/common.css">
+    <link rel="stylesheet" href="static/style/login1.3/loginanimate.css">
+    <link rel="stylesheet" href="static/style/login1.3/login1.3.css">
+    <link rel="stylesheet" href="static/style/login1.3/swiper.min.css">
+    <script src="static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="static/plugin/swiper/swiper-3.4.2.jquery.min.js"></script>
+    <script src="static/plugin/md5/md5.js"></script>
+    <script src="static/plugin/md5/jquery.base64.js"></script>
+    <script src="static/plugin/seo/seoKeys.js"></script>
+    <script src="static/javascript/common.js"></script>
+    <style id="NewStyle"></style>
+    <style id="NewStyle1"></style>
+</head>
+<body>
+<!--自定义分页器-->
+<ul class="Pagination" id="Pagination"></ul>
+<!--一楼内容-->
+<div class=" Pag OutSlide">
+    <!--导航-->
+    <div class="First_Nav">
+        <div class="First_NavBox">
+            <img src="../../static/image/login1.3/logo.png" alt="" class="First_Logo">
+            <p class="First_Dowload" id="First_Dowload">APP下载</p>
+        </div>
+    </div>
+    <!--轮播图-->
+    <div class="swiper-container LunPic" id="InMain">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide Banner0"></div>
+            <div class="swiper-slide Banner1"></div>
+        </div>
+        <div class="swiper-pagination LitterPage" id="LitterPage"></div>
+    </div>
+    <!--登录-->
+    <div class="w_LogInMain">
+        <div class="w_LogInBox">
+            <div class="w_Title">
+                <p class="w_Tixt">登录</p>
+                <a href="model/register1.4/register.html" class="w_RetBtn">注册</a>
+            </div>
+            <div class="w_PhoneBox">
+                <p class="w_ModelTxt">手机号</p>
+                <input type="text" class="w_ModelInput" maxlength="11" id="Phone">
+                <p class="w_ModelImg"><i class="loimg wroico" id="PhoneImg"></i></p>
+                <p class="w_ModelError" id="PhoneError"></p>
+            </div>
+            <div class="w_OtherBox">
+                <div class="w_ModelTxt">密码 <a href="model/foundpass1.3/foundpass.html" class="w_FogetPass">忘记密码？</a></div>
+                <input type="password" class="w_ModelInput" maxlength="16"  id="Pass">
+                <input type="password" style="width:0;height:0;float:left;visibility:hidden"/>
+                <p class="w_ModelImg"><i class="loimg riico" id="PassImg"></i></p>
+                <p class="w_ModelError" id="PassError"></p>
+            </div>
+            <div class="w_OtherBox dino" id="CodeMain">
+                <div class="w_ModelTxt">验证码</div>
+                <input type="text" class="w_ModelCode" maxlength="4" id="Code">
+                <div class="w_CodeBox"><img src="static/image/login1.3/deful.png" alt="" id="CodeImg"></div>
+                <p class="w_OtherCode" id="ChangeCode">看不清?换一张</p>
+                <p class="w_ModelError" id="CodeError"></p>
+            </div>
+            <p class="w_LogBtn" id="LoginBtn">登录</p>
+            <div class="w_RemBox">
+                <i class="loimg reico0" id="Remember"></i>
+                <span class="w_RemTxt">记住密码</span>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+</div>
+<!--二楼内容-->
+<div class="FloorMain Pag OutSlide2">
+    <img src="../../static/image/login1.3/fltxt2.png" alt="" class="Echo_Txt">
+    <div class="SecLeft SecMain" id="Echo_FLeft2">
+        <div class="SecImgBox">
+            <img src='../../static/image/login1.3/floorimg0.png' alt="">
+            <p class="SecMask">辅助教学</p>
+        </div>
+        <ul class="SecIntro">
+            <li>
+                <p class="Sec_Line">一键下载</p>
+                <p class="Sec_Con">精品的<span class="fc00c">视频</span>、<span class="fc00c">课件</span>、<span class="fc00c">典例</span>、<span class="fc00c">教案</span>等备课资源一键下载，让教学更高效</p>
+            </li>
+            <li>
+                <p class="Sec_Line">一键布置</p>
+                <p class="Sec_Con">分层作业<span class="fc00c">一键布置</span>、<span class="fc00c">智能批改</span>，让教学更简单</p>
+            </li>
+        </ul>
+    </div>
+    <div class="SecRight SecMain" id="Echo_FRight2">
+        <div class="SecImgBox">
+            <img src='../../static/image/login1.3/floorimg1.jpg' alt="">
+            <p class="SecMask">翻转学习</p>
+        </div>
+        <ul class="SecIntro">
+            <li>
+                <p class="Sec_Line">先学后教</p>
+                <p class="Sec_Con"><span class="fc00c">国家级视频课</span>配套导学案，在这里实现先学后教，让教学更丰富</p>
+            </li>
+            <li>
+                <p class="Sec_Line">问题先行</p>
+                <p class="Sec_Con">即时交互，问题先行，教师走下讲台变为教练,轻松实现<span class="fc00c">个性化教学</span></p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--三楼内容-->
+<div class="FloorMain Pag OutSlide3" id="OutSlide3" >
+    <img src="../../static/image/login1.3/fltxt3.png" alt="" class="Echo_Txt">
+    <div class="ThreeMain">
+        <ul class="ThreeTab">
+            <li><p class="ThisTab" data-Num="0">老师</p></li>
+            <li><p data-Num="1">学生</p></li>
+        </ul>
+        <div id="TeacherTab">
+            <ul class="ThreeRound" id="Round">
+                <li class="Circle"><img src="../../static/image/login1.3/round1.png" alt="" class="RunPic"><p class="TeachInTro">高效备课</p></li>
+                <li class="Circle"><img src="../../static/image/login1.3/round2.png" alt="" class="RunPic"><p class="TeachInTro">个性讲学</p></li>
+                <li class="Circle"><img src="../../static/image/login1.3/round3.png" alt="" class="RunPic"><p class="TeachInTro">一键布置</p></li>
+                <li class="Circle"><img src="../../static/image/login1.3/round4.png" alt="" class="RunPic"><p class="TeachInTro">智能批改</p></li>
+                <li class="Circle"><img src="../../static/image/login1.3/round5.png" alt="" class="RunPic"><p class="TeachInTro">前沿素材</p></li>
+                <li class="TeacherCicle"></li>
+                <li></li>
+            </ul>
+            <div class="ThreeInTro" id="ThreeInTro">
+                <img src="../../static/image/login1.3/toline.png" alt="" class="ToLine">
+                <div class="ThreeInTroBox">
+                    <p class="ThreeInTroNum">
+                        <span id="IntroNum">1</span>
+                        <img src="../../static/image/login1.3/xline.png" alt="" class="Xline">
+                    </p>
+                    <div class="ThreeInTxt">
+                        <p class="ThreeInTitle" id="ThreeInTitle">高效备课</p>
+                        <p class="ThreeSubhead" id="ThreeSubhead">为您推荐优质课件、微课、教案、典例、试题等，一键下载，备课不愁找资源</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="StuTab" class="dino" >
+            <ul class="ThreeRound1" id="Round1">
+                <li class="Circle1"><img src="../../static/image/login1.3/stu1.png" alt="" class="RunPic1"><p class="TeachInTro1">即时反馈</p></li>
+                <li class="Circle1"><img src="../../static/image/login1.3/stu2.png" alt="" class="RunPic1"><p class="TeachInTro1">翻转学习</p></li>
+                <li class="Circle1"><img src="../../static/image/login1.3/stu3.png" alt="" class="RunPic1"><p class="TeachInTro1">构建图谱</p></li>
+                <li class="Circle1"><img src="../../static/image/login1.3/stu4.png" alt="" class="RunPic1"><p class="TeachInTro1">名师助考</p></li>
+                <li class="Circle1"><img src="../../static/image/login1.3/stu5.png" alt="" class="RunPic1"><p class="TeachInTro1">补偿训练</p></li>
+                <li class="StuCicle"></li>
+                <li></li>
+            </ul>
+            <div class="ThreeInTro1" id="ThreeInTro1">
+                <div class="ThreeInTroBox1">
+                    <p class="ThreeInTroNum1">
+                        <span id="StuIntroNum">1</span>
+                        <img src="../../static/image/login1.3/xline.png" alt="" class="Xline1">
+                    </p>
+                    <div class="ThreeInTxt">
+                        <p class="ThreeInTitle1" id="StuInTitle">即时反馈</p>
+                        <p class="ThreeSubhead1" id="StuSubhead">我的训练智能批改，提交即时有反馈</p>
+                    </div>
+                </div>
+                <img src="../../static/image/login1.3/line0.png" alt="" class="ToLine1">
+            </div>
+        </div>
+    </div>
+</div>
+<!--四楼内容-->
+<div class="FloorMain Pag OutSlide4">
+    <img src="../../static/image/login1.3/fltxt4.png" alt="" class="Echo_Txt">
+    <div class="FourMain">
+        <div class="Phone">
+            <div class="PhoneBox">
+                <div class="swiper-container" id="PhoneBox">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../../static/image/login1.3/phonecon.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="../../static/image/login1.3/phonecon.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="../../static/image/login1.3/phonecon.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="../../static/image/login1.3/down.png" class="DownBox" alt="">
+        <img src="../../static/image/login1.3/hand.png" alt="" class="Hander" id="Hander">
+    </div>
+    <div class="Com_Footer">
+        <div class="FooterCon">
+            <div class="FooterLeft">
+                <ul class="FooterNav">
+                    <!--<li><a href="">关于我们</a></li>-->
+                    <!--<li><a href="">企业合作</a></li>-->
+                    <!--<li><a href="">校园合作</a></li>-->
+                    <!--<li><a href="">加入我们</a></li>-->
+                    <!--<li><a href="">帮助中心</a></li>-->
+                    <!--<li><a href="">意见反馈</a></li>-->
+                </ul>
+                <p class="Copyright">Copyright ©2017 山东百川图书有限公司  All Rights Reserved. 鲁ICP备16038439号-2</p>
+            </div>
+            <div class="FooterRight">
+                <ul class="FooterIcoBox">
+                   <li class="cup">
+                       <html xmlns:wb="http://open.weibo.com/wb"></html>
+                       <wb:follow-button uid="6159972840" type="red_1" width="67" height="24" class="Weibofocus"></wb:follow-button>
+                       <img src="static/image/com/weibo.png" alt="">
+                   </li>
+                   <li class="cup">
+                       <img src="static/image/com/weixin.png" alt="" class="Footer_Weixin">
+                       <img src="static/image/com/weicode.png" alt="" class="Footer_Weicode">
+                   </li>
+                   <li><a href="https://tieba.baidu.com/f?kw=%E4%BA%94%E5%A5%BD%E5%AF%BC%E5%AD%A6&fr=wwwt" target="_blank"><img src="static/image/com/tieba.png" alt=""></a></li>
+                   <li><img src="static/image/com/qq.png" alt=""></li>
+                </ul>
+                <ul class="FooterInfo">
+                    <li>客服QQ：3582840438</li>
+                    <li>教师招募群：248247263</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+<script src="static/javascript/About1.2/bottom_Login.js"></script>
+<script src="static/javascript/login1.3/LogIn.js"></script>
+<script src="static/javascript/login1.3/loginanimate.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学业模考--继续做题</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/studies/studies_Continue.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/plugin/md5/md5.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+</head>
+<body>
+<div class="s_studies_paper">
+    <div class="s_inxnav">
+        <div id="Header"></div>
+        <!--面包屑导航-->
+        <div class="c_Crumbs">
+            <div class="c_Crumbs_in">
+                <!--面包屑导航图标-->
+                <i class="spriteImg c_mico fl mt15"></i>
+                <!--面包屑导航-->
+                <ul class="c_Crum fl" id="c_Crum1">
+                    <!--有链接-->
+                    <li><a href="../../model/index/indexX.html" class="fl fc65">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li><a href="../../model/studies/studies_index.html" class="fl fc65">学业模考</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li class="tudies_papername">继续做题</li>
+                    <!--无链接-->
+                    <!--<li><a href="#" class="fl fc65">个人中心</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="s_paper">
+        <div class="s_paper_title">
+            <span class="s_paper_titlecl fs24"></span>
+        </div>
+        <div class="s_paper_test">
+            <!--试卷放置处-->
+            <div class="s_paper_paper">
+                <div class="s_paper_oder fs18"><span class="s_paper_oderw"></span><span class="s_paper_oder_score"></span></div>
+                <div class="s_paper_oder s_paper_use fs18"><span class="s_paper_oderuse"></span><span class="s_paper_oder_getscore"></span></div>
+                <div class="s_paper_test_con p1">
+                    <!--试卷内容区-->
+                </div>
+            </div>
+            <div class="s_paper_btn">
+                <div class="s_paper_btton">提交</div>
+                <div class="s_paper_correct_btn">批改完了</div>
+            </div>
+            <!--<div class="s_paper_correct">-->
+            <!--<div class="s_paper_correct_btn">提交</div>-->
+            <!--</div>-->
+            <!--<div class="correct">-->
+            <!--<img class="s_corimg" src="../../static/image/studies/s_no.png"/>-->
+            <!--<img class="s_corimg" src="../../static/image/studies/right.png" />-->
+            <!--<img class="s_corimg" src="../../static/image/studies/s_no.png"/>-->
+            <!--<img class="s_corimg" src="../../static/image/studies/s_wrong_right.png" />-->
+            <!--<img class="s_corimg" src="../../static/image/studies/s_right.png"/>-->
+            <!--<img class="s_corimg" src="../../static/image/studies/wrong.png" />-->
+            <!--</div>-->
+            <!--<div class="s_score">-->
+            <!--<span class="s_clickscorereduce">-</span>-->
+            <!--<span class="s_clickstorgenum">0</span>-->
+            <!--<span class="s_clickscoreplus">+</span>-->
+            <!--<span class="s_clickmust">确定</span>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <!--空白页-->
+    <div class="nothing">
+        <img class="kolano" src="../../static/image/kola/no.png" />
+    </div>
+</div>
+<img class="back_top" src="../../static/image/studies/back_top.png" /> <!--返回顶部-->
+<!--遮罩层-->
+<div class="s_paper_shark">
+    <!--提交-->
+    <div class="s_paper_no">
+        <span class="s_paper_delete"></span>
+        <span class="s_paper_success"></span>
+        <span class="s_paper_false"></span>
+    </div>
+</div>
+<div class="s_shark_paper">
+    <!--批改-->
+    <div class="s_correct">
+        <span class="s_paper_delete_correr"></span>
+        <span class="s_paper_success_correr"></span>
+        <span class="s_paper_false_correr"></span>
+    </div>
+</div>
+<!--提交成功-->
+<div class="s_paper_word">提交成功!</div>
+<div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+<script src="../../static/javascript/studies/studies_Continue.js"></script>
+</body>
+</html>

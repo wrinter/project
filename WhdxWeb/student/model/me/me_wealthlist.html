@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>金币记录</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/me/me_wealthlist.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/plugin/paper/kkpager.js"></script>
+    <link rel="stylesheet" href="../../static/plugin/paper/kkpager_orange.css">
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a href="me_index.html">个人中心</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="fl fc49">金币记录</span>
+    </div>
+</div>
+<!--内容区-->
+<div class="Com_Main">
+    <div class="m_ConListMain">
+        <div  class="m_ConListHeader">
+            <p class="m_ConListTit"><span class="fl" >我的金币：</span><span class="fl" id="m_wealth">0</span><img src="../../static/image/me/m_wealthico.png" alt="" class="m_wealthico"></p>
+            <p class="m_ConListTitle">金币记录</p>
+        </div>
+        <ul class="m_ConTitle">
+            <li>时间</li>
+            <li>来源</li>
+            <li>金币值</li>
+            <li>备注</li>
+        </ul>
+        <ul class="m_ConList" id="m_ConList"></ul>
+        <img src="../../static/image/me/none.png" class="m_Nolist dino" id="m_Nolist" alt="">
+    </div>
+    <div class="Paging">
+        <div id="kkpager"></div>
+    </div>
+
+</div>
+
+<script src="../../static/javascript/me/me_wealthlist.js"></script>
+</body>
+</html>

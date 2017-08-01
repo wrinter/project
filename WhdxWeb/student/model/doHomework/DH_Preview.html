@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>写作业——预习测试</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/iconfont.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/doHomework/DH_Preview.css">
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a href="../../../student/model/doHomework/DH_Presentation.html">写作业</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="dohomeworkname fc49"></span>
+    </div>
+</div>
+<div class="Com_Main">
+    <div class="test_Previewpaper">
+        <div class="test_Previewname"></div>
+        <div class="test_Previewposition">
+            <!--<div class="test_Previewpositionclass">班级目标</div>-->
+            <div class="test_Previewpositionpaper">
+                <!--试卷存放处-->
+            </div>
+        </div>
+    </div>
+    <!--空白页-->
+    <div class="nothing">
+        <img class="kolano" src="../../static/image/common/no.png" />
+    </div>
+</div>
+<div class="task_shark">
+    <div class="task_class">
+        <i class="iconfont task_delete" >&#xe69a;</i>
+        <div class="task_target">班级目标</div>
+        <div class="task_portrait">
+            <dl class="task_meimg">
+                <dt class="task_me"></dt>
+                <dd class="task_mename">我</dd>
+                <!--皇冠-->
+                <img class="peom" src="../../static/image/test/peom.png" />
+                <img class="task_pk" src="../../static/image/test/task_pk.png" />
+                <img class="task_blance" src="../../static/image/test/task_blance.png" />
+                <img class="task_nodo" src="../../static/image/test/nodo.png" />
+                <img class="task_wait_correct" src="../../static/image/test/wait_correct.png" />
+            </dl>
+            <img class="task_vsimg" src="../../static/image/test/task_vs.png" />
+            <dl class="task_uimg">
+                <dt class="task_u"></dt>
+                <dd class="task_uname"></dd>
+                <!--皇冠-->
+                <img class="peom" src="../../static/image/test/peom.png" />
+                <img class="task_pk" src="../../static/image/test/task_pk.png" />
+                <img class="task_blance" src="../../static/image/test/task_blance.png" />
+                <img class="task_nodo" src="../../static/image/test/nodo.png" />
+                <img class="task_wait_correct" src="../../static/image/test/wait_correct.png" />
+            </dl>
+        </div>
+        <div class="task_rate">
+            <span class="task_merate">--</span>
+            <span class="task_merateword">正确率</span>
+            <span class="task_urate">--</span>
+        </div>
+        <div class="task_umtime">
+            <span class="task_metime">
+                <span id="task_metimehh"></span>:
+                <span id="task_metimemm"></span>:
+                <span id="task_metimess"></span>
+            </span>
+            <span class="task_metimeword">用时</span>
+            <span class="task_utime">
+                <span id="task_utimehh"></span>:
+                <span id="task_utimemm"></span>:
+                <span id="task_utimess"></span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+</body>
+<script>
+    GetHtml("../../model/common/Head.txt","#Com_Head");
+</script>
+<script src="../../static/javascript/doHomework/DH_Preview.js"></script>
+</html>

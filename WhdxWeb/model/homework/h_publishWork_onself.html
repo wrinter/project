@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布置作业-自主组卷</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/homework/homework.css">
+    <link rel="stylesheet" href="../../static/style/workpaper/kkpager_orange.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/plugin/paper/kkpager_work.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div id="Header"></div>
+        <!--面包屑导航-->
+        <div class="c_Crumbs">
+            <div class="c_Crumbs_in">
+                <!--面包屑导航图标-->
+                <i class="spriteImg c_mico fl mt15"></i>
+                <!--面包屑导航-->
+                <ul class="c_Crum fl" id="c_Crum">
+                    <li><a href="../../model/index/indexX.html" class="fl">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li><a href="../../model/homework/h_publishWork.html" class="fl">布置作业</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li class="fc65"><span id="paperTitle"></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="h_p_Main ">
+            <!-- 布置作业-自主组卷 -->
+            <div class="edit">
+                <div class="edit_btn">
+                <span>
+                    <!--<input class="edit_btn_statistics" type="button" value="命题报告">-->
+                    <input class="edit_btn_done" type="button" value="完成">
+                </span>
+                    <div class="clear"></div>
+                </div>
+                <div class="edit_Box">
+                    <!-- 左边 -->
+                    <div class="edit_Box_source">
+                        <div class="source_title">
+                            <span class="source_title_btn on" id="source_title_btn">折叠</span>
+                            <h2>题库</h2>
+                        </div>
+                        <div class="source_txtes">
+
+                        </div>
+                        <div class="my_kkpager"><div id="kkpager"></div></div>
+                    </div>
+                    <!-- 右边 -->
+                    <div class="edit_Box_work">
+                        <div class="work_txtes"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 布置作业-自主组题结束 -->
+        </div>
+    </div>
+</article>
+<script src="../../static/plugin/BCScript/BC_statistics.js"></script>
+<script src="../../static/plugin/BCScript/h_publish_dataSet.js"></script>
+<script src="../../static/plugin/BCScript/h_publish_eo.js"></script>
+<script src="../../static/plugin/BCScript/h_publish_error.js"></script>
+<script src="../../static/plugin/BCScript/h_publish_inputCheck.js"></script>
+<script src="../../static/plugin/jquery-ui.1.10.4.min.js"></script>
+<script src="../../static/javascript/homework/h_publishwork_eo.js"></script>
+<script src="../../static/javascript/homework/h_publishwork_onself.js"></script>
+</body>
+</html>

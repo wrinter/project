@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投稿</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/me/me_contribute.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <!--[if lt IE 8]><script src="../../static/plugin/webUploader/json3.min.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="../../static/plugin/webUploader/es5.js"></script><![endif]-->
+    <!--[if lt IE 10]><script src="../../static/plugin/webUploader/moxie.js"></script><![endif]-->
+    <script src="../../static/plugin/webUploader/bce-bos-uploader.bundle.js"></script>
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a href="me_index.html">个人中心</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="fl fc49" id="m_ClassName">投稿</span>
+    </div>
+</div>
+<!--内容区-->
+<div class="Com_Main">
+    <div class="m_UpBtnBox"><a href="me_conlist.html" class="m_UpListBtn ">上传列表</a></div>
+    <ul class="m_UpAttr">
+        <!--课堂笔记-->
+        <li><p class="m_UpBtn" data-name="课堂笔记" data-type="21"><img src="../../static/image/me/c_yunico.png" alt="">上传</p></li>
+        <!--知识总结-->
+        <li><p class="m_UpBtn" data-name="知识总结" data-type="22"><img src="../../static/image/me/c_yunico.png" alt="">上传</p></li>
+        <!--学习方法-->
+        <li><p class="m_UpBtn" data-name="学习方法" data-type="23"><img src="../../static/image/me/c_yunico.png" alt="">上传</p></li>
+        <!--作文-->
+        <li><p class="m_UpBtn" data-name="作文" data-type="24"><img src="../../static/image/me/c_yunico.png" alt="">上传</p></li>
+        <!--DIY视频-->
+        <li><p class="m_UpBtn" data-name="DIY视频" data-type="25"><img src="../../static/image/me/c_yunico.png" alt="">上传</p></li>
+    </ul>
+    <div class="m_Notic">
+        <img src="../../static/image/me/m_noticimg.png" alt="">
+        <p>1.上传文件若有侵权内容，经审核确认后，将会被移除。</p>
+        <p>2.为营造绿色网络环境，严禁上传含有淫秽色情及低俗信息的文件，让我们一起携手共同打造健康网络环境。</p>
+    </div>
+</div>
+<div class="m_Mask dino" id="m_UpMain">
+    <div class="m_UpMain">
+        <img src="../../static/image/common/c_ruleico.png" alt=""  class="m_SeacherClose" id="m_SeacherClose">
+        <!--上传-->
+        <div class="m_UpLineBox">
+            <span class="m_MustIco">*</span>
+            <div class="m_FileBtnMain " id="m_FileBox">
+                <div class="m_FileBox">
+                    <input type="file"  id="file"  class="m_Fileinput" value="" >
+                    <span class="m_FileBtn">+选择文件</span>
+                </div>
+                <span class="m_FileSizeTxt">试题、课件不大于20M，音频、视频和其他不大于200M。</span>
+                <span class="m_UpErrorTxt dino" id="m_NoFileErrorTxt">请选择上传文件</span>
+            </div>
+            <div class="m_FileCon dino" id="m_FileCon">
+                <div class="m_FileNameBox">
+                    <img src="../../static/image/me/m_wjico.png" alt="" class="m_Fileico0">
+                    <span>第一单元测试.doc</span>
+                </div>
+                <img src="../../static/image/me/m_resetico.png" alt="" class="m_Resetico">
+                <img src="../../static/image/me/m_delico.png" alt="" class="m_Delico">
+            </div>
+        </div>
+        <!--学科-->
+        <div class="m_UpLineBox">
+            <span class="m_MustIco">*</span>
+            <span class="m_SelectName">学科：</span>
+            <div class="m_SelectBox">
+                <span class="m_SelectShow" id="Sub">请选择学科</span>
+                <span class="ArrowsFont m_Downico">&#xe665;</span>
+                <!--学科列表-->
+                <ul class="m_SelectList dino" id="m_SubList"></ul>
+            </div>
+        </div>
+        <!--教材-->
+        <div class="m_UpLineBox">
+            <span class="m_MustIco">*</span>
+            <span class="m_SelectName">教材：</span>
+            <div class="m_SelectBox">
+                <span class="m_SelectShow" id="Material">请先选择学科</span>
+                <span class="ArrowsFont m_Downico">&#xe665;</span>
+                <!--创建教材-->
+                <ul class="m_SelectList dino" id="MaterialList"></ul>
+            </div>
+        </div>
+        <!--标题-->
+        <div class="m_UpLineBox">
+            <span class="m_MustIco">*</span>
+            <span class="m_SelectName">标题：</span>
+            <input type="text" placeholder="请输入标题" class="m_FileTitle" id="m_FileTitle" maxlength="50">
+            <span class="m_UpErrorTxt dino" id="m_UpErrorTxt">无名氏禁止通过</span>
+        </div>
+        <!--简介-->
+        <div class="m_UpLineBox">
+            <span class="m_SelectName0">简介：</span>
+            <div class="m_IntroBox">
+                <textarea class="m_Intro" id="m_Intro" maxlength="200" placeholder="听说，隔壁班小明写了清晰的内容简介，审核就通过了。"></textarea>
+                <span class="m_IntroTxt">200字</span>
+            </div>
+        </div>
+        <!--上传-->
+        <p class="m_SubMitBtn0" id="m_SubMitBtn">提交</p>
+    </div>
+</div>
+<div class="m_Mask dino" id="m_ProUpPro">
+    <!--进度条-->
+    <div class="m_ProUpPro">
+        <div class="m_ProUpProgress" id="m_ProUpProgress">
+            <div class="m_ProUpProIn" id="m_ProUpProIn"></div>
+            <div class="m_ProNumber" id="m_ProNumber">0%</div>
+        </div>
+        <div class="m_ProTxt">上传中...</div>
+    </div>
+</div>
+<script src="../../static/javascript/me/me_contribute.js"></script>
+</body>
+</html>

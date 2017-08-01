@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>视频播放</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/prepare/prepare_video_prepareVideoPlay.css">
+    <link rel="stylesheet" href="../../static/style/prepare/prepare_video_videoPlay_prepareTest.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div class="Com_Header" id="Com_Head"></div>
+        <!--首页内容区-->
+        <div class="Com_Crumbs">
+            <div class="Com_Crumbs_in">
+                <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+                <a href="../../../student/model/index/index.html">首页</a>
+                <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+
+                <a href="prepare_video.html">看视频</a>
+                <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+                <span id="the_end" class="fl fc49">视频播放</span>
+            </div>
+        </div>
+        <div class="Com_Main ">
+            <div class="prepareVideoBox">
+               <p class="prepareVideoName"></p>
+                <div class="prepareVideo"></div>
+                <div class="functions">
+                    <span class="pageViews">浏览量</span><span class="pageViewsNum">(0)</span>
+                    <span class="agree p_spriteImg p_Praiseico cup"></span><span class="agreeNum">(0)</span>
+                    <span class="enjoys p_spriteImg p_shareico cup"></span><span class="nbsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class='prepareTest'></span>
+                </div>
+                <div class="functions_share">
+                    <span class="pageViews">浏览量</span><span class="pageViewsNum">(0)</span>
+                </div>
+                <!--<div class="paperBase"></div>-->
+            </div>
+            <!--分享-->
+            <div class="Share" id="Share">
+                <i class="spriteImg c_ruleico fr cup" id="ShareClose"></i>
+                <h1 class="ShareTitle">分享给好友</h1>
+                <!--<div class="jiathis_style_32x32">-->
+                    <!--<a class="jiathis_button_cqq"></a>-->
+                    <!--<a class="jiathis_button_qzone"></a>-->
+                    <!--<a class="jiathis_button_tsina"></a>-->
+                    <!--<a class="jiathis_button_weixin"></a>-->
+                <!--</div>-->
+                <div class="bdsharebuttonbox" data-tag="share_1">
+                    <a class="bds_sqq" data-cmd="sqq"></a>
+                    <a class="bds_qzone" data-cmd="qzone" ></a>
+                    <a class="bds_tsina" data-cmd="tsina"></a>
+                    <a class="bds_weixin" data-cmd="weixin"></a>
+                </div>
+            </div>
+        </div>
+        <div class="shark">
+            <div class="sendpaper">
+                <span class="model_paper_delete_correr"></span>
+                <span class="model_paper_false_correr"></span>
+                <span class="model_paper_success_correr"></span>
+            </div>
+        </div>
+    </div>
+</article>
+<script>
+    GetHtml("../../model/common/Head.txt","#Com_Head");
+</script>
+<script src="../../static/javascript/prepare/prepare_video_prepareVideoPlay.js"></script>
+<!--<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>-->
+</body>
+</html>

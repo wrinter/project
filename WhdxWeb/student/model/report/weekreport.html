@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>看报告——周报</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../static/style/report/reportCommon.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/style/report/weekreport.css" />
+    <script src="../../static/plugin/echarts.js"></script>
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a  href="../../../student/model/report/reportlist.html">看报告</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="fl">作业周报</span>
+    </div>
+</div>
+<!--内容区-->
+<div class="Com_Main">
+    <div class="r_Main">
+        <div class="r_wTitle"></div>
+        <ul class="r_subject"></ul>
+        <div class="r_kanalyze">数据分析</div>
+        <div class="r_wanalyze">
+            <div id="r_echarts"></div>
+            <div class="clearfix r_container">
+                <div class="r_pcircle">
+                    <div class="pie_left"><div class="left"></div></div>
+                    <div class="pie_right"><div class="right"></div></div>
+                    <div class="r_mask">
+                        <span class="r_score"></span><span class="r_fen">%</span>
+                        <span class="r_fullscore">平均正确率</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="r_kanalyze">知识点分析</div>
+        <div class="r_wkownledge">
+            <div id="r_table" class="r_table">
+            </div>
+            <div class="r_train">
+                <span class="r_ttitle">大数据+人工智能帮助你提升成绩</span>
+                <ul class="r_trainli">
+                    <li>大数据诊断系统根据本周作业情况，准确定位出薄弱知识点；人工智能系统制定出专属</li>
+                    <li>的补偿训练；通过做补偿训练，可以快速、针对性地强化薄弱知识点，实现成绩提升。</li>
+                </ul>
+                <span class="r_compensate">补偿训练</span>
+                <span class="r_need"></span><span class="r_money"></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../static/javascript/report/weekreport.js"></script>
+<script src="../../static/javascript/report/reportCommon.js"></script>
+</html>

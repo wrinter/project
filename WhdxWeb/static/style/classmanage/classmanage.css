@@ -1,0 +1,78 @@
+/*****************************无班级、有班级**********************************/
+.c_Bg{background: url("../../../static/image/classmanage/c_BgImg0.png") 0 0 repeat;background-size: 100%;height: 100%; position: fixed;overflow: hidden;top: 100px;left: 0;}
+.c_content{width: 1200px; margin: 0 auto;clear: both;text-align: center;position: relative;}
+.c_AddBtn{width: 210px;cursor: pointer; height:60px;border: 0;outline: none;text-align: center;line-height: 60px;color: white;border-radius: 10px;float: left;}
+.m45{margin: 45px 0 0 5px;}
+.dino{display: none;}
+.c_sender:hover{text-decoration: underline; text-underline:#CA0D0D;}
+.c_AddClass li{float: left;width: 505px;height: 300px;margin:25px 50px;position: relative; border-radius: 10px;background: white; box-shadow: 2px 2px 2px #9F9F9F;}
+.c_AddClass li:nth-child(2n+1){margin-left: 20px;}
+.c_UserPhoto{width: 115px;height: 115px;box-sizing: border-box;border: 1px solid #CCCCCC;overflow: hidden;border-radius: 100%;position: absolute;top: -30px;left: 25px;}
+.c_UserName{width: 115px;position: absolute;top: 100px;left: 25px;text-align: center;font-size: 24px;}
+.c_Grade{line-height: 110px;width: 100%;text-align: center;font-size: 24px;}
+.c_Student{font-size: 18px;width: 100%;text-align: center;line-height: 30px;}
+.c_InBtn{width: 150px;height: 45px;background: white;border: 1px solid #65B113; line-height: 45px;text-align: center;font-size: 18px;box-sizing: border-box;border-radius: 10px;outline: none;}
+.c_WaitBtn{width: 150px;height: 45px;background: white;border: 1px solid #65B113; line-height: 45px;text-align: center;font-size: 18px;box-sizing: border-box;border-radius: 10px;outline: none;}
+.borc65{border-color: #65B113;}
+.borcCC{border-color: #CCC;}
+.mt55{margin-top:55px;}
+/*****************************班级管理**********************************/
+.c_SearchC{width: 103%; overflow: scroll;top: 0; height: 100%;display: none; position: fixed;z-index: 999999999; background: black;background: rgba(0,0,0,0.5);}
+.c_SearchCase{position: relative;top:280px;left: 0;right: 0;margin: 0 auto;clear: both; width: 960px;min-height: 260px;background: #ECEDF0;box-sizing: border-box;border-radius: 10px;border: 2px solid #58C1E4;}
+.c_SearchImg{position: absolute;top: -27px;right: 190px;}
+.c_closeimg{margin:8px 23px 0 0; cursor: pointer;}
+.c_InBtn:hover{background: #65B113;color: white!important;}
+.c_SearchX{width: 530px;height: 60px;clear: both;margin: 0 auto; box-sizing: border-box;background: white;border-radius:10px;}
+.c_SearchError{width: 530px;display: none; height: 60px; clear: both;margin: 0 auto;line-height: 60px;color:  #CA0D0D; box-sizing: border-box;}
+.c_SeaBox{width: 350px;height: 60px;outline: none;border: 0; font-size: 18px;padding-left: 20px;box-sizing: border-box;line-height: 60px;border-radius: 10px;}
+.c_SbtnX{width: 120px;height: 60px;float: right;background: #CCC;cursor: pointer;border-radius: 0 10px 10px 0;}
+.c_seaimg{margin: 9px 0 0 37px;}
+.c_SearchClass {width: 505px;height: 300px;margin:60px auto 95px auto;clear: both; position: relative; border-radius: 10px;background: white; box-shadow: 2px 2px 2px #9F9F9F;}
+.c_SeBtn{width: 150px;height: 45px;background: white;color: #58C1E4; border: 1px solid #58C1E4;display: block;margin: 50px auto 0 auto; line-height: 45px;text-align: center;font-size: 18px;box-sizing: border-box;border-radius: 10px;outline: none;}
+.c_SeBtn:hover{background: #58C1E4;color: white;}
+.c_CreatGrade{width: 1200px;min-height: 610px;box-sizing: border-box;padding: 50px 115px; background: white;position: relative;top:160px;left: 0;right: 0;margin: 0 auto;overflow: hidden;}
+.c_ClasslTab{width: 920px;overflow: hidden;margin: 0 auto;}
+.c_TabT{float: left;width: 100%;position: relative;}
+.c_TabT li{float: left;cursor: pointer; width: 290px;color: #666; height: 60px;background: #F6F6F6;line-height: 40px; border-radius: 10px 10px 0 0;position: relative;z-index: 4;top: 20px; border: 1px solid #CCC;border-bottom: 0; margin-right: 22px; font-size: 20px;text-align: center;}
+.c_TabT li:nth-child(1){z-index: 6;font-size: 24px;color:#58C1E4; line-height: 60px; background: #EFFAFD;border: 1px solid #58C1E4;border-bottom: 0;top: 10px;}
+.c_TabT li:last-child{margin-right: 0;}
+.c_TabMain{width: 100%;min-height: 230px;position: relative;z-index: 5; box-sizing: border-box;background: #EFFAFD;border: 1px solid #58C1E4;float: left;border-radius: 10px;}
+.c_space0{width: 292px;height: 9px;position: absolute;bottom: 0;left: 0;background:#EFFAFD }
+.c_space1{width: 292px;height: 9px;position: absolute;bottom: 0;left: -1px;background:#EFFAFD }
+.c_space2{width: 291px;height: 9px;position: absolute;bottom: 0;left: -1px;background:#EFFAFD }
+.c_ClassChoice{float: left;width: 100%;padding-left: 20px;box-sizing: border-box;}
+.c_ClassChoice li{width: 100px;float: left;margin: 40px 0 0 10px;height: 30px;line-height: 30px;font-size: 18px;color: #333;position: relative}
+.dischoice{position: absolute;top: 0;left: 0; width: 100%;height: 100%;background: rgba(0,0,0,0);float: left;z-index: 1000;}
+.s_Choimg{margin: 3px 7px 0 0 ;cursor: pointer;}
+.c_More{height: 30px;cursor:pointer;line-height:30px;float: right;margin:30px 20px 20px 0;}
+.c_m8005{margin: 8px 0 0 5px;}
+.c_SchoolHas{width: 980px;overflow: hidden; margin:0 auto 50px auto;}
+.c_GradeList{width: 100%;float: left;}
+.c_GradeList li{position: relative; width: 120px;height: 45px;margin:15px 45px 0 0;font-size: 18px;border: 1px solid #CCC;box-sizing: border-box;border-radius: 10px; color: #666;line-height: 45px;text-align: center; float: left;}
+.c_DelImg{float: left;position: absolute;top: 0;right: 0;cursor: pointer;}
+.c_CreatSChool input,.c_CreatGrade input{width: 245px;height: 50px;cursor: pointer; outline: none;border: 0;margin-bottom: 50px;line-height: 50px;text-align: center;font-size: 24px;color: #FFF;border-radius: 10px;}
+.c_CreatEnsure{background: #58C1E4;float: left; margin-right: 85px;margin-left: 200px;}
+.c_CreatCancel{background: #999;float: left;}
+.c_closeimg0{float: left;position: absolute;top: 20px;right: 20px;cursor: pointer;}
+.c_Invited{width: 985px;height: 565px;box-sizing: border-box;padding-right: 35px ;padding-left: 340px; background: url("../../../static/image/classmanage/c_invitateicoX.png")0 0 no-repeat;position: relative;top:160px;left: 0;right: 0;margin: 0 auto;overflow: hidden;}
+.c_InvitedMsg{width:590px;height: 140px;float: right;font-size: 18px; margin-top: 175px;line-height: 35px;}
+.c_CopyBtn{width: 135px;float: right;cursor: pointer; height: 50px;font-size: 18px; background: #65B113;margin: 35px 20px 0 0; border-radius: 10px;text-align: center;line-height: 50px;color: white; box-sizing: border-box;outline: none;border: 0;}
+.c_SchoolEnsure{background: #999999;margin:0 auto!important; clear: both;display: block;}
+.c_CreatSChool{min-height: 395px;width: 930px;padding: 90px 100px 35px 100px;box-sizing: border-box;background: white;position: relative;top:160px;left: 0;right: 0;margin: 0 auto;}
+.c_Area{margin-bottom: 60px}
+.c_Area>li{float: left;line-height: 40px;margin-bottom: 30px}
+.c_AreaSelect{width: 155px;float: left;cursor: pointer;color: #333; border-radius: 5px; margin-left: 15px;height: 40px;box-sizing: border-box;padding-left: 12px; border: 1px solid #D2D2D2;position: relative;}
+.c_areaimg{margin:17px 5px;}
+.c_ProvinceList{float: left;display: none;z-index: 3;background:white;padding-left: 15px; box-sizing: border-box; border: 1px solid #D2D2D2;position: absolute;top: 41px;left: -1px;border-radius: 5px;}
+.c_ProvinceList li{min-width: 130px;float: left; text-align: left; box-sizing: border-box; line-height: 40px;font-size: 14px;}
+.c_SchoolSelect{width: 325px;}
+.c_SchoolList{width: 675px;display: none; padding: 0 20px 0 35px;position: absolute;top: 40px;left: -1px; border-radius: 5px;background: white;float: left; box-sizing: border-box; border: 1px solid #D2D2D2;}
+.c_SchoolList li{float: left;box-sizing: border-box;height: 35px;min-width: 130px; line-height: 35px;color:#333;font-size: 14px;margin-right: 30px; }
+.c_SchoolList li:nth-child(4n+4){margin-right: 0;min-width: 135px; }
+.c_SchoolList li:hover,.c_ProvinceList li:hover{color:#65B113; }
+.w545{width: 545px!important;}
+.w280{width: 280px!important;}
+.w265{width: 265px!important;}
+
+
+

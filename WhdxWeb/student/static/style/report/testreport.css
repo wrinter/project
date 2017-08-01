@@ -1,0 +1,186 @@
+.r_main{
+    border-radius:10px;
+    background: white;
+    width:100%;
+    margin-top: 30px;
+}
+.r_tName{
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+}
+.r_tScore{
+    margin-right: 40px;
+    color: #999;
+    font-size: 14px;
+}
+.r_tTime{
+    color: #999;
+    font-size: 14px;
+}
+/*****************数据分析************************/
+.r_personal{
+}
+.r_subjectInfo{
+    display:table-cell;
+    text-align:center;
+}
+.r_subjectInfo span:first-child{
+    display: block;
+    color: #666;
+    font-size: 20px;
+}
+.r_subjectInfo span:last-child{
+    font-size: 28px;
+    color: #333;
+    font-family: Arail Regular !important;
+}
+.r_class{
+    width:50%;
+}
+.r_title{
+    text-align:center;
+    padding: 20px;
+}
+.r_analyze,.r_kanalyze,.r_danalyze{
+    font-size: 24px;
+    margin: 0 0 0 30px;
+    border-top: 1px solid #ccc;
+    width: 940px;
+    overflow: hidden;
+    padding: 40px 0 40px 0;
+}
+.r_personal{
+    border-right: 1px solid #ccc;
+    width:100%;
+    float:left;
+    height: 300px;
+}
+.r_personal>span{
+    margin-left: 230px;
+    font-size: 16px;
+}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content: " ";clear:both;height:0;}
+.clearfix{*zoom:1;}
+.r_analyzeData>span{
+    display:inline-block;
+    margin-left: 45%;
+}
+.r_analyzeData{
+    height: 400px;
+}
+.r_classtarget {
+    display: inline-block;
+    float: right;
+    width: 150px;
+    height: 35px;
+    background: #f9a24a;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 10px 0 0px 0;
+}
+.r_cue{
+    position: relative;
+    top: 233px;
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+}
+.r_secondary{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 82px;
+}
+.tipic {
+    position: relative;
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+}
+.areaImge img {
+    display: block;
+    height: 318px;
+}
+.areatipc {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.answer span,.answer p,.answer>div{
+    font-family:'Times New Roman','楷体' !important;
+}
+/*题目*/
+/*进度条数据*/
+.wprogerssname{
+    display: inline-block;
+    height:10px;
+    background: #59c1e4;
+    float: left;
+    /*position: relative;*/
+}
+.wknowngle{
+    position: absolute;
+    top:-20px;
+    left:0;
+    font-size: 12px;
+}
+
+.analysis{
+    position: relative;
+    mi-height: 40px;
+    line-height: 30px;
+}
+.answer{
+    margin-top:10px;
+    margin-left:20px;
+}
+.Needspeak{
+    position: absolute;
+    width:76px;
+    height: 28px;
+    background:#49b9df;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    border-radius: 5px;
+    right: 10px;
+    top:0;
+    cursor: pointer;
+    padding-top: 2px;
+}
+.hasNeedspeak{
+    position: absolute;
+    width:76px;
+    height: 28px;
+    background: #ccc;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 5px;
+    right: 10px;
+    top:0;
+    cursor: pointer;
+    color: #fff;
+    padding-top: 2px;
+}
+@media screen and (max-width: 1366px) {
+    .r_pcircle{
+        left:44%;
+    }
+}
+
+@media screen and (min-width:1366px) and (max-width:1599px){
+    .r_pcircle{
+        left:45%;
+    }
+}
+@media screen and (min-width: 1600px){
+    .r_pcircle{
+        left:46%;
+    }
+}

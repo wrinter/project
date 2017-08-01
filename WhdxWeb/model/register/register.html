@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>用户注册</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/register/register.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <script src="../../static/plugin/md5/md5.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+<article >
+    <div class="LoginMain">
+        <div class="LoginTop">
+            <img src="../../static/image/login/logo.png" alt="" class="Logo">
+            <a href="../../index.html" class="i_GoReg">登录</a>
+        </div>
+        <div class="LoginCenter" id="LoginCenter">
+            <div class="RegisterMian">
+                <!--老师注册-->
+                <div class="TeacherReg ShowEvt" id="TeacherReg">
+                    <!--教师注册第一步-->
+                    <div class="TeacherStep1 ShowMain dino" id="TeacherStep1">
+                        <h1 class="Title">教师注册</h1>
+                        <!--手机号-->
+                        <div  class="i_InfoIn">
+                            <i class="fl spriteImg i_phoneico"></i>
+                            <input type="text" placeholder="手机号" class="i_Itext " id="Phone0" maxlength="11">
+                        </div>
+                        <p class="i_Error" id="PhoneError0"></p>
+                        <!--图形验证码-->
+                        <div class="i_Captcha" id="CaptchaMain0">
+                            <input type="text" class="CaptchaIn" id="Captcha0" maxlength="4">
+                            <img src="" alt="加载中" class="CapImg" id="CapImg0">
+                            <p class="fs14 lh450 fr"><span class="fl">看不清，</span><span class="fl fs14 lh450 fc58 cup" id="ChangeCap0">换一个？</span></p>
+                        </div>
+                        <p class="i_Error" id="CapError0"></p>
+                        <!--短信验证码-->
+                        <div class="r_Captcha">
+                            <input type="text" class="MsgCapin" id="MsgIn0" maxlength="6">
+                            <input type="button" class="MsgInBtn" value="免费获取验证码" id="GetMsg0">
+                            <div class=" MsgInBtn fs14 lh450 bac99 dino"  id="DisGetMsg0"><span id="GetMsgSec0">60</span>s之后重新发送</div>
+                        </div>
+                        <!--短信验证码错误提示-->
+                        <p class="i_Error" id="MsgError0"></p>
+                        <!--新密码-->
+                        <div  class="i_InfoIn">
+                            <i class="fl spriteImg i_clockico"></i>
+                            <input type="password" placeholder="密码" class="i_Itext" id="Pass0" maxlength="16">
+                        </div>
+                        <p class="i_Error" id="PassError0"></p>
+                        <!--确认密码-->
+                        <div  class="i_InfoIn">
+                            <i class="fl spriteImg i_clockico"></i>
+                            <input type="password" placeholder="确认密码" class="i_Itext" id="Pass2" maxlength="16">
+                        </div>
+                        <p class="i_Error" id="PassError2"></p>
+                        <input type="button" class="NextBtn" value="下一步" id="NextBtn0">
+                    </div>
+                </div>
+                <!--学生注册-->
+                <div class="StudentReg ShowEvt" id="StudentReg">
+                    <!--学生注册第一步-->
+                    <div class="TeacherStep1 ShowMain dino" id="StudentStep1">
+                        <h1 class="Title">学生注册</h1>
+                        <!--手机号-->
+                        <div  class="i_InfoIn">
+                            <i class="fl spriteImg i_phoneico"></i>
+                            <input type="text" placeholder="手机号" class="i_Itext " id="Phone1" maxlength="11">
+                        </div>
+                        <p class="i_Error" id="PhoneError1"></p>
+                        <!--图形验证码-->
+                        <div class="i_Captcha" id="CaptchaMain1">
+                            <input type="text" class="CaptchaIn" id="Captcha1" maxlength="4">
+                            <img src="../../static/image/login/i_yzmico.jpg" alt="" class="CapImg" id="CapImg1">
+                            <p class="fs14 lh450 fr"><span class="fl">看不清，</span><span class="fl fs14 lh450 fc58 cup" id="ChangeCap1">换一个？</span></p>
+                        </div>
+                        <p class="i_Error" id="CapError1"></p>
+                        <!--短信验证码-->
+                        <div class="r_Captcha">
+                            <input type="text" class="MsgCapin" id="MsgIn1" maxlength="6">
+                            <input type="button" class="MsgInBtn" value="免费获取验证码" id="GetMsg1">
+                            <div class=" MsgInBtn fs14 lh450 bac99 dino"  id="DisGetMsg1"><span id="GetMsgSec1">60</span>s之后重新发送</div>
+                        </div>
+                        <!--短信验证码错误提示-->
+                        <p class="i_Error" id="MsgError1"></p>
+                        <!--新密码-->
+                        <div  class="i_InfoIn">
+                            <i class="fl spriteImg i_clockico"></i>
+                            <input type="password" placeholder="密码" class="i_Itext " id="Pass1" maxlength="16">
+                        </div>
+                        <p class="i_Error" id="PassError1"></p>
+                        <!--确认密码-->
+                        <div  class="i_InfoIn">
+                            <i class="fl spriteImg i_clockico"></i>
+                            <input type="password" placeholder="确认密码" class="i_Itext" id="Pass3" maxlength="16">
+                        </div>
+                        <p class="i_Error" id="PassError3"></p>
+                        <input type="button" class="NextBtn" value="下一步" id="NextBtn1">
+                    </div>
+                </div>
+                <!--老师注册第二步-->
+                <div class="StepTwo dino" id="TeacherStep2">
+                    <h1 class="StepTwoTitle">请填写信息</h1>
+                    <div class="TeacherStepTwo">
+                        <!--教师姓名-->
+                        <div class="Box">
+                            <p class="LoadTit"><span class="fl lh450 mt5 fcCA fs24">&nbsp;*&nbsp;</span>姓名：</p>
+                            <input type="text" class="UserName" maxlength="10" id="TeacherName">
+                            <p class="i_Error padeL" id="TeacherNameError0"></p>
+                        </div>
+                        <!--学科-->
+                        <div class="Box">
+                            <p class="LoadTit"><span class="fl lh450 mt5 fcCA fs24">&nbsp;*&nbsp;</span>学科：</p>
+                            <div class="UserSelect" id="SubjectSelect">
+                                <span class="SelectOut" id="Subject0">请选择</span>
+                                <i class="fr spriteImg i_downico mt15"></i>
+                                <!--学科-->
+                                <ul class="UserOption" id="SubjectOption"><li>暂无学科</li></ul>
+                            </div>
+                            <p class="i_Error" id="SubjectError0"></p>
+                        </div>
+                        <!--教材-->
+                        <div class="Box">
+                            <p class="LoadTit"><span class="fl lh450 mt5 fcCA fs24">&nbsp;*&nbsp;</span>教材：</p>
+                            <div class="UserSelect" id="MaterialSelect">
+                                <span class="SelectOut" id="Material0">请选择</span>
+                                <i class="fr spriteImg i_downico mt15"></i>
+                                <!--教材-->
+                                <ul class="UserOption" id="MaterialOption"><li>暂无教材</li></ul>
+                            </div>
+                            <p class="i_Error" id="MaterialError0"></p>
+                        </div>
+                        <!--版本-->
+                        <div class="Box">
+                            <p class="LoadTit"><span class="fl lh450 mt5 fcCA fs24">&nbsp;*&nbsp;</span>版本：</p>
+                            <div class="UserSelect">
+                                <span class="SelectOut" id="Press0">人教版</span>
+                            </div>
+                            <p class="i_Error" id="PressError0"></p>
+                        </div>
+                        <div style="clear: both"></div>
+                        <input type="button" class="DoneRegBtn0" value="完成注册" id="DoneRegBtn0">
+                    </div>
+                </div>
+                <!--学生注册第二步-->
+                <div class="StepTwo dino" id="StudentStep2">
+                    <h1 class="StepTwoTitle">请填写信息</h1>
+                    <div class="IsCode" id="IsCode">
+                        <span class="IsCodeSelect">是否有班级码：</span>
+                        <p class="fl ml20">
+                        <i class="spriteImg i_cheico1 Choico" id="HasCode"></i>
+                        <span class="IsCodeSelect ml7">是</span>
+                        </p>
+                        <p class="fl ml40">
+                        <i class="spriteImg i_cheico0 Choico" id="NoCode"></i>
+                        <span class="IsCodeSelect ml7">否</span>
+                        </p>
+                    </div>
+                    <div class="StudentBox" id="HasCodeMain">
+                        <!--填写班级码-->
+                        <div class="Box">
+                            <p class="LoadTit wc29"><span class="fl lh450 mt5 fcCA fs24">&nbsp;*&nbsp;</span>班级码：</p>
+                            <input type="text" class="UserName" maxlength="10" id="StudentCode">
+                            <p class="i_Error padeL1" id="StudentCodeError0"></p>
+                        </div>
+                        <!--填写姓名-->
+                        <div class="Box">
+                            <p class="LoadTit wc29"><span class="fl lh450 mt5 fcCA fs24 ">&nbsp;*&nbsp;</span>姓&nbsp;名：</p>
+                            <input type="text" class="UserName" maxlength="10" id="StudentName0">
+                            <p class="i_Error padeL1" id="StudentNameError0"></p>
+                        </div>
+                    </div>
+                    <div class="StudentBox dino" id="NoCodeMain">
+                        <!--学生姓名-->
+                        <div class="Box">
+                            <p class="LoadTit wc29"><span class="fl lh450 mt5 fcCA fs24">&nbsp;*&nbsp;</span>姓名：</p>
+                            <input type="text" class="UserName" maxlength="10" id="StudentName1">
+                            <p class="i_Error padeL1" id="StudentNameError1"></p>
+                        </div>
+                        <!--年级-->
+                        <div class="Box">
+                            <p class="LoadTit wc29"><span class="fl lh450 mt5 fcCA fs24">&nbsp;*&nbsp;</span>年级：</p>
+                            <div class="UserSelect">
+                                <span class="SelectOut" id="Grade0">请选择</span>
+                                <i class="fr spriteImg i_downico mt15"></i>
+                                <!--年级-->
+                                <ul class="UserOption" id="GradeOption"><li>暂无年级</li></ul>
+                            </div>
+                            <p class="i_Error padeL1" id="GradeError0"></p>
+                        </div>
+                    </div>
+                    <div class="DoneBox">
+                        <input type="button" class="DoneRegBtn0" value="完成注册" id="DoneRegBtn1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="LoginFooter">
+            <p class="GoTo fs24">
+                <a href="../AboutUs/about.html" target="_blank">关于我们</a>
+                <a href="../AboutUs/Call.html" target="_blank">联系我们</a>
+                <a href="../AboutUs/Use.html" target="_blank">新手指南</a>
+                <a href="../AboutUs/join.html" target="_blank">加入我们</a>
+            </p>
+            <p class="Company fs18">Copyright ©2017 山东百川图书有限公司  All Rights Reserved. 鲁ICP备16038439号-2</p>
+        </div>
+    </div>
+</article>
+<!--提示框-->
+<div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+<script src="../../static/javascript/register/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>写作业——看视频</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/iconfont.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/doHomework/DH_video.css">
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a href="../../../student/model/doHomework/DH_Presentation.html">写作业</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="dohomeworkname fc49"></span>
+    </div>
+</div>
+<div class="Com_Main">
+    <div class="test_videoplay">
+        <!--题目-->
+        <div class="test_heah">
+            <div class="test_line">
+                <div class="test_videoname"></div>
+                <div class="test_wordname">老师要求</div>
+            </div>
+        </div>
+        <!--视频存放处-->
+        <div class="test_videoclick">
+            <div class="test_videoclickplay">
+                <div class="test_videov"></div>
+                <div class="test_videofunction">
+                    <!--浏览量-->
+                    <span class="test_browse"></span>
+                    <!--点赞-->
+                    <span class="test_isok">
+                        <span class="test_nook"></span>
+                        <span class="test_name">(<span class="test_nameS"></span>)</span>
+                    </span>
+                    <!--分享-->
+                    <span class="test_issh">
+                        <span class="test_nosh"></span>
+                    </span>
+                    <span class="test_see">预习测试</span>
+                    <span class="test_laba">
+                        <i class="iconfont test_remine">&#xe658;</i>
+                        <span class="test_pkname"></span>
+                    </span>
+                    <!--预习测试-->
+                </div>
+            </div>
+            <!--<div class="test_videoteacherword">-->
+                <!--<p class="test_teachterword">老师要求</p>-->
+                <!--<span class="test_teachterwords"></span>-->
+            <!--</div>-->
+        </div>
+        <!--基础知识-->
+        <div class="test_videoknown">
+            <div class="test_videoknownname">导学案</div>
+            <div class="test_knownpaper">
+                <!--试卷存放处-->
+            </div>
+            <div class="test_knownsend">提交</div>
+        </div>
+    </div>
+</div>
+<!--弹出框-->
+<div class="shark">
+    <div class="sendpaper">
+        <span class="model_paper_delete_correr"></span>
+        <span class="model_paper_false_correr"></span>
+        <span class="model_paper_success_correr"></span>
+    </div>
+</div>
+<div class="sharks">
+    <div class="teacher_redmine">
+        <div class="teacher_redminename">老师的要求</div>
+        <i class="iconfont teacher_redmineClose">&#xe69a;</i>
+        <div class="teacher_redmineword">
+            <!--老师的要求-->
+        </div>
+    </div>
+</div>
+<div class="correct_shark">
+    <div class="sendcorrect">
+        <span class="model_correct_delete"></span>
+        <span class="model_correct_success"></span>
+        <span class="model_correct_false"></span>
+    </div>
+</div>
+<!--分享-->
+<div class="Share" id="Share">
+    <i class="iconfont ShareClose" id="ShareClose">&#xe69a;</i>
+    <h1 class="ShareTitle">分享给好友</h1>
+    <div class="jiathis_style_32x32">
+        <a class="jiathis_button_cqq"></a>
+        <a class="jiathis_button_qzone"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_weixin"></a>
+    </div>
+</div>
+<div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+</body>
+<script>
+    GetHtml("../../model/common/Head.txt","#Com_Head");
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<script src="../../static/javascript/doHomework/DH_video.js"></script>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>班级目标</title>
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <link href="../../static/image/common/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/me/me_target.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+</head>
+<body>
+<div class="Com_Header" id="Com_Head"></div>
+<!--面包屑-->
+<div class="Com_Crumbs">
+    <div class="Com_Crumbs_in">
+        <i class="ArrowsFont Com_IndexIco" >&#xe610;</i>
+        <a href="../../../student/model/index/index.html">首页</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <a href="me_index.html">个人中心</a>
+        <i class="ArrowsFont Com_NextIco">&#xe603;</i>
+        <span class="fl fc49">班级目标</span>
+    </div>
+</div>
+<!--内容区-->
+<div class="Com_Main">
+    <!--记录按钮-->
+    <div class="m_LineBox"><a href="me_target_log.html" class="m_LogBtn">记录</a></div>
+    <!--目标为空-->
+    <div class="m_Notarget dino" id="m_Notarget"><p class="m_ClickHere" id="m_ClickHere"></p></div>
+    <!--有班级目标-->
+    <div class="m_HasTarget dino" id="m_HasTarget">
+        <!--PK顶部-->
+        <div class="m_PkUserMain">
+            <div class="m_PkUser">
+                <!--用户-->
+                <div class="m_UserCon">
+                    <div class="m_PkPhotoBox">
+                        <!--用户头像-->
+                        <p class="m_PkPhoto"><img src="" alt="" id="UserImg"></p>
+                    </div>
+                    <!--进度条-->
+                    <div class="m_PkProBox"><p class="m_PkPro" id="UserPro"></p></div>
+                    <p class="m_PkNum"><span id="UserWinNum"></span><span>/</span><span class="m_WinTotal"></span></p>
+                </div>
+                <img src="../../static/image/me/m_vsico.png" alt="" class="m_VsIco ">
+                <!--PK对手-->
+                <div class="m_UserCon">
+                    <div class="m_PkPhotoBox" id="m_PkUserBox">
+                        <!--用户头像-->
+                        <p class="m_PkPhoto"><img src="" alt="" id="PKImg"></p>
+                        <p class="m_ChangePkBtn dino" id="m_ChangePkBtn">更换对手</p>
+                    </div>
+                    <!--进度条-->
+                    <div class="m_PkProBox0"><p class="m_PkPro0" id="m_PkPro"></p></div>
+                    <p class="m_PkNum"><span id="UserFailNum"></span><span>/</span><span class="m_WinTotal"></span></p>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="m_PkLog">
+            <ul class="m_PkLogHead">
+                <li>时间</li>
+                <li>我</li>
+                <li>挑战内容</li>
+                <li id="PkUserName"></li>
+            </ul>
+            <!--PK记录-->
+            <ul class="m_PkLogList" id="m_PkLogList"></ul>
+            <!--没有记录-->
+            <div class="m_NoBox dino"  id="m_NoPkLog">
+                <img src="../../static/image/me/none.png" class="m_Nolist " alt="">
+            </div>
+        </div>
+    </div>
+    <!--选择班级目标-->
+    <div class="m_Mask dino" id="m_ChoiceTarget">
+        <div class="m_ChoiceTarget">
+            <img src="../../static/image/common/c_ruleico.png" alt=""  class="m_SeacherClose" id="m_SeacherClose">
+            <h3>选择班级目标</h3>
+            <ul class="m_TargetList" id="m_TargetList"></ul>
+            <p class="m_Surplus" id="m_Surplus"></p>
+            <p class="m_ChoiceBtn" id="m_ChoiceBtn">确定</p>
+        </div>
+    </div>
+</div>
+<script src="../../static/javascript/me/me_target.js"></script>
+</body>
+</html>

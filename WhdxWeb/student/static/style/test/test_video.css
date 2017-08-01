@@ -1,0 +1,338 @@
+@media screen and (max-width: 1366px) {
+
+}
+@media screen and (min-width: 1366px) {
+
+}
+@media screen and (min-width: 1600px) {
+
+}
+/*公共样式*/
+.test_videoclick{
+    width:100%;
+    min-height: 100px;
+    margin-top: 20px!important;
+    overflow: hidden;
+}
+.test_videoplay{
+    width:100%;
+    min-height:600px;
+    /*background: #fff;*/
+    margin-top: 40px!important;
+    border-radius: 15px;
+}
+.test_videoname{
+    font-size: 18px!important;
+    color: #333;
+}
+/*视频*/
+.test_videoclickplay{
+    width:100%;
+    height:620px;
+    background: #fff;
+    float: left;
+    border-radius: 10px;
+}
+.test_videoteacherword{
+    width:12%;
+    height:620px;
+    background: #fff;
+    border-radius: 10px;
+    margin-left: 2%;
+    float: left;
+    padding: 0 1%;
+    overflow: hidden;
+}
+.test_videov{
+    width:100%;
+    height:570px;
+    background: #ccc;
+}
+/*分享*/
+.test_videofunction{
+    width:100%;
+    height:50px;
+}
+/*老师的要求*/
+.test_teachterword{
+    font-size: 20px!important;
+    color:#58c1e4;
+    margin-top: 20px!important;
+    margin-bottom: 10px!important;
+}
+.test_teachterwords{
+    font-size: 14px!important;
+    color: #666;
+    line-height: 24px;
+    margin-top: 10px!important;
+    word-break: break-all;
+}
+/*功能区域*/
+.test_browse{
+    display: inline-block;
+    width: 120px;
+    height: 24px;
+    border-right: 1px solid #ccc;
+    float: left;
+    font-size: 14px!important;
+    margin-top: 13px !important;
+    line-height: 24px;
+    text-align: center;
+}
+/*赞*/
+.test_isok{
+    display: inline-block;
+    width:100px;
+    height: 24px;
+    border-right: 1px solid #ccc;
+    float: left;
+    font-size: 14px!important;
+    margin-top: 13px !important;
+    line-height: 24px;
+}
+.test_nook{
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+    background: url("../../image/test/test_nook.png") no-repeat;
+    background-size: 100%;
+    margin-left: 20px;
+    margin-right: 5px;
+    float: left;
+    cursor: pointer;
+}
+.test_ok{
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+    background: url("../../image/test/test_ok.png") no-repeat;
+    background-size: 100%;
+    margin-left: 20px;
+    margin-right: 5px;
+    float: left;
+}
+.test_name{
+    display: inline-block;
+    float: left;
+}
+/*分享*/
+.test_issh{
+    width:100px;
+    height:50px;
+    margin-top: 13px!important;
+}
+.test_nosh{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    margin-top: 13px!important;
+    margin-left: 20px!important;
+    background: url("../../image/test/test_nosh.png") no-repeat;
+    cursor: pointer;
+    background-size: cover;
+}
+.test_sh{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    margin-top: 13px!important;
+    margin-left: 20px!important;
+    background: url("../../image/test/test_sh.png") no-repeat;
+    background-size: 95%;
+}
+.test_see{
+    display: inline-block;
+    width:145px;
+    height:40px;
+    background: #58c1e4;
+    color: #fff;
+    border-radius: 10px;
+    float: right;
+    margin-top: 5px!important;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px!important;
+    cursor: pointer;
+}
+/*导学案试卷*/
+.test_videoknown{
+    width:96%;
+    min-height: 100px;
+    background: #fff;
+    padding:0 2% 30px;
+    margin-top: 40px!important;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.test_videoknownname{
+    width:100%;
+    font-size: 20px!important;
+    color: #333;
+    margin-top: 20px!important;
+    text-align: center;
+    margin-bottom: 20px!important;
+}
+.test_knownsend{
+    width:95px;
+    height:30px;
+    background: #ccc;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin:32px auto 0;
+}
+.test_knownpaper{
+    width:100%;
+    min-height:50px;
+}
+/*提示语言*/
+.test_laba{
+    display: inline-block;
+    line-height: inherit;
+    float: right;
+    margin-right: 20px!important;
+    margin-top: 13px!important;
+}
+.test_remine{
+    font-size: 24px!important;
+    color: #ccc;
+}
+.test_pkname{
+    color: #ca0d11;
+    font-size: 14px!important;
+}
+.ShareClose {
+    float: right!important;
+    font-size: 18px!important;
+    color: #222;
+    cursor: pointer;
+}
+.test_videoknown p {
+    display:inline-block;
+    margin-top: 5px!important;
+}
+.questionanswer{
+    position: absolute;
+    left:-1000px;
+}
+.video_content{
+    position: relative;
+}
+.quetion_imge{
+    display: inline-block;
+    min-width: 10px;
+    min-height: 10px;
+    margin-top: 0;
+    display: none;
+}
+/*.video_solve{*/
+    /*display: none;*/
+/*}*/
+/*老师的要求*/
+.test_line{
+    position: relative;
+    margin-top: 60px;
+}
+.test_wordname{
+    width:150px;
+    height:45px;
+    border-radius: 10px;
+    background: #49b9df;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    position: absolute;
+    right:0;
+    top:-15px;
+    cursor: pointer;
+}
+.test_wordname:hover{
+    width:150px;
+    height:45px;
+    border-radius: 10px;
+    background: #0fa7db;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    position: absolute;
+    right:0;
+    top:-15px;
+    cursor: pointer;
+}
+/*老师要求*/
+/*遮罩层*/
+.sharks{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+.teacher_redmine{
+    width:620px;
+    height:465px;
+    background: #fff;
+    border-radius: 10px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-left: -310px;
+    margin-top: -232px;
+    position: relative;
+}
+.teacher_redminename{
+    width:100%;
+    height: 70px;
+    font-size: 20px!important;
+    color: #49b9df;
+    text-align: center;
+    line-height: 70px!important;
+}
+.teacher_redmineword{
+    width:495px;
+    height:310px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    margin:0 auto;
+    line-height: 20px;
+    font-size: 18px!important;
+    color: #666;
+    padding: 20px 20px;
+}
+.teacher_redmineClose{
+    font-size: 24px;
+    color: #333;
+    position: absolute;
+    right: 20px;
+    top:20px;
+    cursor: pointer;
+}
+.questionTitle{
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.questionTitle:hover{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+/*基础知识*/
+.test_knownpaper,.test_knownpaper p , .test_knownpaper span{
+    font-size: 14px;
+}
+.questionTitle,.video_solve{
+    margin-top: 5px!important;
+}
+.questionTitle img{
+    max-width: 100%;
+}
+.questionTitle .wr_img{
+    display: inline-block;
+    width:25px;
+}
+

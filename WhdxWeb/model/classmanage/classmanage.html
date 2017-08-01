@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>班级管理</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/classmanage/classmanage.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+</head>
+<body>
+<article >
+    <div class="minw ffyh">
+        <div id="Header"></div>
+        <!--面包屑导航-->
+        <div class="c_Crumbs">
+            <div class="c_Crumbs_in">
+                <!--面包屑导航图标-->
+                <i class="spriteImg c_mico fl mt15"></i>
+                <!--面包屑导航-->
+                <ul class="c_Crum fl" id="c_Crum">
+                    <li><a href="../../model/index/indexX.html" class="fl ">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                    <li class="fc65">班级管理</li>
+                </ul>
+            </div>
+        </div>
+        <!--无班级-->
+        <div class="c_Main dino c_Bg" id="NoClassMain" >
+            <p class="fr mt40">
+                <!--加入班级按钮-->
+                <input type="button" class="c_AddBtn fs24 bac58" value="加入班级" id="JoinClass0">
+                <!--创建班级按钮-->
+                <input type="button" class="c_AddBtn fs24 bacF9 ml30" value="创建班级" id="CreatClass0">
+            </p>
+            <div class="c_content">
+                <img src="../../static/image/classmanage/c_NoClassImg.png" alt="">
+            </div>
+        </div>
+        <!--有班级-->
+        <div class="c_Main " id="c_HasClassMain">
+            <div class="c_content">
+                <p class="fr mt40">
+                    <!--加入班级-->
+                    <input type="button" class="c_AddBtn fs24 bac58" value="加入班级" id="JoinClass1">
+                    <!--创建班级-->
+                    <input type="button" class="c_AddBtn fs24 bacF9 ml30" value="创建班级" id="CreatClass1">
+                </p>
+                <!--展示所有班级-->
+                <ul class="fl w100 c_AddClass" id="c_AllClass"></ul>
+            </div>
+        </div>
+        <!--搜索班级-->
+        <div class="c_SearchC" id="c_Search">
+            <div class="c_SearchCase">
+                <i class="spriteImg c_ClassUico c_SearchImg"></i>
+                <i class="spriteImg c_closeico fr c_closeimg" id="c_closeX"></i>
+                <!--搜索框-->
+                <div class="c_SearchX">
+                    <input type="text" class="c_SeaBox" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="6" id="c_SeaBox">
+                    <p class="c_SbtnX" id="c_SbtnX">
+                        <i class="spriteImg searchico fl c_seaimg "></i>
+                    </p>
+                </div>
+                <!--查无班级-->
+                <div class="c_SearchError" id="c_SearchError">查无此班，请重新输入</div>
+                <!--查到班级-->
+                <div class="c_SearchClass dino" id="c_SearchClass"></div>
+            </div>
+        </div>
+        <!--创建班级-->
+        <div class="c_SearchC" id="c_CreatClass">
+            <!--创建学校-->
+            <div class="c_CreatSChool creatReset dino" id="c_CreatSChool">
+                <i class="spriteImg c_closeico fr c_closeimg0" id="c_closeS"></i>
+                <ul class="c_Area fl">
+                    <li>
+                        <span class="fs18 fl  fc66">地区：</span>
+                        <!--省-->
+                        <div class="c_AreaSelect">
+                            <p class="fl fs14 lh40" id="c_ProvinceCon">选择省</p>
+                            <i class="spriteImg i_downico fr c_areaimg"></i>
+                            <!--省份-->
+                            <ul class="c_ProvinceList arealist w545" id="c_ProvinceList"></ul>
+                        </div>
+                        <!--市-->
+                        <div class="c_AreaSelect">
+                            <p class="fl fs14 lh40" id="c_CityCon">选择市</p>
+                            <i class="spriteImg i_downico fr c_areaimg"></i>
+                            <!--城市-->
+                            <ul class="c_ProvinceList arealist w280" id="c_CityList">
+                                <li>请先选择省</li>
+                            </ul>
+                        </div>
+                        <!--区/县-->
+                        <div class="c_AreaSelect">
+                            <p class="fl fs14 lh40" id="c_CountyCon">选择区/县</p>
+                            <i class="spriteImg i_downico fr c_areaimg"></i>
+                            <!--县区-->
+                            <ul class="c_ProvinceList arealist w280" id="c_CountyList">
+                                <li>请先选择城市</li>
+                            </ul>
+                        </div><br>
+                        <span class="fs18 fl fc66 mt30">学校：</span>
+                        <!--学校-->
+                        <div class="c_AreaSelect c_SchoolSelect mt30" id="c_SchoolSelect">
+                            <p class="fs14 lh40 fl" id="c_SchoolCon">选择学校</p>
+                            <ul class="c_SchoolList arealist" id="c_SchoolList">
+                                <li>请先选择地区</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                    </li>
+                </ul>
+                <input type="button" value="确 定" class="c_SchoolEnsure" id="c_SchoolEnsure">
+            </div>
+            <!--创建班-->
+            <div class="c_CreatGrade creatReset dino" id="c_CreatGrade">
+                <i class="spriteImg c_closeico fr c_closeimg0" id="c_closeG"></i>
+                <!--班级选择-->
+                <div class="c_ClasslTab">
+                    <ul class="c_TabT" id="c_TabT">
+                        <li><span class="c_GradeNum">9年级</span><i class="c_space0"></i><em class="dino gradeId">9</em></li>
+                        <li><span class="c_GradeNum">8年级</span><i class="c_space1"></i><em class="dino gradeId">8</em></li>
+                        <li><span class="c_GradeNum">7年级</span><i class="c_space2"></i><em class="dino gradeId">7</em></li>
+                    </ul>
+                    <div class="c_TabMain">
+                        <!--一开始的班级1-16班-->
+                        <ul class="c_ClassChoice" id="c_Class9"></ul>
+                        <ul class="c_ClassChoice dino" id="c_Classmore9"></ul>
+                        <p class="c_More" ><span class="fl">更多</span><i class="spriteImg moreico fl c_m8005"></i></p>
+                    </div>
+                    <div class="c_TabMain dino">
+                        <!--一开始的班级1-16班-->
+                        <ul class="c_ClassChoice" id="c_Class8"></ul>
+                        <ul class="c_ClassChoice dino" id="c_Classmore8"></ul>
+                        <p class="c_More" ><span class="fl">更多</span><i class="spriteImg moreico fl c_m8005"></i></p>
+                    </div>
+                    <div class="c_TabMain dino">
+                        <!--一开始的班级1-16班-->
+                        <ul class="c_ClassChoice" id="c_Class7"></ul>
+                        <ul class="c_ClassChoice dino" id="c_Classmore7"></ul>
+                        <p class="c_More" ><span class="fl">更多</span><i class="spriteImg moreico fl c_m8005"></i></p>
+                    </div>
+                </div>
+                <p class="fs18 fc33 mt40">已选班级</p>
+                <!--已选班级-->
+                <div class="c_SchoolHas">
+                    <!--选择的班级-->
+                    <ul class="c_GradeList" id="c_GradeList"></ul>
+                </div>
+                <input type="button" value="确 定" class="c_CreatEnsure" id="c_CreatEnsure">
+                <input type="button" value="取 消" class="c_CreatCancel" id="c_CreatCancel">
+            </div>
+        </div>
+        <!--提示框-->
+        <div class="c_Dissolve dino" id="c_ErrorMsg"></div>
+    </div>
+    <i class="spriteImg backtopico backtop"></i>
+</article>
+<script src="../../static/plugin/ZeroClipboard/ZeroClipboard.min.js"></script>
+<script src="../../static/javascript/classmanage/classmanage.js"></script>
+</body>
+</html>

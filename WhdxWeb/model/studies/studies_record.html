@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9;IE=10;IE=11;IE=edge" />
+    <title>学业模考-做题记录</title>
+    <link href="../../static/image/sprite/i_logoico1.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/studies/studies_record.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/plugin/md5/md5.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+</head>
+<body>
+    <div class="studies_record">
+        <div class="s_inxnav">
+            <div id="Header"></div>
+            <!--面包屑导航-->
+            <div class="c_Crumbs">
+                <div class="c_Crumbs_in">
+                    <!--面包屑导航图标-->
+                    <i class="spriteImg c_mico fl mt15"></i>
+                    <!--面包屑导航-->
+                    <ul class="c_Crum fl" id="c_Crum1">
+                        <!--有链接-->
+                        <li><a href="../../model/index/indexX.html" class="fl fc65">首页</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                        <li><a href="studies_index.html" class="fl fc65">学业模考</a><i class="spriteImg c_Crumgoico c_Crumgo"></i></li>
+                        <li>做题记录</li>
+                        <!--无链接-->
+                        <!--<li><a href="#" class="fl fc65">个人中心</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="s_record">
+            <div class="s_rectitle">
+                做题记录
+            </div>
+            <ul class="s_list_contont">
+                <li class="thead">
+                    <ul class="theadtr">
+                        <li class="theadtrli fs20 s_td">套卷</li>
+                        <li class="theadtrli fs20 s_td2">用时</li>
+                        <li class="theadtrli fs20 s_td3">得分</li>
+                        <li class="theadtrli fs20 s_td4">操作</li>
+                    </ul>
+                </li>
+                <li class="tbody">
+                    <ul class="tbodytr">
+                        <li class="theadtrli fs14 s_name s_td"></li>
+                        <li class="theadtrli fs14 s_time"></li>
+                        <li class="theadtrli fs14 s_userScore"></li>
+                        <li class="theadtrli fs14 s_status"></li>
+                    </ul>
+                </li>
+                <!--空白页-->
+                <div class="nothing">
+                    <img class="kolano" src="../../static/image/kola/no.png" />
+                </div>
+            </ul>
+        </div>
+        <!--页码存放处-->
+        <div class="Paging">
+            <div id="kkpager"></div>
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" href="../../static/plugin/paction/kkpager_orange.css" />
+<script src="../../student/static/plugin/paction/kkpager.js"></script>
+<script src="../../static/javascript/studies/studies_record.js"></script>
+</html>

@@ -1,0 +1,82 @@
+.r_main{
+    border-radius:10px;
+    background: white;
+    width:100%;
+    margin-top: 30px;
+}
+.r_homework{
+    padding:30px;
+    font-size:24px;
+    color:#333;
+}
+.r_report{
+    width:100%;
+    margin-top: 30px;
+}
+.r_head{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.r_head li{
+    height: 100%;
+    text-align: center;
+    float: left;
+    font-size: 14px;
+    font-family: bold;
+}
+.r_content{
+    min-height: 400px;
+}
+.r_assign{
+    width: 25%;
+}
+
+.r_workName{
+    width: 45%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.r_operation{
+    width: 25%;
+}
+.r_body{
+    height: 40px;
+    border: 1px solid #fff;
+}
+.r_body li {
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    color: #666;
+}
+.r_body:hover{
+    border: 1px solid #49b9df;
+}
+.r_wait{
+    line-height: 30px;
+    color: #f00;
+    font-size: 12px;
+    border-radius: 5px;
+    left: 0;
+    padding: 5px;;
+    display:none;
+}
+.r_check{
+    color: #49b9df;
+    display: inline-block;
+    width: 76px;
+    height: 30px;
+    border-radius: 8px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.r_check:hover{
+    background: #49b9df;
+    color:white;
+}
+.r_table ul:nth-child(odd){
+    background:#f6f6f6;
+}
