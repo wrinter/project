@@ -1,0 +1,39 @@
+{
+  "retCode": "0000",
+  "retMsg": "登录成功",
+  "retData":
+  {
+    "menu":[
+      {
+        "menuId": "5d25de5ea59e11e680f576304dec7eb7",
+        "name": "首页",
+        "path": "/content/teacher/index/index",
+        "child": []
+      },
+      {
+        "menuId": "5d260744a59e11e680f576304dec7eb7",
+        "name": "国学与美文",
+        "path": "",
+        "child": [
+          {
+            "menuId": "5d2608caa59e11e680f576304dec7eb7",
+            "name": "美文",
+            "path": "/content/teacher/chinese/essay",
+            "child": []
+          },
+          {
+            "menuId": "5d260be0a59e11e680f576304dec7eb7",
+            "name": "国学",
+            "path": "/content/teacher/chinese/chinese",
+            "child": []
+          }
+        ]
+      }
+    ],
+    "userphoto" : "",
+    "role": "0",
+    "subjectId": "01",
+    "grade":"07"
+  },
+  "retGold": 0
+}
