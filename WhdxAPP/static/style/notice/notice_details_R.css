@@ -1,0 +1,7 @@
+.Echo_Out{width: 10rem;height: 2rem;border-bottom: 0.05rem solid #58C1E4;overflow-x: scroll;}
+
+.Echo_List{overflow: hidden;position: relative;height: 2rem;}
+.Echo_List li{float: left;width: 1.2rem;margin: 0.4rem;box-sizing: border-box; height:1.2rem;text-align: center;font-size: 0.5rem;line-height: 1.2rem; border: 1px solid #ccc;border-radius: 100%;}
+.Echo_List li:last-child{position: absolute;height: 1.6rem;border-bottom: 0; border: 0;text-align: center;}
+.Echo_List li:last-child img{width: 0.7rem;position: absolute;bottom: 0;left: 0;right: 0;margin: auto;}
+.swiper-container{height: 15rem;}

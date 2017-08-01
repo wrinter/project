@@ -1,0 +1,41 @@
+html,body{
+    margin:0;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+.me_sign{
+    width:100%;
+    height:100%;
+    background: #fff;
+}
+.me_signed{
+    width:100%;
+    height:9.06549rem;
+    background: #f6f6f6;
+    overflow: hidden;
+    position:relative;
+    text-align: center;
+}
+.me_kolo{
+    width:5.3rem;
+    height:5.3rem;
+    background: url("../../image/notice/kolo.png") no-repeat;
+    background-size: 100%;
+    margin: 1.1393rem auto 0;
+}
+.kolo_word{
+    position: absolute;
+    color: #6acbec;
+    top:3.2rem;
+    right: 1.3276rem;
+    font-size: 0.64rem;
+}
+.kolo_sign{
+    font-size: 0.46rem;
+    color: #666;
+}
+.color{
+    font-size: 0.72rem;
+    color: #ca0d0d;
+}

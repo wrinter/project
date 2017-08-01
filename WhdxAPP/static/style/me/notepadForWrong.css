@@ -1,0 +1,81 @@
+/*** 错题本 ***********************************************************************************************************/
+body{font-size: 0.55rem;overflow-x: hidden;}
+header{position: relative;width: 100%;border-bottom: 1px solid #65b113;}
+header .title{font-size: 0.65rem;line-height: 1.5rem;text-align: center;background-color: #fff;}
+section{position: absolute;top: 0;bottom: 0;width: 100%;overflow: hidden;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;}
+.main{left: 0;z-index: 1;background-color: #f6f6f6;}
+section.main{position: fixed;}
+.pull{position: absolute;top: 0.3rem;width: 0.9rem;height: 0.9rem;overflow: hidden;text-indent: -10rem;background-size: 100%;}
+.pull_left{left: 0.3rem;background-image: url("../../../static/image/me/menu_set_btn_03.png");}
+.pull_right{right: 0.3rem;background-image: url("../../../static/image/me/menu_set_btn_02.png");}
+.menu{right: -12rem;z-index: 1000;background-color: rgba(0,0,0,0);transition: background-color,right 0.3s ease;}
+#menu_close{position: absolute;top: 0;bottom: 0;left: 0;right: 5rem;background-color: transparent;}
+/*.menu.on{right: 0;background-color: rgba(0,0,0,0.3);}*/
+.menu_con{position: absolute;top: 0;bottom: 0;right: -5rem;width: 5rem;overflow-y: auto;background-color: #fff;transition: right 0.5s ease;}
+/*.menu_con.on{right: 0;}*/
+.menu_list{position: absolute;top: 0;bottom: 1.27rem;right: 0;width: 5rem;overflow-y: auto;background-color: #fff;}
+.menu_list li{margin-bottom: 0.17rem;}
+.menu_list li a{display:block;line-height: 1.1rem;text-align: center;color: #333;}
+.menu_list li a.on{background-color: #65b113;color: #fff;}
+.menu_btn{position: absolute;bottom: 0;right: 0;width: 5rem;height: 1.27rem;text-align: center;border-top: 1px solid #ccc;background-color: #fff;}
+.menu_btn a{display: inline-block;width: 80%;line-height: 1.27rem;}
+.menu_btn .icon{display: inline-block;width: 0.625rem;height: 0.625rem;vertical-align: sub;background: url("../../../static/image/me/menu_set_btn_01.png") no-repeat;background-size: 100%;}
+.menu_btn .label{color: #666;}
+.menu_set_wrap{position: absolute;top: 0;right: 0;bottom: 0;left: 0;z-index: 2000;background-color: rgba(0,0,0,0.75);opacity:0;transition: opacity 0.5s ease;}
+.menu_set{position: absolute;top: 50%;left: 50%;width: 100%;height: 8.4rem;margin: -4.2rem 0 0 -6rem;}
+.menu_set_top img{width: 100%;vertical-align: middle;}
+.menu_set_con{font-size: 0.65rem;width: 100%;height: 3.45rem;padding-top: 1rem;line-height: 0.8rem;text-align: center;border-radius: 0 0 0.15rem 0.15rem;background-color: #ebfaff;color: #666;position: relative;}
+.menu_set_con .percentage{width: 2.8rem;height: 1rem;text-indent: 0.5rem;border-radius: 0.12rem;border: 1px solid #ccc;color: #666;    font-size: 0.65rem;  line-height: 1rem;  vertical-align: middle;}
+.menu_set_btn{margin-top: 0.31rem;}
+.menu_set_btn .button{font-size: 0.65rem;display: inline-block;width: 4.93rem;line-height: 1.27rem;text-align: center;border-radius: 0.15rem;color: #fff;}
+.menu_set_btn .button_left{background-color: #ccc;}
+.menu_set_btn .button_right{float: right;background-color: #58c1e4;}
+.percentage_con_wrap{position: absolute;top: 0;right: 0;bottom: 0;left: 0;z-index: 12000;background-color: rgba(0,0,0,0.75);opacity:1;transition: opacity 0.5s ease;}
+.percentage_con{position: absolute;top: 50%;left: 50%;width: 10.4rem;height: 8.4rem;margin-top: -4.2rem;margin-left: -5.2rem;overflow: hidden;border-radius: 0.15rem;background-color: #fff;}
+.percentage_con_list{width: 100%;}
+.percentage_con_btn{border-top: 1px solid #eee; text-align: center;}
+.percentage_con_btn a{display: inline-block;width: 40%;margin-top: 0.55rem;line-height: 1.27rem;border-radius: 0.15rem;}
+.percentage_con_btn a#percentage_con_btn_cancel{margin-right: 0.4rem;background-color: #eee;}
+.percentage_con_btn a#percentage_con_btn_done{background-color: #58c1e4;}
+#percentage_con_list_wrap{width: 100%;overflow: hidden;position: relative;}
+#percentage_con_list_wrap .this_op_wrap{position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 2;background: url("../../image/me/notepadForWrong_01.png") no-repeat;background-size: 100%;}
+#percentage_con_list_wrap .this_op{position: absolute;top: 50%;left: 0;z-index: 1;width: 100%;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+#percentage_con_list{width: 100%;}
+#percentage_con_list li{line-height: 100%;}
+.content{position: absolute;top: 1.52rem;right: 0;bottom: 0;left: 0;overflow-y: auto;}
+.content ul{width: 100%;padding-bottom: 0.45rem;overflow: hidden;}
+.content ul li{position: relative;display: flex;margin-top: 0.45rem;line-height:1.75;background-color: #fff;}
+.content ul li div.item-media{position: relative;flex: 1;display: none;}
+.content ul li div.item-media .checkbox{display: block;width: 0.65rem;height: 0.65rem;margin: 1rem auto;border-radius: 0.325rem;border: 1px solid #ccc;background-image: url("../../image/me/notepadForWrong_02.png");background-size: 100% auto;}
+.content ul li div.item-inner{position: relative;flex: 8;overflow: hidden;}
+.item-inner-btn{position: absolute;bottom: 0;left: 0;right: 0;padding-top: .3rem;font-size: .5rem;line-height: 1.2rem;background-color: #fff;text-align: center;color: #666;}
+.item-inner-btn:after{content: "";position: absolute;top: 20%;left: 1.2rem;right: .8rem;border-top: 1px solid #eee;}
+.content ul li a{display: block;padding: 0.25rem 0 0.25rem 0;}
+.content ul li a h3{margin-right: 0.8rem;text-align: justify;text-justify: inter-ideograph;}
+.content ul li a .option{margin-right: 0.8rem;color: #666;}
+.content ul li a img{max-width: 60%;vertical-align: middle;}
+.content ul li a,.content ul li a p,.content ul li a span{word-break:break-all;}
+.ln_order{position: absolute;top: 0.25rem;left: 0.25rem;}
+.quest_order{position: absolute;top: 0;left: 0.25rem;}
+#infiniteing{background-color: transparent;text-align: center;}
+#infiniteing p{flex: 1;}
+.delbtn{position: absolute;bottom: 0;left: 0;right: 0;height: 1.47rem;text-align: center;border-top: 1px solid #ccc;background-color: #fff;}
+.delbtn a{display: inline-block;width: 3.66rem;margin-top: 0.2rem;line-height: 1.07rem;text-align: center;border-radius: 0.15rem;color: #666;}
+.delbtn a#delbtn-del{width: 2.66rem;background-color: #65b113;color: #fff;}
+.delbtn a#delbtn-choice{float: left;margin-left: 0.2rem;}
+.delbtn a#delbtn-cancel{float: right;margin-right: 0.2rem;}
+.m_second a{text-indent: 0.78rem;}
+
+/*** 详情页 ***********************************************************************************************************/
+.page li{padding: 0.25rem;}
+.page li.nobg{background-color: transparent;}
+.page li ul li{padding: 0;}
+.page #btn_delete{display: block;width: 80%;line-height: 1rem;margin: 0 auto;text-align: center;border-radius: 0.15rem;background: #65b113;color: #fff;}
+.page .option{padding: 0 0.25rem;color: #666;}
+.page .answer{padding: 0 0.25rem;color: #58c1e4;}
+.page .analysis{padding: 0 0.25rem;color: #666;}
+.page .answer p:nth-child(2){display: inline;}
+.deleteDone{display: none;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 13000;background-color: rgba(0,0,0,0.3);}
+.deleteDone p{position: absolute;top: 50%; left: 50%;width: 10.4rem;line-height: 4rem;margin-top: -2rem; margin-left: -5.2rem;text-align: center;border-radius: 0.15rem;background-color: #fff;color: #666;}
+.content ul.page li{display: block;word-break: break-all;}

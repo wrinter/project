@@ -1,0 +1,23 @@
+/***************************************期刊********************************************/
+html,body{font-size: 0.41rem}
+.c_Main{width: 100%;float: left;background: white;position: relative;}
+.c_back{width: 0.8rem;position: absolute;top:0;bottom: 0;margin: auto; left: 0.3rem;}
+.c_share{width: 0.8rem;position: absolute;top:0;bottom: 0;margin: auto; right: 0.3rem;}
+
+.c_Article{line-height: 0.72rem;font-size: 0.41rem; width: 100%;height: 100%;box-sizing: border-box;float: left;padding: 0.3rem;overflow-y: scroll;padding-top: 1.2rem;}
+.c_BotBox{width: 100%;float: left;height: 2.45rem;background: #F6F6F6;position: relative; }
+.c_ShareBtn{width: 4.1rem;height: 1.1rem;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto; outline: none;border: 0;font-size: 0.4rem;color: white;border-radius: 0.1rem;}
+.bac58{background: #58C1E4;margin-left: 0.64rem;}
+.bacF9{background: #F9A24A;}
+.Goback{width: 100%;float: left;position: fixed;top: 0;left: 0; height: 1.2rem;background: white; text-align: center;font-size: 0.5rem;line-height: 1.2rem; border-bottom: 1px solid #ccc;}
+/*李超改*/
+.c_Article img{
+    max-width: 100%;
+    height: auto!important;
+}
+.c_Article p, .c_Article span {
+     font-size: 0.41rem!important; 
+    line-height: 0.72rem!important;
+    /*color: #666!important;*/
+    /*font-family: "Microsoft YaHei"!important;*/
+}

@@ -1,0 +1,35 @@
+
+body{background: #F6F6F6;width: 10rem;float: left; height: 100%; position: fixed;left:0;top: 0; }
+
+.Com_Box{float: left;width: 100%;overflow: scroll;margin-top: 0.5rem;}
+.Com_NavMain{float: left;height: 2rem;min-width: 100%; background: white;box-sizing: border-box;overflow: hidden;}
+.Com_NavList{float: left;height: 100%;min-width: 100%; position: relative;box-sizing: border-box; border-bottom: 1px solid #ccc;}
+.Com_NavList .Com_Nav{float: left; font-size: 0.4rem;line-height: 1.3rem;text-align: center; width: 1.3rem;height: 1.3rem;margin: 0.35rem; border-radius: 100%;box-sizing: border-box; border: 1px solid #ccc;}
+.Com_NavList .Com_NavLine{width: 2rem;height: 1rem; float: left;position: absolute;bottom: -1px;overflow: hidden; text-align: center;}
+.Com_NavLine img{width: 0.7rem;position: absolute;bottom: 0;left: 0;right: 0;margin: auto;}
+.r_OptionRight{color: #65B113;}
+.r_OptionWrong{color: #CA0D0D;}
+.r_OptionHalf {color: #F9A24A;}
+.r_OptionNo {color: #999999;}
+.r_OptionNo :hover{border-color: #999999;}
+.r_Question{float: left;width: 100%;min-height: 4rem;border-bottom: 1px solid #ccc;  background: white;box-sizing: border-box;padding: 0.3rem;overflow: hidden;}
+.r_Question,.r_Question p,.r_Question,.r_Question div{font-size: 0.4rem;line-height: 0.8rem;}/*color: #727272;*/
+.r_Question img,img{max-width: 90%;vertical-align: middle;}
+/*.r_Question p:nth-child(1){color: #333;}*/
+.table1{font-size: 0.4rem;margin: 0 auto;}
+.r_OpRightColor,.r_OpRightColor p,.r_OpRightColor span{color: #59C1E4!important;}
+.r_OpNomalColor,.r_OpNomalColor p,.r_OpNomalColor span{color: #333;}
+.r_OpWrongColor,.r_OpWrongColor p,.r_OpWrongColor span{color: #CA0D0D!important;}
+.r_Answer{margin-top: 0.3rem;border-top: 1px solid #ccc;padding-bottom: 4rem;}
+.r_MyAnswer{height: 2rem;z-index: 9; float: left;width: 10rem;border-top: 1px solid #ccc; background: white;position: fixed;bottom: 0;left: 0;}
+.r_MyAnswer p{height: 1.4rem;border-radius: 0.8rem;text-align: center;font-size: 0.5rem;color: #59C1E4!important; box-sizing: border-box; line-height: 1.4rem; border: 1px solid #59C1E4;background: white; width: 80%;margin:0.3rem auto;}
+.r_MyAnswer a{color: #59C1E4; }
+.r_Need{height: 1rem;width: 100%;overflow: hidden;}
+.r_Need .r_NeedBtn{width: 3rem;font-size: 0.4rem; height: 0.9rem;text-align: center; line-height: 0.9rem;float: right;;border-radius: 0.5rem;border: 1px solid #B09FE2;color: #B09FE2; }
+.r_Need .r_HasNeedBtn{width: 3rem;font-size: 0.4rem; height: 0.9rem;text-align: center; line-height: 0.9rem;float: right;;border-radius: 0.5rem;border: 1px solid #ccc;color: #ccc; }
+.i_needIco{font-size: 0.5rem;}
+
+
+.r_Main{height: 14rem;overflow-y: scroll; float: left;}
+.swiper-slide{overflow: scroll;}
+.swiper-Box{float: left; width: 10rem;height: 100%;}

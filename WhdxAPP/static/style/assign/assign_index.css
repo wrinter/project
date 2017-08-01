@@ -1,0 +1,26 @@
+
+a {
+    text-decoration: none;
+    color:#333;
+}
+.a_paper{
+    margin-top:1rem;
+    padding-left:0.75rem;
+    padding-right:0.75rem;
+}
+.submit_paper{
+    width:100px;
+    height:30px;
+    border:none;
+    border:1px solid #65B113;
+    background: #65B113;
+    color:#fff;
+}
+.typeName{
+    color:#666;
+    font-size:0.5rem;
+}
+.content{
+    color:#333;
+    font-size:0.45rem;
+}

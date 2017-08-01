@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/plugin/md5/md5.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/login/logoin.css">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</head>
+<body>
+<img src="../../static/images/login/logo.png" alt="" class="L_LogoImg">
+<div class="L_LogBox">
+    <div class="L_InputBox Mt40">
+        <img src="../../static/images/common/phone0.png" alt="" class="Phoneico" id="Phoneico">
+        <input type="text" class="L_Input" maxlength="11" placeholder="请输入手机" id="Phone">
+    </div>
+    <div class="L_InputBox ">
+        <img src="../../static/images/common/pass0.png" alt="" class="Phoneico" id="Passico">
+        <input type="password" class="L_Input" maxlength="16" placeholder="请输入密码" id="Pass">
+    </div>
+    <div class="L_InputBox dino" id="CodeBox">
+        <img src="../../static/images/common/yzm0.png" alt="" class="Phoneico" id="Codeico">
+        <input type="text" class="L_Input0" maxlength="4" placeholder="请输入验证码" id="Code">
+        <div class="CodeBox">
+            <img src="../../static/images/common/defult.png" alt="" id="Codeimg">
+            <div class="ChangeCode" id="ChangeCode">看不清楚？<br>换一张</div>
+        </div>
+    </div>
+    <p class="Error" ><span id="PhoneError"></span><span id="PassError"></span><span id="CodeError"></span><span id="AllError"></span></p>
+    <p class="L_LogInBtn" id="LoginBtn">登录</p>
+</div>
+<script src="../../static/javascript/login/login.js"></script>
+</body>
+</html>

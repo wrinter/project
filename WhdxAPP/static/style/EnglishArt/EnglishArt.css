@@ -1,0 +1,26 @@
+/***************************************走遍英美********************************************/
+.e_Main{width: 10rem;float: left;position: fixed;height: 100%; background: #F6F6F6;overflow: scroll;box-sizing: border-box;padding-bottom: 1.5rem}
+.e_IsEnglishArt{width: 100%;overflow-y: scroll; box-sizing: border-box;float: left;border-top: 0.00651rem solid #ccc;border-bottom: 0.00651rem solid #ccc; margin-top: 1.06042rem; }
+.e_IsEnglish,.e_IsTransEnglish{float: left;padding:0.26042rem;background: white;font-size: 0.42rem;line-height: 0.71615rem; box-sizing: border-box;width: 100%;color: #666;}
+.e_IsTransEnglish{border-top: 0.00651rem solid #EEEEEE;display: none;}
+.e_IsTrans{width: 2.21354rem;height: 0.69661rem;text-align: center; line-height: 0.69661rem;color: #5AC2E4;font-size: 0.35203rem; float: right;background: white;border-left:0.00651rem solid #ccc;border-bottom: 0.00651rem solid #ccc; }
+.e_IsTransImg{width: 0.39063rem;margin:0.16276rem 0.0651rem 0 0.51130rem;float: left;}
+.e_Recommend{width:2.7344rem;height: 1.5rem;position: fixed;z-index: 3;right: 0;bottom: 0;display: none}
+.c_back{width: 0.8rem;position: absolute;top:0;bottom: 0;margin: auto; left: 0.3rem;}
+.c_share{width: 0.8rem;position: absolute;top:0;bottom: 0;margin: auto; right: 0.3rem;}
+.Goback{width: 100%;float: left;position: fixed;top: 0;left: 0; height: 1.2rem; text-align: center;font-size: 0.48rem;line-height: 1.2rem;background: #fff;border-bottom: 1px solid #ccc;}
+.e_Recommendbtn{width: 2.2135rem;height: 0.69661rem;font-size:0.3776rem;color: white;color: white;border: 0;outline: none;border-radius: 0.0651rem;background: #F9A24A;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto; }
+.e_RecommendBor{width: 0.00651rem;height: 0.52084rem;position: absolute;left: 0;bottom: 0;top: 0;margin: auto;background: #ccc;}
+
+.e_IsEnglishArt img{
+    height: auto!important;
+}
+.auother{
+    width:100%;
+    text-align: center;
+    color: #999;
+    font-size: 0.38rem!important;
+}
+.e_IsEnglishContent{
+    margin-top: 0.2rem;
+}

@@ -1,0 +1,23 @@
+/***********************************************必刷题Pk信息By徐扬**************************************************/
+.mu_ContentMain{position: fixed;overflow-y: scroll; width: 100%;height: 100%;background: url("../../../static/image/mustdo/mu_bg0.jpg")0 0 repeat;background-size: 100%;}
+.m_backImg{width: 0.4rem;position: fixed;top:0.2rem;left:0.05rem;z-index: 999;}
+/*试题详情*/
+.mu_ContentMain0{position: fixed;overflow: auto; width: 100%;height: 100%;background: url("../../../static/image/mustdo/mu_bg0.jpg")0 0 repeat;background-size: 100%;}
+.m_TestBox0,.m_TestBox1{width: 92%;min-height: 60%;float: left;margin: 2% 5% 0 4% ;color: #333;box-sizing: border-box;padding: 0.1rem 0;font-size: 0.2rem;  background: white;border-radius: 0.2rem; background-size: 100%; overflow: hidden;}
+.m_TestBox1{min-height: 20%;margin-top: 0.1rem;}
+.m_TestBox0{margin-top: 1rem;}
+.m_QuestionBox{width: 94%;overflow: hidden;position: relative;padding:  0 0.3rem;}
+.m_QuestionBox>div,.m_QuestionBox>p{text-align: left;line-height: 0.5rem;}
+.mu_AnswerLine{float: left;width: 100%;}
+.mu_AnswerTitle{float: left;width: 10%;}
+.mu_AnswerLine>p{float: right;width: 90%;}
+.mu_QuNum{position: absolute;top: 0;left:-0.1rem;text-align: center; float: left;width: 0.5rem;height: 0.5rem;line-height: 0.5rem;}
+.mu_AnswerNum{float: left; z-index: 6; position:fixed;top: 0;left: 0; box-sizing: border-box;padding: 0 0.5rem; width: 100%;height: 0.8rem;;background:white;}
+.mu_AnswerNum>li{position: relative;box-sizing: border-box; float: left;width: 0.6rem;height: 0.6rem;background: white;border-radius: 100%;margin: 0.1rem 0.15rem;font-size: 0.25rem;line-height: 0.6rem;text-align: center; }
+.mu_AnswerNum>li span{float: left;width: 100%;height: 100%;text-align: center;;line-height: 0.6rem;}
+.mu_AnswerNum>li img{float: left;display: none; width: 50%;position: absolute;right: 0;left: 0;bottom: -0.24rem;margin: auto;}
+.m_RightNum{border:1px solid #65B113;color: #65B113;}
+.m_WrongNum{border:1px solid #CA0D0D;color: #CA0D0D;}
+
+.swiper-slide{overflow: scroll;width: 100%;}
+.swiper-Box{height: 5rem; width: 10rem;}

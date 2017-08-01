@@ -1,0 +1,169 @@
+/*班級目標*/
+.shark{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.3);
+    position:fixed;
+    top:0;
+    left:0;
+    display: none;
+}
+.classTarget{
+    width:8.889rem;
+    height: 6.48rem;
+    background: #fff;
+    border-radius: 10px;
+    position: fixed;
+    left:50%;
+    top:50%;
+    margin-left: -4.445rem;
+    margin-top: -3.24rem;
+    position: relative;
+    float: left;
+}
+/*頭部區域*/
+.classHead{
+    width:100%;
+    height: 2.379rem;
+    margin-top: 1rem;
+}
+/*默認頭像*/
+.class_me{
+    margin-left: 1.21rem;
+}
+.PK,.class_u{
+    margin-left: 1.179859rem;
+}
+.class_me,.class_u{
+    display: inline-block;
+    width:1.667rem;
+    text-align: center;
+    float: left;
+    font-size: 0.4259rem;
+    color: #333;
+}
+.PK{
+    display: inline-block;
+    width:0.87rem;
+    height: 1rem;
+    text-align: center;
+    float: left;
+    background: url("../../image/reportNew/vs.png") no-repeat;
+    background-size: 100%;
+    margin-top: 0.54356rem;
+}
+.class_meHead{
+    display: inline-block;
+    width:1.667rem;
+    height: 1.667rem;
+    background: url("../../image/common/defult.png");
+    background-size: cover;
+    border-radius: 50%;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+}
+.class_uHead{
+    display: inline-block;
+    width:1.667rem;
+    height: 1.667rem;
+    background: url("../../image/common/defult.png");
+    background-size: cover;
+    border-radius: 50%;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+
+}
+.class_meName,.class_uName{
+    font-size: 0.35rem;
+}
+/*正確率*/
+.classRight{
+    width:88%;
+    height: 0.7592rem;
+    border:1px solid #65b113;
+    border-radius: 0.379rem;
+    margin:0.5248rem auto 0.3148rem;
+    font-size: 0.4259rem;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.classTime{
+    width:88%;
+    height: 0.7592rem;
+    border:1px solid #49b9df;
+    border-radius: 0.379rem;
+    margin:0 auto;
+    font-size: 0.4259rem;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.classPrecentMe,.classPrecentU{
+    display: inline-block;
+    width:2.58rem;
+    height: 0.7592rem;
+    text-align: center;
+    line-height: 0.7592rem;
+    flex-grow: 1;
+    color: #65b113;
+}
+.classTimetMe,.classTimeU{
+    display: inline-block;
+    width:2.58rem;
+    height: 0.7592rem;
+    text-align: center;
+    line-height: 0.7592rem;
+    flex-grow: 1;
+    color: #49b9df;
+}
+.classWord{
+    display: inline-block;
+    width:2.4814rem;
+    height: 0.7592rem;
+    text-align: center;
+    line-height: 0.7592rem;
+    background: #65b113;
+    flex-grow: 1;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.className{
+    display: inline-block;
+    width:2.4814rem;
+    height: 0.7592rem;
+    text-align: center;
+    line-height: 0.7592rem;
+    background: #49b9df;
+    flex-grow: 1;
+    color: #fff;
+    letter-spacing: 2px;
+}
+/*刪除*/
+.classDelete{
+    position: absolute;
+    display: inline-block;
+    width:0.5rem;
+    height: 1.1rem;
+    background: url("../../image/reportNew/classDelete.png") no-repeat;
+    background-size: 100%;
+    top:-0.7468rem;
+    right: 0.2rem;
+    z-index: 999;
+}
+/*平局胜利等待批改未做*/
+.nodo,.nocorrect,.blance{
+    position: absolute;
+    top:-0.1rem;
+    right: -0.6rem;
+    display: none;
+}
+.win{
+    position: absolute;
+    top:-0.585rem;
+    right: -0.44rem;
+    display: none;
+}
+html,body{
+    overflow-x: hidden;
+}

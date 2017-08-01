@@ -1,0 +1,63 @@
+
+body{background: #F6F6F6;}
+.r_PkInfo{height: 7rem; width: 100%;box-sizing: border-box;float: left;padding-top: 0.5rem; background: url("../../../static/image/report/Bitmap.png")0 0 no-repeat;background-size: 100%;}
+.r_PkTitle{width: 100%;float: left;height: 1rem;line-height: 1rem;color: white;text-align: center;font-size: 0.4rem;}
+.r_PkTitle span:first-child{margin-right: 1rem;}
+.m_PkUserCon{float: left;width: 40%;height: 50%;text-align: center;position: relative;}
+.r_Name{float: left;width: 100%;color: #333;;font-size: 0.45rem;}
+.r_Flag0{position: absolute;top: 0;right:9%;width: 30%;}
+.r_Flag1{position: absolute;top: 0;right:9%;width: 50%;}
+.r_Flag2{position: absolute;top: -0.6rem;right:4%;width: 50%;}
+.r_Flag4{position: absolute;top: 0;right:12%;width: 32%;}
+.m_VsBox{float: left;width: 20%;height: 50%;}
+.m_VsBox>img{float: left;width: 100%;margin-top: 50%;}
+.m_PkPhoto0,.m_PkPhoto1{margin: 0 auto ;width:60%;;overflow: hidden;box-sizing: border-box;padding:0.05rem; background: white;border-radius: 100%;border: 1px solid #ccc;}
+.m_PkPhoto0>img,.m_PkPhoto1>img{float: left;width: 100%;border-radius: 100%;}
+.m_PkList{width: 80%;overflow: hidden;margin: 0 auto;}
+.m_PkList li{width: 100%;float: left;text-align: center;font-size: 0.4rem; height: 0.8rem;padding: 0.05rem; box-sizing: border-box;border-radius: 0.4rem;margin-bottom: 0.12rem; background: #A4C5EE;}
+.m_PkNum0,.m_PkNum1{float: left;width: 35%;color: #A4C5EE; height: 0.7rem;line-height: 0.7rem; box-sizing: border-box;background: white;border-radius: 0.35rem 0 0 0.35rem;}
+.m_PkNum1{border-radius: 0 0.35rem 0.35rem 0;}
+.m_PkTxt{float: left;width: 30%;color: white; height: 100%;line-height: 0.7rem; box-sizing: border-box;background: none;}
+.r_TestInfo{width: 100%;float: left;margin-top: 0.5rem;}
+.r_TestInfoTitle{float: left;width: 100%;text-align: center; height: 1.2rem;background: white;line-height: 1.2rem;font-size: 0.45rem;color: #636363;border: 1px solid #ccc;border-right: 0;border-left: 0;box-sizing: border-box; }
+.r_SelectBox{float: left;width: 100%;box-sizing: border-box;padding:0 0.2rem;background: white;}
+.r_OptionTitle{float: left;width: 100%;min-height: 1rem;background: white; line-height: 1rem; font-size: 0.45rem;color: #333;text-align: left;}
+.r_OptionList,.r_InTro{float: left;width: 100%;}
+.r_OptionList li{float: left;width: 1.5rem;;;margin:0.45rem;line-height: 1.45rem;font-size: 0.6rem;text-align: center; height: 1.5rem; ;border-radius: 100%;box-sizing: border-box;border: 1px solid #ccc;}
+.r_OptionRight{color: #65B113;}
+.r_OptionWrong{color: #CA0D0D;}
+.r_OptionHalf {color: #F9A24A;}
+.r_OptionNo {color: #999999;}
+.r_OptionRight:hover{border-color: #65B113;}
+.r_OptionWrong:hover{border-color: #CA0D0D;}
+.r_OptionHalf :hover{border-color: #F9A24A;}
+.r_OptionNo :hover{border-color: #999999;}
+.r_InTro li{float: left;width: 23%;height: 1rem;line-height: 1rem;margin-top: 0.5rem;}
+.r_InTro li>span:nth-child(1){float: left;width:0.5rem;height: 0.5rem;line-height: 1rem;border-radius: 100%;margin: 0.25rem;}
+.r_InTro li>span:nth-child(2){float: left;line-height: 1rem;font-size: 0.4rem;color: #333;}
+.r_BacRight{background: #65B113;}
+.r_BacWrong{background: #CA0D0D;}
+.r_BacHalf {background: #F9A24A;}
+.r_BacNo {background: #999999;}
+.r_TabBox{float: left;margin-left: 0.5rem; width: 9rem;height: 1rem;margin-bottom: 0.5rem;background: white;border-radius: 0.3rem;border: 1px solid #ccc;}
+.r_TabBox>p{float: left;width: 50%;box-sizing: border-box;font-size: 0.45rem;color:#787878;text-align: center;height: 0.8rem;line-height: 0.8rem;margin-top: 0.1rem;}
+.r_TabBox>p:nth-child(1){border-right: 1px solid #ccc;}
+.r_Wrongico{height: 2rem;position: fixed;z-index: 99;right: 0;top: 0;bottom: 0;margin: auto;}
+.r_Tab{color: #59C1E4!important;}
+.r_Analysis,.r_AnalyList{float: left;width: 100%;overflow: hidden;}
+.r_AnalysisTitlt{float: left;width: 100%;font-size: 0.5rem;color: #666;line-height: 0.8rem;box-sizing: border-box;padding-left: 0.4rem;}
+.r_AnalyList li{float: left;width: 100%;box-sizing: border-box;padding: 0.3rem; position: relative;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;background: white;margin-bottom: 0.4rem;padding-right: 0;}
+.r_knowledgeName{float: left;width: 40%;min-height: 1.2rem;line-height: 0.6rem; border-right: 1px solid #ccc;box-sizing: border-box; text-align: center; line-height: 0.65rem; font-size: 0.45rem;word-break: break-all;}
+.r_AnalyRight{float: left;width: 60%;height: 100%;box-sizing: border-box;padding-left: 0.3rem;}
+.r_ItemNumberSet{float: left;width: 100%;line-height: 0.7rem;text-align: left;font-size: 0.4rem;}
+.fc66{color: #666!important;}
+.fc59{color: #59C1E4!important;}
+.r_Flag3{position: absolute;top: 0;right: 0;height: 0.5rem;}
+.r_Bottom{float: left;width: 100%;}
+.r_AnalysisTitlt{float: left;width: 100%;font-size: 0.5rem;color: #666;line-height: 0.8rem;box-sizing: border-box;padding-left: 0.4rem;}
+.r_DataResult{min-height: 2rem;box-sizing: border-box;padding: 0.3rem; float: left;width: 100%;background: white;border-bottom: 1px solid #30A6E5;border-top: 1px solid #30A6E5; }
+.r_Desc{float: left;width: 100%;font-size: 0.4rem;}
+.r_Desc p,.r_Desc img{float: left;}
+.r_Desc img{height: 0.6rem;}
+.r_CoverBtn{float: left;margin-left: 0.4rem; width: 90%;height: 1rem;line-height: 1rem;border-radius: 0.8rem;font-size: 0.4rem;color:#30A6E5;text-align: center;border: 1px solid #30A6E5; margin-top: 0.4rem;}
+.LineT{float: left;width: 100%;height: 0.5rem;line-height: 0.5rem;font-size: 0.4rem;text-align: center;}

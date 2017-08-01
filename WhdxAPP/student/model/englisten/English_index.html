@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no"/>
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/test/classTar.css">
+    <link rel="stylesheet" href="../../static/style/englisten/English_index.css">
+    <title>听力</title>
+</head>
+<body>
+<!--數據分析-->
+<div class="r_TestInfo">
+    <!--提醒-->
+    <div class="r_rendmine">
+        <i class="Cfont r_Rlogo">&#xe611;</i>
+        <span class="r_rendmineword">请注意：老师批改后数据会发生变化</span>
+        <i class="Cfont r_Delete">&#xe641;</i>
+    </div>
+    <div class="r_TabBox" id="r_TabBox">
+        <div class="r_Rnumber">数据分析</div>
+        <!--圆-->
+        <div class="r_Rcicle">
+            <div class="r_Data">
+                <div class="r_pcircle">
+                    <div class="pie_left"><div class="left"></div></div>
+                    <div class="pie_right"><div class="right"></div></div>
+                    <div class="r_mask">
+                        <span class="r_score"></span>
+                        <span class="r_fullscore">客观题正确率</span>
+                    </div>
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+        <!--数据-->
+        <div class="r_DataShow">
+            <!--客观题-->
+            <div class="r_subject">
+                <p class="r_subName">客观题正确数</p>
+                <p class="r_subData"></p>
+                <div class="r_line"></div>
+            </div>
+            <!--主观题-->
+            <div class="r_object">
+                <p class="r_objName">主观题正确数</p>
+                <p class="r_objData"></p>
+                <div class="r_line"></div>
+
+            </div>
+            <!--时间-->
+            <div class="r_usetime">
+                <p class="r_timeName">用时</p>
+                <p class="r_timeData">00:00:00</p>
+            </div>
+        </div>
+    </div>
+    <div class="r_card">答题卡</div>
+    <div id="Tab2Box" class="r_SelectBox">
+        <div id="Main"></div>
+        <ul class="r_InTro">
+            <li>
+                <span class="r_BacRight"></span>
+                <span>正确</span>
+            </li>
+            <li>
+                <span class="r_BacWrong"></span>
+                <span>错误</span>
+            </li>
+            <li>
+                <span class="r_BacHalf"></span>
+                <span>半对</span>
+            </li>
+            <li>
+                <span class="r_BacNo"></span>
+                <span>未批</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--班級目標-->
+<div class="shark">
+    <div class="classTarget">
+        <!--頭像-->
+        <div class="classHead">
+            <dl class="class_me">
+                <dt class="class_meHead">
+                    <img class="nodo" src="../../static/image/reportNew/nodo.png" />
+                    <img class="nocorrect"  src="../../static/image/reportNew/nocorrect.png"/>
+                    <img class="blance"  src="../../static/image/reportNew/blance.png"/>
+                    <img class="win"  src="../../static/image/reportNew/win.png"/>
+                </dt>
+                <dd class="class_meName">我</dd>
+            </dl>
+            <span class="PK"></span>
+            <dl class="class_u">
+                <dt class="class_uHead">
+                    <img class="nodo" src="../../static/image/reportNew/nodo.png" />
+                    <img class="nocorrect"  src="../../static/image/reportNew/nocorrect.png"/>
+                    <img class="blance"  src="../../static/image/reportNew/blance.png"/>
+                    <img class="win"  src="../../static/image/reportNew/win.png"/>
+                </dt>
+                <dd class="class_uName">你</dd>
+            </dl>
+        </div>
+        <!--正确率-->
+        <div class="classRight">
+            <span class="classPrecentMe">--</span>
+            <span class="classWord">正确率</span>
+            <span class="classPrecentU">--</span>
+        </div>
+        <!--用時-->
+        <div class="classTime">
+            <span class="classTimetMe">--</span>
+            <span class="className">用时</span>
+            <span class="classTimeU">--</span>
+        </div>
+        <span class="classDelete"></span>
+    </div>
+</div>
+</body>
+<script src="../../../student/static/javascript/test/test_Data.js"></script>
+<script src="../../static/javascript/englisten/English_index.js"></script>
+<script src="../../../student/static/javascript/test/classTarget.js"></script>
+</html>

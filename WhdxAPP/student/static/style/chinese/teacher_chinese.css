@@ -1,0 +1,33 @@
+body{background: #F6F6F6;}
+.c_Main{width: 100%;float: left;position: relative;}
+.c_back{width: 0.8rem;position: absolute;top:0;bottom: 0;margin: auto; left: 0.3rem;}
+.c_share{width: 0.8rem;position: absolute;top:0;bottom: 0;margin: auto; right: 0.3rem;}
+.Goback{width: 100%;float: left;position: fixed;top: 0;left: 0; height: 1.2rem;background: white; text-align: center;font-size: 0.5rem;line-height: 1.2rem; border-bottom: 1px solid #ccc}
+.c_Article{line-height: 0.72rem;background: white;font-size: 0.41rem;width: 100%;height: 100%;box-sizing: border-box;float: left;padding: 0.3rem;padding-top: 1.28rem; overflow-y: scroll;font-family: "Microsoft YaHei"!important;}
+.c_Article p,.c_Article span{font-family: "Microsoft YaHei"!important;}
+.r_CarBox{height: 3rem;float: left;width: 100%;}
+.r_Car{width: 4rem;height: 2rem;overflow: hidden;margin: auto;margin-top: 0.5rem; background: url("../../../static/image/read/carbg.png")0 0 no-repeat;background-size: 100%;}
+.r_Car p{float: left;width: 100%;font-size: 0.4rem;text-align: center;color: #666;line-height: 0.6rem;height: 0.6rem;}
+.r_Car p:nth-child(1){margin-top: 0.2rem;}
+.r_Require{height: 2rem;position: fixed;z-index: 99;right: 0;top: 0;bottom: 0;margin: auto;}
+.r_RequireBox{width: 8rem;height: 1.8rem;overflow: scroll; font-size: 0.4rem; position: fixed;color: white;box-sizing: border-box;padding: 0.2rem 0.5rem;border-radius: 1rem; background: url("../../../static/image/common/requirebg.png")0 0 repeat;z-index: 90;right: -10rem;;top: 0;bottom: 0;margin: auto;}
+.r_Teacher,.r_RequireTxt{float: left;width: 100%;}
+.r_RequireTxt{font-size: 0.35rem;}
+/*bylihcao改*/
+#a_ArtTitle{
+    display: inline-block;
+    width:70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.c_Article img{
+    height: auto!important;
+}
+.auother{
+    width:100%;
+    text-align: center;
+    color: #999;
+    margin-top: 0.2rem;
+    font-size: 0.38rem!important;
+}

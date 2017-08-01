@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://app.sci99.com/static/Agreement.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache" />
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/me/agreement.css">
+    <script src="../../static/javascript/common/common.js"></script>
+    <title>五号导学网用户注册协议</title>
+</head>
+<style>
+    .a_title{padding:0 0.45573rem ;float:left;width: 100%;margin-top: 0.28646rem; box-sizing: border-box;text-align: center;height: 1rem;line-height: 1rem;font-size: 0.4rem;color: #333;}
+    .ArtBox{width: 100%;box-sizing: border-box;padding: 0.45573rem; color: #333;float: left;font-size: 0.4rem;line-height: 0.8rem;float: left;border: 1px solid #CCC;border-right: 0;border-left: 0;  background: white;}
+    .ArtBox p{color: #333;float: left;font-size: 0.4rem;line-height: 0.8rem;}</style>
+<body>
+    <!--<h2 class="a_title">五号导学网用户注册协议</h2>-->
+    <div id="ArtBox" class="ArtBox"></div>
+    <script>
+        // 获取用户协议
+        GetContent()
+        function GetContent(){
+            var SubData={};
+            SubData.code='content';
+            $.ajax({
+                "type": "post",
+                "url": "/api/common/appSysAlert ",
+                "dataType":'json',
+                "data": SubData,
+                success: function (data) {
+                    var AllData=data.retData;
+                    CreatArtBox(AllData);
+                }
+            });
+        };
+        // 创建文章盒子，将文章插到页面中
+        function CreatArtBox(data){
+            var $ArtHtml='';
+            if(typeof(data)!='undefined'){
+                var content=data;
+                content=content.replace(/\&lt;/g,'<')
+                content=content.replace(/\&gt;/g,'>')
+                content=content.replace(/\&quot;/g,'"')
+                content=content.replace(/\&amp;quot;/g,'"')
+                content=content.replace(/\&amp;nbsp;/g, "");
+                content=content.replace(/\&amp;#39;/g,"'");
+                $('#ArtBox').html(content);
+            }
+            else {
+                $('#ArtBox').html('暂无数据');
+            }
+        };
+
+    </script>
+</body>
+</html>

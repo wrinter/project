@@ -1,0 +1,39 @@
+body{background: #F4F4F4;}
+.UserType{width: 9rem;margin:0.3rem auto;overflow: hidden;height: 1.2rem;background: white;border-radius: 0.3rem;box-sizing: border-box;border: 1px solid #56DB94;}
+/*Tab切换*/
+.TypeBox{float: left;width: 50%;box-sizing: border-box;height: 100%;background: white;}
+.TypeBoxSelect{float: left;width: 50%;box-sizing: border-box;height: 100%;background: #56DB94;}
+.TypeBoxSelect span{color: white;border-right: 0;}
+.TypeSpan{float: left;width: 100%;box-sizing: border-box;height: 0.9rem;line-height: 0.9rem;font-size: 0.4rem;text-align: center;margin-top: 0.15rem; color: #666;}
+.TypeBox:last-child .TypeSpan{border-right: 0;}
+.InputBox{float: left;;width: 100%;height: 1.4rem;background: white;padding: 0 0.5rem; box-sizing: border-box;border-bottom:0.000001rem solid #EFEFEF  ; overflow:hidden;}
+.Picico{width:0.7rem;float: left;margin-top: 0.35rem;}
+.InputMain{float: left;width: 6rem;height: 1.4rem;font-size: 0.4rem;color: #333;border: 0;line-height: 1.4rem;outline: none;}
+.Width4{width: 4rem!important;;}
+.Mb3{margin-bottom: 0.3rem;}
+.GetMsg{float: right;width: 2.5rem;height: 0.8rem;margin-top: 0.3rem;}
+.MsgBtnTxt{float: left;width: 100%;height: 100%;font-size: 0.35rem;color: #56DB94; background: white;line-height: 0.8rem;text-align: center; border-radius: 0.5rem;box-sizing: border-box;border: 0.00001rem solid #56DB94;}
+.DisGetMsg{display: none; float: left;width: 100%;height: 100%;font-size: 0.35rem;color: #ccc; background: white;line-height: 0.8rem;text-align: center; border-radius: 0.5rem;box-sizing: border-box;border: 0.00001rem solid #ccc;}
+.NextBtn{clear: both;margin: 0 auto; width: 8rem;background: #56DB94;color: white;font-size: 0.4rem;height: 1.2rem;line-height: 1.2rem;text-align: center;border-radius: 0.6rem;}
+.Error{float: left;width: 100%;height: 0.8rem;line-height: 0.8rem;text-align: left;font-size: 0.3rem;color: #CA0D0D;box-sizing: border-box;padding-left: 0.5rem;}
+.TitModel{float: left;margin-right: 0.5rem;color: #333; text-align: left;height: 1.4rem;line-height: 1.4rem;font-size: 0.4rem;;}
+.Select{float: right;margin-right: 0.2rem;font-size: 0.4rem;color: #999;height: 1.4rem;line-height: 1.38rem;}
+.Jtico{float: right;height: 0.4rem;margin-top: 0.5rem;}
+.ChoiceList{float: left;width: 100%;}
+.ChoiceList li{float: left;width: 100%;height: 1.4rem;background: white;font-size: 0.4rem;line-height: 1.4rem; box-sizing: border-box;padding: 0 0.5rem;border-bottom:0.000001rem solid #EFEFEF  ; overflow:hidden;}
+.SearchBox{float: left;width: 100%;height: 1.4rem;}
+.SearchMain{overflow: hidden;margin:0.3rem  auto;width: 8rem;position: relative; height: 0.8rem; border-radius: 4rem;background: white;border: 0.00001rem solid #EFEFEF; }
+.SearchBtn{height: 0.7rem;float: right;margin-top: 0.05rem;margin-right: 0.2rem;}
+.SearchInput{position: absolute;top: 0;bottom: 0;right: 0;left: 0;margin: auto;width: 5rem;outline: none;border: 0; font-size: 0.4rem;text-align: center;}
+.GpsBox{float: left;width: 100%;height: 1.4rem;background: white;box-sizing: border-box;padding:0 0.5rem;}
+.GpsIco{float: left;height: 0.8rem;margin-top: 0.3rem;margin-right: 0.3rem;}
+.Adress{float: left;height: 1.4rem;line-height: 1.4rem;font-size: 0.4rem;color: #333;}
+.SearchFixed{float: left;width: 100%;height: 2.8rem;position: fixed;top: 0;left: 0;z-index: 1;background: #F4F4F4;}
+.Adress span{float: left;margin-right: 0.3rem;color: #333;height: 1.4rem;line-height: 1.4rem;font-size: 0.4rem; }
+.SchoolListBox{float: left;margin-top: 2.8rem;box-sizing: border-box;width: 100%;}
+.SchoolListBox>li{float: left;box-sizing: border-box;width: 100%;}
+.Spell{width: 100%;float: left;height: 1rem;line-height: 1rem;text-align: left; background: #F4F4F4;box-sizing: border-box;padding: 0 0.5rem;font-size: 0.4rem;color: #666;text-align: left;}
+.SchoolList{float: left;width: 100%;box-sizing: border-box;border-top: 0.0001rem solid #EFEFEF;background: white;}
+.SchoolList>li{float: left;width: 100%;box-sizing: border-box;height: 1.2rem;line-height: 1.2rem;padding: 0 0.5rem; text-align: left; border-bottom: 0.0001rem solid #EFEFEF;background: white;font-size: 0.4rem;color: #333;}
+
+

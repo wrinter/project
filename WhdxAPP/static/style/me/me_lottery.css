@@ -1,0 +1,223 @@
+html,body,.lottery_main{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    background: #f07113;
+    overflow: hidden;
+}
+.l_lottery{
+    width:100%;
+    height: 100%;
+    background: url("../../image/me/me_lottery_background.png") no-repeat;
+    background-size:cover;
+    /*background: #f69f59;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/*转盘*/
+.l_loterydo{
+    width:100%;
+    height:9.08203rem;
+    position: relative;
+}
+.l_loterdid{
+    position: absolute;
+    left:1.30208rem;
+    top:0.65104rem;
+    width:7.4rem;
+    height: 7.4rem;
+    background: url("../../image/me/me_lotterydo.png") no-repeat;
+    background-size:cover;
+    position: relative;
+    /*margin:0 auto;*/
+    /*margin-top: 0.83008rem;*/
+    position: relative;
+}
+.l_tterydid{
+    display: block;
+    position: absolute;
+    width:2.4rem;
+    height:2.4rem;
+    left:50%;
+    top:50%;
+    margin-left:-1.2rem;
+    margin-top: -1.2rem;
+}
+/*中奖*/
+.l_lotterylist{
+    width:100%;
+    min-height: 1rem;
+}
+.l_lottery_img{
+    width:8.46354rem;
+    height:1.07421rem;
+    background: url("../../image/me/me_lotterylist.png") no-repeat;
+    background-size:cover;
+    margin:0 auto;
+    text-align: center;
+    line-height: 1.07421rem;
+}
+.l_lotteryname{
+    display: block;
+    font-size: 0.11718rem;
+    color: #f69f59;
+    font-size: 0.32rem;
+}
+.l_lottery_worder{
+    display: block;
+    width:0.95rem;
+    height: 0.95rem;
+    font-size: 0.45rem;
+    color: #fff;
+    position: absolute;
+    left:3.2055rem;
+    top:3.075rem;
+}
+.l_lottery_sharks{
+    display: block;
+    width:1.1rem;
+    height: 1.3rem;
+    /*background: #fff;*/
+    position: absolute;
+    left:3.255rem;
+    top:3.075rem;
+}
+/*中奖名单*/
+.l_lotteryli{
+    width:7.42187rem;
+    height:4.45963rem;
+    background: rgba(255,255,255,0.2);
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.l_lotteryli li{
+    display: block;
+    width:100%;
+    height:0.78125rem;
+    font-size: 0.37760rem;
+    line-height: 0.78125rem;
+    color: #fff;
+    /*margin-top: 0.390625rem;*/
+}
+/*.l_lotteryli li:first-child{*/
+    /*float: left;*/
+    /*margin-top: 0.195rem!important;*/
+/*}*/
+.l_lotteryli_name{
+    display: inline-block;
+    width:1.6rem;
+    float: left;
+    margin-left: 0.32552rem;
+}
+.l_lotteryli_win{
+    display: inline-block;
+    width:2rem;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 0.42552rem;
+ }
+.l_loaddress{
+    display: inline-block;
+    width:2.4rem;
+    /*float: right;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 0.42552rem;
+}
+/*中奖规则*/
+.l_lottery_rule{
+    width:8.39843rem;
+    height:5.40364rem;
+    margin:0.4557rem auto 0;
+}
+.l_lottery_word{
+    width:100%;
+    height:0.71614rem;
+    font-size:0.33203rem;
+    color: #fff69c;
+    line-height: 0.7rem;
+}
+.l_lotterycont{
+    width:8.39843rem;
+    height:4.6875rem;
+    border:1px solid #fff69c;
+    box-sizing: border-box;
+    color: #fff;
+    font-size:0.2rem;
+    margin-bottom: 1.30208rem;
+    line-height: 0.5rem;
+}
+.l_lotterycont p{
+    width:6.68848rem;
+    font-size: 0.33203rem;
+    line-height: 0.46223rem;
+    margin-left: 0.29296rem;
+
+}
+.l_lotterycont p:first-child{
+    float: left;
+    margin-top: 0.13rem;
+}
+.l_lotterycont p:last-child{
+    float: left;
+    margin-top: 0.32593rem;
+}
+/*遮罩层*/
+.l_lottery_shark{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+.l_lottery_win{
+    width:100%;
+    height:9.11458rem;
+    /*background: #ddd;*/
+}
+.l_lottery_winname{
+    width:8.39843rem;
+    height:7.61718rem;
+    background: url("../../image/me/me_lottery_winname.png") no-repeat;
+    background-size: cover;
+    float: left;
+    margin-left:0.89403rem;
+    /*margin:0 auto;*/
+    margin-top: 0.74rem;
+    position: relative;
+}
+.l_lotterydelte{
+    position: absolute;
+    right: 0;
+    top:0.45572rem;
+    width:0.65104rem;
+    height:0.65104rem;
+}
+.l_lottery_get{
+    display: block;
+    width:4.10156rem;
+    height:1.041666rem;
+    font-size: 0.5776rem;
+    margin:2.16rem auto 0;
+    line-height: 1.04rem;
+    text-align: center;
+    color:#fff;
+}
+.l_lotterywinword{
+    display: block;
+    width:4.10156rem;
+    height:1.041666rem;
+    background: #fff69c;
+    border-radius: 0.5rem;
+    font-size: 0.6776rem;
+    line-height: 1.04rem;
+    text-align: center;
+    margin: 0.596rem auto 0;
+    color: #df3a3a;
+}

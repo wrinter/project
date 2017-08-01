@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <script src="../../../weixin/static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../../weixin/static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/lot/lot.css">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <style id="NewStyle"></style>
+</head>
+<body>
+<div class="Main">
+    <p class="Rule" id="ARTBtn">活动规则</p>
+    <a href="luchlist.html" class="LuckRule">中奖纪录</a>
+    <div class="LotBox">
+        <img src="../../static/images/lot/z.png" alt="" class="Table" id="Turn">
+        <img src="../../static/images/lot/pointer.png" alt="" class="Pointer" id="Pointer" data-status='false'>
+    </div>
+    <div class="Chance">今日可抽奖次数：<span id="Chance"></span>次</div>
+    <p class="ChanceRule" id="CTBtn">如何获得抽奖次数？</p>
+    <div class="WinBox">
+        <img src="../../static/images/lot/wint.png" alt="" class="WinTitle">
+        <ul class="WinList" id="WinList"></ul>
+    </div>
+    <!--中奖弹窗-->
+    <div class="WinMain dino" id="WinMain">
+        <div class="WinLot">
+            <img src="../../static/images/lot/close.png" alt="" class="CloseWin" id="CloseWIn">
+            <p class="IsWin" id="IsWin"></p>
+            <p style="clear: both;"></p>
+            <p class="WinGrade" id="WinGrade"></p>
+        </div>
+    </div>
+    <!--活动规则-->
+    <div class="WinMain dino" id="AwardRuleTipsMian">
+        <div class="RulueBox">
+            <img src="../../static/images/lot/ruleclose.png" alt="" class="Ruleclose">
+            <ul class="RuleTitle" id="AwardRuleTips"></ul>
+        </div>
+    </div>
+    <!--获取抽奖机会-->
+    <div class="WinMain dino" id="ChanceTipsMain">
+        <div class="RulueBox">
+            <img src="../../static/images/lot/ruleclose.png" alt="" class="Ruleclose">
+            <ul class="RuleTitle BacRu1" id="ChanceTips"></ul>
+        </div>
+    </div>
+</div>
+<script src="../../static/javascript/lot/lot.js"></script>
+</body>
+</html>

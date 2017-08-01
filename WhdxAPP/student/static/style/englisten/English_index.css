@@ -1,0 +1,251 @@
+
+body{background: #F6F6F6;overflow-x: hidden}
+.r_PkInfo{width:100%;}
+/*数据分析这一栏*/
+.r_TabBox{width:100%;height:7.2rem;background: #fff;}
+.r_rendmine{width:100%;height:1.01rem;background: #ffb968;font-size: 0.38rem;color: #fff;line-height: 1.01rem;display: none}
+.r_Rlogo{font-size: 0.45rem;margin-left: 0.29629rem}
+.r_Delete{font-size: 0.38rem;float: right;margin-right: 0.29629rem}
+.r_Rnumber{
+    width:100%;
+    height:1.04rem;
+    font-size: 0.48rem;
+    line-height: 1.04rem;
+    color: #333;
+    margin-left: 0.29629rem;
+}
+/*圆*/
+.r_Rcicle{
+    width:100%;
+    height: 3.6rem;
+
+}
+.r_Data{
+    width:3.6rem;
+    height: 3.6rem;
+    margin:0 auto;
+}
+/*********************************圆环**********************************/
+.r_pcircle {
+    width: 3.6rem;
+    height: 3.6rem;
+    position: absolute;
+    border-radius: 50%;
+    background: #59c1e4;
+    margin:0 auto;
+}
+.r_ccircle {
+    width: 3.6rem;
+    height: 3.6rem;
+    position: absolute;
+    border-radius: 50%;
+    background: #59c1e4;
+    margin-left: 110px;
+    margin-top: 20px;
+}
+.pie_left, .pie_right {
+    width:3.6rem;
+    height:3.6rem;
+    position: absolute;
+    top: 0;left: 0;
+}
+.left, .right {
+    width:3.6rem;
+    height:3.6rem;
+    background:#ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pie_right, .right {
+    clip:rect(0,auto,auto,1.799999999rem);
+}
+.pie_left, .left {
+    clip:rect(0,1.79999999999rem,auto,0);
+}
+.r_mask {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    left: 0.2rem;
+    top: 0.2rem;
+    background: #FFF;
+    position: absolute;
+    text-align: center;
+    line-height: 3.2rem;
+    font-size: 20px;
+}
+.r_score{
+    font-size:0.74rem;
+    display:block;
+    color: #333;
+}
+.r_fullscore{
+    font-size:0.33rem;
+    display:block;
+    color:#999;
+    position: relative;
+    top: -2.38rem;
+}
+/*数据*/
+.r_DataShow{
+    width:100%;
+    height:1.85rem;
+    margin-top: 0.68rem;
+    display: flex;
+    flex-flow:row nowrap;
+}
+.r_subject,.r_object,.r_usetime{
+    width:33%;
+    height: 1.85rem;
+    float: left;
+    font-size: 0.33rem;
+    text-align: center;
+    color: #333;
+    margin-top: 0.2rem;
+    position: relative;
+    flex-grow: 1;
+}
+.r_subData,.r_objData,.r_timeData{
+    font-size: 0.537rem;
+}
+.r_subName,.r_objName,.r_timeName{
+    color: #999;
+}
+.r_line{
+    width:0.1rem;
+    height:0.629rem;
+    border-right: 1px solid #ccc;
+    position: absolute;
+    right: 0;
+    top:0.3rem;
+}
+/*答题卡*/
+.r_card{
+    width: 100%;
+    height:0.98rem;
+    background: #f6f6f6;
+    font-size: 0.4259rem;
+    color: #666;
+    margin-left: 0.29269rem;
+    line-height: 0.98rem;
+}
+.r_PkTitle{width: 100%;float: left;height: 1rem;line-height: 1rem;color: white;text-align: center;font-size: 0.4rem;}
+.r_PkTitle span:first-child{margin-right: 1rem;}
+.m_PkUserCon{float: left;width: 40%;height: 50%;text-align: center;position: relative;}
+.r_Name{float: left;width: 100%;color: #333;;font-size: 0.429rem;}
+.r_Flag0{position: absolute;top: 0;right:9%;width: 30%;}
+.r_Flag1{position: absolute;top: 0;right:9%;width: 50%;}
+.r_Flag2{position: absolute;top: -0.6rem;right:4%;width: 50%;}
+.r_Flag4{position: absolute;top: 0;right:12%;width: 32%;}
+.m_VsBox{float: left;width: 20%;height: 50%;}
+.m_VsBox>img{float: left;width: 100%;margin-top: 50%;}
+.m_PkPhoto0,.m_PkPhoto1{margin: 0 auto ;width:60%;;overflow: hidden;box-sizing: border-box;padding:0.05rem; background: white;border-radius: 100%;border: 1px solid #ccc;}
+.m_PkPhoto0>img,.m_PkPhoto1>img{float: left;width: 100%;border-radius: 100%;}
+.m_PkList{width: 80%;overflow: hidden;margin: 0 auto;}
+.m_PkList li{width: 100%;float: left;text-align: center;font-size: 0.4rem; height: 0.8rem;padding: 0.05rem; box-sizing: border-box;border-radius: 0.4rem;margin-bottom: 0.12rem; background: #A4C5EE;}
+.m_PkNum0,.m_PkNum1{float: left;width: 35%;color: #A4C5EE; height: 0.7rem;line-height: 0.7rem; box-sizing: border-box;background: white;border-radius: 0.35rem 0 0 0.35rem;}
+.m_PkNum1{border-radius: 0 0.35rem 0.35rem 0;}
+.m_PkTxt{float: left;width: 30%;color: white; height: 100%;line-height: 0.7rem; box-sizing: border-box;background: none;}
+.r_TestInfo{width: 100%;float: left;}
+.r_TestInfoTitle{float: left;width: 100%;text-align: center; height: 1.2rem;background: white;line-height: 1.2rem;font-size: 0.429rem;color: #636363;border: 1px solid #ccc;border-right: 0;border-left: 0;box-sizing: border-box; }
+.r_SelectBox{float: left;width: 100%;box-sizing: border-box;padding:0 0.2rem;background: white;}
+.r_OptionTitle{float: left;width: 100%;min-height: 1rem;background: white; line-height: 1rem; font-size: 0.429rem;color: #333;text-align: left;}
+.r_OptionList,.r_InTro{float: left;width: 100%;}
+.r_OptionList li{float: left;width: 1.5rem;;;margin:0.29rem;line-height: 1.45rem;font-size: 0.6rem;text-align: center; height: 1.5rem; ;border-radius: 100%;box-sizing: border-box;border: 1px solid #ccc;}
+.r_OptionRight{color: #65B113; border:1px solid #65B113!important;}
+.r_OptionWrong{color: #CA0D0D;border:1px solid #CA0D0D!important;}
+.r_OptionHalf {color: #F9A24A;border:1px solid #F9A24A!important;}
+.r_OptionNo {color: #999999;}
+.r_OptionRight:hover{border-color: #65B113;}
+.r_OptionWrong:hover{border-color: #CA0D0D;}
+.r_OptionHalf :hover{border-color: #F9A24A;}
+.r_OptionNo :hover{border-color: #999999;}
+.r_InTro li{float: left;width: 23%;height: 1rem;line-height: 1rem;margin-top: 0.5rem;}
+.r_InTro li>span:nth-child(1){float: left;width:0.5rem;height: 0.5rem;line-height: 1rem;border-radius: 100%;margin: 0.25rem;}
+.r_InTro li>span:nth-child(2){float: left;line-height: 1rem;font-size: 0.4rem;color: #333;}
+.r_BacRight{background: #65B113;}
+.r_BacWrong{background: #CA0D0D;}
+.r_BacHalf {background: #F9A24A;}
+.r_BacNo {background: #999999;}
+.r_TabBox>p{float: left;width: 50%;box-sizing: border-box;font-size: 0.429rem;color:#787878;text-align: center;height: 0.8rem;line-height: 0.8rem;margin-top: 0.1rem;}
+.r_TabBox>p:nth-child(1){border-right: 1px solid #ccc;}
+.r_Wrongico{height: 2rem;position: fixed;z-index: 99;right: 0;top: 0;bottom: 0;margin: auto;}
+.r_Tab{color: #59C1E4!important;}
+.r_Analysis,.r_AnalyList{width: 100%;overflow: hidden;}
+.r_knowledgeName{float: left;width: 40%;min-height: 1.2rem;line-height: 0.6rem; border-right: 1px solid #ccc;box-sizing: border-box; text-align: center; line-height: 0.65rem; font-size: 0.429rem;word-break: break-all;}
+.r_AnalyRight{float: left;width: 60%;height: 100%;box-sizing: border-box;padding-left: 0.3rem;}
+.r_ItemNumberSet{float: left;width: 100%;line-height: 0.7rem;text-align: left;font-size: 0.4rem;}
+.fc66{color: #666!important;}
+.fc59{color: #59C1E4!important;}
+.r_Flag3{position: absolute;top: 0;right: 0;height: 0.5rem;}
+.r_Desc{float: left;width: 100%;font-size: 0.4rem;}
+.r_Desc p,.r_Desc img{float: left;}
+.r_Desc img{height: 0.6rem;}
+.r_CoverBtn{float: left;margin-left: 0.4rem; width: 90%;height: 1rem;line-height: 1rem;border-radius: 0.8rem;font-size: 0.4rem;color:#30A6E5;text-align: center;border: 1px solid #30A6E5; margin-top: 0.4rem;}
+.LineT{float: left;width: 100%;height: 0.5rem;line-height: 0.5rem;font-size: 0.4rem;text-align: center;}
+/*知识点*/
+.r_AnalysisTitlt{
+    float: left;
+    width: 100%;
+    font-size: 0.33rem;
+    color: #999;
+    line-height: 0.8rem;
+    box-sizing: border-box;
+    padding-left: 0.296rem;
+}
+.r_AnalyListName{
+    font-size: 0.4259rem;
+    color: #666;
+}
+/*知识*/
+.r_AnalyList{
+    width:100%;
+    height: 3.63rem;
+    background: #fff;
+    border-top: 1px solid #ccc;
+}
+.r_ListName{
+    width:100%;
+    height:1.21rem;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.4259rem;
+    line-height: 1.21rem;
+    color: #333;
+}
+.r_KnownName{
+    display: inline-block;
+    margin-left: 0.296rem;
+}
+.r_KnownNumber{
+    display: inline-block;
+    float: right;
+    margin-right: 0.296rem;
+    color: #CA0D0D;
+}
+/*显示剩余Ｎ个知识点*/
+.r_ShowList{
+    width:100%;
+    height: 0.9259rem;
+    line-height: 0.9259rem;
+    font-size: 0.33rem;
+    color: #49b9df;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+/*補償訓練*/
+.r_ClickRain{
+    width:81.4%;
+    height: 1.241rem;
+    background: #fff;
+    border:1px solid #49b9df;
+    border-radius: 1.12rem;
+    margin:0.787rem auto;
+    font-size: 0.48148rem;
+    line-height: 1.241rem;
+    text-align: center;
+    color: #49b9df;
+}

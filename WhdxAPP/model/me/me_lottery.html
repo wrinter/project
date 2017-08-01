@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>抽奖</title>
+    <script src="../../static/plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/common.css" />
+    <link rel="stylesheet" href="../../static/style/me/me_lottery.css">
+</head>
+<body>
+    <div class="lottery_main">
+        <!--背景图-->
+        <div class="l_lottery">
+            <!--转盘-->
+            <div class="l_loterydo">
+                <div class="l_loterdid">
+                    <img class="l_tterydid" id="rotaryArrow" src="../../static/image/me/me_lotterydidodcl.png"/>
+                    <span class="l_lottery_worder">我要抽奖</span>
+                    <span class="l_lottery_sharks" id="rotaryArrow0"></span>
+                </div>
+            </div>
+            <div class="l_lotterylist">
+                <div class="l_lottery_img">
+                    <span class="l_lotteryname">获奖名单</span>
+                </div>
+                <ul class="l_lotteryli">
+
+                    <li class="l_lottery_auto"><span class="l_lotteryli_name">李超</span><span class="l_lotteryli_win">神秘大奖神这还</span><span class="l_loaddress">莒南一中</span></li>
+                    <li class="l_lottery_auto"><span class="l_lotteryli_name">李超超超</span><span class="l_lotteryli_win">一等奖</span><span class="l_loaddress">山东省莒南三中</span></li>
+                    <li class="l_lottery_auto"><span class="l_lotteryli_name">超</span><span class="l_lotteryli_win">二等奖</span><span class="l_loaddress">莒南四中</span></li>
+                    <li class="l_lottery_auto"><span class="l_lotteryli_name">超</span><span class="l_lotteryli_win">三等奖</span><span class="l_loaddress">莒南三中</span></li>
+                </ul>
+            </div>
+            <div class="l_lottery_rule">
+                <div class="l_lottery_word">抽奖规则</div>
+                <div class="l_lotterycont">
+                    <p>1.抽奖资格：认证老师才可以参加抽奖;</p>
+                    <p>2.活动时间：2016年3月7日-2016年4月7号;</p>
+                    <p>3.奖项设置：一等奖为神秘大奖，二等奖为下 &nbsp;&nbsp;&nbsp;载券一张;</p>
+                    <p>4.发放规则：金币、经验即可到账；</p>
+                    <p>5.中奖分享：获奖老师可以将奖品照片和心情分 &nbsp;&nbsp;&nbsp;享到教师论坛上;</p>
+                    <p>本活动最终解释权归xx公司所有</p>
+                </div>
+            </div>
+        </div>
+        <div class="l_lottery_shark" id="result">
+            <div class="l_lottery_win">
+                <div class="l_lottery_winname">
+                    <span class="l_lottery_get"></span>
+                    <span class="l_lotterywinword" id="resultTxt"></span>
+                    <img class="l_lotterydelte" id="rebtn" src="../../static/image/me/me_lotterydelete.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="../../static/plugin/me/jquery.rotate.min.js"></script>
+    <script src="../../static/plugin/me/me_lottery.js"></script>
+</html>
