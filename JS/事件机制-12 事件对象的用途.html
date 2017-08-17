@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<title></title>
+	<style type="text/css">
+		div{width:200px;height:80px;border:1px solid #f00;text-align:center;font-size:44px;}
+		p{background:#ccc;margin:0;}
+	</style>
+</head>
+
+<body id='body'>
+	<div id="outer" class="">
+		<p id='inner'>单击此处</p>
+	</div>
+	<script type="text/javascript">
+		var outer = document.getElementById('outer');
+		var inner = document.getElementById('inner');
+		outer.onclick = function (evt) {
+			var evt = evt||window.event;
+			var targetElement = evt.target||evt.srcElement;
+			if (targetElement==this) {
+				targetElement.innerHTML="更换内容";
+			}
+		};
+	</script>
+</body>
+</html>

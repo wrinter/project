@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>get target</title>
+    <script type='text/javascript'>
+        window.onload = function(){
+            var obj = document.getElementById("test");
+
+            obj.onclick = function(event) {
+                // 获取事件对象
+                var evt = event || window.event;
+
+                // 获取事件触发的目标对象
+                // W3C标准（非IE）： evt.target
+                // IE：evt.srcElement
+                var src = evt.target || evt.srcElement;
+
+                // 当点击div（非h3）标签上显示DIV，点击h3标签上显示H3
+                alert(src.tagName);
+            };
+        };
+    </script>
+</head>
+<body>
+<div style='height: 200px; width: 200px; background-color: green; padding: 30px;' id="test">
+    <h3 style="background-color: red;">点击我</h3>
+</div>
+<body>
+</html>
