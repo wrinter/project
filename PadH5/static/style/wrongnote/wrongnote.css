@@ -1,0 +1,15 @@
+body{background:white;font-family:STHeiTi;}
+.w_main{width:9.025rem;padding:0 0.25rem;}
+.w_quetions{margin-top:0.375rem;}
+.w_question{font-size:0.176rem;height:0.361rem;line-height:0.361rem;color:#101010;}
+.w_question li{position:relative;}
+.w_optiownLi{line-height:0.361rem;height:0.361rem;}
+.w_content,.w_option,.w_group{margin-left:0.29rem;}
+.w_labels{background: #F8F8F8;font-size:0.156rem;line-height:0.2734rem;padding-left:0.29rem;}
+.w_labels ul li p{line-height:0.2734rem;height:0.2734rem;}
+.w_label,.w_label p{word-break:break-all;}
+.w_label{margin-left:0.08rem;}
+.w_order{position: absolute;}
+.w_check{overflow: hidden;}
+.w_check p{float:right;color:#41B3EE;}
+.w_subc{position:absolute;}

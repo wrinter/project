@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="Title">英文文章</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="../../plugin/vue.js"></script>
+    <script src="../../plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/extend/engart.css">
+    <script src="../../static/javascript/basic/Echo_Player.js"></script>
+</head>
+<body>
+<div id="Art_Main" class="Art_Main">
+    <div class="Com_Art">
+        <p :class="{'Art_Title NoAuthor':!isEmptyObject(Data.subtitle),'Art_Title':isEmptyObject(Data.subtitle)}">{{Data.title}}</p>
+        <p class="Art_Author" v-if="isEmptyObject(Data.subtitle)">{{author}}</p>
+        <p class="Art_CoMand"  @click="Command"><span></span><span>推荐</span></p>
+        <div class="Art_Con" v-html="Content"></div>
+        <p class="Art_TransBtn" @click="ShowTransEvt">
+            <span>{{TransBtnTxt}}</span>
+            <i :class="{'Art_Ico0':ShowTrans,'Art_Ico1':!ShowTrans}"></i>
+        </p>
+        <div v-if="ShowTrans" class=" Art_Translate">
+            <div class="Art_Trans" v-html="TransContent"></div>
+        </div>
+    </div>
+    <div class="Art_UpDown" v-if="CanUpDown">
+        <p v-if="IsUp" @click="ChangeArt(-1)">
+            <span>上一篇：</span>
+            <span>{{UpArtName}}</span>
+        </p>
+        <p v-if="IsDown" @click="ChangeArt(1)">
+            <span>下一篇：</span>
+            <span>{{DownArtName}}</span>
+        </p>
+    </div>
+    <p class="Shelter"></p>
+    <audio :src="AudioSrc" id="ThisAudio"></audio>
+
+</div>
+
+</body>
+<script src="../../static/javascript/extend/engart.js"></script>
+</html>

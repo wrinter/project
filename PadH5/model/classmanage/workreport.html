@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业报告</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="../../plugin/vue.js"></script>
+    <script src="../../plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../plugin/echarts.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/classmanage/workreport.css">
+</head>
+<body>
+<div class="c_main">
+    <div class="c_right" id="work">
+        <p>
+            <span class="c_wname">{{workName}}</span>
+            <span class="c_cname">{{className}}</span>
+        </p>
+        <div class="c_work">
+            <p>本次作业情况</p>
+            <div id="c_echart" class="c_echart"></div>
+        </div>
+        <div class="c_list">
+            <p>
+                <span>未交名单</span>
+                <span class="c_check" @click="checkList">查看累计为名单</span>
+            </p>
+            <div class="c_unSubmit">
+                <li v-for="item in unSubmitList">
+                    <img :src="item.avatar" v-if="item.avatar">
+                    <img src="../../static/images/classmanage/default.png" v-else>
+                    <span>{{item.userName}}</span>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../static/javascript/classmanage/workreport.js"></script>
+</html>

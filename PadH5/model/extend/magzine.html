@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>期刊</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="../../plugin/vue.js"></script>
+    <script src="../../plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/extend/magzine.css">
+</head>
+<body>
+    <ul class="Mag_Main" id="Magazine">
+      <li v-for="(data,index) in Data">
+          <div class="Mag_ImgBox">
+              <img :src="data.picUrl" alt="" v-if="isEmptyObject(data.picUrl)">
+              <img src="../../static/images/chinese/2.png"  alt="" v-else>
+          </div>
+          <div class="Mag_Right">
+              <div class="Mag_Title">
+                  <p>{{data.title}}</p>
+                  <p>{{data.updateTime}}</p>
+              </div>
+              <ul class="Mag_List" v-if="isEmptyObject(data.childrens[0])">
+                  <li v-for="(art,aindex) in data.childrens" @click="ToArt(aindex,data.childrens)">
+                      <span>{{art.title}}</span>
+                      <span v-if="aindex!=data.childrens.length-1">／</span>
+                  </li>
+              </ul>
+          </div>
+      </li>
+    </ul>
+</body>
+<script src="../../static/javascript/extend/magzine.js"></script>
+</html>

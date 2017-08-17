@@ -1,0 +1,10 @@
+body{background: white;font-family: "Microsoft YaHei"}
+.Com_Art,.Art_Title,.Art_Con,.Art_UpDown{float: left;width: 100%;box-sizing: border-box;}
+.Com_Art{padding: 0.29297rem 0.391rem 0.9rem 0.391rem;position: relative;}
+.Art_Title{font-size: 0.234375rem;color: #222;text-align: center;line-height: 0.34146rem;}
+.Art_Con{font-size: 0.17578rem;color: #656565;line-height: 0.36133rem;text-indent: 0.390625rem;margin-top: 0.4395rem;}
+.Art_UpDown{background: white;position: fixed;text-align:center; bottom: 0;left: 0;height: 0.6836rem;border-top: 1px  solid #E8E8E8;font-size: 0.15625rem;color: #656565;}
+.Art_UpDown >p{display: inline-flex;margin:0 0.29297rem;height: 0.6836rem;line-height: 0.6836rem;}
+.Art_UpDown >p>span:nth-child(2){max-width:1.172rem;display: inline-block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; }
+.Art_UpDown >p:hover{color: #30C3A6!important;;}
+.Art_Con p,.Art_Con span{font-family: 'Microsoft YaHei'!important;line-height: 0.36133rem!important;}

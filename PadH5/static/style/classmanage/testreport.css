@@ -1,0 +1,11 @@
+body{background:white;font-family:STHeiTi;font-size:0.225rem;}
+.c_top{height:0.33rem;width:9.12rem;margin:0.46rem 0.35rem 0.26rem 0.39rem;border-bottom:1px solid #E8E8E8;}
+.c_con{min-height:4.5rem;width:9.05rem;padding:0 0.45rem;}
+.c_con>li{height:0.75rem;line-height:0.75rem;border-bottom:1px solid #E8E8E8;border-left:1px solid #E8E8E8;border-right:1px solid #E8E8E8;}
+.c_con>li:first-child{border-top:1px solid #E8E8E8;}
+.c_title li,.c_detail li{display:inline-block;width:24%;overflow:hidden;text-align: center;}
+.c_title li{color: #222222;}
+.c_detail li,.c_avgs{color: #656565;}
+.c_tname{float:left;color: #222222;}
+.c_cname{float:right;color: #656565;}
+.c_avg{margin-left: 0.2rem;color: #656565;}

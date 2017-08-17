@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>错题本</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="../../plugin/vue.js"></script>
+    <script src="../../plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/wrongnote/wrongnote.css">
+</head>
+<body>
+<div class="w_main" id="wrongnote">
+    <ul class="w_quetions">
+        <li>
+            <ul class="w_question">
+                <li v-for="question in questions">
+                    <span class="w_order">{{question.order}}</span>
+                    <div class="w_group" v-if="question.groupCode">
+                        <div v-html="question.content"></div>
+                        <div v-for="sub in question.subs">
+                            <div class="w_subc" v-html="sub.questionTitle"></div>
+                            <ul class="w_option">
+                                <li class="w_optiownLi" v-for="option in sub.options" v-html="option"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div v-else>
+                        <div v-if="question.isSplite" v-html="question.content"></div>
+                        <div class="w_content" v-html="question.questionTitle"></div>
+                        <ul class="w_option">
+                            <li class="w_optiownLi" v-for="option in question.options" v-html="option"></li>
+                        </ul>
+                    </div>
+                    <div class="w_check down" @click="checkAnalyse">
+                        <p>
+                            <span>查看解析</span>
+                            <img src="../../static/images/wrongnote/down.png">
+                        </p>
+                    </div>
+                    <div class="w_labels dino">
+                        <ul>
+                            <li>
+                                <p>【正确答案】</p>
+                                <p class="w_label" v-html="question.answer" v-if="question.answer"></p>
+                                <p class="w_label" v-else>无</p>
+                            </li>
+                            <li>
+                                <p>【文字解析】</p>
+                                <p class="w_label" v-html="question.analyse" v-if="question.analyse"></p>
+                                <p class="w_label" v-else>无</p>
+                            </li>
+                            <li>
+                                <p>【难度】</p>
+                                <p class="w_label" v-html="question.diff" v-if="question.diff"></p>
+                                <p class="w_label" v-else>无</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+<script src="../../static/javascript/wrongnote/wrongnote.js"></script>
+</html>

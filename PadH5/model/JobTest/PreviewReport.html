@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预习报告</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="../../plugin/vue.js"></script>
+    <script src="../../plugin/jquery-1.11.3.min.js"></script>
+    <script src="../../static/javascript/common.js"></script>
+    <link rel="stylesheet" href="../../static/style/common.css">
+    <link rel="stylesheet" href="../../static/style/JobTest/PreviewReport.css">
+</head>
+<body>
+<div class="PreviewReport" id="PreviewReport">
+    <div class="PreviewReportContent">
+        <div class="PreviewQuestion" v-for="(data,index) in datas">
+            <label>{{++index}}、</label>
+            <div class="PreviewTopic">
+                <div class="TopicQutionTitle"  v-for="List in data.list" v-if="List.questionType == '01'" v-html="List.content.replace('【题干】','')"></div>
+                <div class="PreviewOptions" v-if="data.optionA">
+                    <div class="choose" v-html="data.optionA" :class="data.answer == 'A' ? addColor : '' "></div>
+                    <div class="choose" v-html="data.optionB" :class="data.answer == 'B' ? addColor : '' "></div>
+                    <div class="choose" v-html="data.optionC" :class="data.answer == 'C' ? addColor : '' "></div>
+                    <div class="choose" v-html="data.optionD" :class="data.answer == 'D' ? addColor : '' "></div>
+                </div>
+                <div class="PreviewAnswer">
+                    <div class="PreviewRate">【错误率】</div>
+                    <div class="PreviewLeft" v-html="errorRate[data.id]"></div>
+                    <div class="PreviewRate">【文字解析】</div>
+                    <div class="PreviewLeft" v-for="List in data.list" v-if="List.questionType == '05'" v-html="List.content.replace('【解析】','')"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="PreviewMask">
+        <div class="PreviewnotDoneName">
+            <p class="PreviewnotDoneNameTopic">未完成名单</p>
+            <ul class="PreviewnotDoneNameList">
+                <li v-for="(notDone,index) in notDoneNameList">{{notDone}}、</li>
+            </ul>
+            <div class="PreviewIsee" @click="Cancle">我知道了</div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../static/javascript/JobTest/PreviewReport.js"></script>
+</html>
