@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset='utf-8' />
+</head>
+
+<body>
+	<a href='http://www.baidu.com' id='def'>baidu</a>
+	<script type="text/javascript">
+		def.addEventListener('click',common,false);
+		function common(evt) {
+			var evt=evt||window.event;
+			if (evt&&evt.preventDefault) {
+				evt.preventDefault();
+			}
+			else {
+				window.event.returnValue = false;
+			}
+		}
+	</script>
+</body>
+</html>

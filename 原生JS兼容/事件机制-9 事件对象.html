@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<title></title>
+	<style type="text/css">
+		div{width:200px;height:80px;border:1px solid #f00;text-align:center;font-size:44px;}
+		p{background:#ccc;margin:0;}
+	</style>
+</head>
+
+<body id='body'>
+	<div id="outer" class="">
+		<p id='inner'>单击此处</p>
+	</div>
+	<script type="text/javascript">
+		document.onclick = function (evt) {//添加参数evt，保证事件对象能在对应的事件处理函数内部可以访问到
+			alert(evt);
+		};
+	</script>
+</body>
+</html>
