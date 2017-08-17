@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lottery</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .Title{height: 100px;line-height: 100px;font-size: 32px;text-align: center;}
+        .Echo_Main{width: 500px;height: 500px;margin: 30px auto;position: relative;perspective: 800px;background: url("images/tablebg.png")0 0 no-repeat;background-size: 100%;}
+        .Echo_Table{width: 420px; position: absolute; top: 0;right: 0;left: 0;bottom: 0; margin: auto;z-index: 1;}
+        .Echo_Pointer{width: 195px;height: 195px;font-size: 30px; text-align: center;color: white; background: url("images/pointer.png") 0 0 no-repeat;background-size: 100%;  position: absolute;top: 0;bottom: 0; cursor: pointer; right: 0;left: 0;margin: auto;z-index: 2;}
+        .Echo_Pointer p:nth-child(1){height: 95px; line-height:150px;}
+        .Echo_Pointer p:nth-child(2){height: 40px; line-height:40px;}
+        /*@keyframes rotate {0%{-webkit-transform: rotate(0deg) }100%{-webkit-transform: rotate(360deg)}}*/
+    </style>
+    <style id="NewStyle"></style>
+</head>
+<body>
+<div>
+    <h2 class="Title">This Is Lottery By EchoVue</h2>
+    <div class="Echo_Main">
+        <img src="images/table.png" alt="" class="Echo_Table" id="Turn">
+        <div class="Echo_Pointer" id="Pointer">
+            <p>我要</p>
+            <p>抽奖</p>
+        </div>
+    </div>
+</div>
+<script>
+    Opration()
+    function Opration(){
+        $('#Pointer').on('click',function(){
+            var Index=1;
+            StartRoll(Index);
+        });
+    }
+    function StartRoll(Index){
+        var $Animata='@keyframes Roll {0%{transform:rotate(0deg)}100%{transform:rotate('+360+'deg)}}';
+        $('#NewStyle').html($Animata);
+        $('#Turn').css({'animation':'Roll 0.'+Index+'s linear infinite'});
+        var Time1=null;
+        if(Time1){clearInterval(Time1);}
+        Time1=setInterval(function(){
+            Index+=2;
+            if(Index>=6){
+                var IsBase=Math.floor(Math.random()*7+1);
+                if((IsBase%2)==0){
+                    IsBase+=1;
+                }else {
+
+                }
+                var MathNum=IsBase*45;
+                var $Animata='@keyframes RollEnd {0%{transform:rotate(0deg);} 100%{transform:rotate('+MathNum+'deg);}}';
+                $('#NewStyle').html($Animata);
+                $('#Turn').css({'transform':'rotate('+MathNum+'deg)'});
+                setTimeout(function(){
+                    switch (IsBase){
+                        case 1:alert('三等奖');break;
+                        case 3:alert('二等奖');break;
+                        case 5:alert('一等奖');break;
+                        case 7:alert('哎哟，没有中奖');break;
+                    }
+                },100)
+                clearInterval(Time1);
+            }
+            else {
+                $('#Turn').css({'animation':'Roll  0.'+Index+'s linear infinite'});
+            }
+        },800)
+    };
+</script>
+</body>
+</html>
