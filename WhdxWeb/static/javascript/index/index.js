@@ -162,7 +162,7 @@ index.prototype = {
             T3 = {"for":"小学科","name":"试题","title":"全国各地中考题和模拟题任您选择"},
             T4 = {"for":"语文","name":"国学美文","title":"美文常伴左右，读写能力自然提升"},
             T5 = {"for":"英语","name":"走遍英美","title":"和英语相知，让阅读更容易"},
-            T6 = {"for":"数学","name":"拓展学习","title":"巧妙的方法和总结，轻松获取"},
+            T6 = {"for":"数学","name":"数学思维","title":"巧妙的方法和总结，轻松获取"},
             a = "",
             div = "",
             li = "",
@@ -254,7 +254,7 @@ index.prototype = {
                 SaveArtInfo(obj);
                 //取链接
                 $.each(menuData,function (i,obj) {
-                    if(obj.menuName == "拓展学习"){
+                    if(obj.menuName == "数学思维"){
                         Tid = obj.menuId;
                         Turl = obj.href;
                     }
@@ -262,7 +262,7 @@ index.prototype = {
                 //设置
                 Ta = "<a class='ml20 fr' href='../../../model/extendLearning/extendLearning_index.html'>更多精彩...</a>";
                 Tp = "<p class='fs18 lh40'>" + T6.title + "</p>";
-                Th3 = "<h3>拓展学习</h3>";
+                Th3 = "<h3>数学思维</h3>";
                 //栏目数据设置
                 a = "<a href='../extendLearning/extend_article.html?id=" + obj.id + "' title='" + obj.title + "' target='_blank'>" + obj.title + "</a>";
                 div = "<div>" + a + "</div>";
@@ -302,7 +302,7 @@ index.prototype = {
                             SaveArtInfo(obj);
                             //取链接
                             $.each(menuData,function (i,obj) {
-                                if(obj.menuName == "拓展学习"){
+                                if(obj.menuName == "数学思维"){
                                     Tid = obj.menuId;
                                     Turl = obj.href;
                                 }

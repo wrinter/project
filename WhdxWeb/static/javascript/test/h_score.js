@@ -12,6 +12,7 @@ function setScore(){
         var qnum = 0,numcon=[];//小题数目
         var sum = 0, sccon=[];//总分
         var BatchFlag = '';
+        var gCode = '';//记录不可拆分groupCode
         if(detectLines(pData)){
             for(var i=0;i<pData.length;i++){
                 var question = pData[i];
@@ -54,13 +55,19 @@ function setScore(){
                             if(group=='start'){
                                 groupNum = 0;
                                 groupIds = "";
+                                if(question.groupCode&&question.isSplite=='0'){
+                                    qnum++;
+                                    gCode = question.groupCode;
+                                }
                             }else if(group=='end'&&question.isSplite=="0"){
                                 groupIds = groupIds.substr(0,groupIds.length-1);
                                 html += "<li id='"+groupIds+"' class='h_groupli' qunum='"+groupNum+"'>第"+pData[i-1].lnOrder+"题<input class='h_escore' value='"+pData[i-1].score+"'>"+"分";
                                 html += "&times"+groupNum+"</li>";
                             }
                         }else{
-                            qnum++;
+                            if(gCode!=question.groupCode){
+                                qnum++;
+                            }
                             if(qscore==null){
                                 qscore = "_";
                             }else{
@@ -79,13 +86,19 @@ function setScore(){
                             if(group=='start'){
                                 groupNum = 0;
                                 groupIds = '';
+                                if(question.groupCode&&question.isSplite=='0'){
+                                    qnum++;
+                                    gCode = question.groupCode;
+                                }
                             }else if(group=='end'&&question.isSplite=="0"){
                                 groupIds = groupIds.substr(0,groupIds.length-1);
                                 html += "<li id='"+groupIds+"' class='h_groupli' qunum='"+groupNum+"'>第"+pData[i-1].lnOrder+"题<input class='h_escore' value='"+pData[i-1].score+"'>"+"分";
                                 html += "&times"+groupNum+"</li>";
                             }
                         }else{
-                            qnum++;
+                            if(gCode!=question.groupCode){
+                                qnum++;
+                            }
                             if(qscore==null){
                                 qscore = "_";
                             }else{
@@ -208,7 +221,7 @@ function setPdata(scoreSets,lineFlag){
     var saveData = JSON.stringify(pData);
     $H.storage.setLocal(thisType,"paperdata",saveData);
     $('.test_score').html(allscore);
-    $H.event.resetPaperHtml({showLineNumber:true,type:thisType,subject:thisSubject});
+    $H.event.resetPaperHtml({orderLineNumber:true,type:thisType,subject:thisSubject});
 }
 function detectLines(pData){
     var flag = true;

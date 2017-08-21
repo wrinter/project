@@ -457,6 +457,7 @@
                 if(data){
                     if("list" in data){//题库
                         var List = data.list;
+                        var tgcode='',tisSplite='';
                         for(var a=0;a<List.length;a++){
                             if(List[a].groupCode == null || List[a].groupCode == "null"){//单题
                                 if("questions" in List[a] && List[a].questions.length > 0){
@@ -488,12 +489,17 @@
                                         groupCode: List[a].groupCode,
                                         groupId: List[a].questionId
                                     };
+                                tisSplite = List[a].isSplite;
+                                tgcode = List[a].groupCode;
                                 idata.push(groupStartA);
                                 if("questions" in List[a] && List[a].questions.length > 0){
                                     var Questionses = List[a].questions;
                                     for(var b=0;b<Questionses.length;b++){
                                         Questionses[b].lnOrder = iNum;
                                         Questionses[b].gpOrder = iCode;
+                                        if(Questionses[b].groupCode == tgcode){
+                                            Questionses[b].isSplite = tisSplite;
+                                        }
                                         delete Questionses[b].lineId;
                                         idata.push(Questionses[b]);
                                         if(Questionses[b].isSplite == "0"){//不可拆分
@@ -561,6 +567,7 @@
                             idata.push(lineStart);
                             if("questionGroup" in QuestionLines[i] && QuestionLines[i].questionGroup.length > 0){
                                 var QuestionGroup = QuestionLines[i].questionGroup;
+                                var tgcode='',tisSplite='';
                                 for(var j=0;j<QuestionGroup.length;j++){
                                     if(QuestionGroup[j].groupCode == null || QuestionGroup[j].groupCode == "null"){//单题
                                         if("questions" in QuestionGroup[j] && QuestionGroup[j].questions.length > 0){
@@ -592,12 +599,17 @@
                                                 groupCode: QuestionGroup[j].groupCode,
                                                 groupId: QuestionGroup[j].questionId
                                             };
+                                        tisSplite = QuestionGroup[j].isSplite;
+                                        tgcode = QuestionGroup[j].groupCode;
                                         idata.push(groupStart);
                                         if("questions" in QuestionGroup[j] && QuestionGroup[j].questions.length > 0){
                                             var Questions = QuestionGroup[j].questions;
                                             for(var k=0;k<Questions.length;k++){
                                                 Questions[k].lnOrder = iNum;
                                                 Questions[k].gpOrder = iCode;
+                                                if(Questions[k].groupCode == tgcode){
+                                                    Questions[k].isSplite = tisSplite;
+                                                }
                                                 delete Questions[k].lineId;
                                                 idata.push(Questions[k]);
                                                 if(Questions[k].isSplite == "0"){//不可拆分
@@ -845,17 +857,23 @@
                     }else if(prevCondition.indexOf("group") != -1){
                         //行内不置顶的组合题，可跨行
                         for(var i=0;i<paperData.length;i++){
+                            var prevGroupNum = 0;
                             if(paperData[i].questionId == prevId){
-                                var prevGroupNum = 0;
-                                accumulationGroup(i);
-                                function accumulationGroup(num) {
-                                    prevGroupNum++;
-                                    if(!(paperData[num+1].group && paperData[num+1].group == "end")){
-                                        accumulationGroup(num+1);
+                                if(paperData[i].groupCode){
+                                    accumulationGroup(i);
+                                    function accumulationGroup(num) {
+                                        prevGroupNum++;
+                                        if(!(paperData[num+1].group && paperData[num+1].group == "end")){
+                                            accumulationGroup(num+1);
+                                        }
                                     }
-                                }
-                                for(var j=0;j<objArr.length;j++){
-                                    paperData.splice(i+1+prevGroupNum,0,objArr[j]);
+                                    for(var j=0;j<objArr.length;j++){
+                                        paperData.splice(i+1+prevGroupNum,0,objArr[j]);
+                                    }
+                                }else{
+                                    for(var j=0;j<objArr.length;j++){
+                                        paperData.splice(i+1,0,objArr[j]);
+                                    }
                                 }
                                 break;
                             }
@@ -895,9 +913,8 @@
                         }
                     }
                     $this.storage.setLocal(type,"paperdata",JSON.stringify(paperData));
-                    console.log(paperData)
+                    $this.Data.hjPaperData.reorder(type);//数据排序
                     if(type == "test"){
-                        $this.Data.hjPaperData.reorder(type);//数据排序
                         if(condition.indexOf("question") != -1 || condition.indexOf("group") != -1){//整行移动位置不会改变他们的scoreDef
                             var lineId;
                             for(var j = 0;j<paperData.length;j++){
@@ -941,8 +958,16 @@
                             if(j>0 && paperData[j-1].group == "start" && paperData[j+1].group == "end"){
                                 deleteGroup = true;
                             }
+                            var deleteGroup0num = 1;
                             if(j>0 && paperData[j].group == "start"){
                                 deleteGroup0 = true;
+                                haveNum(j);
+                                function haveNum(num) {
+                                    deleteGroup0num++;
+                                    if(!(paperData[num+1].group && paperData[num+1].group == "end")){
+                                        haveNum(num+1);
+                                    }
+                                }
                             }
                             //(2)删除:组不可拆分
                             var deleteGroup2 = false,deleteGroup2num = 1;
@@ -960,7 +985,7 @@
                             if(deleteGroup){
                                 paperData.splice(j-1,3);
                             }else if(deleteGroup0){
-                                paperData.splice(j,3);
+                                paperData.splice(j,deleteGroup0num);
                             }else if(deleteGroup2){
                                 paperData.splice(j,deleteGroup2num);
                             }else{
@@ -970,8 +995,8 @@
                         }
                     }
                     $this.storage.setLocal(type,"paperdata",JSON.stringify(paperData));
+                    $this.Data.hjPaperData.reorder(type);//数据排序
                     if(type == "test"){//测试
-                        $this.Data.hjPaperData.reorder(type);//数据排序
                         $this.Data.hjPaperData.modify.lineScoreDef(type,lineId);//更新数据行分
                         $this.event.modifyLineScoreDef(type,lineId);//更新html行分
                     }
@@ -1011,10 +1036,13 @@
                             orderMin,orderMax,totalScore = 0;
                         for(var i = 0;i<paperData.length;i++){
                             if(paperData[i].line && paperData[i].line == "start" && paperData[i].lineId == lineId){
+                                //if(paperData[i].group && paperData[i].group == "start") {
+                                //
+                                //}
                                 orderMin = paperData[i].lnOrder;
                                 findOrderMax(i);
                                 addTotalScore(i);
-                                paperData[i].scoreDef = orderMax ? "（共" + (orderMax - orderMin + 1) + "小题，共" + totalScore + "分）" : null;
+                                paperData[i].scoreDef = orderMax ? "（共" + (orderMax-orderMin+1) + "小题，共" + totalScore + "分）" : null;
                                 function findOrderMax(num) {
                                     if(!(paperData[num+1].line && paperData[num+1].line == "end")){
                                         if(!(paperData[num+1].group && paperData[num+1].group == "end")){
@@ -1045,7 +1073,7 @@
                                 orderMin = paperData[i].lnOrder;
                                 findOrderMax(i);
                                 addTotalScore(i);
-                                paperData[i].scoreDef = orderMax ? "（共" + (orderMax - orderMin + 1) + "小题，共" + totalScore + "分）" : null;
+                                paperData[i].scoreDef = orderMax ? "（共" + (orderMax-orderMin+1) + "小题，共" + totalScore + "分）" : null;
                                 function findOrderMax(num) {
                                     if(!(paperData[num+1].line && paperData[num+1].line == "end")){
                                         orderMax = paperData[num+1].lnOrder ? paperData[num+1].lnOrder : orderMax;
@@ -1066,7 +1094,6 @@
                         var paperData = JSON.parse($this.storage.getLocal(type,"paperdata"));
                         for(var i = 0;i<paperData.length;i++){
                             if(paperData[i].line && paperData[i].line == "start" && paperData[i].isScoreBatch){
-                                console.log(paperData[i]);
                                 var baser = null,isbaser = false;
                                 eveScore(i);
                                 function eveScore(num) {
@@ -1081,10 +1108,8 @@
                                         }else{
                                             eveScore(num+1);
                                         }
-                                        console.log(isbaser);
                                     }
                                 }
-                                console.log(isbaser);
                                 if(isbaser){
                                     paperData[i].isScoreBatch = false;
                                 }
@@ -1154,21 +1179,54 @@
                     var paperData = JSON.parse($this.storage.getLocal(type,"paperdata"));
                     if(paperData && paperData.length > 0){
                         var showOrder = 0;
-                        var lnOrder = 1;
+                        //var lnOrder = 1;
+                        var tCode = '',tSplite = '',order= 0,gorder=0;
                         for(var i = 0;i<paperData.length;i++){
                             var obj = paperData[i];
                             if(obj.line && obj.line == "start" && (obj.showOrder || obj.showOrder == 0)){
                                 obj.showOrder = showOrder;
                                 showOrder++;
                             }
-                            if(obj.lnOrder || obj.lnOrder == 0){
-                                obj.lnOrder = lnOrder;
-                                if(!(obj.line || obj.group || (obj.groupCode && obj.isSplite == "0"))){
-                                    lnOrder++;
+                            //if(obj.lnOrder || obj.lnOrder == 0){
+                            //    obj.lnOrder = lnOrder;
+                            //    if(!(obj.line || obj.group || (obj.groupCode && obj.isSplite == "0"))){
+                            //        lnOrder++;
+                            //    }
+                            //}else{
+                            //
+                            //}if(obj.group && obj.group == "end"){
+                            //    lnOrder++;
+                            //}
+                            if(obj.group){
+                                if(obj.group=='start'){
+                                    tCode = obj.groupCode;
+                                    tSplite = obj.isSplite;
+                                    if(tSplite == '0'){
+                                        order++;
+                                        obj.lnOrder = order;
+                                        gorder=0;
+                                    }else{
+                                        obj.lnOrder = order+1;
+                                    }
+                                }
+                            }else if(obj.line){
+                                if(obj.line=='start'){
+                                    obj.lnOrder = order+1;
                                 }
                             }else{
-                                if(obj.group && obj.group == "end"){
-                                    lnOrder++;
+                                if(obj.groupCode&&obj.groupCode == tCode){
+                                    if(tSplite == '0'){
+                                        obj.lnOrder = order;
+                                        gorder++;
+                                        obj.gpOrder = gorder;
+                                    }else{
+                                        order++;
+                                        obj.lnOrder = order;
+                                        obj.lnOrder = order;
+                                    }
+                                }else{
+                                    order++;
+                                    obj.lnOrder = order;
                                 }
                             }
                         }
@@ -1376,6 +1434,7 @@
                     sub = argobj.subject,//科目
                     pt = argobj.pt,//作业类型
                     btnObj = argobj.btnobj;//按钮{analysis:查看解析,error:报错,delet:删除,choice:选入}
+                var groupCode = '', isSplite = '';
                 var $questionLines,publishType = theType,subject = sub;
                 if(Data.length > 0){
                     $questionLines = "<ul>";
@@ -1391,6 +1450,8 @@
                             }
                         }else if("group" in obj){//组
                             if(obj.group == "start"){
+                                groupCode = obj.groupCode
+                                isSplite = obj.isSplite
                                 $questionLines += $this.Html.SetHtmlGroupStart(obj) ? $this.Html.SetHtmlGroupStart(obj) : "";
                                 $questionLines += "<ul class='group_list'>";
                             }else if(obj.group == "end"){
@@ -1405,7 +1466,7 @@
                         }else{//题
                             $questionLines += $this.Html.SetHtmlTitle(obj,subject) ? $this.Html.SetHtmlTitle(obj,subject) : "";//题干
                             $questionLines += $this.Html.SetHtmlOption(obj) ? $this.Html.SetHtmlOption(obj) : "";//选项
-                            if(!(obj.groupCode && obj.isSplite == "0")){//非 不可拆分的组合题
+                            if(!(obj.groupCode && obj.groupCode == groupCode && isSplite == "0")){//非 不可拆分的组合题
                                 $questionLines += $this.Html.SetHtmlButton(obj,btnObj) ? $this.Html.SetHtmlButton(obj,btnObj) : "";//按钮
                                 $questionLines += $this.Html.SetHtmlAnswer(obj) ? $this.Html.SetHtmlAnswer(obj) : "";//答案
                                 $questionLines += $this.Html.SetHtmlAnalysis(obj) ? $this.Html.SetHtmlAnalysis(obj) : "";//解析
@@ -1458,6 +1519,7 @@
                         " data-wrapid='" + obj.questionId + "'" +
                         " data-issplite='" + obj.isSplite +"'" +
                         " data-groupCode='" + obj.groupCode + "'" +
+                        " data-questiontype='" + obj.questionTypeId + "'" +
                         ">" +
                         title;
                 }
@@ -1505,7 +1567,8 @@
                             "<li" +
                             " class='question'" +
                             " data-wrapid='" + obj.questionId + "'" +
-                            " data-selectable='" + obj.selectable +"'>" +
+                            " data-selectable='" + obj.selectable + "'" +
+                            " data-questiontype='" + obj.questionTypeId + "'" +"'>" +
                             "<h3>" +
                             "<span class='question_number question_score' data-score='" + obj.score + "'></span>" + audio + obj.questionTitle.replace(/题干/g,' ').replace("【","").replace("】","").replace(/题<\/span><span>干/g,' ') +
                             "</h3>";
@@ -1758,7 +1821,7 @@
             hjSimulatepapers:function (data) {
                 var $paperslist = "";
                 for(var i = 0;i<data.length;i++){
-                    $paperslist += "<li class='paperTitle'><a class='needsetstorage' href='../../model/test/hj_paper.html' data-pi='" + data[i].paperId + "' data-target='mylist'>" + data[i].paperName + "</a></li>";
+                    $paperslist += "<li class='paperTitle'><a class='needsetstorage' href='../../model/test/hj_paper.html?isSaved=no' data-pi='" + data[i].paperId + "'title='" + data[i].paperName + "' data-target='mylist'><nobr>" + data[i].paperName + "</nobr></a></li>";
                 }
                 return $paperslist;
             }
@@ -1979,10 +2042,15 @@
                     }
                     //可拆分的组合题在试卷和选入列表中的情况
                     condition = null;//清空
+                    var tgroupCode = '',tisSplite = '';
                     for(var i = 0;i<currentlist.length;i++) {
+                        if(currentlist[i].group&&currentlist[i].group=='start') {
+                            tgroupCode = currentlist[i].groupCode;
+                            tisSplite = currentlist[i].isSplite;
+                        }
                         if (currentlist[i].questionId == optId) {
                             thisGroupCode = currentlist[i].groupCode;//当前组别
-                            if(currentlist[i].groupCode && currentlist[i].isSplite == "1"){
+                            if(currentlist[i].groupCode &&currentlist[i].groupCode==tgroupCode && tisSplite == "1"){
                                 condition = 1;//是可拆分的组合题后，↓再判断子条件的值↓
                                 for(var j = 0;j<paperData.length;j++){
                                     if(paperData[j].groupCode && paperData[j].groupCode == thisGroupCode){
@@ -2073,7 +2141,12 @@
                         newlistarr.push(optId);
                         $this.storage.setLocal(type,"newlistarr",JSON.stringify(newlistarr));//缓存选入后的所有题目id
                         var thisQuestionData = [];// length=1:单题 ; length>1:组合题
+                        var tgroupCode = '',tisSplite = '';
                         for(var i = 0;i<currentlist.length;i++){
+                            if(currentlist[i].group&&currentlist[i].group=='start') {
+                                tgroupCode = currentlist[i].groupCode;
+                                tisSplite = currentlist[i].isSplite;
+                            }
                             if(currentlist[i].questionId == optId){
                                 if(currentlist[i].group == "start" && currentlist[i].isSplite == "0"){//不可拆分组合
                                     thisQuestionData.push(currentlist[i]);
@@ -2085,7 +2158,7 @@
                                             accumulationGroup(num+1);
                                         }
                                     }
-                                }else if(currentlist[i].groupCode && currentlist[i].isSplite == "1"){//可拆分组合
+                                }else if(currentlist[i].groupCode && currentlist[i].groupCode == tgroupCode&& tisSplite == "1"){//可拆分组合
                                     if(condition == 1){//绝对不存在材料
                                         accumulationGroupStart(i);
                                         thisQuestionData.push(currentlist[i]);
@@ -2648,6 +2721,7 @@
                     cursorAt: {top: 10,left: 10},
                     distance: 25,
                     placeholder: "ui-state",
+                    dropOnEmpty: true,
                     start: function(event, ui) {
                         ui.item.css('cursor','n-resize');
                         //取出id、条件class
@@ -2683,19 +2757,90 @@
                     },
                     stop: function(event, ui){
                         //取出位置id、条件class
+                        var id = ui.item.attr("data-wrapid");
                         var prev = ui.item.prev().attr("data-wrapid") ? ui.item.prev() : ui.item.parent().parent();
                         prevId = prev.attr("data-wrapid");
                         prevCondition = prev.attr("class");
+                        var tempQtype = ui.item.attr('data-questiontype');
                         var sprevId = localStorage.getItem('prevId')
                         var paperData = JSON.parse($this.storage.getLocal(type,"paperdata"));
-                        if(sprevId == prevId){
-                            for(var i=0;i<paperData.length;i++){
-                                if(paperData[i].questionId&&paperData[i].questionId.indexOf('delete')!=-1){
-                                    paperData[i].questionId = paperData[i].questionId.replace(/delete/g,'');
+                        var questiontypes = prev.attr("data-questiontype");
+                        var tempId = "delete" + id;
+                        var className = '';
+                        if(prevCondition=='line'){
+                            if(condition != 'line'&&questiontypes.indexOf(tempQtype)==-1){
+                                for(var i=0;i<paperData.length;i++){
+                                    if(paperData[i].questionId == tempId){
+                                        paperData[i].questionId = id;
+                                        break;
+                                    }
+                                }
+                                $this.storage.setLocal(type,"paperdata",JSON.stringify(paperData));
+                                $(this).sortable( 'cancel' );
+                                return;
+                            }
+                        }else if(prevCondition=='group'||prevCondition.indexOf('question')!=-1){
+                            className = prev.parent().parent().attr('class');//题行类名
+                            questiontypes = prev.parent().parent().attr('data-questiontype');//题行包含题型
+                            if(className == 'line'){
+                                if(questiontypes.indexOf(tempQtype)==-1){
+                                    for(var i=0;i<paperData.length;i++){
+                                        if(paperData[i].questionId == tempId){
+                                            paperData[i].questionId = id;
+                                            break;
+                                        }
+                                    }
                                     $this.storage.setLocal(type,"paperdata",JSON.stringify(paperData));
-                                    break;
+                                    $(this).sortable( 'cancel' );
+                                    return
                                 }
                             }
+                        }else if(prevCondition=='group new'){
+                            var gCode = prev.attr("data-groupcode");
+                            var gsplite = prev.attr("data-issplite");
+                            var className = ''
+                            if(gCode&&gsplite=='0') {
+                                className = prev.parent().parent().attr('class');//题行类名
+                                questiontypes = prev.parent().parent().attr('data-questiontype');//题行包含题型
+                            } else {
+                                className = prev.parent().attr('class');//题行类名
+                                questiontypes = prev.parent().attr('data-questiontype');//题行包含题型
+                            }
+                            if(className == 'line'){
+                                if(questiontypes.indexOf(tempQtype)==-1){
+                                    for(var i=0;i<paperData.length;i++){
+                                        if(paperData[i].questionId == tempId){
+                                            paperData[i].questionId = id;
+                                            break;
+                                        }
+                                    }
+                                    $this.storage.setLocal(type,"paperdata",JSON.stringify(paperData));
+                                    $(this).sortable( 'cancel' );
+                                    return
+                                }
+                            }
+                        }else{
+                            //移动整个题行
+                        }
+                        if(sprevId == prevId){
+                            if(condition=='line'){
+                                for(var i=0;i<paperData.length;i++){
+                                    if(paperData[i].lineId&&paperData[i].lineId.indexOf('delete')!=-1){
+                                        paperData[i].lineId = paperData[i].lineId.replace(/delete/g,'');
+                                        $this.storage.setLocal(type,"paperdata",JSON.stringify(paperData));
+                                        break;
+                                    }
+                                }
+                            }else{
+                                for(var i=0;i<paperData.length;i++){
+                                    if(paperData[i].questionId&&paperData[i].questionId.indexOf('delete')!=-1){
+                                        paperData[i].questionId = paperData[i].questionId.replace(/delete/g,'');
+                                        $this.storage.setLocal(type,"paperdata",JSON.stringify(paperData));
+                                        break;
+                                    }
+                                }
+                            }
+                            return;
                         }else{
                             //根据prevId相关信息增加数据
                             $this.Data.hjPaperData.add(type,subject,id,prevId,prevCondition,cloneArr,condition);//添加题目或行
@@ -2711,7 +2856,6 @@
                         $this.Data.hjPaperData.reorder(type);
                         //排列html题号
                         $this.event.setOrderNumber({orderLineNumber:orderLineNumber,type:type,subject:subject});
-                        console.log(JSON.parse($this.storage.getLocal(type,"paperdata")));
                         //清空这次操作
                         id = undefined;
                         condition = undefined;
@@ -2744,12 +2888,12 @@
                         if(type == "work"){
                             if(!(subject == "01" || subject == "03" || subject == "05" || subject == "09")){
                                 var defaultLineTypeObj = {};
-                                defaultLineTypeObj.questionType = "01";
-                                defaultLineTypeObj.lineId = $this.class("line")[0].getAttribute("data-wrapid");
-                                $this.storage.setLocal(type,"linetype","false");
-                                $this.storage.setLocal(type,"defaultlinetypeobj",JSON.stringify(defaultLineTypeObj));
-                                _newBtn = "<input class='exercise_btn_done' type='button' value='完成'><input class='exercise_btn_add_lineTypeFalse' type='button' value='加题' data-questiontype='" + defaultLineTypeObj.questionType + "' data-lineid='" + defaultLineTypeObj.lineId + "'>";
-                            }
+                            defaultLineTypeObj.questionType = "01";
+                            defaultLineTypeObj.lineId = $this.class("line")[0].getAttribute("data-wrapid");
+                            $this.storage.setLocal(type,"linetype","false");
+                            $this.storage.setLocal(type,"defaultlinetypeobj",JSON.stringify(defaultLineTypeObj));
+                            _newBtn = "<input class='exercise_btn_done' type='button' value='完成'><input class='exercise_btn_add_lineTypeFalse' type='button' value='加题' data-questiontype='" + defaultLineTypeObj.questionType + "' data-lineid='" + defaultLineTypeObj.lineId + "'>";
+                        }
                         }
                         $(".exercise_btn_in").html(_newBtn);
                     }
@@ -2831,7 +2975,11 @@
                 document.getElementById("w_PrintBtn").onclick = function () {
                     //界面
                     if($this.class("print_wrap").length == 0){
-                        $("body").append("<div class='print_wrap'><div class='print_in'><i class='GoPayClose print_wrap_close spriteImg c_closeico fr c_closeimg0'></i><div class='print_btn withAnalyze'>带解析打印</div><div class='print_btn normal'>普通打印</div></div></div><div style='display: none'><div id='w_Print'><div id='w_Print_Main'></div></div></div>");
+                        $("body").append("<div class='print_wrap'><div class='print_in'><i class='GoPayClose print_wrap_close spriteImg c_closeico fr c_closeimg0'></i><div class='print_btn withAnalyze'>带解析打印</div><div class='print_btn normal'>普通打印</div></div></div><div style='display: none'><div id='w_Print'><div id='ComStyle'></div><div id='w_Print_Main'></div></div></div>");
+                    }
+                    $this.ajax.hjCommonStyle(true,{},sCommonStyle);//请求试题样式
+                    function sCommonStyle(data) {
+                        $("#ComStyle").html(data.retData);
                     }
                     //事件
                     $(".print_wrap").fadeIn(200);
@@ -2848,6 +2996,7 @@
                         $("#w_Print_Main .analysis").hide();
                         $("#w_Print_Main .buttons").hide();
                         $("#w_Print_Main math").remove();
+                        console.log($("#w_Print").html())
                         $("#w_Print_Main li.on").css("border","none");
                         $("#w_Print").jqprint({
                             importCSS: true
@@ -3135,6 +3284,7 @@
                         });
                         //提交
                         $(".work_done").on("click",function () {
+                            $(".work_done").off("click").css("background-color","#aaa");
                             var scoreWrap = $this.class("test_score");
                             doparam.testTime = $( "input.act_time" ).val();
                             doparam.score = scoreWrap.length != 0 ? parseFloat(scoreWrap[0].text().replace(/[^0-9]/g,"")) : "0";
@@ -3188,7 +3338,7 @@
                                 }
                                 function sAssignpapersto(data) {
                                     //解除事件并置灰
-                                    $(".work_done").off("click").css("background-color","#aaa").val("提交成功");
+                                    $(".work_done").val("提交成功");
                                     $(".publish_box_Main").fadeOut(200);
                                     //金币
                                     GoldAnimate(data.retGold);
@@ -3701,16 +3851,19 @@
                     //题库
                     papersquestions();
                     function papersquestions() {
+                        $('#h_load').show();
                         type == "work" ? $this.ajax.hjPapersquestions(true,papersquestionsParam,sPapersquestions,ePapersquestions) : $this.ajax.hjPpapertestquestions(true,papersquestionsParam,sPapersquestions,ePapersquestions);
                         function sPapersquestions(data) {
                             var pages = data.retData.pages;//可以返回的总页数
                             questionsBox(data);
                             initKkpager(pages);
+                            $('#h_load').hide();
                         }
                         function ePapersquestions() {
                             $this.class("addLineQuestion_middle_questions")[0].innerHTML = "<img class='nodata' src='../../static/image/nodata.png' />";
                             document.getElementById("kkpager").innerHTML = "";//清空分页
                             $this.storage.setLocal(type,"currentlist","");//清空缓存的旧分页的题目
+                            $('#h_load').hide();
                         }
                         function questionsBox(data) {
                             var data = data.retData;

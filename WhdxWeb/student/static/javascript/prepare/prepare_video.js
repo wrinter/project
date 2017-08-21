@@ -8,8 +8,7 @@ getVideo.prototype={
     constructor:getVideo,//确定原型链
     init:function(){
         this.subjectSel();
-        this.GetLastid()
-        this.autoDo();
+        this.GetLastid();
     },
     //页面进入自动执行
     autoDo:function(cFlag){
@@ -39,6 +38,7 @@ getVideo.prototype={
                                 flag = false;
                                 that.sellist(list, "auto",cFlag);
                                 store.set("lastPrepareId", knowledgeId);
+                                that.SaveLastId(knowledgeId)
                                 that.getViedoCategory(knowledgeId, subject.subjectId);
                             }
                         }
@@ -82,6 +82,7 @@ getVideo.prototype={
                         } else {
                             knowledgeId = list[i].knowledgeId;
                             store.set("lastPrepareId", knowledgeId);
+                            this.SaveLastId(knowledgeId)
                             this.getViedoCategory(knowledgeId, $(".fn_sub.change").attr("val"));
                             break;
                         }
@@ -106,6 +107,8 @@ getVideo.prototype={
                     if(data.retData==''||data.retData==null){
                         store.set('selectedSubject','');
                         store.set('changeData','');
+                        that.showSubjects();
+                        that.autoDo();
                     }else {
                         that.setDefault(data.retData)
                     }
@@ -131,6 +134,7 @@ getVideo.prototype={
         });
     },
     setDefault: function(lastCode) {
+        var that = this;
         for(var i=0;i<subjectList.length;i++){
             var subjectId = subjectList[i].value
             var subject = {}
@@ -149,19 +153,22 @@ getVideo.prototype={
                     function getDefault(sets,id){
                         for(var j=0;j<sets.length;j++) {
                             if(sets[j].childrens.length==0){
-                                if(retData[j].knowledgeId == lastCode){
+                                if(sets[j].knowledgeId == lastCode){
+                                    store.set('selectedSubject',subjectId)
                                     changData['0'] = subjectId
                                     if(id=='1') {
-                                        changData['1'] = retData[j].parentId
+                                        changData['1'] = sets[j].parentId
                                         changData['2'] = lastCode
                                     }else if(id==''){
                                         changData['1'] = lastCode
                                     }else{
                                         changData['1'] = id
-                                        changData['2'] = retData[j].parentId
+                                        changData['2'] = sets[j].parentId
                                         changData['3'] = lastCode
                                     }
                                     store.set('changeData',changData);
+                                    that.showSubjects();
+                                    that.autoDo();
                                 }
                             }else{
                                 getDefault(sets[j].childrens,sets[j].parentId)
@@ -183,23 +190,27 @@ getVideo.prototype={
             success:function(data){
                 var htm = '';
                 subjectList = data.retData;
-                for(var i in data.retData){
-                    htm += '<span class="fn_sub ';
-                    var changeSub = store.get('selectedSubject');
-                    if(changeSub == undefined||changeSub == '') {
-                        changeSub = '01'
-                        defaultSelect.push('01')
-                        store.set('changeData','');
-                    }
-                    if(data.retData[i].value==changeSub){
-                        htm += 'change';
-                    }
-                    htm +='" mycla="mathematics" val="'+data.retData[i].value+'">'+data.retData[i].label+'</span>';
-                }
-                $("#fn_subject_div").append(htm);
-                that.subjectAll();
             }
         });
+    },
+    showSubjects: function(){
+        var htm='';
+        var changeSub = store.get('selectedSubject');
+        console.log(changeSub)
+        for(var i in subjectList){
+            htm += '<span class="fn_sub ';
+            if(changeSub == undefined||changeSub == '') {
+                changeSub = '01'
+                defaultSelect.push('01')
+                store.set('changeData','');
+            }
+            if(subjectList[i].value==changeSub){
+                htm += 'change';
+            }
+            htm +='" mycla="mathematics" val="'+subjectList[i].value+'">'+subjectList[i].label+'</span>';
+        }
+        $("#fn_subject_div").append(htm);
+        this.subjectAll();
     },
     //章、节
     subjectAll:function(){

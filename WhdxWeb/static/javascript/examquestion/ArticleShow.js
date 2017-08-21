@@ -14,16 +14,18 @@ var documentId,year;
 var resourseId;
 var bucketName,objectKey;
 $(function(){
-	if(Request.documentId==undefined||Request.documentId=='undefined'){
+	if(Request.backPreviewToken == undefined||Request.backPreviewToken == 'undefined'){
 		var doc = JSON.parse(store.get("documentarticle"));
 		documentId = doc.documentId;
 		resourseId = doc.resourseId;
-		objectKey = doc.objectKey;
+		objectKey = decodeURI(doc.objectKey);
 		bucketName = doc.bucketName;
 		document.getElementById('iframeReload').src = "Article.html"
 		selectcheckarticle(doc);
 	}else{
 		documentId = Request.documentId;
+		objectKey = decodeURI(Request.objectKey);
+		bucketName = Request.bucketName;
 		year = Request.year;
 		selectcheckarticle(null);
 	}

@@ -154,7 +154,7 @@ function CreatArtBox(data){
         $('#c_ArticleBox1').html('暂无数据');
     }
     IsPostsArt();
-
+	intMathJax();
 };
 GetArticle(ArticleId);
 /*分享*/

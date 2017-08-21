@@ -465,7 +465,8 @@ var jiathis_config = {
 window._bd_share_config = {
     common : {
         bdDesc : '欢迎使用五好导学',
-        // bdPic : '../../static/image/logo/logo.jpg'
+        bdText : '欢迎使用五好导学',
+        bdPic : 'http://whdx.bcbook.cn/static/image/logo/logo.jpg'
     },
     share : [{
         "bdSize" : 80

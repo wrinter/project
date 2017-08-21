@@ -381,14 +381,16 @@ $(function() {
                                 var lDtrue = qDtrue.labels[n];
                                 var content = lDtrue.content;
                                 var questionType = lDtrue.questionType;
+                                var $analysisanswer = $("<div></div>").appendTo($answer);
+                                var $analysis = "";
                                 if(questionType == "03" ){
-                                    var $analysisanswer = $("<div class='analysis speek'>"+content+"</div>").appendTo($answer);
+                                    $analysisanswer = $("<div class='analysis speek'>"+content+"</div>").appendTo($answer);
                                 }
                                 if(questionType == "05"){
-                                    var $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
+                                    $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
                                 }
                                 if(questionType == "18"){
-                                    var $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
+                                    $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
                                 }
                             }
                             //    答案区域
@@ -411,14 +413,16 @@ $(function() {
                             var lDtrue = Dtrue.questionGroup[j].labels[m];
                             var content = lDtrue.content;
                             var questionType = lDtrue.questionType;
+                            var $analysisanswer = $("<div></div>").appendTo($answer);
+                            var $analysis = "";
                             if(questionType == "03" ){
-                                var $analysisanswer = $("<div class='analysis speek'>"+content+"</div>").appendTo($answer);
+                                $analysisanswer = $("<div class='analysis speek'>"+content+"</div>").appendTo($answer);
                             }
                             if(questionType == "05"){
-                                var $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
+                                $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
                             }
                             if(questionType == "18"){
-                                var $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
+                                $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
                             }
                             //    答案区域
                             var needExplain = qDtrue.paperUserAnswer.needExplain;
@@ -484,14 +488,16 @@ $(function() {
                                 var lDtrue = qDtrue.labels[n];
                                 var content = lDtrue.content;
                                 var questionType = lDtrue.questionType;
+                                var $analysisanswer = $("<div></div>").appendTo($answer);
+                                var $analysis = "";
                                 if(questionType == "03" ){
-                                    var $analysisanswer = $("<div class='analysis speek'>"+content+"</div>").appendTo($answer);
+                                    $analysisanswer = $("<div class='analysis speek'>"+content+"</div>").appendTo($answer);
                                 }
                                 if(questionType == "05"){
-                                    var $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
+                                    $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
                                 }
                                 if(questionType == "18"){
-                                    var $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
+                                    $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
                                 }
                             }
                             //    答案区域
@@ -556,14 +562,16 @@ $(function() {
                                 var lDtrue = qDtrue.labels[n];
                                 var content = lDtrue.content;
                                 var questionType = lDtrue.questionType;
+                                var $analysisanswer = $("<div></div>").appendTo($answer);
+                                var $analysis = "";
                                 if(questionType == "03" ){
-                                    var $analysisanswer = $("<div class='analysis speek'>"+content+"</div>").appendTo($answer);
+                                    $analysisanswer = $("<div class='analysis speek'>"+content+"</div>").appendTo($answer);
                                 }
                                 if(questionType == "05"){
-                                    var $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
+                                    $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
                                 }
                                 if(questionType == "18"){
-                                    var $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
+                                    $analysis = $("<div class='analysis'>"+content+"</div>").appendTo($answer);
                                 }
                             }
                             //    答案区域

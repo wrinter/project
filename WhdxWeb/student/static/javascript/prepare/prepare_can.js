@@ -230,7 +230,7 @@ $(document).ready(function(){
         var p_loadtexttitle = $(".p_loadtexttitle");
         var p_loadcon = $(".p_loadcon");
         var can_title = $(".can_title");
-	    var Tilte = data.retData.testTitle.replace("--","&mdash;");
+	    var Tilte = data.retData.testTitle.replace("&mdash;","-");
         can_title.text(Tilte)
         for(var i=0;i<questionList.length;i++){
             Num++;

@@ -205,7 +205,9 @@ function IsOptionShow(A,B,C,D){
 //打印
 $(document).ready(function(){
     $("#m_PrintBtn").on('click',function(){
-        $("#m_PrintCon").jqprint({
+        $('#m_printDiv').append('<div style="text-align:center;">'+$('#m_PrintName').html()+'</div>');
+        $('#m_printDiv').append($('#m_PrintCon').html());
+        $("#m_printDiv").jqprint({
             debug: false,
             importCSS: true,
             printContainer: true,

@@ -72,6 +72,8 @@ table{border-collapse: separate;}
 .data_Popup .in .btn a{margin-left: 5%;}
 .data_Popup .in .btn a:first-child{margin-left: 20%;}
 .data_Popup .in .btn a:hover{background: #6abad4;}
+.h_load{z-index: 19999 !important;}
+.h_loadding{border-radius: 10px;color:white;position:absolute;left:50%;top:50%;font-size: 24px;margin-left: -72px;margin-top:-16px;}
 /*题目列表*/.work_box{padding: 0 24px;font-size: 14px;line-height: 1.9;color: #333;}
 .work_box h2,.work_box h3,.work_box h4{font-size: inherit;}
 /*.work_box h2 p:nth-child(2),.work_box h3 p:nth-child(2),.work_box h4 p:nth-child(2){display: inline;}*/
@@ -160,7 +162,7 @@ ul.set_time li:active{background: #aaa;}
 /*****************************  模拟套卷  **********************************/
 .mo_container{background: #fff;border-radius: 10px;height: auto;min-height: 568px;margin: 0 auto;margin-top: 40px;}
 .mo_list{overflow-y: auto;}
-.paperTitle{height: 80px;line-height: 80px;color: #333;width: 80%;padding: 0 10%;border-bottom: 1px dashed #ccc;}
+.paperTitle{height: 80px;line-height: 80px;color: #333;width: 80%;padding: 0 10%;border-bottom: 1px dashed #ccc;text-overflow:ellipsis;overflow: hidden;}
 
 /*****************************  编辑/自主主卷 **********************************/
 .work_box ul li > div.line_title{padding: 0;}
@@ -243,7 +245,7 @@ ul.set_time li:active{background: #aaa;}
 .addLineQuestion_middle_questions .answer.on,.addLineQuestion_middle_questions .analysis.on{display: block;}
 .addLineQuestion_middle_questions > ul > li:hover,.addLineQuestion_middle_questions > ul > li.on{border-color: #ccc;}
 .addLineQuestion_middle_questions > ul > li[data-issplite = "1"]{border-color: transparent;}
-.addLineQuestion_middle_questions > ul > li:hover > div.buttons div span,.addLineQuestion_middle_questions > ul > li.on > div.buttons div span{display: inline-block;}
+.addLineQuestion_middle_questions > ul > li:hover > div.buttons div span,.addLineQuestion_middle_questions > ul > li > ul > li:hover > div.buttons div span,.addLineQuestion_middle_questions > ul > li.on > div.buttons div span{display: inline-block;}
 .addLineQuestion_middle_questions > ul > li:hover > div.buttons div span.options_choice,.addLineQuestion_middle_questions > ul > li.on > div.buttons div span.options_choice{border-color: #ccc;}
 .addLineQuestion_middle_questions > ul > li.on > div.buttons div{border-radius: 0 0 0 0;}
 .addLineQuestion_middle_list{padding: 30px;}

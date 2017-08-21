@@ -255,7 +255,7 @@ var index = {
                 $(".article_button").addClass("match");
                 $(".article_button").removeClass("english");
                 $(".article_button").removeClass("chinese");
-                $(".fn_update_1").html("拓展学习");
+                $(".fn_update_1").html("数学思维");
                 $(".fn_update_2").html("来这学数学，简单还有趣");
                 $(".article_button").attr("href","../extendLearning/extendLearning_index.html");
             }else if($(this).attr("val")=="03"){
@@ -272,10 +272,10 @@ var index = {
     articleTitleClick:function(){
         $(".article_a").click(function(){
             if($(this).hasClass("chinese")){
-                var VideoMenuid = GetMenuid("国学与美文");
+                var VideoMenuid = GetMenuid("国学美文");
                 store.set("menuId",VideoMenuid);
             }else if($(this).hasClass("match")){
-                var VideoMenuid = GetMenuid("拓展学习");
+                var VideoMenuid = GetMenuid("数学思维");
                 store.set("menuId",VideoMenuid);
             }else if($(this).hasClass("english")){
                 var VideoMenuid = GetMenuid("走遍英美");
@@ -338,6 +338,7 @@ function UserOpration(){
 }
 function GetMenuid(str){
     var MenuRole=store.get('data').retData.roleMenuRes;
+    console.log(MenuRole)
     for(var i=0;i<MenuRole.length;i++){
         if(str==MenuRole[i].menuName){
             return MenuRole[i].menuId

@@ -62,6 +62,7 @@ function GetChapter(data){
     });
     //初始化html
     $('#c_Kownledge').html("");//清空
+    $('.PreHeader').css('border-bottom','1px solid #ccc');
     var $html='';
     $html+= FirstKownledge(Data);//一级
     if(Data.length>0){
@@ -70,6 +71,8 @@ function GetChapter(data){
         Recursive(thisId,newArrays);//递归插入html
         GetLeafData(newArrays);//切换操作
         IsDefultRecord()
+    } else {
+
     }
 }
 //默认选择情况
@@ -80,6 +83,7 @@ function IsDefultRecord(){
 function FirstKownledge(FirstData){
     var $Html='';
     if(FirstData==null||FirstData.length==0){
+        $('.PreHeader').css('border-bottom',0);
         $('#c_Kownledge').html('<div class="NoData p_nodata" id="NoData"><img src="../../static/image/kola/no.png" class="NoDataImg" alt=""></div>');
         return false;
     }
@@ -238,6 +242,8 @@ function GetTypeData(id) {
 function ResetDefault() {
     var ThisSubject=$('.ThisSubject').html();
     var SubId=$('.ThisSubject').attr('data-id');
+    $('.PreHeader').css('border-bottom',0);
+    $('#c_Kownledge').html('<div class="NoData p_nodata" id="NoData"><img src="../../static/image/kola/no.png" class="NoDataImg" alt=""></div>');
     if(ThisSubject=='语文'){
         ChangReset(true)
     }else {

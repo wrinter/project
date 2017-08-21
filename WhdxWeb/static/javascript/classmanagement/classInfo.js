@@ -905,9 +905,16 @@ $(function() {
             $(this).next().fadeIn();
 
         });
+        var invalue = '';
         $('.c_GroupName').keyup(function(){
             $(this).parent().siblings('.c_GroupSaveBtn').show();
-        });
+            var len = $(this).val().replace(/[^\x00-\xff]/g,"**").length;
+            if(len == 16){
+                invalue = $(this).val();
+            }else if(len > 16){
+                $(this).val(invalue);
+            }
+        }).css("ime-mode", "disabled");  //CSS设置输入法不可用;
         $('.c_SaveGroup').unbind().click(function(){
             var sibs= $(this).parent().siblings();
             var groupName = '';

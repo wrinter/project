@@ -1098,31 +1098,31 @@ function LrcAnalysis(data) {
 };
 //解析歌词
 function ParseLyric(text){
-    //将歌词分成一行一行的
+	//将歌词分成一行一行的
     var lines = text.split('</br>'),
         pattern = /\[\d{2}:\d{2}.\d{2}\]/g,//将时间轴和歌词内容分隔开
         result = [];//保存最终结果的数组
     //去掉不含时间的行
-    if (pattern.test(lines[0])) {
+	if (pattern.test(lines[0])) {
         lines = lines.slice(1);
     };
-    //上面用'\n'生成生成数组时，结果中最后一个为空元素，这里将去掉
+	//上面用'\n'生成生成数组时，结果中最后一个为空元素，这里将去掉
     lines[lines.length - 1].length === 0 && lines.pop();
     //在页面上显示所有内容
     for(var i=0;i<lines.length;i++){
         var time = lines[i].match(pattern), value = lines[i].replace(pattern, '');
         var t = lines[i].slice(1, -1).split(':');
-        result.push([parseInt(t[0], 10) * 60 + parseFloat(t[1]), value]);
+	    result.push([parseInt(t[0], 10) * 60 + parseFloat(t[1]), value]);
     }
-    //最后将结果数组中的元素按时间大小排序，以便保存之后正常显示歌词
+	//最后将结果数组中的元素按时间大小排序，以便保存之后正常显示歌词
     result.sort(function(a, b) {
         return a[0] - b[0];
     });
-    return result;
+	return result;
 };
 //将歌词插入
 function AppendLrc(data){
-    var Src=data.voicePath;
+	var Src=data.voicePath;
     var DefultSrc='../../static/plugin/song/slice.mp3';//默认音频文件
     EngPlayerReset();
     NoAudioSrc(Src);

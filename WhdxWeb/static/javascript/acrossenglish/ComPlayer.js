@@ -119,7 +119,7 @@
 
 				theAudio.addEventListener( 'volumechange', function()
 				{
-					volumeAdjuster.find( 'div' ).width( theAudio.volume * 50 + '%' );
+					volumeAdjuster.find( 'div' ).width( theAudio.volume * 100 + '%' );
 					if( theAudio.volume > 0 && thePlayer.hasClass( cssClass.muted ) ) thePlayer.removeClass( cssClass.muted );
 					if( theAudio.volume <= 0 && !thePlayer.hasClass( cssClass.muted ) ) thePlayer.addClass( cssClass.muted );
 				});

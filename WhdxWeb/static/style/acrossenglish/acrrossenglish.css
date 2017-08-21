@@ -100,6 +100,9 @@
 
 
 /****************************************手机端适配*****************************************/
+@media screen  and (max-width:750px){
+    html,body{overflow-x: hidden;}
+}
 .c_ArLogo0{float: left;width: 100%;text-align: center; height:1.4rem;border-bottom: 1px solid #ccc;}
 .c_logoar0{height: 1.4rem;float: left;}
 .a_IsTransEngLish0,.a_IsEngLish0{float: left;width: 100%;min-height: 30px;text-align: left;margin-bottom: 1.5rem;}

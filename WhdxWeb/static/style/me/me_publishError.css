@@ -4,6 +4,7 @@
 .source_txt_btn{margin:10px 0;height: 40px;}
 .reflesh:hover{cursor: pointer;}
 .reflesh {color: #58c1e4;margin-top: 10px;}
+.source_txt p {word-wrap: break-word;word-break: break-all;}
 .source_txt_btn > a{margin-left: 10px; border: 1px solid #ccc; border-radius: 5px; width: 76px; height: 31px; display: block; float: left; text-align: center; line-height: 31px; color: #333; font-size: 15px;}
 .source_txt_btn > a:hover{background: #65b113 !important;color:#fff !important;border: 1px solid #65b113;}
 .addAndRemove{position: absolute;float: right;border-bottom: none;display: none; top: 6px;right: -36px;}
@@ -948,11 +949,11 @@
     color: #666 !important;
     margin-top: 7px;
     font-size: 17px;
-    font-family: "宋体";
+    font-family: "Times new roman","宋体";
     margin-left: 9px;
 }
 .option *{
     color: #666 !important;
-    font-family: "宋体";
+    font-family: "Times new roman","宋体";
     font-size: 17px;
 }

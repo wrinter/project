@@ -463,6 +463,11 @@ function testPaper(id,pageNum,pageSize) {
                 });
                 jobNumbers();
                 Paging(data.retData.pages,data.retData.pageNum);
+                if(document.documentElement.scrollTop) {
+                    document.documentElement.scrollTop = 0;
+                }else {
+                    document.body.scrollTop = 0;
+                }
             }
         }
     });

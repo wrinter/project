@@ -394,6 +394,11 @@ function testPaper(id,pageNum,pageSize) {
             }
             Paging(data.retData.pages,data.retData.pageNum);
             intMathJax();//公式
+            if(document.documentElement.scrollTop) {
+                document.documentElement.scrollTop = 0;
+            }else {
+                document.body.scrollTop = 0;
+            }
         }
     });
 }

@@ -50,8 +50,9 @@ function sPaperinfo(data){
     var retData = data.retData;
     var paperTitle = "<h1>" + retData.paperName + "</h1>",
         paperTime = "<div class='timeing'>时间：" + retData.testTime +"<span>分钟</span>" + ( thisType == "work" ? "" : "　分数：<span class='timeing_score'>" + retData.score + "</span><span>分</span>") + "</div>",
-        questionLinesData = $H.Data.hjQuestionLines(retData,thisType,thisSubject,thisPt),
-        questionLines = "<div class='work_box'>" + (thisSubject == "03" && (thisPt == "203" || thisPt == "213") ? $H.Html.hjQuestionLines({type:thisType,subject:thisSubject,data:questionLinesData,btnobj:{analysis:true,error:true}}) : $H.Html.hjQuestionLines({type:thisType,subject:thisSubject,data:questionLinesData,btnobj:{analysis:true}})) + "</div>",
+        questionLinesData = $H.Data.hjQuestionLines(retData,thisType,thisSubject,thisPt);
+    questionLinesData = editScoreDef(questionLinesData);
+    var questionLines = "<div class='work_box'>" + (thisSubject == "03" && (thisPt == "203" || thisPt == "213") ? $H.Html.hjQuestionLines({type:thisType,subject:thisSubject,data:questionLinesData,btnobj:{analysis:true,error:true}}) : $H.Html.hjQuestionLines({type:thisType,subject:thisSubject,data:questionLinesData,btnobj:{analysis:true}})) + "</div>",
         paperInfo = {isMarked: retData.isMarked,paperId: retData.paperId,paperName: retData.paperName,score: retData.score,testTime: retData.testTime,url: retData.url};
     document.getElementById("paperTitle").innerHTML = retData.paperName;
     $H.class("exercise_box")[0].innerHTML = paperTitle + paperTime + questionLines;
@@ -131,4 +132,28 @@ function sPaperinfo(data){
 function ePaperinfo(){
     document.getElementById("paperTitle").innerHTML = $H.Html.setDefaultPaperName(thisPt);
     $H.class("exercise_box")[0].innerHTML = "<img class='nodata' src='../../static/image/nodata.png' />";
+}
+function editScoreDef(data){
+    for(var i = 0;i<data.length;i++){
+        if(data[i].line && data[i].line == "start"){
+            var orderMin,orderMax = null,totalScore = 0;
+            orderMin = data[i].lnOrder;
+            findOrderMax(i);
+            addTotalScore(i);
+            data[i].scoreDef = orderMax ? "（共" + (orderMax-orderMin+1) + "小题，共" + totalScore + "分）" : null;
+            function findOrderMax(num) {
+                if(!(data[num+1].line && data[num+1].line == "end")){
+                    orderMax = data[num+1].lnOrder ? data[num+1].lnOrder : orderMax;
+                    findOrderMax(num+1);
+                }
+            }
+            function addTotalScore(num) {
+                if(!(data[num+1].line && data[num+1].line == "end")){
+                    totalScore += data[num+1].score ? data[num+1].score : 0;
+                    addTotalScore(num+1);
+                }
+            }
+        }
+    }
+    return data;
 }

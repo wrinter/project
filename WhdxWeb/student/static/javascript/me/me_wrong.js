@@ -454,6 +454,11 @@ function CreateWrongQue(data){
             }
         }
         $('#m_WrongTest').html($QuestionHtml)
+        if(document.documentElement.scrollTop) {
+            document.documentElement.scrollTop = 0;
+        }else {
+            document.body.scrollTop = 0;
+        }
     }
     else {
         $('#m_Nolist').css('display','block');

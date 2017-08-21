@@ -160,9 +160,8 @@ var getStuList = {
             data: param,
             success:function(data){
                 if(data.retCode=="0000"){
-                    var li="",num = 0,Snum = 0,flag = true,code=0,changliFlag = true;
+                    var li="",num = 0,changliFlag = true,qnum=0;
                     var queLn=data.retData;
-                    console.log(queLn);
                     results = data.retData;
                     for(var i in queLn){
                         li+="<ul id='"+queLn[i].id+"'>";
@@ -178,27 +177,16 @@ var getStuList = {
                             li+=">";
                             li+="<span class='que_num'>";
                             if(queLn[i].list[k].groupCode === null||queLn[i].list[k].groupCode != null && queLn[i].list[k].isSplite === "1"){
-                                if(Snum==0){
-                                    li+=num
-                                }else{
-                                    li+=num-Snum+code+1;
-                                }
-                                flag = false;
+                                qnum++;
+                                li+=qnum;
                             }else{
-                                if(queLn[i].list[k-1]&&queLn[i].list[k].groupCode!=queLn[i].list[k-1].groupCode){
-                                    if(num!=(num-Snum+code)){
-                                        Snum--;
-                                    }
+                                if(!(queLn[i].list[k-1]&&queLn[i].list[k].groupCode==queLn[i].list[k-1].groupCode)){
                                     splitNum = 0;
-                                }
-                                if(k<9){
-                                    li+=(num-Snum+code)+'.'+(splitNum+1);
+                                    qnum++;
                                 }else{
-                                    li+=String(num-Snum+code)+"."+String(splitNum+1);
+                                    splitNum++
                                 }
-                                Snum++;
-                                splitNum++;
-                                flag = true;
+                                li+=String(qnum)+'.'+String(splitNum+1);
                             }
                             li+="</span>";
                             li+="<span class='judge right";
@@ -216,9 +204,6 @@ var getStuList = {
                             li+="</li>";
                         }
                         li+="</ul>";
-                        if(flag){
-                            code++;
-                        }
                     }
                     $(".paperList").html(li);
                     if(status!="6"){
