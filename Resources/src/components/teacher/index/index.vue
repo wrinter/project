@@ -21,12 +21,12 @@
         <div class="i_Main_son_title i_Main_son_title_1">
           <h3>课件</h3>
           <p class="fs18 lh40">您讲课比赛的坚实后援</p>
-          <a id="sort9" class="ml20 fr" href="../prepare/prepare_courseware.html">更多精彩...</a>
+          <router-link id="sort9" v-bind:to="'/content/teacher/LessonCenter/CoursewareList'" class="ml20 fr">更多精彩...</router-link>
         </div>
         <div class="i_Main_son_content mt30">
           <div class="i_Courseware_ul">
             <div class="i_Courseware_li" v-for="temp in wareList">
-              <router-link v-bind:to="'/'">
+              <router-link v-bind:to="'/content/teacher/LessonCenter/CoursewareView?id='+temp.id">
                 <img :src="temp.thumbnail" :alt="temp.title">
                 <h4>{{temp.title}}</h4>
               </router-link>
@@ -46,11 +46,11 @@
         <div class="i_Main_son_content mt30">
           <div class="i_Homework_ul">
             <div class="i_Homework_li">
-              <a id="sort21"  href="javascript:;">
+              <router-link id="sort21" v-bind:to="'/content/teacher/homework/assignwork'">
                 <div class="i_Homework_img"><img src="/static/teacher/images/index/i_Homework_01.jpg" alt="布置作业"></div>
                 <h4>布置作业</h4>
                 <p>好作业，一键布置！</p>
-              </a>
+              </router-link>
             </div>
             <div class="i_Homework_li">
               <router-link id="sort23" v-bind:to="'/content/teacher/homework/correctworklist'">
@@ -92,7 +92,7 @@
           <div class="i_Video_min">
             <ul>
               <li v-for="temp in videoList">
-                <router-link v-bind:to="'/'">
+                <router-link v-bind:to="'/content/teacher/prepare/videoplay?id='+temp.id">
                   <div class="i_Video_min_wrap">
                     <img :src="temp.src">
                   </div>
@@ -161,7 +161,7 @@
       this.lunbo()
     },
     methods: {
-      showAd() {
+      showAd () {
         let that = this
         getAd(this).then(function (response) {
           let res = response.body
@@ -170,7 +170,7 @@
           }
         })
       },
-      init() {
+      init () {
         let banner = document.getElementById('i_Banner')
         let width = banner.clientWidth* 37 / 192
         banner.style.height = width + 'px'
@@ -179,39 +179,39 @@
           let res = response.body
           if (res.retCode === '0000') {
             let retData = res.retData
-            for(let i=0;i<retData.length;i++) {
+            for (let i = 0; i < retData.length; i++) {
               let temp = {}
               temp.id = retData[i].id
               temp.title = retData[i].title
               temp.url = 'url("/static/teacher/images/index/i_Index_li.png") no-repeat center left'
-              if(retData[i].content==='1') {//视频
+              if (retData[i].content === '1') {//视频
                 that.videoreList.push(retData[i])
-              }else if(retData[i].content==='2') {//课件
+              } else if(retData[i].content === '2') {// 课件
                 that.wareList.push(retData[i])
-              }else if(retData[i].content==='3') {//五年真题
+              } else if(retData[i].content === '3') {// 五年真题
                 that.title = '试题'
                 that.cue = '全国各地中考题和模拟题任您选择'
                 temp.paper = true
                 temp.url = ''
                 temp.linkName = ''
-                  that.hlink = ''
+                that.hlink = ''
                 that.list.push(temp)
-              }else if(retData[i].content==='4') {//国学与美文
+              } else if(retData[i].content === '4') {// 国学与美文
                 that.title = '国学美文'
                 that.cue = '美文常伴左右，读写能力自然提升'
                 temp.linkName = '/content/teacher/chinese/article?nofresh=true&index=2&id='
                 temp.paper = false
                 that.list.push(temp)
                 that.hlink = '/content/teacher/chinese/essay'
-              }else if(retData[i].content==='5') {//走遍英美
+              } else if (retData[i].content === '5') {// 走遍英美
                 that.title = '走遍英美'
                 that.cue = '和英语相知，让阅读更容易'
                 temp.linkName = '/content/teacher/eng/engart?index=0&share=true&id='
                 temp.paper = false
                 that.list.push(temp)
                 that.hlink = '/content/teacher/eng/engbook'
-              }else if(retData[i].content==='6') {//拓展学习
-                that.title = '拓展学习'
+              } else if (retData[i].content === '6') {// 拓展学习
+                that.title = '数学思维'
                 that.cue = '巧妙的方法和总结，轻松获取'
                 temp.linkName = '/content/teacher/expand/exarticle?nofresh=true&index=0&share=true&id='
                 temp.paper = false
@@ -219,10 +219,10 @@
                 that.hlink = '/content/teacher/expand/expand_index'
               }
             }
-            if(that.videoreList.length>0) {
+            if (that.videoreList.length > 0) {
               that.reVideo = that.videoreList[0]
-              if(that.videoreList.length>1) {
-                for(let k=1;k<that.videoreList.length;k++) {
+              if (that.videoreList.length > 1) {
+                for (let k = 1; k < that.videoreList.length; k++) {
                   let video = {}
                   video.thumbnail = that.videoreList[k].thumbnail
                   video.title = that.videoreList[k].title
@@ -233,16 +233,16 @@
           }
         })
       },
-      lunbo() {
+      lunbo () {
         window.setTimeout(function() {
           let mySwiper = new Swiper('.swiper-container', {
-            autoplay: 4000,//可选选项，自动滑动
-            autoplayDisableOnInteraction : false,//用户操作swiper之后自动切换不会停止
-            pagination : '.swiper-pagination',//分页器
-            paginationClickable :true,//分页器切换事件
-            prevButton:'.swiper-button-prev',//前进
-            nextButton:'.swiper-button-next',//后退
-            loop : true//循环
+            autoplay: 4000,// 可选选项，自动滑动
+            autoplayDisableOnInteraction : false,// 用户操作swiper之后自动切换不会停止
+            pagination : '.swiper-pagination',// 分页器
+            paginationClickable :true,// 分页器切换事件
+            prevButton:'.swiper-button-prev',// 前进
+            nextButton:'.swiper-button-next',// 后退
+            loop : true// 循环
           });
         },3000)
       }

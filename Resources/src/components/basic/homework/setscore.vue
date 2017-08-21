@@ -14,11 +14,16 @@
               <span class="h_qnum">{{temp.allnum}}</span>
               <span class="h_qsc">{{temp.allScore}}</span>
             </p>
-            <input class="h_custombtn h_setbtn" v-model="temp.btn" type="button" v-if="temp.isBatch">
+            <input class="h_custombtn h_setbtn" v-model="temp.btn" type="button" v-if="temp.isBatch" @click="setScoreMode(temp.btn,index)">
           </div>
           <ul class="h_questions h_all" v-if="!temp.text">
             <li v-for="question in temp.questions">
-              {{question.text}}<input class="h_escore" v-model="question.score" style="ime-mode: disabled;" @blur="computeScore(question,index)" @keyup="checkScore($event)">分
+              <div v-if="question.number">
+                {{question.text}}<input class="h_escore" v-model="question.score" style="ime-mode: disabled;" @blur="computeScore(question,index)" @keyup="checkScore($event)">分&times{{question.number}}
+              </div>
+              <div v-else>
+                {{question.text}}<input class="h_escore" v-model="question.score" style="ime-mode: disabled;" @blur="computeScore(question,index)" @keyup="checkScore($event)">分
+              </div>
             </li>
           </ul>
           <ul class="h_questions h_one" v-else>
@@ -59,9 +64,9 @@
             let line = this.lines[i]
             let item = {}
             if (line.lineId.indexOf("new") !== -1) {
-              item.isBatch = this.standard() //  标准题行
+              item.isBatch = this.standard(line.questionType) //  标准题行
             } else {
-              item.isBatch = this.practice()  // 课时练题行
+              item.isBatch = this.practice(line.questionType)  // 课时练题行
             }
             item.btn = ''
             item.lineId = line.lineId
@@ -79,9 +84,9 @@
                 if (questions[j].isSplite === '0') {
                   order++
                   num++
-                  allScore += questions[j].subs[0].score * questions[j].subs.length
+                  allScore += questions[j].score * questions[j].subs.length
                   que.text = '第' + order + '题'
-                  que.score = questions[j].subs[0].score
+                  que.score = questions[j].score
                   que.number = questions[j].subs.length
                   item.questions.push(que)
                 } else {
@@ -193,8 +198,8 @@
             let flag = true
             let score = 0
             if (this.lineList[i].isBatch) {
-              for (let j=0; j < this.lineList.questions.length; j++) {
-                let ques = this.lineList.questions[j]
+              for (let j=0; j < this.lineList[i].questions.length; j++) {
+                let ques = this.lineList[i].questions[j]
                 if (ques.groupCode && ques.isSplite === '0') {
                   if (j === 0) {
                     score = ques.score
@@ -225,6 +230,16 @@
             }
           }
         },
+        setScoreMode (btn, index) {
+          if (btn === '自定义赋分') {
+            this.lineList[index].btn = '批量赋分'
+            this.lineList[index].text = ''
+          } else {
+            this.lineList[index].btn = '自定义赋分'
+            this.lineList[index].text = '每小题'
+            this.lineList[index].score = 0
+          }
+        },
         closePop () {
           this.$parent.scoreShow = false
         },
@@ -236,9 +251,9 @@
               for (let k=0; k < this.lines[i].questions.length; k++) {
                 if (questions[j].questionId === this.lines[i].questions[k].questionId) {
                   if (questions[j].groupCode && questions[j].isSplite === '1') {
-                    for (let m=0; m < questions[j].subs.length; m++) {
-                      if (questions[j].subs[m].questionId === questions[j].id) {
-                        questions[j].subs[m].score = questions[j].score
+                    for (let m=0; m < this.lines[i].questions[k].subs.length; m++) {
+                      if (this.lines[i].questions[k].subs[m].questionId === questions[j].id) {
+                        this.lines[i].questions[k].subs[m].score = questions[j].score
                       }
                     }
                   } else {
@@ -259,16 +274,31 @@
           if (obj.questionId) {
             for (let i=0; i < this.lineList[index].questions.length; i++) {
               let questions = this.lineList[index].questions
-              if (obj.questionId === questions[i].questionId) {
-                questions[i].score = obj.score
+              if (questions[i].groupCode && questions[i].isSplite === '1') {
+                if (obj.id === questions[i].id) {
+                  questions[i].score = obj.score
+                }
+              } else {
+                if (obj.questionId === questions[i].questionId) {
+                  questions[i].score = obj.score
+                }
               }
-              score += parseInt(questions[i].score)
+              if (questions[i].groupCode && questions[i].isSplite === '0') {
+                score += parseInt(questions[i].score) * questions[i].number
+              } else {
+                score += parseInt(questions[i].score)
+              }
             }
             this.lineList[index].allScore = '共' + score + '分)'
             this.lineList[index].qscore = score
           } else {
+            for (let i=0; i < this.lineList[index].questions.length; i++) {
+              let question = this.lineList[index].questions[i]
+              question.score = obj.score
+            }
             this.lineList[index].score = obj.score
             this.lineList[index].allScore = '共' + parseInt(obj.score) * this.lineList[index].qnum + '分)'
+            this.lineList[index].qscore = parseInt(obj.score) * this.lineList[index].qnum
           }
           let scores = 0
           for (let j=0; j < this.lineList.length; j++) {

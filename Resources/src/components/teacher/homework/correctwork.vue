@@ -73,11 +73,11 @@
 </template>
 <script type="text/ecmascript-6">
   import {selectDetails, selectPaper, selectAnswerPicture, selectQueLabelByMongo, nextStudent} from '../../../service/teacher/homework/correctwork.js';
-  import {UrlSearch} from '../../../common/js/request.js';//addExperience
+  import {UrlSearch} from '../../../common/js/request.js'; // addExperience
   import {contains} from '../../../common/js/common.js'
   import canvas from './canvas.vue'
   export default {
-    data() {
+    data () {
       return {
         assignId:'',
         stuList:[],
@@ -110,34 +110,34 @@
         j:0
       };
     },
-    mounted() {
+    mounted () {
       this.showStu()
       this.getOffset()
     },
     methods: {
-      getOffset() {
+      getOffset () {
         let Canvascon = document.getElementById('Canvascon')
         this.offsetLeft = Canvascon.offsetLeft
         this.offsetTop = Canvascon.offsetTop
       },
-      showStu() {
+      showStu () {
         this.assignId = UrlSearch('id')
         let para = {'assignId':this.assignId}
         let that = this
-        selectDetails(this,para).then(function(response) {
+        selectDetails(this, para).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
+          if (res.retCode === '0000') {
             let retData = res.retData
             let flag = true
             let ad = 0
             let correctedNum = 0
-            for (let i=0;i<retData.length;i++) {
+            for (let i = 0; i < retData.length; i++) {
               let stu = {}
               stu.userId = retData[i].userId
               stu.userName = retData[i].userName
               stu.status = retData[i].status
-              if(retData[i].status !== '6') {
-                if(flag) {
+              if (retData[i].status !== '6') {
+                if (flag) {
                   ad = i
                   stu.show = true
                   flag = false
@@ -145,21 +145,21 @@
                 stu.corrected = false
               } else {
                 stu.corrected = true
-                if(!flag) {
+                if (!flag) {
                   stu.show = false
-                }else {
+                } else {
                   correctedNum++
                 }
               }
               that.stuList.push(stu)
             }
-            if(that.stuList.length===1||ad===that.stuList.length-1) {
+            if (that.stuList.length === 1 || ad === that.stuList.length - 1) {
               that.nextStu = '完成'
             }
-            if(correctedNum === that.stuList.length) {
+            if (correctedNum === that.stuList.length) {
               that.stuList[0].show = true
             }
-            if(that.stuList.length>6) {
+            if (that.stuList.length > 6) {
               that.rightgray = false
               that.rightgreen = true
             }
@@ -169,71 +169,70 @@
           }
         })
       },
-      showbtn() {
+      showbtn () {
         let active = document.getElementsByClassName('s_active')[0]
         let status = active.attributes[1].value
-        console.log(status)
-        if(status=='6') {
+        if (status === '6') {
           this.gray = true
         } else {
           this.gray = false
         }
       },
-      showCorrect() {
-        for(var i in this.picList) {
-          let markPic = null;
+      showCorrect () {
+        for (var i in this.picList) {
+          let markPic = null
           for (var k in this.marksList) {
             if (this.picList[i].fileId === this.marksList[k].imgPosition) {
-              markPic = this.marksList[k].markPic;
-              var pro = {};
-              pro.answerPicId = this.picList[i].fileId;
-              pro.fileStr = markPic;
-              pro.flag = "2";
-              this.imgArray.push(pro);
+              markPic = this.marksList[k].markPic
+              var pro = {}
+              pro.answerPicId = this.picList[i].fileId
+              pro.fileStr = markPic
+              pro.flag = '2'
+              this.imgArray.push(pro)
             }
           }
         }
       },
-      showPaper(userId) {
-        let para = {'assignId':this.assignId,'userId':userId}
+      showPaper (userId) {
+        let para = {'assignId':this.assignId, 'userId':userId}
         let that = this
         this.qList = []
-        selectPaper(this,para).then(function(response) {
+        selectPaper(this, para).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
+          if (res.retCode === '0000') {
             let retData = res.retData
             this.results = res.retData
             let qNum1 = 1
             let flag = true
-            for(let j=0;j<retData.length;j++) {
+            for (let j = 0; j < retData.length; j++) {
               let group = {}
               group.title = retData[j].title
               group.list = []
               let list = retData[j].list
               let qNum2 = 1
-              if(list) {
-                for(let i=0;i<list.length;i++) {
+              if (list) {
+                for (let i = 0; i < list.length; i++) {
                   let question = {}
                   question.questionId = list[i].questionId
-                  if(list[i].groupCode) {
-                    if(list[i].isSplite=='0') {
-                      if(list[i-1]&&list[i-1].groupCode&&list[i-1].groupCode===list[i].groupCode) {
+                  if (list[i].groupCode) {
+                    if (list[i].isSplite === '0') {
+                      if (list[i - 1] && list[i - 1].groupCode && list[i - 1].groupCode === list[i].groupCode) {
                         question.qNum = qNum1 + '.' + qNum2
                         qNum2++
-                      }else {
+                      } else {
                         qNum1++
                         qNum2 = 1
                         question.qNum = qNum1 + '.' + qNum2
                       }
-                    }else {
+                    } else {
                       question.qNum = qNum1
                       qNum1++
                     }
-                  }else {
+                  } else {
                     question.qNum = qNum1
                     qNum1++
                   }
-                  if(list[i].result=='1') {
+                  if (list[i].result === '1') {
                     question.wflag = true
                     question.rflag = false
                     question.hflag = false
@@ -246,7 +245,7 @@
                     question.hrSelected = false
                     question.hgSelected = false
                     question.hhSelected = false
-                  }else if(list[i].result=='0') {
+                  } else if (list[i].result === '0') {
                     question.rflag = true
                     question.wflag = false
                     question.hflag = false
@@ -259,7 +258,7 @@
                     question.hrSelected = false
                     question.hgSelected = false
                     question.hhSelected = false
-                  }else if(list[i].result=='2') {
+                  } else if (list[i].result === '2') {
                     question.rflag = false
                     question.wflag = false
                     question.hflag = true
@@ -272,7 +271,7 @@
                     question.hrSelected = false
                     question.hgSelected = false
                     question.hhSelected = true
-                  }else {
+                  } else {
                     question.rflag = false
                     question.wflag = false
                     question.hflag = false
@@ -285,11 +284,11 @@
                     question.hrSelected = false
                     question.hgSelected = false
                     question.hhSelected = false
-                    if(flag) {
+                    if (flag) {
                       question.selected = true
-                      this.initAnswer(question.qNum,question.questionId)
+                      this.initAnswer(question.qNum, question.questionId)
                       flag = false
-                    }else {
+                    } else {
                       question.selected = false
                     }
                   }
@@ -303,13 +302,13 @@
           }
         })
       },
-      showPicture(userId) {
-        let para = {'assignId':this.assignId,'userId':userId}
+      showPicture (userId) {
+        let para = {'assignId':this.assignId, 'userId':userId}
         let that = this
         this.picList = []
-        selectAnswerPicture(this,para).then(function(response) {
+        selectAnswerPicture(this, para).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
+          if (res.retCode === '0000') {
             that.picList = res.retData.picList
             that.marksList = res.retData.marksList
             that.fileId = res.retData.picList[0].fileId
@@ -317,7 +316,7 @@
           }
         })
       },
-      showStuPaper(event,userId,index) {
+      showStuPaper (event, userId, index) {
         let tar = event.target
         let stuSpan = document.getElementsByClassName('s_active')[0]
         stuSpan.classList.remove('s_active')
@@ -330,71 +329,70 @@
         this.showbtn()
         this.showPaper(userId)
         this.showPicture(userId)
-        if(this.stuList.length===(index+1)) {
+        if (this.stuList.length === (index + 1)) {
           this.nextStu = '完成'
         } else {
           this.nextStu = '下一人'
         }
       },
-      clickquestion(item,event) {
+      clickquestion (item, event) {
         let tar = event.target
-        if(tar.childNodes.length<2) {
-          if(!item.result) {
+        if (tar.childNodes.length < 2) {
+          if (!item.result) {
             let classList = tar.classList
-            if(contains(classList,'right')) {
+            if (contains(classList, 'right')) {
               classList.add('green')
               tar.nextElementSibling.classList.remove('Red')
               tar.nextElementSibling.nextElementSibling.classList.remove('yellow')
-              this.saveResult(item.questionId,'1')
-            }else if(contains(classList,'wrong')) {
+              this.saveResult(item.questionId, '1')
+            } else if (contains(classList, 'wrong')) {
               classList.add('Red')
               tar.nextElementSibling.classList.remove('yellow')
               tar.previousElementSibling.classList.remove('green')
-              this.saveResult(item.questionId,'1')
-            }else {
+              this.saveResult(item.questionId, '1')
+            } else {
               classList.add('yellow')
               tar.previousElementSibling.classList.remove('Red')
               tar.previousElementSibling.previousElementSibling.classList.remove('green')
-              this.saveResult(item.questionId,'0')
+              this.saveResult(item.questionId, '0')
             }
           }
           tar = tar.parentNode
         }
         let selected = document.getElementsByClassName('change_li')
-        if(selected.length>0) {
+        if (selected.length > 0) {
           selected[0].classList.remove('change_li')
         }
         tar.classList.add('change_li')
-        let that = this
         this.answerNum = '第' + item.qNum + '题'
         this.createAnswer(item.questionId)
       },
-      initAnswer(qNum,questionId) {
+      initAnswer (qNum, questionId) {
         this.answerNum = '第' + qNum + '题'
         this.createAnswer(questionId)
       },
-      createAnswer(questionId) {
+      createAnswer (questionId) {
         let that = this
-        let para = {'assignId':this.assignId,'questionId':questionId}
-        selectQueLabelByMongo(this,para).then(function(response) {
+        let para = {'assignId':this.assignId, 'questionId':questionId}
+        selectQueLabelByMongo(this, para).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
+          if (res.retCode === '0000') {
             that.answerHtml = ''
             let htm = '<div class="h_answer"'
             let list = res.retData.list
-            for(let i=0;i<list.length;i++) {
+            for (let i = 0; i < list.length; i++) {
               htm += list[i].content
-              if(list[i].questionType === "01") {
-                if(list[i].optionA!=undefined) {
+              if (list[i].questionType === '01') {
+                if (list[i].optionA !== undefined) {
                   htm += list[i].optionA
                 }
-                if(list[i].optionB!=undefined) {
+                if (list[i].optionB !== undefined) {
                   htm += list[i].optionB
                 }
-                if(list[i].optionC!=undefined) {
+                if (list[i].optionC !== undefined) {
                   htm += list[i].optionC
                 }
-                if(list[i].optionD!=undefined) {
+                if (list[i].optionD !== undefined) {
                   htm += list[i].optionD
                 }
               }
@@ -404,76 +402,76 @@
           }
         })
       },
-      saveResult(questionId,result) {
-        for(let i=0; i<this.results.length; i++) {
-            for(let k in this.results[i].list) {
-              if(this.results[i].list[k].questionId == questionId) {
-                this.results[i].list[k].result = result;
-              }
+      saveResult (questionId, result) {
+        for (let i = 0; i < this.results.length; i++) {
+          for (let k in this.results[i].list) {
+            if (this.results[i].list[k].questionId === questionId) {
+              this.results[i].list[k].result = result;
             }
+          }
         }
       },
-      showAnswer() {
+      showAnswer () {
         let len = document.getElementsByClassName('change_li').length
-        if(len===0) {
+        if (len === 0) {
           return
         }
         document.getElementById('anTitle').classList.remove('dino')
         document.getElementById('anContent').classList.remove('dino')
       },
-      closeAnswer() {
+      closeAnswer () {
         document.getElementById('anTitle').classList.add('dino')
         document.getElementById('anContent').classList.add('dino')
       },
-      showImg(fileId) {
+      showImg (fileId) {
         let canvases = document.getElementsByClassName('Canvas')
-        for(let i=0;i<canvases.length;i++) {
-          if(!contains(canvases[i].classList,'dino')) {
+        for (let i = 0; i < canvases.length; i++) {
+          if (!contains(canvases[i].classList, 'dino')) {
             canvases[i].classList.add('dino')
           }
         }
         let id = fileId + 'canvas'
         document.getElementById(id).classList.remove('dino')
-     },
-      changeColor(event) {
+      },
+      changeColor (event) {
         let tar = event.target
-        if(contains(tar.classList,'pencil')||contains(tar.classList,'pencil_div')) {
+        if (contains(tar.classList, 'pencil') || contains(tar.classList, 'pencil_div')) {
           this.pencilColor = {'background-color':'rgb(250, 162, 73)'}
           this.eraserColor = {'background-color':'rgb(255, 255, 255)'}
           this.pen = true
           this.eraser = false
           tar.parentNode.nextElementSibling.classList.add('addBorder')
-        }else {
+        } else {
           this.eraserColor = {'background-color':'rgb(250, 162, 73)'}
           this.pencilColor = {'background-color':'rgb(255, 255, 255)'}
           this.pen = false
           this.eraser = true
           let children = this.$refs.child
-          for(let i=0;i<children.length;i++) {
+          for (let i = 0; i < children.length; i++) {
             let child = children[0]
-            if(this.fileId === child.item.fileId) {
+            if (this.fileId === child.item.fileId) {
               child.goBack()
             }
           }
         }
       },
-      goRight() {
+      goRight () {
         let stu = document.getElementById('stuCon')
         let pageSize = 7
         let scrollWidth
-        if(stu.offsetWidth === 900) {
-          scrollWidth=882;
-          pageSize = 6;
-        }else if(stu.offsetWidth === 882) {
-          scrollWidth=882;
-          pageSize = 6;
-        }else if(stu.offsetWidth === 1045) {
-          scrollWidth=1029;
+        if (stu.offsetWidth === 900) {
+          scrollWidth = 882
+          pageSize = 6
+        } else if (stu.offsetWidth === 882) {
+          scrollWidth = 882
+          pageSize = 6
+        } else if (stu.offsetWidth === 1045) {
+          scrollWidth = 1029
         }
-        let totalPage = Math.ceil(this.stuList.length / pageSize)//计算总页数
+        let totalPage = Math.ceil(this.stuList.length / pageSize) // 计算总页数
         if (this.currentPage === totalPage) {
           return false
-        } else if(this.currentPage === totalPage-1) {
+        } else if (this.currentPage === totalPage - 1) {
           this.leftRange = this.currentPage * -scrollWidth
           this.currentPage++
           this.rightgray = true
@@ -485,70 +483,67 @@
           this.rightgreen = true
         }
       },
-      goLeft() {
+      goLeft () {
         let stu = document.getElementById('stuCon')
-        let pageSize = 7
         let scrollWidth
-        if(stu.offsetWidth === 900) {
-          scrollWidth=882;
-          pageSize = 6;
-        }else if(stu.offsetWidth === 882) {
-          scrollWidth=882;
-          pageSize = 6;
-        }else if(stu.offsetWidth === 1045) {
-          scrollWidth=1029;
+        if (stu.offsetWidth === 900) {
+          scrollWidth = 882
+        } else if (stu.offsetWidth === 882) {
+          scrollWidth = 882
+        } else if (stu.offsetWidth === 1045) {
+          scrollWidth = 1029
         }
         if (this.currentPage === 1) {
           this.leftgray = true
           this.leftgreen = false
           return false
-        } else if(this.currentPage === 2) {
+        } else if (this.currentPage === 2) {
           this.currentPage--
-          this.leftRange = (this.currentPage-1)*(-scrollWidth)
+          this.leftRange = (this.currentPage - 1) * (-scrollWidth)
           this.leftgray = false
           this.leftgreen = true
         } else {
           this.currentPage--
-          this.leftRange = (this.currentPage-1)*(-scrollWidth)
+          this.leftRange = (this.currentPage - 1) * (-scrollWidth)
           this.leftgray = false
           this.leftgreen = true
         }
       },
-      afterCorrect() {
+      afterCorrect () {
         let that = this
         let active = document.getElementsByClassName('s_active')[0]
         let status = active.attributes[1]
         let id = active.id
-        if(status === 6) {
+        if (status === 6) {
           return
         } else {
-        for(let i=0; i<this.results.length; i++) {
-          for(let k in this.results[i].list) {
-            if(this.results[i].list[k].result == null) {
-              console.log('您还有试题没有批改!')
-              return
+          for (let i = 0; i < this.results.length; i++) {
+            for (let k in this.results[i].list) {
+              if (this.results[i].list[k].result === null) {
+                console.log('您还有试题没有批改!')
+                return
+              }
             }
           }
-        }
         }
         let param = {}
         param.userId = id
         param.assignId = this.assignId
-        if(this.imgArray.length>0) {
+        if (this.imgArray.length > 0) {
           param.filesStr = JSON.stringify(this.imgArray)
         }
         param.resultsStr = JSON.stringify(this.results)
         param.totalRemarks = this.markText
-        nextStudent(this,param).then(function(response) {
+        nextStudent(this, param).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
-            for(let i=0;i<that.stuList.length;i++) {
-              if(that.stuList[i].userId === res.retData) {
-                if(i === that.stuList.length-1) {
+          if (res.retCode === '0000') {
+            for (let i = 0; i < that.stuList.length; i++) {
+              if (that.stuList[i].userId === res.retData) {
+                if (i === that.stuList.length - 1) {
                   that.nextStu = '完成'
                   that.$router.push('/content/teacher/homework/correctworklist')
                 } else {
-                  let userId = that.stuList[i+1].userId
+                  let userId = that.stuList[i + 1].userId
                   this.userId = userId
                   that.showPaper(userId)
                   that.showPicture(userId)
@@ -560,7 +555,7 @@
       }
     },
     components:{
-      'v-canvas':canvas
+      'v-canvas': canvas
     }
   };
 </script>

@@ -62,7 +62,7 @@
          this.$http.post('/web/teacher/prepare/category', para, {'emulateJSON': true}).then(function (response) {
           if (response.body.retCode === '0000') {
             this.categoryList = response.body.retData
-            for (let i=0; i < this.categoryList.length; i++) {
+            for (let i = 0; i < this.categoryList.length; i++) {
               let video = {}
               video.id = this.categoryList[i].id
               video.title = this.categoryList[i].title
@@ -73,7 +73,7 @@
         })
       },
       getVideoList () {
-        for (let i=0; i < this.videoList.length; i++) {
+        for (let i = 0; i < this.videoList.length; i++) {
           let para = {}
           para.categoryId = this.videoList[i].id
           para.knowledgeList = this.ThisSectionId
@@ -85,7 +85,6 @@
         }
       },
       enter (e) {
-        console.log(e.target)
         let classList = e.target.children[0].children[0].children[1].classList
         classList.remove('dino')
       },

@@ -34,19 +34,18 @@
   import draggable from 'vuedraggable'
   import {contains} from '../../../common/js/common.js'
     export default {
-        data () {
-          return {
-            lines: [],
-            queTypes: [],
-            typeShow: false
-          };
-        },
+      props: ['lines'],
+      data () {
+        return {
+          queTypes: [],
+          typeShow: false
+        };
+      },
       mounted () {
         this.init()
       },
       methods: {
         init () {
-          this.lines = JSON.parse(window.localStorage.getItem('lines'))
           this.$http.post('/web/teacher/paper/assign/subjectquestiontypes').then(function(response) {
             let retCode = response.body.retCode
             if (retCode === '0000') {
@@ -81,13 +80,21 @@
             this.queTypes[index].selected = true
           }
           let line = {}
-          line.lineNumber = ''
-          line.lineId = ''
-          line.lineName = this.queTypes[index].label
+          let subjectId = window.localStorage.getItem('subjectId')
+          let len = this.lines.length + 1
+          if (subjectId === '03') {
+            line.lineNumber = this.$parent.toRoman(len)
+            line.lineName = '.' + this.queTypes[index].label
+          } else {
+            line.lineNumber = this.$parent.toChinese(len)
+            line.lineName = '、' + this.queTypes[index].label
+          }
+          line.lineId = 'new' + Math.random().toString().replace('.', '') + new Date().getTime()
           line.questionType = this.queTypes[index].code
+          line.questions = []
           this.lines.push(line)
           this.typeShow = false
-          window.localStorage.setItem('lines',JSON.stringify(this.lines))
+//          window.localStorage.setItem('lines',JSON.stringify(this.lines))
         },
         complete () {
           this.$emit('updateLine',this.lines)

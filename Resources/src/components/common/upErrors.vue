@@ -15,7 +15,7 @@
             <span class="p_cesend" @click="thisdo">确定</span>
             <span class="p_cecancel" @click="Delete">取消</span>
         </div>
-        <i class="spriteImg c_ruleico fl p_cedelte" @click="Delete">X</i>
+        <i class="spriteImg c_ruleico fl p_cedelte" @click="Delete"></i>
     </div>
 </div>
 </template>

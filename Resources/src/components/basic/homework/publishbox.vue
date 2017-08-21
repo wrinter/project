@@ -96,10 +96,12 @@
           tempGroup:{},
           groupShow:false,
           indvShow:false,
-          classShow:true
+          classShow:true,
+          type:''
         }
       },
       mounted () {
+        this.type = window.localStorage.getItem('type')
         this.getDeadline(1)
         this.getClass()
       },
@@ -342,12 +344,18 @@
         },
         publishEnsure (para, url) {
           let param = JSON.stringify(para)
+          let skipUrl = ''
+          if (this.type === 'test') {
+            skipUrl = '/content/teacher/test/assigntest?id=5d26023aa59e11e680f576304dec7eb7'
+          } else {
+            skipUrl = '/content/teacher/homework/assignwork?id=5d25f8a8a59e11e680f576304dec7eb7'
+          }
           this.$http.post(url, param).then(function (response) {
             let retCode = response.body.retCode
             if (retCode === '0000') {
               this.markInfo.Random = Math.random()
               this.markInfo.Con = '布置成功,即将跳转'
-              this.$router.push('/content/teacher/homework/assignwork?id=5d25f8a8a59e11e680f576304dec7eb7')
+              this.$router.push(skipUrl)
             } else {
               this.markInfo.Random = Math.random()
               this.markInfo.Con = '布置失败,请联系管理员'

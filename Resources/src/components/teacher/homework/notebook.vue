@@ -12,17 +12,32 @@
     <div class="note_question">
       <div v-if="questions.length>0">
       <ul class="source_txt slot-list" v-for="temp in questions" @mouseenter="enter($event)" @mouseleave="leave($event)">
-        <li class="lineBox slot-item saveLine">
-          <div :id="temp.questionId" class="questionContext" v-html="temp.content"></div>
+        <li v-if="temp.flag=='0'">
+          <div class="questionContext" v-html="temp.content"></div>
+          <div class="questionContext" v-for="sub in temp.subs" v-html="sub.questionTitle"></div>
           <div class="source_txt_btn">
             <a class="lookExplore" href="javascript:;" @click="lookExplore($event)">查看解析</a>
             <span class="dino">
-              <a class="paoError" href="javascript:;">报错</a>
+              <a class="paoError" href="javascript:;" @click="showError(temp.questionId)">报错</a>
               <a class="del_out" :questionid="temp.questionId" href="javascript:;" @click="deleteQuestion(temp,$event)">删除</a>
             </span>
           </div>
           <div class="analysisBox dino">
-            <div v-for="label in temp.labels" :id="label.questionId">{{label.content}}</div>
+            <div v-for="label in temp.labels" :id="label.questionId" v-html="label.content"></div>
+          </div>
+        </li>
+        <li class="lineBox slot-item saveLine" v-else>
+          <div class="questionContext" v-html="temp.content" v-if="temp.flag=='1'"></div>
+          <div :id="temp.questionId" class="questionContext" v-html="temp.questionTitle"></div>
+          <div class="source_txt_btn">
+            <a class="lookExplore" href="javascript:;" @click="lookExplore($event)">查看解析</a>
+            <span class="dino">
+              <a class="paoError" href="javascript:;" @click="showError(temp.questionId)">报错</a>
+              <a class="del_out" :questionid="temp.questionId" href="javascript:;" @click="deleteQuestion(temp,$event)">删除</a>
+            </span>
+          </div>
+          <div class="analysisBox dino">
+            <div v-for="label in temp.labels" :id="label.questionId" v-html="label.content"></div>
           </div>
         </li>
       </ul>
@@ -81,20 +96,13 @@
     </div>
     <input type="button" class="m_btnPer" value="确定" @click="rateEnsure">
   </div>
-  <div class="m_submitErrors">
-    <i class="spriteImg c_closeico fr c_closeimg0" id="c_closeG2"></i>
-    <p>报错</p>
-    <ul class="m_errorPointsBox">
-    </ul>
-    <textarea name="" id="errorReason"  placeholder="请输入错误原因"></textarea>
-    <input type="button" class="m_submitErrorsSure" value="确定">
-    <input type="button" class="m_submitErrorsCancel" value="取消">
-  </div>
+  <v-upErrors></v-upErrors>
   <v-mark :MarkCon="markInfo"></v-mark>
   </div>
 </template>
 <script type="text/ecmascript-6">
   import pages from '../../common/pages'
+  import upErrors from '../../common/upErrors'
   import {contains} from '../../../common/js/common.js'
   import mark from '../../common/Mark.vue'
   export default {
@@ -128,19 +136,19 @@
 //      this.initKnowledge()
     },
     methods:{
-      getKnowledge() {
-        this.$http.get('/web/teacher/center/wrongbook/knowledge').then(function(response) {
+      getKnowledge () {
+        this.$http.get('/web/teacher/center/wrongbook/knowledge').then(function (response) {
           let retCode = response.body.retCode
-          if(retCode === '0000') {
+          if (retCode === '0000') {
             let retData = response.body.retData
-            if(retData.length>0) {
+            if (retData.length > 0) {
               this.subjectId = retData[0].subjectId
               this.plevelName = retData[0].levelName + ':'
-              if(this.subjectId !== '07') {
-                this.cells.push({'knowledgeId':'','name':'全部','alias':''})
+              if (this.subjectId !== '07') {
+                this.cells.push({'knowledgeId':'', 'name':'全部', 'alias':''})
               }
-              this.exportCell.push({'knowledgeId':'','name':'全部','alias':''})
-              for(let i=0;i<retData.length;i++) {
+              this.exportCell.push({'knowledgeId':'', 'name':'全部', 'alias':''})
+              for (let i = 0; i < retData.length; i++) {
                 let cell = {}
                 cell.knowledgeId = retData[i].knowledgeId
                 cell.name = retData[i].name
@@ -151,49 +159,87 @@
               }
               this.activeKownledge.push(this.cells[0].knowledgeId)
               this.chapter = this.chapters[this.cells[0].knowledgeId]
-              if(this.chapter&&this.chapter.length>0) {
+              if (this.chapter && this.chapter.length > 0) {
                 this.clevelName = this.chapter[0].levelName + ':'
                 this.activeKownledge.push(this.chapter[0].knowledgeId)
               }
               let len = this.activeKownledge.length
-              this.getWrongBook(this.activeKownledge[len-1],'1')
+              this.getWrongBook(this.activeKownledge[len-1], '1')
             }
           }
         })
       },
-      initKnowledge() {
-        for(let j=0;j<this.activeKownledge.length;j++) {
-          console.log(this.activeKownledge[j])
+      initKnowledge () {
+        for(let j = 0; j < this.activeKownledge.length; j++) {
           document.getElementById(this.activeKownledge[j]).classList.add('n_active')
         }
       },
-      getWrongBook(id,pageNum) {
-        this.$http.get('/web/teacher/center/wrongbook', {'params':{'knowLedgeList':id, 'pageNum':pageNum, 'pageSize':3}}).then(function(response) {
+      getWrongBook (id, pageNum) {
+        this.$http.get('/web/teacher/center/wrongbook', {'params': {'knowLedgeList':id, 'pageNum':pageNum, 'pageSize':3}}).then(function (response) {
           let retCode = response.body.retCode
-          if(retCode === '0000') {
+          if (retCode === '0000') {
             this.questions = []
             this.ThisPages.Total = response.body.retData.pages
             this.ThisPages.PnoPage = response.body.retData.pageNum
             let retData = response.body.retData.list
-            for(let i=0;i<retData.length;i++) {
+            for (let i = 0; i < retData.length; i++) {
               let question = {}
-              if(retData[i].groupCode) {
-//if(retData[i].isSplite === '0') {
-//
-//              }else if(retData[i].isSplite === '1') {
-//
-//              }
-              }else {
-                let list = retData[i].questions
-                question.num = i+1+'.'
+              let list = retData[i].questions
+              if (retData[i].groupCode) {
+                if (retData[i].isSplite === '0') {
+                  question.groupCode = retData[i].groupCode
+                  question.isSplite = retData[i].isSplite
+                  question.flag = '0'
+                  question.num = i + 1 + '.'
+                  question.subs = []
+                  question.questionId = retData[i].questionId;
+                  question.content = retData[i].content.replace('【材料】', '')
+                  question.labels = list[i].questions[0].labels
+                  for (var j = 0; j < list.length; j++) {
+                    var sub = {}
+                    sub.questionId = list[j].questionId;
+                    sub.questionTitle = list[j].questionTitle.replace('【题干】', '')
+                    if (list[j].optionA) {
+                      sub.questionTitle += list[j].optionA
+                    }
+                    if (list[j].optionB) {
+                      sub.questionTitle += list[j].optionB
+                    }
+                    if (list[j].optionC) {
+                      sub.questionTitle += list[j].optionC
+                    }
+                    if (list[j].optionD) {
+                      sub.questionTitle += list[j].optionD
+                    }
+                    question.subs.push(sub);
+                  }
+                  this.questions.push(question)
+                } else {
+                  question.flag = '1'
+                  question.groupCode = retData[i].groupCode
+                  question.isSplite = retData[i].isSplite
+                  question.num = i + 1 + '.'
+                  question.questionId = retData[i].questionId;
+                  question.content = retData[i].content.replace('【材料】', '')
+                  let numstr = '<span class="m_order">' + question.num + '</span>'
+                  question.questionTitle = list[0].questionTitle.replace('题干', numstr).replace('【', '').replace('】', '')
+                  if (list[0].questionTypeId === '01') {
+                    question.questionTitle += list[0].optionA + list[0].optionB + list[0].optionC + list[0].optionD
+                  }
+                  question.labels = list[0].labels
+                  this.questions.push(question)
+                }
+              } else {
+                question.flag = '2'
+                question.num = i + 1 + '.'
                 question.groupCode = null
                 question.isSplite = null
                 question.questionTypeId = list[0].questionTypeId
                 question.questionId = list[0].questionId
                 let numstr = '<span class="m_order">' + question.num + '</span>'
-                question.content = list[0].questionTitle.replace("题干", numstr).replace("【","").replace("】","")
-                if(list[0].questionTypeId === '01') {
-                  question.content += list[0].optionA + list[0].optionB + list[0].optionC + list[0].optionD
+                question.questionTitle = list[0].questionTitle.replace('题干', numstr).replace('【', '').replace('】', '')
+                if (list[0].questionTypeId === '01') {
+                  question.questionTitle += list[0].optionA + list[0].optionB + list[0].optionC + list[0].optionD
                 }
                 question.labels = list[0].labels
                 this.questions.push(question)
@@ -202,39 +248,39 @@
           }
         })
       },
-      RecieveChild(page) {
+      RecieveChild (page) {
         let len = this.activeKownledge.length
         let id = this.activeKownledge[len-1]
-        this.getWrongBook(id,page)
+        this.getWrongBook(id, page)
       },
-      lookExplore(e) {
+      lookExplore (e) {
         let text = e.target.text
         let next = e.target.parentNode.nextElementSibling
-        if(text === '查看解析') {
+        if (text === '查看解析') {
           e.target.text = '收起解析'
           next.classList.remove('dino')
-        }else {
+        } else {
           e.target.text = '查看解析'
           next.classList.add('dino')
         }
       },
-      enter(e) {
+      enter (e) {
         let li = e.target.children[0]
         let btnDiv = li.children[1]
         let span = btnDiv.children[1]
         span.classList.remove('dino')
       },
-      leave(e) {
+      leave (e) {
         let li = e.target.children[0]
         let btnDiv = li.children[1]
         let span = btnDiv.children[1]
         span.classList.add('dino')
       },
-      deleteQuestion(obj,e) {
+      deleteQuestion (obj, e) {
         let tar = e.target.parentNode.parentNode.parentNode.parentNode
         let param = {}
-        if(obj.groupCode) {
-          if(obj.isSplite === '0') {
+        if (obj.groupCode) {
+          if (obj.isSplite === '0') {
             param.questionIdList = ''
             param.groupCodeList = obj.groupCode
           } else {
@@ -244,55 +290,55 @@
         }else {
           param.questionIdList = obj.questionId
         }
-        this.$http.post('/web/teacher/center/wrongbook/delete', param, {'emulateJSON': true}).then(function(response) {
+        this.$http.post('/web/teacher/center/wrongbook/delete', param, {'emulateJSON': true}).then(function (response) {
           let retCode = response.body.retCode
           if(retCode === '0000') {
             tar.remove()
           }
         })
       },
-      selectCell(obj,e) {
+      selectCell (obj, e) {
         let id = obj.knowledgeId
         this.chapter = this.chapters[id]
         let active = document.getElementsByClassName('n_active')[0]
         active.classList.remove('n_active')
         e.target.classList.add('n_active')
-        if(this.chapter.length>0) {
+        if (this.chapter.length > 0) {
           id = this.chapter[0].knowledgeId
         }
-        this.getWrongBook(id,1)
+        this.getWrongBook(id, 1)
       },
-      selectChapter(obj,e) {
+      selectChapter (obj, e) {
         let active = document.getElementsByClassName('n_active')[1]
         active.classList.remove('n_active')
         e.target.classList.add('n_active')
-        this.getWrongBook(obj.knowledgeId,1)
+        this.getWrongBook(obj.knowledgeId, 1)
       },
-      exportBook() {
+      exportBook () {
         this.exportFlag = true
       },
-      closeExport() {
+      closeExport () {
         this.exportFlag = false
       },
-      selectExported(e,id) {
+      selectExported(e, id) {
         let classList = e.target.classList
-        if(contains(classList,'i_slcico0')) {
-          if(id === '') {
+        if (contains(classList, 'i_slcico0')) {
+          if (id === '') {
             let selected = document.getElementsByClassName('i_slcico0')
-            for(let i=0;i<=selected.length;i++) {
+            for (let i = 0; i <= selected.length; i++) {
               i=0
               selected[0].classList.add('i_slcico1')
               selected[0].classList.remove('i_slcico0')
-              if(selected[0].parentNode.id !== '') {
+              if (selected[0].parentNode.id !== '') {
                 this.exportedId.push(selected[0].parentNode.id)
               }
             }
-          }else {
+          } else {
             classList.remove('i_slcico0')
             classList.add('i_slcico1')
             this.exportedId.push(id)
           }
-        }else {
+        } else {
           let selected = document.getElementsByClassName('i_slcico1')
           if (id === '') {
             if (selected.length === this.exportCell.length) {
@@ -303,7 +349,7 @@
                 selected[0].classList.remove('i_slcico1')
                 let index = this.exportedId.indexOf(selected[0].parentNode.id);
                 if (index > -1) {
-                  this.exportedId.splice(index, 1);
+                  this.exportedId.splice(index, 1)
                 }
               }
             }
@@ -316,51 +362,67 @@
               classList.add('i_slcico0')
               let index = this.exportedId.indexOf(id);
               if (index > -1) {
-                this.exportedId.splice(index, 1);
+                this.exportedId.splice(index, 1)
               }
             }
           }
         }
         },
-      exportEnsure() {
+      exportEnsure () {
+        if (this.exportedId.length === 0) {
+          this.markInfo.Random = Math.random()
+          this.markInfo.Con = '请先选择章节'
+          return
+        }
         let para = {}
-        para.knowledgeList = this.exportedId.join(',')
-        this.$http.get('/web/teacher/center/wrongbook/export', para, {'emulateJSON': true}).then(function(response) {
+        if (this.exportedId.length > 1) {
+          para.knowledgeList = this.exportedId.join(',')
+        }
+        para.knowledgeList = this.exportedId[0]
+        this.$http.get('/web/teacher/center/wrongbook/export', {'params': para}).then(function (response) {
           let retCode = response.body.retCode
           if(retCode === '0000') {
-//
+//            window.open('/web/teacher/center/wrongbook/export?knowledgeList=' + para.knowledgeList) // 下载
+            this.exportFlag = false
           }
         })
       },
-      setErrorRate() {
+      setErrorRate () {
         this.setFlag = true
       },
-      showRate() {
+      showRate () {
         this.errorRateShow = true
       },
-      closeRate() {
+      closeRate () {
         this.setFlag = false
       },
-      selectRate(e) {
+      selectRate (e) {
         this.selectedRate = e.target.innerText
         this.errorRateShow = false
       },
-      rateEnsure() {
-        let arr = this.selectedRate.split("%");
-        let errorPercent = arr[0] / 100;
+      rateEnsure () {
+        let arr = this.selectedRate.split('%')
+        let errorPercent = arr[0] / 100
         let para = {}
         para.wrongRate = errorPercent;
-        this.$http.post('/web/teacher/center/wrongrate', para, {'emulateJSON': true}).then(function(response) {
+        this.$http.post('/web/teacher/center/wrongrate', para, {'emulateJSON': true}).then(function (response) {
           let retCode = response.body.retCode
-          if(retCode === '0000') {
+          if (retCode === '0000') {
             this.markInfo.Con = '错题率更新成功'
+            this.setFlag = false
           }
         })
+      },
+      showError (questionId) {
+        sessionStorage.setItem('questionId', questionId)
+        let upErrors = document.getElementsByClassName('upErrors')[0]
+        upErrors.style.display = 'block'
       }
     },
     components:{
-      'v-pages':pages,
-      'v-mark':mark
+      'v-pages': pages,
+      'v-mark': mark,
+      'v-upErrors': upErrors
     }
   };
 </script>
@@ -513,7 +575,7 @@
       position: absolute;
       top: 30%;
       left: 30%;
-      z-index: 1112;
+      z-index: 512;
       background: #fff;
     }
 
@@ -800,7 +862,7 @@
       position: absolute;
       top: 30%;
       left: 30%;
-      z-index: 1112;
+      z-index: 512;
       background: #fff;
     }
     .exportError .m_seclectSection{
@@ -1074,7 +1136,7 @@
       position: absolute;
       top: 30%;
       left: 25%;
-      z-index: 1112;
+      z-index: 512;
       background: #fff;
     }
     .exportError .m_seclectSection {

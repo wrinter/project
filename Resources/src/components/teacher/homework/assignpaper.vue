@@ -3,7 +3,7 @@
     <div class="exercise_btn" v-if="lines.length>0">
       <div class="exercise_btn_in">
         <input id="w_PrintBtn" class="exercise_btn_print" value="打印" type="button">
-        <router-link v-bind:to="'/content/teacher/homework/assignedit?paperType='+paperType" class="exercise_btn_edit" v-if="status=='2'||status==undefined">编辑</router-link>
+        <router-link v-bind:to="'/content/teacher/homework/assignedit?paperType='+paperType+'&status='+status" class="exercise_btn_edit" v-if="status=='2'||status==undefined">编辑</router-link>
         <input class="exercise_btn_publish" value="布置" type="button" @click="getAssignClass">
       </div>
     </div>

@@ -12,13 +12,47 @@
       <div class="note_question">
         <div v-if="questions.length>0">
         <ul class="source_txt slot-list" v-for="(temp,index) in questions" @mouseenter="enter($event,temp.questionId)" @mouseleave="leave($event)">
-          <li class="lineBox slot-item saveLine">
+          <li class="lineBox slot-item saveLine" v-if="temp.flag=='0'">
             <span class="addAndRemove dino">
               <a class="_add" href="javascript:;" @click="addAndRemove($event,temp)">
                 <img src="../../../../static/teacher/images/homework/m_add.png">
               </a>
             </span>
-            <div :id="temp.questionId" class="questionContext" v-html="temp.content"></div>
+            <div class="questionContext" v-html="temp.content"></div>
+            <div :id="temp.questionId" class="questionContext" v-for="sub in temp.subs" v-html="sub.questionTitle"></div>
+            <div class="source_txt_btn">
+              <a class="lookExplore" href="javascript:;" @click="lookExplore($event)">查看解析</a>
+              <a class="paperChanged hasChange" href="javascript:;" @click="getSimilar($event,temp.questionId,index)">变式题</a>
+            </div>
+            <div class="analysisBox dino">
+              <div v-for="label in temp.labels" :id="label.questionId" v-html="label.content"></div>
+            </div>
+            <div class="analysisChanged dino">
+              <div class="reflesh"  @click="getSimilar($event,temp.questionId,index)">【变式】<img src="../../../../static/teacher/images/homework/m_reflesh.png" alt="刷新">换一个</div>
+              <span class="addAndRemove dino">
+                  <a class="_add" href="javascript:;" @click="addAndRemove($event,temp)">
+                    <img src="../../../../static/teacher/images/homework/m_add.png">
+                  </a>
+              </span>
+              <div class="changedTitle">
+                <div class="questionContextChanged" v-html="temp.similar.content"></div>
+                <div class="source_txt_btn">
+                  <a class="change_lookExplore" href="javascript:;" @click="lookExplore($event)">查看解析</a>
+                </div>
+                <div class="analysisBox dino">
+                  <div v-for="label in temp.similar.labels" :id="label.questionId" v-html="label.content"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="lineBox slot-item saveLine" v-else>
+            <span class="addAndRemove dino">
+              <a class="_add" href="javascript:;" @click="addAndRemove($event,temp)">
+                <img src="../../../../static/teacher/images/homework/m_add.png">
+              </a>
+            </span>
+            <div class="questionContext" v-html="temp.content" v-if="temp.flag=='1'"></div>
+            <div :id="temp.questionId" class="questionContext" v-html="temp.questionTitle"></div>
             <div class="source_txt_btn">
               <a class="lookExplore" href="javascript:;" @click="lookExplore($event)">查看解析</a>
               <a class="paperChanged hasChange" href="javascript:;" @click="getSimilar($event,temp.questionId,index)">变式题</a>
@@ -186,15 +220,59 @@
             let retData = response.body.retData.list
             for(let i=0;i<retData.length;i++) {
               let question = {}
-              if(retData[i].groupCode) {
-//if(retData[i].isSplite === '0') {
-//
-//              }else if(retData[i].isSplite === '1') {
-//
-//              }
-              }else {
-                let list = retData[i].questions
-                question.num = i+1+'.'
+              let list = retData[i].questions
+              if (retData[i].groupCode) {
+                if (retData[i].isSplite === '0') {
+                  question.flag = '0'
+                  question.groupCode = retData[i].groupCode
+                  question.isSplite = retData[i].isSplite
+                  question.num = i + 1 + '.'
+                  question.subs = []
+                  question.similar = {}
+                  question.questionId = retData[i].questionId
+                  question.labels = list[i].questions[0].labels
+                  question.content = retData[i].content.replace('【材料】', '')
+                  for (var j = 0; j < list.length; j++) {
+                    var sub = {}
+                    sub.questionId = list[j].questionId
+                    sub.questionTitle = list[j].questionTitle.replace('【题干】', '')
+                    if (list[j].optionA) {
+                      sub.questionTitle += list[j].optionA
+                    }
+                    if (list[j].optionB) {
+                      sub.questionTitle += list[j].optionB
+                    }
+                    if (list[j].optionC) {
+                      sub.questionTitle += list[j].optionC
+                    }
+                    if (list[j].optionD) {
+                      sub.questionTitle += list[j].optionD
+                    }
+                    question.subs.push(sub)
+                  }
+                  this.questions.push(question)
+                } else {
+                  question.flag = '1'
+                  question.num = i + 1 + '.'
+                  question.similar = {}
+                  question.groupOrder = list[0].groupOrder
+                  question.groupCode = retData[i].groupCode
+                  question.isSplite = retData[i].isSplite
+                  question.similar = {}
+                  question.questionTypeId = list[0].questionTypeId
+                  question.questionId = list[0].questionId
+                  question.content = retData[i].content.replace('【材料】', '')
+                  let numstr = '<span class="m_order">' + question.num + '</span>'
+                  question.questionTitle = list[0].questionTitle.replace('题干', numstr).replace('【', '').replace('】', '')
+                  if (list[0].questionTypeId === '01') {
+                    question.questionTitle += list[0].optionA + list[0].optionB + list[0].optionC + list[0].optionD
+                  }
+                  question.labels = list[0].labels
+                  this.questions.push(question)
+                }
+              } else {
+                question.flag = '2'
+                question.num = i + 1 + '.'
                 question.similar = {}
                 question.groupOrder = list[0].groupOrder
                 question.groupCode = null
@@ -202,9 +280,9 @@
                 question.questionTypeId = list[0].questionTypeId
                 question.questionId = list[0].questionId
                 let numstr = '<span class="m_order">' + question.num + '</span>'
-                question.content = list[0].questionTitle.replace("题干", numstr).replace("【","").replace("】","")
+                question.questionTitle = list[0].questionTitle.replace("题干", numstr).replace("【","").replace("】","")
                 if(list[0].questionTypeId === '01') {
-                  question.content += list[0].optionA + list[0].optionB + list[0].optionC + list[0].optionD
+                  question.questionTitle += list[0].optionA + list[0].optionB + list[0].optionC + list[0].optionD
                 }
                 question.labels = list[0].labels
                 this.questions.push(question)
@@ -466,12 +544,8 @@
       font-size: 18px;
       font-family: "微软雅黑";
     }
-
-
-
     /*导出错题章节    遮罩层*/
     .exportError {
-      display: none;
       width: 680px;
       height: 350px;
       border: 1px solid #ccc;

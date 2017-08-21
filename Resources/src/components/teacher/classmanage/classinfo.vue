@@ -288,12 +288,12 @@
     <div class="c_SearchC" id="c_Invitedmain" v-if="inviteFlag">
       <div class="c_Invited creatReset" id="c_Invited">
         <div class="c_InvitedMsg" id="Copy_text">
-          <p>我是 <span id="c_TeacherName"></span>，在 <i class="fc65">五好导学网</i>创建了班级 【<span id="GradeName"></span>】，欢迎加入。</p>
-          <p>第一步，点击 <a href="" class="fc58 c_adress"></a> 进入网站并注册。</p>
+          <p>我是 <span id="c_TeacherName"></span>，在 <i class="fc65">五好导学网</i>创建了班级 【<span id="GradeName">{{tempClass}}</span>】，欢迎加入。</p>
+          <p>第一步，点击 <a href="shref" class="fc58 c_adress">{{shref}}</a> 进入网站并注册。</p>
           <p>第二步，在加入班级中输入班级码 <span id="GradeCode"></span>，搜索出班级。</p>
           <p>第三步，点击加入。</p>
         </div>
-        <input type="button" value="复制" class="c_CopyBtn" id="c_CopyBtn" data-clipboard-target="Copy_text">
+        <input type="button" value="复制" class="c_CopyBtn" id="c_CopyBtn" data-clipboard-target="Copy_text" @click="copy">
         <!--邀请函关闭按钮-->
         <i class="spriteImg c_closeico fr c_closeimg0" id="c_closeI" @click="closeInvite"></i>
       </div>
@@ -305,7 +305,7 @@
   import {quit} from '../../../service/register/register.js';
   import md5 from 'js-md5';
   export default {
-    data() {
+    data () {
       return {
         classCode:'',
         classId:'',
@@ -346,17 +346,18 @@
         password: '',
         disCue:'请输入登录密码',
         errorCue:'',
-        leftRange:''
+        leftRange:'',
+        shref:''
       }
     },
-    mounted() {
+    mounted () {
       this.init()
       this.getJoined()
       this.showTeachers()
       this.showStudents()
     },
     methods: {
-      init() {
+      init () {
         let gradeName = window.localStorage.getItem('c_grade')
         let crumb = this.$route.meta.crumbs[2]
         crumb.name = gradeName
@@ -365,32 +366,32 @@
         let that = this
         getClassCode(this, {'classId': classId}).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
+          if (res.retCode === '0000') {
             that.classCode = res.retData.classCode
           }
         })
       },
-      contains(arr, obj) {
-        var i = arr.length;
+      contains (arr, obj) {
+        var i = arr.length
         while (i--) {
           if (arr[i] === obj) {
-            return true;
+            return true
           }
         }
-        return false;
+        return false
       },
-      getJoined() {
+      getJoined () {
         let classId = window.localStorage.getItem('nowClassId')
         let that = this
         getJionedClass(this).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
+          if (res.retCode === '0000') {
             let retData = res.retData
-            /*获取当前班级*/
+            // 获取当前班级
             for (var i = 0; i < retData.length; i++) {
-              if (retData[i].joinStatus == "1") {
-                if (retData[i].classId == classId) {
-                  that.tempClass = retData[i].gradeName + retData[i].className;
+              if (retData[i].joinStatus === '1') {
+                if (retData[i].classId === classId) {
+                  that.tempClass = retData[i].gradeName + retData[i].className
                 }
                 let dclass = {}
                 dclass.classId = retData[i].classId
@@ -402,26 +403,26 @@
           }
         })
       },
-      showJoinedClass() {
+      showJoinedClass () {
         this.joinedShow = true
       },
-      selectClass(obj) {
+      selectClass (obj) {
         this.joinedShow = false
         this.tempClass = obj.c_grade
         this.classId = obj.classId
-        window.localStorage.setItem('nowClassId',obj.classId)
+        window.localStorage.setItem('nowClassId', obj.classId)
         this.init()
         this.showTeachers()
         this.showStudents()
       },
-      showTeachers() {
+      showTeachers () {
         let classId = window.localStorage.getItem('nowClassId')
         let para = {'classId': classId}
         let that = this
         getTeachers(this, para).then(function (response) {
           let res = response.body
           let retData = res.retData
-          if (res.retCode == '0000') {
+          if (res.retCode === '0000') {
             that.tempTeacher.teacherId = retData[0].teacherId
             that.tempTeacher.teacherName = retData[0].teacherName
             that.tempTeacher.teacherImage = retData[0].teacherImage
@@ -443,141 +444,141 @@
           }
         })
       },
-      goRight() {
-        var totalSize = this.otherTeacher.length;//获取总数据
-        var pageSize = 4;//每页显示4条数据
-        var totalPage = Math.ceil(totalSize / pageSize);//计算总页数
-        var scrollWidth;//通过判断浏览器的宽度决定课件容器的宽度
+      goRight () {
+        let totalSize = this.otherTeacher.length;// 获取总数据
+        let pageSize = 4// 每页显示4条数据
+        let totalPage = Math.ceil(totalSize / pageSize)// 计算总页数
+        let scrollWidth// 通过判断浏览器的宽度决定课件容器的宽度
         if (document.body.offsetWidth < 1366) {
-          scrollWidth = 680;
+          scrollWidth = 680
         } else if (document.body.offsetWidth >= 1366 && document.body.offsetWidth <= 1599) {
-          scrollWidth = 740;
+          scrollWidth = 740
         } else {
-          scrollWidth = 840;
+          scrollWidth = 840
         }
-        if (this.currentPage == totalPage) {
-          return false;
+        if (this.currentPage === totalPage) {
+          return false
         } else {
           this.leftRange = this.currentPage * -scrollWidth
-          this.currentPage++;
+          this.currentPage++
         }
       },
-      goLeft() {
-        var scrollWidth;//通过判断浏览器的宽度决定课件容器的宽度
+      goLeft () {
+        var scrollWidth// 通过判断浏览器的宽度决定课件容器的宽度
         if (document.body.offsetWidth < 1366) {
-          scrollWidth = 680;
+          scrollWidth = 680
         } else if (document.body.offsetWidth >= 1366 && document.body.offsetWidth <= 1599) {
-          scrollWidth = 740;
+          scrollWidth = 740
         } else {
-          scrollWidth = 840;
+          scrollWidth = 840
         }
-        if (this.currentPage == 1) {
+        if (this.currentPage === 1) {
           return false
         } else {
           this.currentPage--
           this.leftRange = (this.currentPage - 1) * -scrollWidth
         }
       },
-      showInfo(obj) {
+      showInfo (obj) {
         if (this.tempTeacher.teacherHeader === '1') {
           window.localStorage.setItem('teacherName', obj.teacherName);
           window.localStorage.setItem('teacherId', obj.teacherId);
           this.$router.push('/content/teacher/classmanage/teachermanage')
         }
       },
-      enter(event) {
+      enter (event) {
         let tar = event.target.children
         if (this.tempTeacher.teacherHeader === '1') {
           tar[5].classList.remove('dino')
           tar[6].classList.remove('dino')
         }
       },
-      leave(event) {
+      leave (event) {
         let tar = event.target.children
         tar[5].classList.add('dino')
         tar[6].classList.add('dino')
       },
-      setTeacherHead(obj) {
+      setTeacherHead (obj) {
         this.setFlag = true
         window.localStorage.setItem('teacherSet', obj.teacherId);
       },
-      setTeacher() {
+      setTeacher () {
         let teacherId = window.localStorage.getItem('teacherSet')
         let para = {}
         para.classId = this.classId
         para.teacherId = teacherId
         teacherSet(this, para).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
+          if (res.retCode === '0000') {
             this.setFlag = false
           }
         })
       },
-      closeSet() {
+      closeSet () {
         this.setFlag = false
       },
-      deleteTeacher(obj) {
+      deleteTeacher (obj) {
         window.localStorage.setItem('teacherSet', obj.teacherId);
         this.deleteFlag = true
       },
-      toDelete() {
+      toDelete () {
         let teacherId = window.localStorage.getItem('teacherSet')
         let para = {}
         para.classId = this.classId
         para.teacherId = teacherId
         teacherDelete(this, para).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
+          if (res.retCode === '0000') {
             this.deleteFlag = false
           }
         })
       },
-      closeDelete() {
+      closeDelete () {
         this.deleteFlag = false
       },
-      showBtn() {
+      showBtn () {
         if (this.btnFlag) {
           this.btnFlag = false
         } else {
           this.btnFlag = true
         }
       },
-      showexitClass() {
+      showexitClass () {
         this.exitFlag = true
       },
-      noexitClass() {
+      noexitClass () {
         this.exitFlag = false
       },
-      exitClass() {
+      exitClass () {
         let para = {'classId':this.classId}
         let that = this
         teacherExit(this, para).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
-            //退出班级成功返回班级管理页面
+          if (res.retCode === '0000') {
+            // 退出班级成功返回班级管理页面
             that.$router.push('/content/teacher/classmanage/classmain')
           }
         })
       },
-      headerExit() {
+      headerExit () {
         this.cueFlag = true
-        if(this.otherTeacher.length>0) {
+        if (this.otherTeacher.length > 0) {
           this.ecue = '快去任命下一任班主任吧！'
-        }else {
+        } else {
           this.ecue = '班里没有更多老师，请解散班级'
         }
       },
-      closeCue() {
+      closeCue () {
         this.cueFlag = false
       },
-      openDis() {
+      openDis () {
         this.disFlag = true
       },
-      closedis() {
+      closedis () {
         this.disFlag = false
       },
-      disClass() {
-        if (this.password == "") {
+      disClass () {
+        if (this.password === '') {
           this.disCue = '密码错误'
           let style = document.getElementById('dish').style
           style.height = '70px'
@@ -587,17 +588,17 @@
           codeStyle.marginTop = '20px'
           document.getElementById('classPass').style.marginTop = '10px'
         } else {
-          //密码不为空，但是输入密码错误，并向后台发送数据
-          let password = md5(this.password);
+          // 密码不为空，但是输入密码错误，并向后台发送数据
+          let password = md5(this.password)
           let para = {'classId': this.classId, 'password': password}
           let that = this
           teacherDissolve(this, para).then(function (response) {
             let res = response.body
-            let cnum = res.retCode.substr(0,1)
-            if (cnum == '0') {
+            let cnum = res.retCode.substr(0, 1)
+            if (cnum === '0') {
               that.$router.push('/content/teacher/classmanage/classmain')
-            }else if(cnum == '3') {
-              var clickNum = res.retData;
+            } else if (cnum === '3') {
+              var clickNum = res.retData
               this.disCue = '密码错误'
               let style = document.getElementById('dish').style
               style.height = '70px'
@@ -605,54 +606,59 @@
               let codeStyle = document.getElementsByClassName('c_code')[0].style
               codeStyle.marginTop = '20px'
               document.getElementById('classPass').style.marginTop = '10px'
-              if (clickNum == 2) {
+              if (clickNum === 2) {
                 this.errorCue = '您还有两次机会'
-              } else if (clickNum == 1) {
+              } else if (clickNum === 1) {
                 this.errorCue = '您还有一次机会'
                 this.password = ''
               }
               this.password = ''
-            }else if(cnum == '9') {
-              //当输入密码三次错误时，自动跳转到修改密码的页面
+            } else if (cnum === '9') {
+              // 当输入密码三次错误时，自动跳转到修改密码的页面
               this.password = ''
               this.disCue = '请输入登录密码'
               document.getElementById('classPass').style.marginTop = '0'
-              that.logout();
+              that.logout()
             }
           })
         }
       },
-      invite() {
+      invite () {
+        this.shref = window.location.href.split('/')[2]
         this.inviteFlag = true
       },
-      closeInvite() {
+      closeInvite () {
         this.inviteFlag = false
       },
-      showStudents() {
+      copy () {
+        document.getElementById('c_CopyBtn').select()
+        document.execCommand('Copy') // 执行浏览器复制命令
+      },
+      showStudents () {
         let para = {'classId': this.classId}
         let that = this
         getStudents(this, para).then(function (response) {
           let res = response.body
-          if (res.retCode == '0000') {
+          if (res.retCode === '0000') {
             that.studentList = res.retData
           }
         })
       },
-      denter(event) {
+      denter (event) {
         let tar = event.target
         tar.classList.remove('s_Delico0')
         tar.classList.add('s_Delico1')
       },
-      dleave(event) {
+      dleave (event) {
         let tar = event.target
         tar.classList.remove('s_Delico1')
         tar.classList.add('s_Delico0')
       },
-      deleteStudent(obj) {
+      deleteStudent (obj) {
         this.sFlag = true
         window.localStorage.setItem('studentId', obj.studentId);
       },
-      todeleteStu() {
+      todeleteStu () {
         let studentId = window.localStorage.getItem('studentId')
         let para = {'classId': this.classId, 'studentId': studentId}
         let that = this
@@ -663,10 +669,10 @@
           }
         })
       },
-      closeStu() {
+      closeStu () {
         this.sFlag = false
       },
-      stuManage(event) {
+      stuManage (event) {
         let tar = event.target
         let classList = tar.classList
         if (!this.contains(classList, 'c_StudentAreaBtnCur')) {
@@ -676,7 +682,7 @@
           this.mFlag = true
         }
       },
-      groupManage(event) {
+      groupManage (event) {
         let tar = event.target
         let classList = tar.classList
         if (!this.contains(classList, 'c_StudentAreaBtnCur')) {
@@ -686,7 +692,7 @@
           this.showGroup()
         }
       },
-      showGroup() {
+      showGroup () {
         let para = {'classId': this.classId}
         let that = this
         getGroup(this, para).then(function (response) {
@@ -707,21 +713,21 @@
           }
         })
       },
-      addStudent(event,groupId) {
+      addStudent (event, groupId) {
         this.newStuList = []
-        if(groupId!='new') {
-          localStorage.setItem('editGroup',groupId)
-        }else {
-          localStorage.setItem('editGroup','new')
+        if (groupId !== 'new') {
+          localStorage.setItem('editGroup', groupId)
+        } else {
+          localStorage.setItem('editGroup', 'new')
         }
         let tar = event.target
-        if(!this.contains(tar.classList,'c_MainB')) {
+        if (!this.contains(tar.classList, 'c_MainB')) {
           tar = tar.parentElement
         }
         let btns = document.getElementsByClassName('c_GroupSaveBtn')
-        for(let i=0;i<btns.length;i++) {
+        for (let i = 0; i < btns.length; i++) {
           let clist = btns[i].classList
-          if(!this.contains(clist,'dino')&&tar.nextElementSibling!=btns[i]) {
+          if (!this.contains(clist, 'dino') && tar.nextElementSibling !== btns[i]) {
             return
           }
         }
@@ -740,13 +746,13 @@
           }
         })
       },
-      addEnsure() {
+      addEnsure () {
         let editGroup = localStorage.getItem('editGroup')
-        if(editGroup === 'new') {
+        if (editGroup === 'new') {
           this.ensureStuList = this.newStuList
-        }else {
-          for(let i=0;i<this.groupData.length;i++) {
-            if(editGroup === this.groupData[i].groupId) {
+        } else {
+          for (let i = 0; i < this.groupData.length; i++) {
+            if (editGroup === this.groupData[i].groupId) {
               this.groupData[i].classStudentList = this.groupData[i].classStudentList.concat(this.newStuList)
               break
             }
@@ -754,24 +760,24 @@
         }
         this.noGflag = false
       },
-      saveStu(event,group) {
+      saveStu (event, group) {
         let tar = event.target
         let that = this
-        let sibs= tar.parentNode.previousElementSibling.previousElementSibling
-        let para = {};
-        para.classId = this.classId;
-        para.studentIdList = [];
-        var lis = sibs.children;
+        let sibs = tar.parentNode.previousElementSibling.previousElementSibling
+        let para = {}
+        para.classId = this.classId
+        para.studentIdList = []
+        var lis = sibs.children
         for (var i = 0; i < lis.length; i++) {
-          if(lis[i].attributes['studentId']!=undefined) {
-            para.studentIdList.push(lis[i].attributes['studentId'].value);
+          if (lis[i].attributes['studentId'] !== undefined) {
+            para.studentIdList.push(lis[i].attributes['studentId'].value)
           }
         }
-        if(lis.length==0||para.studentIdList.length==0) {
-         //请添加学生
-        }else {
+        if (lis.length === 0 || para.studentIdList.length === 0) {
+         // 请添加学生
+        } else {
           if (group === 'new') {
-            if (this.newName != "") {
+            if (this.newName !== '') {
               para.groupName = this.newName
               groupCreate(this, para).then(function (response) {
                 let res = response.body
@@ -781,36 +787,36 @@
                 }
               })
             }
-          }else {
-              para.groupName = group.groupName
-              para.groupId = group.groupId
-              groupUpdate(this, para).then(function (response) {
-                let res = response.body
-                if (res.retCode === '0000') {
-                  tar.classList.add('dino')
-                }
-              })
-            }
+          } else {
+            para.groupName = group.groupName
+            para.groupId = group.groupId
+            groupUpdate(this, para).then(function (response) {
+              let res = response.body
+              if (res.retCode === '0000') {
+                tar.classList.add('dino')
+              }
+            })
           }
+        }
       },
-      cancelStu(event) {
+      cancelStu (event) {
         let tar = event.target.parentElement
         tar.classList.add('dino')
       },
-      createNewGroup() {
+      createNewGroup () {
         this.createNew = true
         this.noGroup = false
       },
-      selectStu(stu,event) {
+      selectStu (stu, event) {
         let tar = event.target
         tar.remove()
-        this.newStuList.push({'sutdentId':stu.sutdentId,'sutdentName':stu.sutdentName})
+        this.newStuList.push({'sutdentId':stu.sutdentId, 'sutdentName':stu.sutdentName})
         let GroupNoStu = document.getElementsByClassName('c_GroupNoStu')
-        if(GroupNoStu.length>0) {
+        if (GroupNoStu.length > 0) {
           GroupNoStu[0].classList.add('dino')
         }
       },
-      deleteGroup(obj) {
+      deleteGroup (obj) {
         let para = {'groupId': obj.groupId}
         let that = this
         groupDelete(this, para).then(function (response) {
@@ -820,36 +826,35 @@
           }
         })
       },
-      dstuFromGroup(groupId,studentId) {
-        for(let i=0;i<this.groupData.length;i++) {
-          if(groupId === this.groupData[i].groupId) {
+      dstuFromGroup (groupId, studentId) {
+        for (let i = 0; i < this.groupData.length; i++) {
+          if (groupId === this.groupData[i].groupId) {
             let studentList = this.groupData[i].classStudentList
-            for(let j=0;j<studentList.length;j++) {
-              if(studentId===studentList[j].studentId) {
-                studentList.splice(j,1)
+            for (let j = 0; j < studentList.length; j++) {
+              if (studentId === studentList[j].studentId) {
+                studentList.splice(j, 1)
               }
             }
             break
           }
         }
       },
-      deenter(event) {
+      deenter (event) {
         let tar = event.target
         tar.children[0].classList.remove('dino')
-        console.log(tar.children[0].classList)
       },
-      deleave(event) {
+      deleave (event) {
         let tar = event.target
         tar.children[0].classList.add('dino')
       },
-      logout() {
+      logout () {
         let that = this
         quit(this).then(function (response) {
           let res = response.body
           if (res.retCode === '0000') {
             that.$router.push('/forgetPass')
           }
-      })
+        })
       }
     }
   };
@@ -879,8 +884,9 @@
   .c_Synsize{width:150px;height:90px;border:1px solid #ddd;border-top:none;box-sizing:border-box;position: absolute;top:45px;left: -1px;z-index: 2;background: #fff;border-radius: 0 0 10px 10px;}
   .c_Synsize li{width:150px;height: 45px;text-align:center;line-height:45px;z-index:1;}
   .c_Synsize li:hover{color: #65b113;}
-  .c_intnav:hover{color:#fff;background: url('/static/teacher/images/classmanage/c_btn1ico.jpg');}
-  .c_more:hover{color:#fff;background: url('/static/teacher/images/classmanage/c_btn1ico.jpg');}
+  .c_intnav:hover{color:#fff;background: url('/static/teacher/images/classmanage/c_BgBtnGreen.png');}
+  .c_more:hover{color:#fff;background: url('/static/teacher/images/classmanage/c_BgBtnGreen.png');}
+  .c_more:hover>ul{color:#000;}
   /*********教师区域-教师列表***********/
   .c_TeacherAreaList{height: 160px;}
   .c_TeacherAreaCurrent{ width:320px; height: 160px;overflow:hidden;}

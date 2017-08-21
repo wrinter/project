@@ -1,140 +1,162 @@
 <template>
   <div class="c_Main" >
-    <div class="NoData i_nodata NoDataTop dino" id="NoData"></div>
-    <div style="clear:both"></div>
-    <ul class="workList correctList" id="workList">
-      <li class="listLi" v-for="temp in workList" :id="temp.id">
-        <ul class="workList">
-          <li class="assignTime">
-          <span>{{temp.assignTime}}</span><span style="margin-left:2px;">{{getWeek(temp.assignTime)}}</span>
-          </li>
-          <li class="Title" title="temp.title">{{temp.title}}</li>
-          <li class="classes">{{temp.correctObj}}</li>
-          <li class="subAndCorrectBox">
-            <div class="submitWork">
-              <span class="_name">提交</span>
-              <div class="s_progressBar">
-                <span class="s_progress" :class="temp.id+'s_progress'" :style="{width:temp.swidth}"></span>
+    <div v-if="workList.length>0" class="c_workList">
+      <ul class="workList correctList" id="workList">
+        <li class="listLi" v-for="temp in workList" :id="temp.id">
+          <ul class="workList">
+            <li class="assignTime">
+              <span>{{temp.assignTime}}</span><span style="margin-left:2px;">{{getWeek(temp.assignTime)}}</span>
+            </li>
+            <li class="Title" title="temp.title">{{temp.title}}</li>
+            <li class="classes">{{temp.correctObj}}</li>
+            <li class="subAndCorrectBox">
+              <div class="submitWork">
+                <span class="_name">提交</span>
+                <div class="s_progressBar">
+                  <span class="s_progress" :class="temp.id+'s_progress'" :style="{width:temp.swidth}"></span>
+                </div>
+                <span class="submitStu">{{temp.submitNum}}</span>
+                <span class="line">/</span>
+                <span class="totalStu">{{temp.allNum}}</span>
               </div>
-              <span class="submitStu">{{temp.submitNum}}</span>
-              <span class="line">/</span>
-              <span class="totalStu">{{temp.allNum}}</span>
-            </div>
-            <div class="correctWork">
-              <span class="_name">批改</span>
-              <div class="c_progressBar">
-                <span class="c_progress" :class="temp.id+'s_progress'" :style="{'width':temp.cwidth}"></span>
+              <div class="correctWork">
+                <span class="_name">批改</span>
+                <div class="c_progressBar">
+                  <span class="c_progress" :class="temp.id+'s_progress'" :style="{'width':temp.cwidth}"></span>
+                </div>
+                <span class="correctStu">{{temp.correctNum}}</span>
+                <span class="line">/</span>
+                <span class="totalStu">{{temp.allNum}}</span>
               </div>
-              <span class="correctStu">{{temp.correctNum}}</span>
-              <span class="line">/</span>
-              <span class="totalStu">{{temp.allNum}}</span>
-            </div>
-            <div class="deadlineTime">
-              <span>截止时间：</span>
-              <span>{{temp.endTime}}</span>
-            </div>
-          </li>
-          <li class="end_li">
-            <span class="end_flag" v-if="temp.endFlag=='yes'"></span>
-            <span v-else class="sendMessage" :nosubmitlist="temp.noSubmitId">催作业</span>
-          </li>
-          <li class="clickIn _correct cup" :submitnum="temp.submitNum" :correctnum="temp.correctNum" :allnum="temp.allNum" :hasselectable="temp.hasSelectAble" @click="toCorrect(temp.id)">批改</li>
-        </ul>
-      </li>
-    </ul>
+              <div class="deadlineTime">
+                <span>截止时间：</span>
+                <span>{{temp.endTime}}</span>
+              </div>
+            </li>
+            <li class="end_li">
+              <span class="end_flag" v-if="temp.endFlag=='yes'"></span>
+              <span v-else class="sendMessage" :nosubmitlist="temp.noSubmitId">催作业</span>
+            </li>
+            <li class="clickIn _correct cup" :submitnum="temp.submitNum" :correctnum="temp.correctNum" :allnum="temp.allNum" :hasselectable="temp.hasSelectAble" @click="toCorrect(temp.id,temp.submitNum)">批改</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="h_nodata" id="NoData" v-else>
+      <img class="nodata" src="/static/common/images/no.png">
+    </div>
     <div class="p_LessMoney" id="NoIdentify">
       <div class="p_NoIdentifyBg">
         <p class="GoPayClose" id="GoIdentifyClose"></p>
       </div>
     </div>
     <v-pages :ToPages="ThisPages" @ListenChild="RecieveChild" v-if="workList.length>0"></v-pages>
+    <v-mark :MarkCon="markInfo"></v-mark>
   </div>
 </template>
 <script type="text/ecmascript-6">
   import pages from '../../common/pages'
+  import mark from '../../common/Mark.vue'
   import {selectCorrect} from '../../../service/teacher/homework/correctwork.js';
   export default {
-      data() {
-        return {
-          workList: [],
-          currentPage:1,
-          ThisPages:{
-            Total:0,
-            Role:0,
-            PnoPage:0,
-            Local:''
-          }
-        }
-      },
-      mounted() {
-        this.showList('1')
-      },
-      methods: {
-        showList(pagesNum) {
-          let param = {}
-          param.type=1;
-          param.pageNum=pagesNum;
-          param.pageSize=5;
-          let that = this
-          selectCorrect(this,param).then(function(response) {
-            let res = response.body
-            if (res.retCode == '0000') {
-              that.workList = []
-              that.ThisPages.Total = res.retData.pages
-              that.ThisPages.PnoPage = res.retData.pageNum
-              let list = res.retData.list
-              for(let i=0;i<list.length;i++) {
-                let item = list[i]
-                item.swidth = item.submitNum/item.allNum*100+'%'
-                item.cwidth = item.correctNum/item.allNum*100+'%'
-                that.workList.push(item)
-              }
-              that.currentPage = res.retData.pageNum
+    data () {
+      return {
+        workList: [],
+        currentPage:1,
+        ThisPages:{
+          Total:0,
+          Role:0,
+          PnoPage:0,
+          Local:''
+        },
+        markInfo:{'Con':'', 'Random':''}
+      }
+    },
+    mounted () {
+      this.showList('1')
+    },
+    methods: {
+      showList (pagesNum) {
+        let param = {}
+        param.type = 1
+        param.pageNum = pagesNum
+        param.pageSize = 5
+        let that = this
+        selectCorrect(this, param).then(function (response) {
+          let res = response.body
+          if (res.retCode === '0000') {
+            that.workList = []
+            that.ThisPages.Total = res.retData.pages
+            that.ThisPages.PnoPage = res.retData.pageNum
+            let list = res.retData.list
+            for (let i = 0; i < list.length; i++) {
+              let item = list[i]
+              item.swidth = item.submitNum / item.allNum * 100 + '%'
+              item.cwidth = item.correctNum / item.allNum * 100 + '%'
+              that.workList.push(item)
             }
-          })
-        },
-        RecieveChild(page) {
-          this.showList(page)
-        },
-        getWeek(day) {//通过日期，改为周几
-          let arrDay=day.split("-");
-          let x;
-          let Day=new Date(arrDay[0],parseInt(arrDay[1]-1),arrDay[2]);
-          switch (Day.getDay()) {
-            case 0:
-              x="周日";
-              break;
-            case 1:
-              x="周一";
-              break;
-            case 2:
-              x="周二";
-              break;
-            case 3:
-              x="周三";
-              break;
-            case 4:
-              x="周四";
-              break;
-            case 5:
-              x="周五";
-              break;
-            case 6:
-              x="周六";
-              break;
+            that.currentPage = res.retData.pageNum
           }
-          return x//返回周几
-        },
-        toCorrect(id) {
-          this.$router.push('/content/teacher/homework/correctwork?id='+id)
-        }
+        })
       },
+      RecieveChild (page) {
+        this.showList(page)
+      },
+      getWeek (day) { // 通过日期，改为周几
+        let arrDay = day.split('-')
+        let x
+        let Day = new Date(arrDay[0], parseInt(arrDay[1] - 1), arrDay[2])
+        switch (Day.getDay()) {
+          case 0:
+            x = '周日'
+            break
+          case 1:
+            x = '周一'
+            break
+          case 2:
+            x = '周二'
+            break
+          case 3:
+            x = '周三'
+            break
+          case 4:
+            x = '周四'
+            break
+          case 5:
+            x = '周五'
+            break
+          case 6:
+            x = '周六'
+            break
+        }
+        return x // 返回周几
+      },
+      toCorrect (id, num) {
+        if (num === 0) {
+          this.markInfo.Con = '暂无学生提交'
+        } else {
+          this.$router.push('/content/teacher/homework/correctwork?id=' + id)
+        }
+      }
+    },
     components:{
-      'v-pages':pages
+      'v-pages': pages,
+      'v-mark': mark
     }
-    };
+  };
 </script>
 <style>
+  .c_workList{margin-top: 90px;}
+  .h_nodata{
+    height: 600px;
+    line-height: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius:10px;
+    margin-top:90px;
+  }
+  .nodata{display: block;margin: 40px auto;height:250px;}
+  .cup {cursor: pointer !important;}
   @media screen and (min-width: 1600px) {
     .s_progressBar {
       width: 250px;
@@ -155,7 +177,6 @@
       height: 20px;
       background: #59c1e4;
     }
-
     .c_progressBar {
       width: 250px;
       height: 20px;
@@ -165,7 +186,6 @@
       margin: 13px auto;
       float: left;
     }
-
     .c_progressBar .c_progress {
 
       display: block;
@@ -267,12 +287,7 @@
       height: 43px;
       line-height: 43px;
     }
-
-    #kkpager {
-      width: 1000px;
-      margin: 0 auto;
-    }
-    .i_nodata{
+    .h_nodata{
       width:1200px;
     }
   }
@@ -409,12 +424,7 @@
       height: 45px;
       line-height: 45px;
     }
-
-    #kkpager {
-      width: 900px;
-      margin: 0 auto;
-    }
-    .i_nodata{
+    .h_nodata{
       width:1000px;
     }
   }
@@ -552,12 +562,7 @@
       height: 42px;
       line-height: 42px;
     }
-
-    #kkpager {
-      width: 800px;
-      margin: 0 auto;
-    }
-    .i_nodata{
+    .h_nodata{
       width:900px;
     }
   }

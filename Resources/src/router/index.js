@@ -367,7 +367,7 @@ let routes = [
           showcrumbs: true,
           crumbs: [
             {name: '首页', path: '/content/teacher/index/index'},
-            {name: '布置测试', path: '/content/teacher/homework/assigntest'},
+            {name: '布置测试', path: '/content/teacher/test/assigntest'},
             {name: ''}
           ]
         }
@@ -381,7 +381,7 @@ let routes = [
           showcrumbs: true,
           crumbs: [
             {name: '首页', path: '/content/teacher/index/index'},
-            {name: '布置测试', path: '/content/teacher/homework/assigntest'},
+            {name: '布置测试', path: '/content/teacher/test/assigntest'},
             {name: ''}
           ]
         }

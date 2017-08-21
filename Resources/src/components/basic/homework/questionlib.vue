@@ -29,7 +29,7 @@
                 <div class="buttons">
                   <div>
                     <span class="options_analysis" @click="lookAnalyse">查看解析</span>
-                    <span class="options_error">报错</span>
+                    <span class="options_error" @click="showError(question.questionId)">报错</span>
                     <span class="options_choice" @click="optIn($event,question,'')">选入</span>
                   </div>
                 </div>
@@ -45,7 +45,7 @@
                     <div class="buttons">
                       <div>
                         <span class="options_analysis" @click="lookAnalyse">查看解析</span>
-                        <span class="options_error">报错</span>
+                        <span class="options_error" @click="showError(sub.questionId)">报错</span>
                         <span class="options_choice" @click="optIn($event,question,sub)">选入</span>
                       </div>
                     </div>
@@ -60,7 +60,7 @@
                 <div class="buttons">
                   <div>
                     <span class="options_analysis" @click="lookAnalyse">查看解析</span>
-                    <span class="options_error">报错</span>
+                    <span class="options_error" @click="showError(question.questionId)">报错</span>
                     <span class="options_choice" @click="optIn($event,question,'')">选入</span>
                   </div>
                 </div>
@@ -85,10 +85,12 @@
       </span>
       </div>
     </div>
+    <v-upErrors></v-upErrors>
   </div>
 </template>
 <script type="text/ecmascript-6">
   import pages from '../../common/pages'
+  import upErrors from '../../common/upErrors'
   import {contains} from '../../../common/js/common.js'
   export default {
     props: ['queTypes'],
@@ -328,6 +330,9 @@
                   this.questions.push(question)
                 }
               }
+            } else {
+              this.ThisPages.Total = 0
+              this.ThisPages.PnoPage = 0
             }
           }
         })
@@ -456,6 +461,11 @@
         let code = this.getTypeCode(this.tempType)
         this.getQuestions(page, code)
       },
+      showError (questionId) {
+        sessionStorage.setItem('questionId', questionId)
+        let upErrors = document.getElementsByClassName('upErrors')[0]
+        upErrors.style.display = 'block'
+      },
       finish () {
         let sques = []
         for (let i = 0; i < this.selectedInfo.length; i++) {
@@ -485,7 +495,8 @@
           }
         }
         if (this.subjectId === '03') {
-          let newObj = {}// 阅读理解
+          let flag = false // 不含阅读理解题型
+          let newObj = {} // 阅读理解
           newObj.code = '13,30,31,32,33'
           newObj.type = '阅读理解'
           newObj.lineId = 'new' + Math.random().toString().replace('.', '') + new Date().getTime()
@@ -493,17 +504,23 @@
           // 删除旧映射
           for (let i = sques.length - 1; i >= 0; i--) {
             if (sques[i].code === '13' || sques[i].code === '30' || sques[i].code === '31' || sques[i].code === '32' || sques[i].code === '33') {
-              newObj.questions.push(sques[i].questions)
+              for (let k = 0; k < sques[i].questions.length; k++) {
+                newObj.questions.push(sques[i].questions[k])
+              }
+              flag = true
               sques.splice(i, 1)
             }
           }
-          sques.push(newObj) // 添加新映射
+          if (flag) {
+            sques.push(newObj) // 添加新映射
+          }
         }
         this.$emit('addQues', this.selectedQuestion, sques)
       }
     },
     components: {
-      'v-pages': pages
+      'v-pages': pages,
+      'v-upErrors': upErrors
     }
   };
 </script>

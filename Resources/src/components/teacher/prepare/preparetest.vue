@@ -24,117 +24,117 @@
 </template>
 <script type="text/ecmascript-6">
   import {UrlSearch} from '../../../common/js/request.js';
-    export default {
-      data() {
-        return {
-          questionList:[],
-          testId:'',
-          testTitle:'',
-          selectedAnswer:[],
-          subFlag:false//未提交
-        };
-      },
-      mounted() {
-        this.getTest()
-      },
-      methods: {
-        getTest() {
-          let param = {}
-          param.resId = UrlSearch('id')
-          this.$http.post('/web/teacher/prepare/video/test', param, {'emulateJSON': true}).then(function(response) {
-            let retCode = response.body.retCode
-            let retData = response.body.retData
-            if(retCode === '0000') {
-              this.testTitle = retData.testTitle
-              this.testId = retData.testId
-              for(let i=0;i<retData.questionList.length;i++) {
-                let question = {}
-                question.id = retData.questionList[i].id
-                question.groupCode = retData.questionList[i].groupCode
-                question.answer = retData.questionList[i].answer
-                question.num = i+1+'.'
-                question.content = ''
-                question.labels = []
-                question.options = []
-                let list = retData.questionList[i].list
-                let str = '<span class="p_order">'+question.num+'</span>'
-                for(let j=0;j<list.length;j++) {
-                  if(list[j].questionType === '01') {
-                    question.content += list[j].content.replace("【题干】", str)
-                  } else {
-                    if(list[j].questionType !== '07') {
-                      question.labels.push({'id':list[j].id, 'content':list[j].content})
-                    }
+  export default {
+    data () {
+      return {
+        questionList:[],
+        testId:'',
+        testTitle:'',
+        selectedAnswer:[],
+        subFlag:false // 未提交
+      };
+    },
+    mounted () {
+      this.getTest()
+    },
+    methods: {
+      getTest () {
+        let param = {}
+        param.resId = UrlSearch('id')
+        this.$http.post('/web/teacher/prepare/video/test', param, {'emulateJSON': true}).then(function (response) {
+          let retCode = response.body.retCode
+          let retData = response.body.retData
+          if (retCode === '0000') {
+            this.testTitle = retData.testTitle
+            this.testId = retData.testId
+            for (let i = 0; i < retData.questionList.length; i++) {
+              let question = {}
+              question.id = retData.questionList[i].id
+              question.groupCode = retData.questionList[i].groupCode
+              question.answer = retData.questionList[i].answer
+              question.num = i + 1 + '.'
+              question.content = ''
+              question.labels = []
+              question.options = []
+              let list = retData.questionList[i].list
+              let str = '<span class="p_order">' + question.num + '</span>'
+              for (let j = 0; j < list.length; j++) {
+                if (list[j].questionType === '01') {
+                  question.content += list[j].content.replace('【题干】', str)
+                } else {
+                  if (list[j].questionType !== '07') {
+                    question.labels.push({'id':list[j].id, 'content':list[j].content})
                   }
                 }
-                let qList = retData.questionList[i]
-                if(qList.optionA) {
-                  let option = {}
-                  option.flag = 'A'
-                  option.content = qList.optionA
-                  question.options.push(option)
-                }
-                if(qList.optionB) {
-                  let option = {}
-                  option.flag = 'B'
-                  option.content = qList.optionB
-                  question.options.push(option)
-                }
-                if(qList.optionC) {
-                  let option = {}
-                  option.flag = 'C'
-                  option.content = qList.optionC
-                  question.options.push(option)
-                }
-                if(qList.optionD) {
-                  let option = {}
-                  option.flag = 'D'
-                  option.content = qList.optionD
-                  question.options.push(option)
-                }
-                this.questionList.push(question)
               }
-              this.selectedAnswer.length = this.questionList.length
+              let qList = retData.questionList[i]
+              if (qList.optionA) {
+                let option = {}
+                option.flag = 'A'
+                option.content = qList.optionA
+                question.options.push(option)
+              }
+              if (qList.optionB) {
+                let option = {}
+                option.flag = 'B'
+                option.content = qList.optionB
+                question.options.push(option)
+              }
+              if (qList.optionC) {
+                let option = {}
+                option.flag = 'C'
+                option.content = qList.optionC
+                question.options.push(option)
+              }
+              if (qList.optionD) {
+                let option = {}
+                option.flag = 'D'
+                option.content = qList.optionD
+                question.options.push(option)
+              }
+              this.questionList.push(question)
             }
-          })
-        },
-        submit() {
-          let wr = document.getElementsByClassName('wr')
-          let labels = document.getElementsByClassName('p_label')
-          let options = document.getElementsByClassName('t_optionLi')
-          for(let i=0;i<this.questionList.length;i++) {
-            if(this.selectedAnswer[i]&&this.questionList[i].answer === this.selectedAnswer[i].flag) {
-              wr[i].src = '/static/teacher/images/prepare/right.png'
-              wr[i].classList.remove('dino')
-            } else {
-              wr[i].src = '/static/teacher/images/prepare/wrong.png'
-              wr[i].classList.remove('dino')
-            }
+            this.selectedAnswer.length = this.questionList.length
           }
-          for(let i=0;i<labels.length;i++) {
-            labels[i].classList.remove('dino')
+        })
+      },
+      submit () {
+        let wr = document.getElementsByClassName('wr')
+        let labels = document.getElementsByClassName('p_label')
+        let options = document.getElementsByClassName('t_optionLi')
+        for (let i = 0; i < this.questionList.length; i++) {
+          if (this.selectedAnswer[i] && this.questionList[i].answer === this.selectedAnswer[i].flag) {
+            wr[i].src = '/static/teacher/images/prepare/right.png'
+            wr[i].classList.remove('dino')
+          } else {
+            wr[i].src = '/static/teacher/images/prepare/wrong.png'
+            wr[i].classList.remove('dino')
           }
-          for(let i=0;i<options.length;i++) {
-            options[i].classList.remove('t_hli')
-          }
-          this.subFlag = true
-        },
-        selectAnswer(e,flag,index) {
-          if(this.subFlag) {
-            return
-          }
-          this.selectedAnswer[index] = flag
-          let tar = e.target
-          let classList = tar.classList
-          if(tar.nodeName === 'SPAN') {
-            classList = tar.parentNode.parentNode.classList
-          } else if(tar.nodeName === 'P') {
-            classList = tar.parentNode.classList
-          }
-          classList.add('on')
         }
+        for (let i = 0; i < labels.length; i++) {
+          labels[i].classList.remove('dino')
+        }
+        for (let i = 0; i < options.length; i++) {
+          options[i].classList.remove('t_hli')
+        }
+        this.subFlag = true
+      },
+      selectAnswer (e, flag, index) {
+        if (this.subFlag) {
+          return
+        }
+        this.selectedAnswer[index] = flag
+        let tar = e.target
+        let classList = tar.classList
+        if (tar.nodeName === 'SPAN') {
+          classList = tar.parentNode.parentNode.classList
+        } else if (tar.nodeName === 'P') {
+          classList = tar.parentNode.classList
+        }
+        classList.add('on')
       }
-    };
+    }
+  };
 </script>
 <style>
   .p_paper {
