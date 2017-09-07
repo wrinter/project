@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id='myCanvas'></canvas>
+	</body>
+	<script>
+		var myCanvas = document.getElementById("myCanvas");
+		myCanvas.width = 100;
+		myCanvas.height = 80;
+		var cxt = myCanvas.getContext("2d");
+		var x = myCanvas.width / 2;
+		var y = myCanvas.height / 2;
+		var Rad = Math.PI*2 / 100;
+		// 绘制白色的外圈
+		cxt.save();
+		cxt.beginPath();
+		cxt.lineWidth = 3;
+		cxt.strokeStyle = "#e8e8e8";
+		cxt.arc(x, y, x-20, 0, Math.PI*2, false);
+		cxt.stroke();
+		cxt.closePath();
+        cxt.restore();
+        // 绘制外面运动的外圈
+        cxt.save();
+        cxt.beginPath();
+        cxt.lineWidth = 4;
+        cxt.strokeStyle = "#49b9df";
+        cxt.lineCap = "round";
+        cxt.beginPath(); //路径开始
+        cxt.arc(x, y, x-20 , -Math.PI/2, -Math.PI/2 + 30*Rad, false); //用于绘制圆弧context.arc(x坐标，y坐标，半径，起始角度，终止角度，顺时针/逆时针)
+        cxt.stroke(); //绘制
+        cxt.closePath(); //路径结束
+        cxt.restore();
+        // 百分比文字绘制
+        cxt.save();
+        cxt.fillStyle = "#656565";  // 设置描边样式
+        cxt.font = "24px '黑体' ";  // 设置字体大小和字体
+        cxt.textAlign = "center";   // 文本水平对齐方式
+        cxt.textBaseline = "middle";  //  文本垂直方向，基线位置
+        cxt.fillText(30+"%", x, y);//绘制字体，并且指定位置
+        cxt.restore();
+	</script>
+</html>

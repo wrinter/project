@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<canvas id="Canvas"></canvas>
+	</body>
+	<script type="text/javascript">
+//		var canvas=document.getElementById('myCanvas');
+//		var vas=document.getElementById('Canvas');
+//		var ctx=canvas.getContext('2d');
+//		var cxt=vas.getContext('2d');
+//		ctx.fillStyle='#49b9df';
+//		cxt.fillStyle='#ccc';
+//		ctx.beginPath();
+//		cxt.arc(170,68,35,50,Math.PI*2,true);
+//		ctx.strokeRect(0,0,150,70);
+//		ctx.closePath();
+//		cxt.closePath();
+//		cxt.fill();
+//		ctx.clearRect(0,0,150,70);
+//		ctx.fill();
+		// canvas的指令
+		// ctx.fillStyle = "rgba(0, 0, 200, 0.5)"; // 颜色
+		// fillRect(x, y, width, height) // 绘制一个填充的矩形
+		// strokeRect(x, y, width, height) // 绘制一个矩形的边框
+		// clearRect(x, y, width, height) // 清除指定矩形区域，让清除部分完全透明。
+		// moveTo(20,20) // 移动到该点
+		// lineTo(20,100) // 画线
+		// save() //save是入栈，restore是出栈
+		// restore() 
+		// strokeStyle // 颜色  ctx.strokeStyle="green"; // ctx.stroke();
+		draw()
+		function draw() {
+		  var canvas = document.getElementById('Canvas')
+		  var ctx = canvas.getContext('2d');
+		  ctx.fillRect(0,0,150,150);
+		  ctx.translate(75,75); // 将新的 (0,0) 位置设置为 (70,70)。
+		
+		  // Create a circular clipping path
+		  ctx.beginPath();
+		  ctx.arc(0,0,60,0,Math.PI*2,true);
+		  ctx.clip(); // 剪切图形
+			
+		  // draw background
+		  var lingrad = ctx.createLinearGradient(0,-75,0,75); // 创建线性的渐变对象。（x0,y0,x1,y1）
+		  lingrad.addColorStop(0, '#232256'); // 渐变色开始的颜色
+		  lingrad.addColorStop(1, '#143778'); // 渐变色结束的颜色
+		  
+		  ctx.fillStyle = lingrad; // 颜色
+		  ctx.fillRect(-75,-75,150,150); // 绘制一个填充的矩形
+		
+		  // draw stars
+		  for (var j=1;j<50;j++){
+		    ctx.save();
+		    ctx.fillStyle = '#fff';
+		    ctx.translate(75-Math.floor(Math.random()*150),
+		                  75-Math.floor(Math.random()*150));
+		    drawStar(ctx,Math.floor(Math.random()*4)+2);
+		    ctx.restore();
+		  }
+		}
+		function drawStar(ctx,r){
+		  ctx.save();
+		  ctx.beginPath();
+		  ctx.moveTo(r,0);
+//		  for (var i=0;i<9;i++){
+//		    ctx.rotate(Math.PI/5);
+//		    if(i%2 == 0) {
+//		      ctx.lineTo((r/0.525731)*0.200811,0);
+//		    } else {
+//		      ctx.lineTo(r,0);
+//		    }
+//		  }
+		  ctx.closePath();
+		  ctx.fill();
+		  ctx.restore();
+		}
+	</script>
+</html>
