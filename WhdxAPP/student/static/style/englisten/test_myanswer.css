@@ -1,9 +1,0 @@
-
-body{background: #F6F6F6;}
-.r_MyAnswer{margin-top: 0.4rem;}
-.r_MyAnswer,.r_MyAnswer li{float: left;width: 100%;}
-.r_MyAnswer li{position: relative;}
-.r_TeacherMarks{position: absolute;top: 0;left: 0;height: 100%;}
-.r_TeaMarkTitle{float: left;width: 100%; height: 1rem;line-height: 1rem;box-sizing: border-box ;margin-top: 0.4rem; padding-left: 0.3rem;font-size: 0.5rem;color: #666;}
-.r_TeaMark{float: left;width: 100%; min-height: 3rem;line-height: 0.8rem;box-sizing: border-box ;padding: 0.3rem;font-size: 0.45rem;color: #333;background: white;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
-.r_MyAnswer li img:first-child{;margin: auto;display: block;}

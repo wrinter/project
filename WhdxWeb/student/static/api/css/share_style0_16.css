@@ -1,7 +1,0 @@
-.bdsharebuttonbox{float: left;width: 100%;}
-.bdsharebuttonbox a{width: 80px;margin:0 30px; height: 80px;cursor: pointer; background:url('../../image/sprite/p_VideoSpriteImg0.png')0 0 no-repeat;float: left;}
-.bdsharebuttonbox .bds_sqq {  background-position:0 -97px;  }
-.bdsharebuttonbox .bds_qzone {  background-position:-288px -96px; }
-.bdsharebuttonbox .bds_tsina {  background-position:-96px -96px;}
-.bdsharebuttonbox .bds_weixin {  background-position:-191px -96px; }
-.Share .bdsharebuttonbox a span,.Share .bdsharebuttonbox  .jtico{display: none!important;}
