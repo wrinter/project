@@ -1,0 +1,24 @@
+
+div,ul,li{
+	padding: 0;
+	margin: 0;
+}
+a,li{
+	font: 14px microsoft Yahei;
+}
+.container-top{
+	height: 30px;
+	background: #4c4c4c;
+}
+.container-one {
+    width: 1030px;
+    height: 30px;
+    height: 30px;
+	margin: 0 auto;
+}
+.cnavbar li,.navbar-ul li {
+	line-height: 30px;
+}
+.navbar-ul li a{
+	color: #fff;
+}

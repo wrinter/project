@@ -1,0 +1,32 @@
+.pagination{
+  li {
+    display: inline-block;
+    span,
+    {
+      display: inline-block;
+      cursor: pointer;
+      padding: 6px 18px;
+      margin-left: -2px;
+      line-height: 1.42857143;
+      color: #428bca;
+      text-decoration: none;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+    &.active{
+      span{
+        color: #fff;
+        background-color: #0275d8;
+        border-color: #0275d8;
+      }
+    }
+    &.disabled{
+      span{
+        color: #777;
+        cursor: not-allowed;
+        background-color: #fff;
+        border-color: #ddd;
+      }
+    }
+  }
+}

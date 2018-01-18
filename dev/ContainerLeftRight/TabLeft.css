@@ -1,0 +1,85 @@
+label{
+	display: inline-block;
+}
+.form-group-first .control-label{
+	color: #ff8400;
+    font-size: 15px;
+    font-weight: 300;
+    float: left;
+    margin: 20px -6px 0 13px;
+}
+.control-label{
+    color: #ff8400;
+    font-size: 15px;
+    font-weight: 300;
+    float: left;
+    margin: 20px 0 0 -2px;
+}
+.form-control{
+    margin: 15px 5px;
+    width: 583px;
+    height: 37px;
+}
+.control-label-type{
+	color: #ff8400;
+    font-size: 15px;
+    font-weight: 300;
+    float: left;
+    margin: 9px 0 0 0;
+}
+.control-label-second{
+	color: #ff8400;
+    font-size: 15px;
+    font-weight: 300;
+    float: left;
+    margin: 9px 0 0 20px;
+}
+.form-control-textarea{
+	width: 583px;
+	height: 101px;
+    resize: none;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+.form-control-select{
+	width: 164px;
+	height: 34px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+.form-control-input{
+	width: 85px;
+	height: 34px;
+	float: left;
+    /* display: inline; */
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-top: -15px;
+}
+.btn-btn-default-load{
+    background: #fc8919;
+    color: #fff;
+    
+}
+.test-react{
+	padding: 4px 22px;
+    margin-left: 75px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    background-color: rgb(252, 137, 25);
+}
+
+.test-react-submit{
+    padding: 6px 42px;
+    margin-left: 345px;
+    margin-top: 75px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;	
+}
